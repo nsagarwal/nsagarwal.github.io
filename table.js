@@ -310,13 +310,13 @@ function updateChart() {
                   month: "short",
                   day: "2-digit"
                 });
-                return [dateStr, chartName, ""];
+                return [dateStr, context[0].dataset.label, ""];
               },
               label: function(context) {
-                return `${context.dataset.label}: ${context.formattedValue}`;
+                return `${facilityMap[facilityList[context.datasetIndex]].name}: ${context.formattedValue}`;
               }
-            }          
-          }        
+            }
+          }   
         }
       }
     });
