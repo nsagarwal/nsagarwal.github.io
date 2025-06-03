@@ -2,18 +2,18 @@
 <head>
 	<meta charset="UTF-8">
 	<title>ICE Detention Trends</title>
-  <script src="https://d3js.org/d3.v6.min.js"></script>
-  <script src="https://unpkg.com/topojson-client@3"></script>
-  <script src="https://unpkg.com/geo-albers-usa-territories@0.1.0/dist/geo-albers-usa-territories.js"></script>
+	<script src="https://d3js.org/d3.v6.min.js"></script>
+	<script src="https://unpkg.com/topojson-client@3"></script>
+	<script src="https://unpkg.com/geo-albers-usa-territories@0.1.0/dist/geo-albers-usa-territories.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
-	<link href="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/css/tom-select.css" rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/css/tom-select.css">
 	<script src="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/js/tom-select.complete.min.js"></script>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nouislider@15.7.1/dist/nouislider.min.css">
 	<script src="https://cdn.jsdelivr.net/npm/nouislider@15.7.1/dist/nouislider.min.js"></script>
 
-  <link rel="stylesheet" href="styles.css">
-  <script src="map.js" defer></script>
+	<link rel="stylesheet" href="styles.css">
 	<script src="table.js" defer></script>
+	<script src="map.js" defer></script>
 </head>
 <body>
 	<h1>ICE Detention Trends</h1>
@@ -34,77 +34,81 @@
 	</center>
 	<br><br>
 
-	<div class="main-container">
-	  <div class="left-panel">
+	<div class="map-container">
+		<div class="map-left-panel">
 			<div id="activeFacilities" style="font-size: 21px;line-height: 120%;color: #666;"></div>
 			<span style="color: #666;">Active Facilities</span><br>
 			<span style="color:#666;font-size: 12px">in <span id="selectedDate_1"></span></span><br><br>
 			<div id="totalFacilities" style="font-size: 21px;line-height: 120%;color: #666;"></div>
 			<span style="color: #666;">Total Facilities</span><br>
 			<span style="color:#666;font-size: 12px">since <span id="startDate"></span></span>
-	    <ul id="activity">
-	      <li class="legend-active">Active</li>
-	      <li class="legend-inactive">Inactive</li>
-	    </ul>
+			<ul id="activity">
+				<li class="legend-active">Active</li>
+				<li class="legend-inactive">Inactive</li>
+			</ul>
 		</div>
-	  <div class="right-panel">
-	    <div class="top-controls">
-		  	<div class="slider-group">
-		    	<label for="sizeSlider">Filter by population size:</label>
-		    	<div id="sizeSlider" style="width: 200px;"></div>
-		  	</div>
-	    </div>
-	    <div class="map-container">
-				<div id="content"></div>
-	    </div>
-	    <div class="bottom-controls">
-				<button id="playButton" style="margin-right: 25px;">Play</button>
-				<input type="range" id="slider" min="0" max="N" value="0" step="1" style="width: 700px;">
-				<div id="selectedDate_2">Oct. 2008</div>
-	    </div>
-	  </div>
-	</div>
-
-	<div class = "second-container">
-		<div class="top-2">
-			<div class="left-panel-2">
-				<div><canvas id="myLineChart"></canvas></div>
-				<div class="slider-container">
-				  <div id="rangeSlider_2" style="margin: 30px auto; width: 300px;"></div>
-				  <div class="slider-labels">
-				    <span id="startLabel">Sep. 2008</span>
-				    <span id="endLabel">Jan. 2025</span>
-				  </div>
+		<div class="map-right-panel">
+			<div class="map-top-controls">
+				<div class="slider-group">
+					<label for="sizeSlider">Filter by population size:</label>
+					<div id="sizeSlider" style="width: 200px;"></div>
 				</div>
 			</div>
-			<div class="right-panel-2">
+			<div class="map-element-container" style="margin-top: 20px;">
+				<div id="map-content"></div>
+			</div>
+			<div id="zoom-controls">
+				<button class="zoom" id="zoom-in">+</button>
+				<button class="zoom" id="zoom-out">−</button>
+			</div>
+			<div class="map-bottom-controls" style="margin-top: 20px;">
+				<button id="playButton" style="margin-right: 25px;">Play</button>
+				<input type="range" id="mapSlider" min="0" max="N" value="0" step="1" style="width: 700px;">
+				<div id="selectedDate_2">Oct. 2008</div>
+			</div>
+		</div>
+	</div>
+
+	<div class = "graph-container">
+		<div class="graph-top-panel">
+			<div class="graph-element-container">
+				<div><canvas id="graph-element"></canvas></div>
+				<div class="graphSlider-container">
+					<div id="graphSlider" style="margin: 30px auto; width: 300px;"></div>
+					<div class="graphSlider-labels">
+						<span id="graphSlider-startLabel">Sep. 2008</span>
+						<span id="graphSlider-endLabel">Jan. 2025</span>
+					</div>
+				</div>
+			</div>
+			<div class="graph-right-controls">
 				<select id="facilitySearch" placeholder="Search facilities..." style="width: 200px;"></select>
-				<div id="facility_div_1" style="display: none; align-items: center; gap: 6px; margin-top: 10px;">
-					<button id="clearFacility_1" class="x" style="margin-top:-2px;">x</button>
-					<span id="facility_1">Test</span>
+				<div id="facility-group-0" style="display: none; align-items: center; gap: 6px; margin-top: 10px;">
+					<button id="facility-button-0" class="x" style="margin-top:-2px;">x</button>
+					<span id="facility-name-0">Test</span>
 				</div>
-				<div id="facility_div_2" style="display: none; align-items: center; gap: 6px;">
-					<button id="clearFacility_2" class="x">x</button>
-					<span id="facility_2">Test</span>
+				<div id="facility-group-1" style="display: none; align-items: center; gap: 6px;">
+					<button id="facility-button-1" class="x">x</button>
+					<span id="facility-name-1">Test</span>
 				</div>
-				<div id="facility_div_3" style="display: none; align-items: center; gap: 6px;">
-					<button id="clearFacility_3" class="x">x</button>
-					<span id="facility_3">Test</span>
+				<div id="facility-group-2" style="display: none; align-items: center; gap: 6px;">
+					<button id="facility-button-2" class="x">x</button>
+					<span id="facility-name-2">Test</span>
 				</div>
-				<div id="facility_div_4" style="display: none; align-items: center; gap: 6px;">
-					<button id="clearFacility_4" class="x">x</button>
-					<span id="facility_4">Test</span>
+				<div id="facility-group-3" style="display: none; align-items: center; gap: 6px;">
+					<button id="facility-button-3" class="x">x</button>
+					<span id="facility-name-3">Test</span>
 				</div>
-				<div id="facility_div_5" style="display: none; align-items: center; gap: 6px;">
-					<button id="clearFacility_5" class="x">x</button>
-					<span id="facility_5">Test</span>
+				<div id="facility-group-4" style="display: none; align-items: center; gap: 6px;">
+					<button id="facility-button-4" class="x">x</button>
+					<span id="facility-name-4">Test</span>
 				</div>
 				<div id="controls">
 					<form id="columnsForm"></form>
 				</div>
 			</div>
 		</div>
-		<div class="bottom-2">
+		<div class="graph-bottom-panel">
 			<p class="footer-note">February 2025 reflects a partial month through February 17, 2025. Facilities located in Cuba (at Naval Station Guantanamo Bay) are not displayed on the map; select “Migrant Ops Center Main AV622” and “JTF Camp Six” in the search box to display the graphs for these facilities.</p>
 		</div>
 	</div>

@@ -1,18 +1,24 @@
 let monthlyData = [];
 
+let countiesLoaded = false;
+let countyPaths;
+
+// ------------------------------------------------------------------------------------------------
+// create geography
+
 let margin = { top: 0, right: 50, bottom: 10, left: 50 };
-let container = document.getElementById("content");
-let fullWidth = container.clientWidth;
+let fullWidth = document.getElementById("map-content").clientWidth;
 let width = fullWidth - margin.left - margin.right;
 let height = 700 - margin.top - margin.bottom;
 
+let zoomLevel = 1.;
 let projection = geoAlbersUsaTerritories.geoAlbersUsaTerritories()
   .scale(width * 1.5)
   .translate([width / 2, height / 2.2]);
 
 const path = d3.geoPath().projection(projection);
 
-const svg = d3.select("#content")
+const svg = d3.select("#map-content")
   .append("svg")
   .attr("id", "map")
   .attr("width", fullWidth)
@@ -39,7 +45,59 @@ d3.json("https://unpkg.com/us-atlas@3.0.0/states-10m.json").then(function (data)
   updateMap();
 });
 
-noUiSlider.create(document.getElementById("sizeSlider"), {
+const zoom = d3.zoom()
+  .scaleExtent([1, 8])
+  .on("zoom", (event) => {
+    map.attr("transform", event.transform);
+    zoomLevel = event.transform.k;
+    if (!countiesLoaded && zoomLevel > 2.5) {
+      loadCounties();
+    }
+    if (countyPaths) {
+      countyPaths.style("opacity", zoomLevel > 2.5 ? 1.0 : 0);
+    }    
+    updateMap();
+  });
+
+function loadCounties() {
+  d3.json("https://cdn.jsdelivr.net/npm/us-atlas@3/counties-10m.json").then(topology => {
+    const counties = topojson.feature(topology, topology.objects.counties).features;
+
+    countyPaths = map.append("g")
+      .attr("class", "counties")
+      .selectAll("path")
+      .data(counties)
+      .enter()
+      .append("path")
+      .attr("d", path)
+      .attr("fill", "none")
+      .attr("stroke", "white")
+      .attr("stroke-width", 0.2 / zoomLevel)
+      .attr("pointer-events", "none")
+
+    countiesLoaded = true;
+  });
+}
+
+svg.call(zoom);
+
+const zoomStep = 1.5;
+
+d3.select("#zoom-in").on("click", () => {
+  svg.transition().duration(500)
+    .call(zoom.scaleBy, zoomStep);
+});
+
+d3.select("#zoom-out").on("click", () => {
+  svg.transition().duration(500)
+    .call(zoom.scaleBy, 1 / zoomStep);
+});
+
+// ------------------------------------------------------------------------------------------------
+// size slider
+
+const sizeSlider = document.getElementById("sizeSlider");
+noUiSlider.create(sizeSlider, {
   start: [0, 2260],
   connect: true,
   range: { min: 0, max: 2260 },
@@ -50,11 +108,12 @@ noUiSlider.create(document.getElementById("sizeSlider"), {
     from: value => Number(value)
   }
 });
-
-const sizeSlider = document.getElementById("sizeSlider").noUiSlider;
-sizeSlider.on("update", (values, handle) => {
+sizeSlider.noUiSlider.on("update", (values, handle) => {
   updateMap();
 });
+
+// ------------------------------------------------------------------------------------------------
+// map
 
 let mapData = {};
 
@@ -73,7 +132,7 @@ d3.csv("data/proc/monthly.csv").then(function(data_1) {
   });
   d3.csv("data/proc/map/2008-10.csv").then(function(data_2) {
     monthlyData = data_1;
-    document.getElementById("slider").max = monthlyData.length - 1;
+    document.getElementById("mapSlider").max = monthlyData.length - 1;
     mapData["2008-10"] = data_2;
     document.getElementById("startDate").textContent = formatMonthYear("2008-10");
     updateMap(0);
@@ -83,12 +142,15 @@ d3.csv("data/proc/monthly.csv").then(function(data_1) {
   });
 });
 
-d3.select("#slider").on("input", function() {
+// ------------------------------------------------------------------------------------------------
+// map slider
+
+d3.select("#mapSlider").on("input", function() {
   updateMap();
 });
 
 let interval = null;
-const slider1 = document.getElementById("slider");
+const mapSlider = document.getElementById("mapSlider");
 const playButton = document.getElementById("playButton");
 
 playButton.addEventListener("click", () => {
@@ -98,9 +160,9 @@ playButton.addEventListener("click", () => {
     playButton.textContent = "Play";
   } else {
     interval = setInterval(() => {
-      if (+slider1.value < +slider1.max) {
-        slider1.value = +slider1.value + 1;
-        slider1.dispatchEvent(new Event("input"));
+      if (+mapSlider.value < +mapSlider.max) {
+        mapSlider.value = +mapSlider.value + 1;
+        mapSlider.dispatchEvent(new Event("input"));
       } else {
         clearInterval(interval);
         interval = null;
@@ -111,10 +173,13 @@ playButton.addEventListener("click", () => {
   }
 });
 
+// ------------------------------------------------------------------------------------------------
+
 function updateMap() {
+  if (DEBUG) console.log("updateMap called", monthlyData.length);
   if (monthlyData.length === 0) return;
 
-  const i = Number(document.getElementById("slider").value);
+  const i = Number(document.getElementById("mapSlider").value);
   if (!(monthlyData[i].month in mapData)) return;
 
   document.getElementById("selectedDate_1").textContent = formatMonthYear(monthlyData[i].month);
@@ -122,7 +187,7 @@ function updateMap() {
   document.getElementById("activeFacilities").textContent = monthlyData[i].active;
   document.getElementById("totalFacilities").textContent = monthlyData[i].total;
 
-  const range = sizeSlider.get();
+  const range = sizeSlider.noUiSlider.get();
   map.selectAll("circle").remove();
 
   const tooltip = d3.select("#tooltip");
@@ -144,6 +209,7 @@ function updateMap() {
     .attr("stroke", "white")
     .attr("fill-opacity", 0.5)
     .attr("stroke-opacity", 0.5)
+    .attr("vector-effect", "non-scaling-stroke")
     .style("cursor", "default")
     .on("mouseover", (event, d) => {
       tooltip
@@ -162,14 +228,28 @@ function updateMap() {
     .on("mouseout", () => {
       tooltip.style("opacity", 0);
     })
+    .on("click", (event, d) => {
+      const [x, y] = projection([+d.longitude, +d.latitude]);
+
+      svg.transition()
+        .duration(750)
+        .call(
+          zoom.transform,
+          d3.zoomIdentity
+            .translate(width / 2, height / 2)
+            .scale(3)
+            .translate(-x, -y)
+        );
+      if (facilityList.length < 5) loadFacilityChart(d.code, facilityMap[d.code].name);
+    })
     .append("title")
     .text(d => d.name);
 }
 
 function formatMonthYear(ym) {
   const [year, month] = ym.split("-");
-  const months = ["Jan.", "Feb.", "Mar.", "Apr.", "May", "Jun.", "Jul.", "Aug.", "Sep.", "Oct.", "Nov.", "Dec."]
-  return `${months[+month-1]}. ${year}`;
+  const months = ["", "Jan.", "Feb.", "Mar.", "Apr.", "May", "Jun.", "Jul.", "Aug.", "Sep.", "Oct.", "Nov.", "Dec."]
+  return `${months[+month]} ${year}`;
 }
 
 

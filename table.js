@@ -1,3 +1,5 @@
+let DEBUG = 0;
+
 let chart;
 let labels = [];
 let facilityData = [];
@@ -5,14 +7,13 @@ let nationalData = [];
 let availableColumns = [];
 let facilities = [];
 let facilityMap = {};
-let dMap = {};
 let facilityList = [];
 let chartName = "";
 
 loadNationalChart();
-const slider_2 = document.getElementById("rangeSlider_2");
 
-noUiSlider.create(slider_2, {
+const graphSlider = document.getElementById("graphSlider");
+noUiSlider.create(graphSlider, {
   start: [0, 196],
   connect: true,
   range: { min: 0, max: 196 },
@@ -24,11 +25,13 @@ noUiSlider.create(slider_2, {
   }
 });
 
-slider_2.noUiSlider.on("slide", (values, handle) => {
+graphSlider.noUiSlider.on("slide", (values, handle) => {
   updateChart();
   updateSliderLabels();
 });
 
+// load dMap
+let dMap = {};
 d3.csv("data/proc/dmap.csv").then(function(data) {
   data.forEach(row => {
     dMap[row.date] = row.index;
@@ -38,6 +41,8 @@ d3.csv("data/proc/dmap.csv").then(function(data) {
 let suppressChange = false;
 
 d3.csv("data/proc/facilities.csv").then(function(data) {
+  const select = document.getElementById("facilitySearch");
+
   data.forEach(row => {
     facilityMap[row.detention_facility_code] = {
       name: row.name,
@@ -50,15 +55,10 @@ d3.csv("data/proc/facilities.csv").then(function(data) {
       code: row.detention_facility_code,
       name: row.name
     });
-  });
-
-  const select = document.getElementById("facilitySearch");
-
-  facilities.forEach(facility => {
     const option = document.createElement("option");
-    option.value = facility.code;
-    option.textContent = facility.name;
-    select.appendChild(option);
+    option.value = row.detention_facility_code;
+    option.textContent = `${row.name} (${row.state})`;
+    select.appendChild(option);    
   });
 
   select.value = "";
@@ -81,6 +81,7 @@ d3.csv("data/proc/facilities.csv").then(function(data) {
 });
 
 function populateColumnCheckboxes() {
+  if (DEBUG) console.log("populateColumnCheckboxes called");
   const form = document.getElementById('columnsForm');
   availableColumns.forEach(col => {
     const label = document.createElement('label');
@@ -88,9 +89,9 @@ function populateColumnCheckboxes() {
     if (facilityList.length > 1) bgColor = "#444";
     label.innerHTML = `
       <label class="custom-checkbox" style="--check-color: ${bgColor}">
-        <input type="checkbox" name="col" value="${col}" checked>
-        <span class="checkmark"></span>
-        ${col}
+      <input type="checkbox" name="col" value="${col}" checked>
+      <span class="checkmark"></span>
+      ${col}
       </label>
     `;
     form.appendChild(label);
@@ -115,20 +116,19 @@ function populateColumnCheckboxes() {
 }
 
 function setupSliders(min, max) {
-  const slider_2 = document.getElementById("rangeSlider_2");
-  slider_2.noUiSlider.set([min, max]);
+  graphSlider.noUiSlider.set([min, max]);
   updateSliderLabels();
 }
 
 function updateSliderLabels() {
   if (monthlyData.length === 0) return;
-  const slider_2 = document.getElementById("rangeSlider_2");
-  const [start, end] = slider_2.noUiSlider.get().map(Number);
-  document.getElementById('startLabel').textContent = formatMonthYear(monthlyData[start].month);
-  document.getElementById('endLabel').textContent = formatMonthYear(monthlyData[end].month);
+  const [start, end] = graphSlider.noUiSlider.get().map(Number);
+  document.getElementById('graphSlider-startLabel').textContent = formatMonthYear(monthlyData[start].month);
+  document.getElementById('graphSlider-endLabel').textContent = formatMonthYear(monthlyData[end].month);
 }
 
 function loadFacilityChart(code, name) {
+  if (DEBUG) console.log("loadFacilityChart called", code, name);
   facilityList.push(code);
   d3.csv(`data/proc/facilities/${code}.csv`).then(function(data) {
     facilityData.push(data);
@@ -144,6 +144,7 @@ function loadFacilityChart(code, name) {
 }
 
 function loadNationalChart() {
+  if (DEBUG) console.log("loadNationalChart called");
   d3.csv("data/proc/national.csv").then(function(data) {
     nationalData = data;
     labels = data.map(row => row.Date);
@@ -161,7 +162,12 @@ function loadNationalChart() {
   });
 }
 
+// ------------------------------------------------------------------------------------------------
+// update chart
+
 function updateChart() {
+  if (DEBUG) console.log("updateChart called", monthlyData.length, facilityList.length, chartName);
+
   if (monthlyData.length === 0) return;
 
   if ((facilityList.length == 0) && (chartName != "National")) {
@@ -170,7 +176,7 @@ function updateChart() {
   }
   if (chart) chart.destroy();
 
-  const [d1, d2] = document.getElementById("rangeSlider_2").noUiSlider.get().map(Number);
+  const [d1, d2] = graphSlider.noUiSlider.get().map(Number);
   d1_index = +dMap[monthlyData[d1].month];
   d2_index = +dMap[monthlyData[d2].month];
   const visibleLabels = labels.slice(d1_index, d2_index + 1);
@@ -178,9 +184,9 @@ function updateChart() {
                              .map(input => input.value);
 
 
-  const fDiv = Array.from({ length: 5 }, (_, i) => document.getElementById(`facility_div_${i + 1}`));
-  const fSpan = Array.from({ length: 5 }, (_, i) => document.getElementById(`facility_${i + 1}`));
-  const fButton = Array.from({ length: 5 }, (_, i) => document.getElementById(`clearFacility_${i + 1}`));
+  const fDiv = Array.from({ length: 5 }, (_, i) => document.getElementById(`facility-group-${i}`));
+  const fSpan = Array.from({ length: 5 }, (_, i) => document.getElementById(`facility-name-${i}`));
+  const fButton = Array.from({ length: 5 }, (_, i) => document.getElementById(`facility-button-${i}`));
 
   const tselect = document.getElementById('facilitySearch').tomselect;
   if (facilityList.length >= 5) {
@@ -199,7 +205,7 @@ function updateChart() {
     fDiv[i].style.display = "flex";
     fSpan[i].textContent = name;
     fButton[i].replaceWith(fButton[i].cloneNode(true));
-    fButton[i] = document.getElementById(`clearFacility_${i + 1}`);
+    fButton[i] = document.getElementById(`facility-button-${i}`);
     fButton[i].addEventListener('click', () => {
       facilityList.splice(i, 1);
       facilityData.splice(i, 1);
@@ -229,27 +235,25 @@ function updateChart() {
       input.checked = selectedCols.includes(input.value);
     });
 
-   for (let i = 1; i <= 5; i++) {
-      const span = document.getElementById(`facility_${i}`);
-      span.style.color = getColor("", i);
+   for (let i = 0; i < 5; i++) {
+      const span = document.getElementById(`facility-name-${i}`);
+      span.style.color = getColor("facilities", i);
     }
      
     const datasets = facilityData.flatMap((dataSet, setIndex) =>
       selectedCols.map((col) => ({
-        label: facilityData.length > 1
-          ? `${col}${setIndex > 0 ? ` (${setIndex + 1})` : ""}`
-          : col,
+        label: col,
         data: dataSet.slice(d1_index, d2_index).map(row => parseFloat(row[col])),
         borderWidth: 2,
         pointRadius: 0,
         fill: false,
         yAxisID: "y",
         tension: 0.3,
-        borderColor: getColor(col, setIndex + 1)
+        borderColor: getColor("facilities", setIndex)
       }))
     );
 
-    const ctx = document.getElementById('myLineChart').getContext('2d');
+    const ctx = document.getElementById('graph-element').getContext('2d');
 
     chart = new Chart(ctx, {
       type: 'line',
@@ -323,9 +327,9 @@ function updateChart() {
 
 
   } else if (facilityList.length == 1) {
-   for (let i = 1; i <= 5; i++) {
-      const span = document.getElementById(`facility_${i}`);
-      span.style.color = getColor("default", 0);
+   for (let i = 0; i < 5; i++) {
+      const span = document.getElementById(`facility-name-${i}`);
+      span.style.color = getColor("default");
     }
 
     chartName = facilityMap[facilityList[0]].name;
@@ -340,7 +344,7 @@ function updateChart() {
       borderColor: getColor(col)
     }));
 
-    const ctx = document.getElementById('myLineChart').getContext('2d');
+    const ctx = document.getElementById('graph-element').getContext('2d');
 
     chart = new Chart(ctx, {
       type: 'line',
@@ -431,7 +435,7 @@ function updateChart() {
       if (set["label"] == "Book-outs") set["yAxisID"] = "y1";
     });
 
-    const ctx = document.getElementById('myLineChart').getContext('2d');
+    const ctx = document.getElementById('graph-element').getContext('2d');
 
     chart = new Chart(ctx, {
       type: 'line',
@@ -514,11 +518,9 @@ function updateChart() {
 }
 
 function getColor(key, index = 0) {
-  if (index == 1) return "#d62728";
-  if (index == 2) return "#9467bd";
-  if (index == 3) return "#ff7f0e";
-  if (index == 4) return "#1f77b4";
-  if (index == 5) return "#2ca02c";
+  const facilityColors = ["#d62728", "#9467bd", "#ff7f0e", "#1f77b4", "#2ca02c"];
+  if (DEBUG) console.log("getColor called", key, index, facilityColors[index]);
+  if (key == "facilities") return facilityColors[index];
   if (key == "Midnight population") return "blue";
   if (key == "24-hour population") return "red";
   if (key == "Book-ins") return "green";
