@@ -23,7 +23,7 @@
 	<div style="width: 1000px; margin: 0 auto;">
 	<p>Every year, U.S. Immigration and Customs Enforcement (ICE) subjects hundreds of thousands of people to civil immigration detention—a practice that is <a href="https://www.vera.org/ending-mass-incarceration/reducing-incarceration/detention-of-immigrants" target="_blank">unjust, inhumane, and completely unnecessary</a>. It does so under a veil of secrecy, sharing only limited, <a href="https://tracreports.org/reports/696/" target="_blank">often</a> <a href="https://www.gao.gov/assets/gao-24-106233.pdf" target="_blank">error-prone</a> statistics with the public. ICE’s failure to regularly release accurate, complete, and accessible data to the public enables it to operate its multi-billion-dollar detention network with impunity and little oversight.</p>
 
-	<p>To address this need, the <i>ICE Detention Trends</i> dashboard presents analysis by Vera that reveals an unprecedented level of detail about ICE detention populations—nationally and across the 1,357 facilities in which ICE detained people—on each day of the 16-year period from fiscal year 2009 through mid-fiscal year 2025 <strong>(October 1, 2008, through February 17, 2025)</strong>. This includes a detailed picture of ICE detention during the first four weeks of President Trump’s second term, including people sent by the government to detention centers at Guantanamo Bay. Vera’s tool allows the public to see the kinds of information that ICE <i>should</i> share.</p>
+	<p>To address this need, the <i>ICE Detention Trends</i> dashboard presents analysis by Vera that reveals an unprecedented level of detail about ICE detention populations—nationally and across the 1,357 facilities in which ICE detained people—on each day of the 16-year period from fiscal year 2009 through mid-fiscal year 2025 <strong style="font-weight: 500;">(October 1, 2008, through February 17, 2025)</strong>. This includes a detailed picture of ICE detention during the first four weeks of President Trump’s second term, including people sent by the government to detention centers at Guantanamo Bay. Vera’s tool allows the public to see the kinds of information that ICE <i>should</i> share.</p>
 
 	<p>The federal government must end the harmful practice of civil immigration detention as a fundamental step toward ending mass incarceration in the United States. Until then, it should regularly release current, anonymized, person-level detention datasets. This would be a critical move toward making ICE operations transparent and enabling further research on detention and its impacts. Without data transparency, ICE’s operations—and their harms—will continue behind closed doors.</p>
 	</div>
@@ -60,10 +60,11 @@
 			<div id="zoom-controls">
 				<button class="zoom" id="zoom-in">+</button>
 				<button class="zoom" id="zoom-out">−</button>
+				<button class="zoom" id="zoom-reset">⟳</button>
 			</div>
 			<div class="map-bottom-controls" style="margin-top: 20px;">
 				<button id="playButton" style="margin-right: 25px;">Play</button>
-				<input type="range" id="mapSlider" min="0" max="N" value="0" step="1" style="width: 700px;">
+				<input type="range" id="mapSlider" min="0" value="0" step="1" style="width: 700px;">
 				<div id="selectedDate_2">Oct. 2008</div>
 			</div>
 		</div>
@@ -112,7 +113,121 @@
 			<p class="footer-note">February 2025 reflects a partial month through February 17, 2025. Facilities located in Cuba (at Naval Station Guantanamo Bay) are not displayed on the map; select “Migrant Ops Center Main AV622” and “JTF Camp Six” in the search box to display the graphs for these facilities.</p>
 		</div>
 	</div>
+    
+	<div id="aboutdata" style="max-width: 1000px; margin: 50px auto 0;">
+	  <h3>About the Data</h3>
+	  <p>
+	    Through interactive maps and graphs, this tool allows users to see changes in the following metrics&mdash;geographically and over time:
+	  </p>
+  <ul>
+    <li>
+      <strong>Midnight population</strong>: the daily number of people detained
+      at midnight (nationally and by facility).
+    </li>
+    <li>
+      <strong>24-hour population</strong>: the number of people detained for any
+      part of a given day, including those whom ICE transferred or booked-out of
+      custody before midnight (nationally and by facility). While ICE relies
+      solely on midnight populations in its reporting, Vera includes both types
+      of daily populations—midnight and 24-hour—as the two can differ
+      drastically.
+    </li>
+    <li>
+      <strong>Book-ins</strong>: the daily number of people ICE booked into
+      custody (nationally).
+    </li>
+    <li>
+      <strong>Book-outs</strong>: the daily number of people ICE booked out of
+      custody (nationally).
+    </li>
+    <li>
+      <strong>Active facilities</strong>: facilities in which ICE held at least
+      one person in custody during a given month.
+    </li>
+    <li>
+      <strong>Inactive facilities</strong>: facilities in which ICE held people
+      at some point between October 2008 and a given month, but not during the
+      given month.
+    </li>
+    <li>
+      <strong>Total facilities</strong>: the cumulative number of facilities
+      (active and inactive) in use between October 2008 and a given month.
+    </li>
+  </ul>
+
+  <div class="col">
+    <div class="tabs">
+      <div class="tab">
+        <input type="checkbox" id="chck1" />
+        <label class="tab-label" for="chck1">Read more about the data</label>
+        <div class="tab-content">
+          <p>
+            This dashboard primarily draws from ICE detention datasets obtained through Freedom of Information Act (FOIA) requests, shared with Vera by <a href="https://www.david-hausman.com/" target="_blank" rel="noreferrer noopener">David Hausman</a>, assistant professor of law, University of California, Berkeley, and the American Civil Liberties Union (ACLU). The initial version of this dashboard, launched in August 2023, used data from October 1, 2008, through March 30, 2020 (“Dataset I”). Vera updated this tool in May 2025 to add more recent data. The current iteration of the tool uses data from October 1, 2008, through February 17, 2025 (fiscal year 2009 through mid-fiscal year 2025). The data includes detention history information for every person in ICE custody during this time.
+          </p>
+          <p>
+            The structure of Dataset I, which ran through March 2020, posed several challenges for researchers seeking to analyze ICE operations. Most notably, the dataset does not link together separate detention stints for people whom ICE transferred to one or more facility after their initial book-in. To overcome this limitation, Vera developed a novel algorithm to construct individual detention histories from a person’s initial book-in to their final-book out, inclusive of any transfers. Doing so allowed Vera to combine records across spreadsheets, account for duplicated data, and compute detention populations.
+          </p>
+          <p>
+            Vera later received updated datasets (“Dataset II” and “Dataset III”) that included anonymized identifiers that linked records across a person’s detention history. These newer datasets are nearly identical in form to the original dataset, with some exceptions requiring a revised method of calculating detention population statistics, as described in Vera’s technical appendix. Vera used these different datasets to calculate statistics for different time periods, with some exceptions explained in the technical appendix:
+          </p>
+          <ul>
+            <li>Dataset I: October 1, 2008, through September 30, 2013;</li>
+            <li>Dataset II: October 1, 2013, through November 14, 2023; and</li>
+            <li>Dataset III: November 15, 2023, through February 17, 2025.</li>
+          </ul>
+          <p>
+            Differences in facility populations before and after the respective date boundaries (i.e., from September 30 to October 1, 2013 and from November 14 to 15, 2023) may at least partially reflect differences in how ICE compiled the different datasets, rather than a population change alone.
+          </p>
+          <p>
+            Vera counts each unique facility code in the ICE detention data as a distinct facility. Some facility codes appear to reflect different units or buildings in the same or adjacent physical property as another code. Other facility codes reflect facility “types” other than a detention center, such as hospitals or hotels. Vera did not combine or group facility codes for two reasons. First, there is no available ICE source to combine such codes for the entire ICE network. Second, the fact that ICE uses distinct codes in these instances indicates that they carry some significance in data entry.
+          </p>
+          <p>
+            Vera drew from additional datasets to geocode facility locations, as the original datasets included facility names and codes, but no information on location or facility type.
+          </p>
+          <p>
+            Otherwise, Vera chose to present the ICE detention data “as is” to the greatest extent possible, including any inconsistencies or errors that may be present in the data compiled and shared by ICE. For example, Vera retained data entries that indicated lengths of stay lasting zero minutes and those that showed people as being detained in two places at once during a transfer. Notably, some detention facilities in the older dataset were missing from the newer data in the period in which the two datasets overlap (see technical appendix). Other researchers have noted similar gaps, inconsistencies, and errors in ICE detention records.<sup>1</sup>
+          </p>
+          <p>
+            See Vera’s <a href="https://www.vera.org/ice-detention-trends/files/dashboard_appendix.pdf" target="_blank">technical appendix</a> for more detailed methodology and <a href="https://github.com/vera-institute/ice-detention-trends" target="_blank">the ICE Detention Trends GitHub repository</a> to download accompanying data files.
+          </p>
+          <p>
+            <sup>1</sup> Emily Ryo and Ian Peacock, “A National Study of Immigration Detention in the United States,” <span class="italic">Southern California Law Review</span>, Vol 92, No 1 (2018), <a href="https://perma.cc/RV65-XPUK" target="_blank">https://perma.cc/RV65-XPUK</a>; Don Kerwin, Daniela Alulema, and Siqi Tu, “Piecing Together the US Immigrant Detention Puzzle One Night at a Time: An Analysis of All Persons in DHS-ICE Custody on September 22, 2012,” <span class="italic">Journal on Migration and Human Security</span>, Vol 3 No 4 (2015), <a href="https://journals.sagepub.com/doi/pdf/10.1177/233150241500300402" target="_blank">https://journals.sagepub.com/doi/pdf/10.1177/233150241500300402</a>; Human Rights Watch, “A Costly Move: Far and Frequent Transfers Impede Hearings for Immigrant Detainees in the United States,” June 14, 2011, <a href="https://perma.cc/S57K-Z8CU" target="_blank">https://perma.cc/S57K-Z8CU</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="wrap" style="max-width: 1000px; margin: 0 auto 100px; padding: 0 2em;">
+  <h3>Credits</h3>
+  <ul>
+    <li>Data analysis: Noelle Smart, Zachary Lawrence, and Neil Agarwal</li>
+    <li>Data engineering: Zachary Lawrence and Neil Agarwal</li>
+    <li>Design and development: Jill Hubley</li>
+    <li>Writing: Noelle Smart</li>
+    <li>Editing: Léon Digard</li>
+  </ul>
+  <h3>Acknowledgements</h3>
+  <p>
+    Vera thanks <a href="https://www.david-hausman.com/" target="_blank">David Hausman,</a> assistant professor of law, University of California, Berkeley, and the American Civil Liberties Union (ACLU) for providing the detention-stint-level ICE detention datasets acquired through FOIA requests that are visualized in this dashboard. Vera also thanks the following organizations for making available the supplemental ICE datasets Vera used to process the data and geocode facilities: Human Rights Watch, Transactional Records Access Clearinghouse, National Immigrant Justice Center, Immigrant Legal Resource Center, and the Marshall Project.
+  </p>
+  <p>
+    Vera would like to thank the following current and former colleagues for their support in providing editing, design, and guidance: Nina Siulc, Jacquelyn Pavilon, Bethany Costello, Kenny Lam, Chris Henrichson, Jasmine Heiss, Jacob Kang-Brown, Kica Matos, Will Snowden, and Lizzie Allen. The authors wish to acknowledge the work of Dennis Kuo, who contributed to the development of the Detention Stay ID algorithm during his time as senior data scientist at Vera.
+  </p>
+  <h3>Contact</h3>
+  <p>
+    For more information, contact Noelle Smart, principal research associate, at <ahref="mailto:nsmart@vera.org">nsmart@vera.org</a>.
+  </p>
+</div>
+
+
+<style>
+
+</style>
 
 	<div id="tooltip" class="tooltip"></div>
+
 </body>
 </html>

@@ -2,6 +2,34 @@ div {
 //  border: 1px solid red;
 }
 
+h3 {
+  font-size: 20px;
+  line-height: 140%;
+  margin: 30px 0 10px 0;
+  font-family: "Whyte Bold";
+}
+
+#aboutdata h3 {
+  margin-bottom: 10px;
+  padding: 0 0px;
+}
+
+#aboutdata p {
+  padding: 0 0px;
+  max-width: 1000px;  
+}
+
+#wrap h3 {
+  margin-bottom: 10px;
+  padding: 0 0px;
+}
+
+#wrap p {
+  padding: 0 0px;
+  max-width: 1000px;  
+}
+
+
 /* graph slider */
 
 .graphSlider-container {
@@ -172,6 +200,18 @@ ul li.legend-inactive::before {
   font-style: italic
 }
 
+#mapSlider {
+  width: 100%;
+  max-width: 700px;
+  display: block;
+}
+
+#map-content {
+  max-width: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
 .map-container {
   display: flex;
   max-width: 1000px;
@@ -210,6 +250,7 @@ ul li.legend-inactive::before {
   align-items: center;
   justify-content: space-between;
   margin-top: 0px;
+  flex-wrap: wrap;
 }
 
 strong {
@@ -387,6 +428,86 @@ p {
   opacity: 0;
   transition: opacity 0.2s;
 }
+
+  input#chck1 {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+  }
+  a {
+    color: #ef4136;
+    text-decoration: none;
+  }
+  .italic {
+    font-style: italic;
+  }
+  /* Accordion styles */
+  .tabs {
+    border-radius: 0px;
+    overflow: hidden;
+    /* box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5); */
+  }
+
+  .tab {
+    width: 100%;
+    color: white;
+    overflow: hidden;
+  }
+  .tab-label {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 0em;
+    background: #fff7f0;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    border-bottom: 1px solid #d2bab4;
+
+    /* Icon */
+  }
+  .tab-label:hover {
+    border-bottom: 1px solid #ef4136;
+  }
+  .tab-label::after {
+    content: "❯";
+    width: 1em;
+    height: 1em;
+    text-align: center;
+    transition: all 0.35s;
+  }
+  .tab-content {
+    max-height: 0;
+    padding: 0;
+    color: #2c3e50;
+    background: #fff7f0;
+    transition: all 0.35s;
+    display: none;
+  }
+  .tab-close {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 1em;
+    font-size: 0.75em;
+    background: #fff7f0;
+    cursor: pointer;
+  }
+  .tab-close:hover {
+    border-bottom: 1px solid #fff7f0;
+  }
+  label {
+    max-width: 220px;
+  }
+  input#chck1:checked + .tab-label {
+    background: #fff7f0;
+  }
+  input#chck1:checked + .tab-label::after {
+    transform: rotate(90deg);
+  }
+  input#chck1:checked ~ .tab-content {
+    max-height: 3000px;
+    padding: 0;
+    display: block;
+  }
 
 /* ------------------------------------------------------------------ */
 /* Vera fonts */

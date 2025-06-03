@@ -9,7 +9,7 @@ let countyPaths;
 let margin = { top: 0, right: 50, bottom: 10, left: 50 };
 let fullWidth = document.getElementById("map-content").clientWidth;
 let width = fullWidth - margin.left - margin.right;
-let height = 700 - margin.top - margin.bottom;
+let height = 550 - margin.top - margin.bottom;
 
 let zoomLevel = 1.;
 let projection = geoAlbersUsaTerritories.geoAlbersUsaTerritories()
@@ -53,11 +53,25 @@ const zoom = d3.zoom()
     if (!countiesLoaded && zoomLevel > 2.5) {
       loadCounties();
     }
-    if (countyPaths) {
-      countyPaths.style("opacity", zoomLevel > 2.5 ? 1.0 : 0);
-    }    
+    updateCountyVisibility();
     updateMap();
   });
+
+  d3.select("#zoom-reset").on("click", () => {
+    svg.transition()
+      .duration(500)
+      .call(zoom.transform, d3.zoomIdentity.translate(margin.left, margin.top))
+      .on("end", () => {
+          zoomLevel = 1;
+          updateCountyVisibility();
+        });
+    });
+
+function updateCountyVisibility() {
+  if (countyPaths) {
+    countyPaths.style("opacity", zoomLevel > 2.5 ? 1.0 : 0);
+  }
+}
 
 function loadCounties() {
   d3.json("https://cdn.jsdelivr.net/npm/us-atlas@3/counties-10m.json").then(topology => {
@@ -79,7 +93,9 @@ function loadCounties() {
   });
 }
 
-svg.call(zoom);
+svg.call(zoom).on("wheel.zoom", null);
+const initialTransform = d3.zoomIdentity.translate(margin.left, margin.top);
+svg.call(zoom.transform, initialTransform);
 
 const zoomStep = 1.5;
 
@@ -230,7 +246,6 @@ function updateMap() {
     })
     .on("click", (event, d) => {
       const [x, y] = projection([+d.longitude, +d.latitude]);
-
       svg.transition()
         .duration(750)
         .call(
@@ -241,6 +256,11 @@ function updateMap() {
             .translate(-x, -y)
         );
       if (facilityList.length < 5) loadFacilityChart(d.code, facilityMap[d.code].name);
+      const hideTooltip = () => {
+        tooltip.style("opacity", 0);
+        window.removeEventListener("pointermove", hideTooltip);
+      };
+      window.addEventListener("pointermove", hideTooltip);
     })
     .append("title")
     .text(d => d.name);
