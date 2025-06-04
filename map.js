@@ -146,12 +146,14 @@ d3.csv("data/proc/monthly.csv").then(function(data_1) {
     d.active = +d.active;
     d.total = +d.total;
   });
-  d3.csv("data/proc/map/2008-10.csv").then(function(data_2) {
+  d3.csv("data/proc/map/2025-02.csv").then(function(data_2) {
     monthlyData = data_1;
-    document.getElementById("mapSlider").max = monthlyData.length - 1;
-    mapData["2008-10"] = data_2;
+    const mapSlider = document.getElementById("mapSlider");
+    mapSlider.max = monthlyData.length - 1;
+    mapSlider.value = monthlyData.length - 1;
+    mapData["2025-02"] = data_2;
     document.getElementById("startDate").textContent = formatMonthYear("2008-10");
-    updateMap(0);
+    updateMap();
     loadMapData();
     updateChart();
     updateSliderLabels();
@@ -175,6 +177,10 @@ playButton.addEventListener("click", () => {
     interval = null;
     playButton.textContent = "Play";
   } else {
+    if (+mapSlider.value >= +mapSlider.max) {
+      mapSlider.value = 0;
+      mapSlider.dispatchEvent(new Event("input"));
+    }
     interval = setInterval(() => {
       if (+mapSlider.value < +mapSlider.max) {
         mapSlider.value = +mapSlider.value + 1;

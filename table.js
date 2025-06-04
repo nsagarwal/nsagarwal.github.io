@@ -3,12 +3,15 @@ let DEBUG = 0;
 let chart;
 let labels = [];
 let facilityData = [];
-let nationalData = [];
+let facilityDataCounts = [];
+let nationalData = new Map();
+let nationalDataCounts = new Map();
 let availableColumns = [];
 let facilities = [];
 let facilityMap = {};
 let facilityList = [];
 let chartName = "";
+let dateRange = "";
 
 loadNationalChart();
 
@@ -65,7 +68,7 @@ d3.csv("data/proc/facilities.csv").then(function(data) {
   tselect = new TomSelect("#facilitySearch", {
     allowEmptyOption: true,
     placeholder: "Search facilities...",
-    maxOptions: 1000,
+    maxOptions: 1357,
     maxItems: 1
   });
 
@@ -123,18 +126,55 @@ function setupSliders(min, max) {
 function updateSliderLabels() {
   if (monthlyData.length === 0) return;
   const [start, end] = graphSlider.noUiSlider.get().map(Number);
-  document.getElementById('graphSlider-startLabel').textContent = formatMonthYear(monthlyData[start].month);
-  document.getElementById('graphSlider-endLabel').textContent = formatMonthYear(monthlyData[end].month);
+  document.getElementById('graphSlider-startLabel').textContent = (start < monthlyData.length) ? 
+    formatMonthYear(monthlyData[start].month) : "Mar. 2025";
+  document.getElementById('graphSlider-endLabel').textContent = (end < monthlyData.length) ?
+    formatMonthYear(monthlyData[end].month) : "Mar. 2025";
+
+  let dateRange1 = document.getElementById('graphSlider-startLabel').textContent;
+  let dateRange2 = document.getElementById('graphSlider-endLabel').textContent;
+  if (dateRange1 == dateRange2) {
+    dateRange = `${dateRange1}`;
+    if (dateRange1 == "Feb. 2025") {
+      dateRange = `${dateRange1}*`;
+      document.getElementById("footer1").style.display = "block";
+    } else {      
+      document.getElementById("footer1").style.display = "none";
+    }
+  } else {
+    dateRange = `${dateRange1} - ${dateRange2}`;    
+    if (dateRange2 == "Feb. 2025") {
+      dateRange = `${dateRange1} - ${dateRange2}*`;
+      document.getElementById("footer1").style.display = "block";
+    } else {
+      document.getElementById("footer1").style.display = "none";      
+    }
+  }
 }
 
 function loadFacilityChart(code, name) {
   if (DEBUG) console.log("loadFacilityChart called", code, name);
   facilityList.push(code);
-  d3.csv(`data/proc/facilities/${code}.csv`).then(function(data) {
-    facilityData.push(data);
+  d3.csv(`data/proc/facilities/${code}_avg.csv`).then(function(data) {
+    const facilityDataCountsMap = new Map();
+    data.forEach(row => {
+      const { Date, ...rest } = row;
+      facilityDataCountsMap.set(Date, rest);
+    });
+    facilityData.push(facilityDataCountsMap);
     labels = data.map(row => row.Date);
-    availableColumns = Object.keys(data[0]).filter(key => key !== 'Date');
+    availableColumns = Object.keys(data[0]).filter(key => key !== 'Date' && key !== 'N');
     document.getElementById('columnsForm').innerHTML = "";
+
+    d3.csv(`data/proc/facilities/${code}_count.csv`).then(function(data_2) {
+      const facilityDataCountsMap_2 = new Map();
+      data_2.forEach(row => {
+        const { Date, ...rest } = row;
+        facilityDataCountsMap_2.set(Date, rest);
+      });
+      facilityDataCounts.push(facilityDataCountsMap_2);
+    });
+
     populateColumnCheckboxes();
     const index_1 = Math.min(...facilityList.map(i => +facilityMap[i].start));
     const index_2 = Math.max(...facilityList.map(i => +facilityMap[i].end));
@@ -145,16 +185,28 @@ function loadFacilityChart(code, name) {
 
 function loadNationalChart() {
   if (DEBUG) console.log("loadNationalChart called");
-  d3.csv("data/proc/national.csv").then(function(data) {
-    nationalData = data;
-    labels = data.map(row => row.Date);
+  nationalData.clear();
+
+  d3.csv("data/proc/national_avg.csv").then(function(data) {
+    data.forEach(row => {
+      const { Date, ...rest } = row;
+      nationalData.set(Date, rest);
+    });
+    labels = [...nationalData.keys()];
     availableColumns = Object.keys(data[0]).filter(key => key !== 'Date');
     document.getElementById('columnsForm').innerHTML = "";      
+
+    d3.csv("data/proc/national_counts.csv").then(function(data_2) {
+      data_2.forEach(row => {
+        const { Date, ...rest } = row;
+        nationalDataCounts.set(Date, rest);
+      });
+    });
 
     populateColumnCheckboxes();
 
     index_1 = 0;
-    index_2 = 196;
+    index_2 = 197;
 
     setupSliders(index_1, index_2);
     chartName = "National"
@@ -177,12 +229,13 @@ function updateChart() {
   if (chart) chart.destroy();
 
   const [d1, d2] = graphSlider.noUiSlider.get().map(Number);
-  d1_index = +dMap[monthlyData[d1].month];
-  d2_index = +dMap[monthlyData[d2].month];
+  d1_index = (d1 < monthlyData.length) ? +dMap[monthlyData[d1].month] : 99999;
+  d2_index = (d2 + 1 < monthlyData.length) ? +dMap[monthlyData[d2+1].month] : 99999;
+  const d1_index_1 = (d1_index === 0) ? 29 : d1_index;
+
   const visibleLabels = labels.slice(d1_index, d2_index + 1);
   let selectedCols = Array.from(document.querySelectorAll('input[name="col"]:checked'))
                              .map(input => input.value);
-
 
   const fDiv = Array.from({ length: 5 }, (_, i) => document.getElementById(`facility-group-${i}`));
   const fSpan = Array.from({ length: 5 }, (_, i) => document.getElementById(`facility-name-${i}`));
@@ -209,6 +262,7 @@ function updateChart() {
     fButton[i].addEventListener('click', () => {
       facilityList.splice(i, 1);
       facilityData.splice(i, 1);
+      facilityDataCounts.splice(i, 1);
       if (facilityList.length == 0) {
           loadNationalChart();
       } else {
@@ -221,6 +275,9 @@ function updateChart() {
       }
     });
   });
+
+
+  updateSliderLabels();
 
   if (facilityList.length > 1) {
     chartName = "various";
@@ -243,7 +300,7 @@ function updateChart() {
     const datasets = facilityData.flatMap((dataSet, setIndex) =>
       selectedCols.map((col) => ({
         label: col,
-        data: dataSet.slice(d1_index, d2_index).map(row => parseFloat(row[col])),
+        data: [...dataSet.values()].slice(d1_index, d2_index + 1).map(row => parseFloat(row[col])),      
         borderWidth: 2,
         pointRadius: 0,
         fill: false,
@@ -277,10 +334,12 @@ function updateChart() {
               maxTicksLimit: 10,
               callback: function(value, index, ticks) {
                 const rawDate = this.getLabelForValue(value);
-                const date = new Date(rawDate);
+                const parts = rawDate.split("-");
+                const date = new Date(Date.UTC(parts[0], parts[1] - 1, parts[2]));
                 const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", 
                                     "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-                return `${monthNames[date.getMonth()]} ${date.getFullYear()}`;
+                if (date.getUTCDate() !== 1) return null;
+                return `${monthNames[date.getUTCMonth()]} ${date.getUTCFullYear()}`;
               }
             }
           }
@@ -291,7 +350,7 @@ function updateChart() {
           },
           title: {
             display: true,
-            text: "People detained by ICE, 30 Day Rolling Average - " + chartName,
+            text: ["People detained by ICE, 30 Day Rolling Average - " + chartName, dateRange],
             font: {
               size: 18
             }
@@ -308,7 +367,7 @@ function updateChart() {
                 pointStyle: false
               }),
               title: function (context) {
-                const date = new Date(context[0].label);
+                const date = new Date(context[0].label + "T00:00:00");
                 dateStr = date.toLocaleDateString("en-US", {
                   year: "numeric",
                   month: "short",
@@ -317,7 +376,7 @@ function updateChart() {
                 return [dateStr, context[0].dataset.label, ""];
               },
               label: function(context) {
-                return `${facilityMap[facilityList[context.datasetIndex]].name}: ${context.formattedValue}`;
+                return `${facilityMap[facilityList[context.datasetIndex]].name}: ${facilityDataCounts[context.datasetIndex].get(context.label)[context.dataset.label]}`;
               }
             }
           }   
@@ -333,16 +392,26 @@ function updateChart() {
     }
 
     chartName = facilityMap[facilityList[0]].name;
-    const datasets = selectedCols.map((col, i) => ({
-      label: col,
-      data: facilityData[0].slice(d1_index, d2_index).map(row => parseFloat(row[col])),
-      borderWidth: 2,
-      pointRadius: 0,
-      fill: false,
-      yAxisID: "y",
-      tension: 0.3,
-      borderColor: getColor(col)
-    }));
+    const datasets = [
+      ...selectedCols.map((col, i) => ({
+        label: col,
+        data: [...facilityData[0].values()].slice(d1_index, d2_index + 1).map(row => parseFloat(row[col])),      
+        borderWidth: 2,
+        pointRadius: 0,
+        fill: false,
+        yAxisID: "y",
+        tension: 0.3,
+        borderColor: getColor(col)
+      })),
+      {
+        label: "N",
+        type: "bar",
+        data: [...facilityData[0].values()].slice(d1_index, d2_index + 1).map(row => parseInt(row["N"])),
+        yAxisID: "y",
+        backgroundColor: "#bbb",
+        borderWidth: 0
+      }
+    ];
 
     const ctx = document.getElementById('graph-element').getContext('2d');
 
@@ -368,10 +437,12 @@ function updateChart() {
               maxTicksLimit: 10,
               callback: function(value, index, ticks) {
                 const rawDate = this.getLabelForValue(value);
-                const date = new Date(rawDate);
+                const parts = rawDate.split("-");
+                const date = new Date(Date.UTC(parts[0], parts[1] - 1, parts[2]));
                 const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", 
                                     "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-                return `${monthNames[date.getMonth()]} ${date.getFullYear()}`;
+                if (date.getUTCDate() !== 1) return null;
+                return `${monthNames[date.getUTCMonth()]} ${date.getUTCFullYear()}`;
               }
             }
           }
@@ -382,7 +453,7 @@ function updateChart() {
           },
           title: {
             display: true,
-            text: "People detained by ICE, 30 Day Rolling Average - " + chartName,
+            text: ["People detained by ICE, 30 Day Rolling Average - " + chartName, dateRange],
             font: {
               size: 18
             }
@@ -399,7 +470,7 @@ function updateChart() {
                 pointStyle: false
               }),
               title: function (context) {
-                const date = new Date(context[0].label);
+                const date = new Date(context[0].label + "T00:00:00");
                 dateStr = date.toLocaleDateString("en-US", {
                   year: "numeric",
                   month: "short",
@@ -408,7 +479,8 @@ function updateChart() {
                 return [dateStr, chartName, ""];
               },
               label: function(context) {
-                return `${context.dataset.label}: ${context.formattedValue}`;
+                if (context.dataset.label === "N") return null;
+                return `${context.dataset.label}: ${facilityDataCounts[0].get(context.label)[context.dataset.label]}`;
               }
             }          
           }        
@@ -418,10 +490,9 @@ function updateChart() {
 
   } else {
     chartName = "National";
-
     const datasets = selectedCols.map((col, i) => ({
       label: col,
-      data: nationalData.slice(d1_index, d2_index).map(row => parseFloat(row[col])),
+      data: [...nationalData.values()].slice(d1_index, d2_index + 1).map(row => parseFloat(row[col])),
       borderWidth: 2,
       pointRadius: 0,
       fill: false,
@@ -460,17 +531,22 @@ function updateChart() {
             title: {
               display: true,
               text: 'Book-ins/outs'
-            }          
+            },
+            grid: {
+              display: false
+            }                      
           },
           x: {
             ticks: {
               maxTicksLimit: 10,
               callback: function(value, index, ticks) {
                 const rawDate = this.getLabelForValue(value);
-                const date = new Date(rawDate);
+                const parts = rawDate.split("-");
+                const date = new Date(Date.UTC(parts[0], parts[1] - 1, parts[2]));
                 const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", 
                                     "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-                return `${monthNames[date.getMonth()]} ${date.getFullYear()}`;
+                if (date.getUTCDate() !== 1) return null;
+                return `${monthNames[date.getUTCMonth()]} ${date.getUTCFullYear()}`;
               }
             }
           }
@@ -481,7 +557,7 @@ function updateChart() {
           },
           title: {
             display: true,
-            text: "People detained by ICE, 30 Day Rolling Average - " + chartName,
+            text: ["People detained by ICE, 30 Day Rolling Average - " + chartName, dateRange],
             font: {
               size: 18
             }
@@ -498,7 +574,7 @@ function updateChart() {
                 pointStyle: false
               }),
               title: function (context) {
-                const date = new Date(context[0].label);
+                const date = new Date(context[0].label  + "T00:00:00");
                 dateStr = date.toLocaleDateString("en-US", {
                   year: "numeric",
                   month: "short",
@@ -507,7 +583,7 @@ function updateChart() {
                 return [dateStr, chartName, ""];
               },
               label: function(context) {
-                return `${context.dataset.label}: ${context.formattedValue}`;
+                return `${context.dataset.label}: ${nationalDataCounts.get(context.label)[context.dataset.label]}`;
               }
             }          
           }        

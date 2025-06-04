@@ -8,24 +8,36 @@ os.makedirs("data/proc/facilities", exist_ok=True)
 os.makedirs("data/proc/map", exist_ok=True)
 
 # national.csv => 
-#	national.csv
+#   national.csv
 X = pd.read_csv("data/raw/national.csv")
 X = X[['date','midnight_count_unique_people_ma','daily_count_unique_people_ma','book_in_count_ma','book_out_count_ma']]
 for col in X.columns :
     if col == "date" : continue
     X[col] = X[col].fillna(0.)
     X[col] = round(X[col])
+    X.loc[X.index[0:29], col] = None
 X.columns = ['Date', 'Midnight population', '24-hour population', 'Book-ins', 'Book-outs']
-X.to_csv("data/proc/national.csv", index = False)
+X.to_csv("data/proc/national_avg.csv", index = False)
+
+# national.csv => 
+#   national.csv
+X = pd.read_csv("data/raw/national.csv")
+X = X[['date','midnight_count_unique_people','daily_count_unique_people','book_in_count','book_out_count']]
+for col in X.columns :
+    if col == "date" : continue
+    X[col] = X[col].fillna(0.)
+    X[col] = round(X[col]).astype(int).apply(lambda x: f"{x:,}")
+X.columns = ['Date', 'Midnight population', '24-hour population', 'Book-ins', 'Book-outs']
+X.to_csv("data/proc/national_counts.csv", index = False)
 
 # monthly_freq.csv 
 # facilities/[XXXXXX].csv =>
-#	facilities/[XXXXXX].csv
-# 	facilities.csv
+#   facilities/[XXXXXX].csv
+#   facilities.csv
 X = pd.read_csv("data/raw/monthly_freq.csv")
 X = X[['detention_facility_code', 'name', 'city', 'state', 'type_detailed']].drop_duplicates(['detention_facility_code'])
 X['start'] = 0
-X['end'] = 196
+X['end'] = 197
 Q = X[~X['city'].isna()]
 X.loc[Q.index, 'city'] = Q.apply(lambda x : x['city'] + ", ", axis = 1)
 X['city'] = X['city'].fillna("")
@@ -43,20 +55,34 @@ def func(date) :
 
 for index, row in X.iterrows() :
     Y = pd.read_csv("data/raw/facilities/" + row['detention_facility_code'] + ".csv")
-    Y = Y[['date', 'midnight_count_unique_people_ma', 'daily_count_unique_people_ma']]
+    Y = Y[['date', 'midnight_count_unique_people_ma', 'daily_count_unique_people_ma', 'daily_count_unique_people']]
     for col in Y.columns :
         if col == "date" : continue
         Y[col] = Y[col].fillna(0.)
         Y[col] = round(Y[col])
-    Y.columns = ['Date', 'Midnight population', '24-hour population']
-    Y.to_csv("data/proc/facilities/" + row['detention_facility_code'] + ".csv", index = False)    
-    Y = Y[(Y['Midnight population'] > 0.) | (Y['24-hour population'] > 0.)]
+        if (col != "daily_count_unique_people") : Y.loc[Y.index[0:29], col] = None
+    Y.columns = ['Date', 'Midnight population', '24-hour population', 'N']
+    Y['N'] = Y['N'].astype(int)
+    Y.to_csv("data/proc/facilities/" + row['detention_facility_code'] + "_avg.csv", index = False)    
+
+#   Y = Y[(Y['Midnight population'] > 0.) | (Y['24-hour population'] > 0.)]
+    Y = Y[Y['N'] > 0]
     if Y.shape[0] > 0 :         
         X.loc[index, 'start'] = func(pd.to_datetime(Y.iloc[0]['Date']))
-        X.loc[index, 'end'] = func(pd.to_datetime(Y.iloc[-1]['Date']))
+        X.loc[index, 'end'] = func(pd.to_datetime(Y.iloc[-1]['Date'])) + 1
+            
+    
+    Y = pd.read_csv("data/raw/facilities/" + row['detention_facility_code'] + ".csv")
+    Y = Y[['date', 'midnight_count_unique_people', 'daily_count_unique_people']]
+    for col in Y.columns :
+        if col == "date" : continue
+        Y[col] = Y[col].fillna(0.)
+        Y[col] = round(Y[col]).astype(int).apply(lambda x: f"{x:,}")
+    Y.columns = ['Date', 'Midnight population', '24-hour population']
+    Y.to_csv("data/proc/facilities/" + row['detention_facility_code'] + "_count.csv", index = False)    
 
 X = X.sort_values('name')
-X.to_csv("data/proc/facilities.csv", index = False)        
+X.to_csv("data/proc/facilities.csv", index = False)
 
 # monthly_freq.csv =>
 # 	map/YYYYMM.csv
