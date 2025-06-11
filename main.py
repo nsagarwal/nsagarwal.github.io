@@ -93,7 +93,7 @@ X.columns = ['code', 'name', 'month', 'latitude', 'longitude', 'N']
 
 X['latitude'] = X['latitude'].round(3)
 X['longitude'] = X['longitude'].round(3)
-X['N'] = X['N'].round().astype(int)
+X['N'] = X['N'].round(3)
 
 def size(N) :
     if N <= 10 : return 2
@@ -117,7 +117,7 @@ for month in sorted(X['month'].drop_duplicates()) :
 X = pd.read_csv("data/raw/monthly_freq.csv")
 Z = pd.DataFrame(columns = ['active', 'total'])
 Z.index.name = 'month'
-for month in sorted(list(X['month'].drop_duplicates())) :
+for month in sorted(X['month'].drop_duplicates()) :
     Y = X[X['month'] == month]
     Y = Y[Y['daily_unique_avg'] > 0.]
     Z.loc[month, 'active'] = Y.shape[0]
@@ -135,4 +135,12 @@ Q.columns = ['index', 'date']
 Q = Q[['date', 'index']]
 Q.to_csv("data/proc/dmap.csv", index = False)
 
+X = pd.read_csv("data/proc/monthly.csv")
+X = X.set_index('month')
+
+for file in sorted(glob.glob("data/proc/map/*")) :
+    month = re.search(r"(\d\d\d\d-\d\d)", file).group(1)
+    Y = pd.read_csv(file)
+    assert(X.loc[month]['total'] - Y.shape[0] == 0)
+    assert(X.loc[month]['active'] - Y[Y['N'] > 0.].shape[0] == 0)
 

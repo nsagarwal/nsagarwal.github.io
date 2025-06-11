@@ -282,8 +282,8 @@ function updateMap() {
 
   document.getElementById("selectedDate_1").textContent = formatMonthYear(monthlyData[i].month);
   document.getElementById("selectedDate_2").textContent = formatMonthYear(monthlyData[i].month);
-  document.getElementById("activeFacilities").textContent = monthlyData[i].active.toLocaleString();
-  document.getElementById("totalFacilities").textContent = monthlyData[i].total.toLocaleString();
+//  document.getElementById("activeFacilities").textContent = monthlyData[i].active.toLocaleString();
+//  document.getElementById("totalFacilities").textContent = monthlyData[i].total.toLocaleString();
 
   const range = sizeSlider.noUiSlider.get().map(val => Number(val.replace(/,/g, '')));
   map.selectAll("circle").remove();
@@ -298,6 +298,9 @@ function updateMap() {
   if (facilityTypeSelect.items.length > 0) {
     filteredData = filteredData.filter(d => ff.includes(d.code));
   }
+
+  document.getElementById("activeFacilities").textContent = filteredData.filter(d => d.N > 0.).length.toLocaleString();
+  document.getElementById("totalFacilities").textContent = filteredData.length.toLocaleString();
 
   map.selectAll("circle")
     .data(filteredData)
@@ -325,7 +328,7 @@ function updateMap() {
               ${facilityMap[d.code].place}<br>
               ${formatMonthYear(monthlyData[i].month)}<br>
               ${facilityMap[d.code].type}<br>          
-              Monthly average 24-hour population: ${(+d.N).toLocaleString()}`);
+              Monthly average 24-hour population: ${Math.round(+d.N).toLocaleString()}`);
     })
     .on("mousemove", event => {
       tooltip
