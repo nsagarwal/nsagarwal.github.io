@@ -3,7 +3,7 @@ let monthlyData = [];
 let countiesLoaded = false;
 let countyPaths;
 
-const ts = new TomSelect('#facilityType', {
+const facilityTypeSelect = new TomSelect('#facilityType', {
   plugins: [],
   persist: false,
   create: false,
@@ -26,63 +26,57 @@ const ts = new TomSelect('#facilityType', {
   self.control_input.addEventListener('paste', (e) => e.preventDefault());
   self.control_input.addEventListener('input', (e) => e.preventDefault());
 
-    self.onOptionSelect = function(e, option) {
-      e.preventDefault();
-    }
-    self.on('dropdown_open', () => {
-        if (self.dropdown._customToggleListenerAttached) return;
+  self.onOptionSelect = function(e, option) {
+    e.preventDefault();
+  }
+  self.on('dropdown_open', () => {
+      if (self.dropdown._customToggleListenerAttached) return;
 
-        self.dropdown.addEventListener('pointerdown', (evt) => {
-          const option = evt.target.closest('.option');
-          if (!option) return;
+      self.dropdown.addEventListener('pointerdown', (evt) => {
+        const option = evt.target.closest('.option');
+        if (!option) return;
 
-          evt.preventDefault();
-          const value = option.getAttribute('data-value');
-          const isSelected = self.items.includes(value);
+        evt.preventDefault();
 
-          if (isSelected) {
-            self.removeItem(value);
-          } else {
-            self.addItem(value);
-          }
-          ts_refresh(self);
-        });
+        const value = option.getAttribute('data-value');
+        self.items.includes(value) ? self.removeItem(value) : self.addItem(value);
 
-        self.dropdown._customToggleListenerAttached = true;
+        facilityTypeRefresh(self);
       });
-    }
+
+      self.dropdown._customToggleListenerAttached = true;
+    });
+  }
 });
 
-ts.on('dropdown_close', () => {
+facilityTypeSelect.on('dropdown_close', () => {
   const options = document.querySelectorAll('.ts-dropdown .option.active');
   options.forEach(option => option.classList.remove('active'));
 });
 
 
-function ts_refresh(tinst) {
-  if (tinst.items.length === 0) {
-    tinst.settings.placeholder = " Select facility types...";            
-  } else if (tinst.items.length === 1) {
-    tinst.settings.placeholder = "1 facility type selected";            
+function facilityTypeRefresh(select) {
+  const len = select.items.length;
+  if (len === 0) {
+    select.settings.placeholder = " Select facility types...";            
+  } else if (len === 1) {
+    select.settings.placeholder = "1 facility type selected";            
   } else {
-    tinst.settings.placeholder = tinst.items.length + " facility types selected";                        
+    select.settings.placeholder = len + " facility types selected";                        
   }
-  tinst.control_input.setAttribute('placeholder', tinst.settings.placeholder);
-  tinst.refreshState();
-  tinst.refreshOptions(false);
+  select.control_input.setAttribute('placeholder', select.settings.placeholder);
+  select.refreshState();
+  select.refreshOptions(false);
 
- const btn = document.getElementById('facilityTypeClear');
-  if (tinst.items.length === 0) {
-    btn.style.visibility = 'hidden';
-  } else {
-    btn.style.visibility = 'visible';
-  }
+  const but = document.getElementById('facilityTypeClear');
+  but.style.visibility = len === 0 ? 'hidden' : 'visible';
+
   updateMap();
 }
 
 document.getElementById('facilityTypeClear').addEventListener('click', () => {
-  ts.clear();
-  ts_refresh(ts);
+  facilityTypeSelect.clear();
+  facilityTypeRefresh(facilityTypeSelect);
 });
 
 // ------------------------------------------------------------------------------------------------
@@ -202,8 +196,8 @@ noUiSlider.create(sizeSlider, {
   step: 1,
   tooltips: true,
   format: {
-    to: value => Math.round(value),
-    from: value => Number(value)
+    to: value => Math.round(value).toLocaleString(),
+    from: value => Number(value.replace(/,/g, ''))
   }
 });
 sizeSlider.noUiSlider.on("update", (values, handle) => {
@@ -288,20 +282,20 @@ function updateMap() {
 
   document.getElementById("selectedDate_1").textContent = formatMonthYear(monthlyData[i].month);
   document.getElementById("selectedDate_2").textContent = formatMonthYear(monthlyData[i].month);
-  document.getElementById("activeFacilities").textContent = monthlyData[i].active;
-  document.getElementById("totalFacilities").textContent = monthlyData[i].total;
+  document.getElementById("activeFacilities").textContent = monthlyData[i].active.toLocaleString();
+  document.getElementById("totalFacilities").textContent = monthlyData[i].total.toLocaleString();
 
-  const range = sizeSlider.noUiSlider.get();
+  const range = sizeSlider.noUiSlider.get().map(val => Number(val.replace(/,/g, '')));
   map.selectAll("circle").remove();
 
   const tooltip = d3.select("#tooltip");
 
   const ff = Object.entries(facilityMap)
-    .filter(([key, val]) => ts.items.includes(val.type))
+    .filter(([key, val]) => facilityTypeSelect.items.includes(val.type))
     .map(([key, val]) => key);
 
   filteredData = mapData[monthlyData[i].month].filter(d => +d.N >= +range[0] && +d.N <= +range[1]);
-  if (ts.items.length > 0) {
+  if (facilityTypeSelect.items.length > 0) {
     filteredData = filteredData.filter(d => ff.includes(d.code));
   }
 

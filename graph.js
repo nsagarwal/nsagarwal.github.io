@@ -206,7 +206,7 @@ function loadNationalChart() {
       nationalData.set(Date, rest);
     });
     labels = [...nationalData.keys()];
-    availableColumns = Object.keys(data[0]).filter(key => key !== 'Date');
+    availableColumns = Object.keys(data[0]).filter(key => key !== 'Date' && key !== 'N');
     document.getElementById('columnsForm').innerHTML = "";      
 
     d3.csv("data/proc/national_counts.csv").then(function(data_2) {
@@ -514,6 +514,22 @@ function updateChart() {
       borderColor: getColor(col)
     }));
 
+
+    if (d2 - d1 <= 12) {
+      datasets.push(
+      {
+        label: "N",
+        type: "bar",
+        data: [...nationalData.values()].slice(d1_index, d2_index + 1).map(row => parseInt(row["N"])),
+        yAxisID: "y",
+        backgroundColor: "#bbb",
+        borderWidth: 0
+      }
+        );
+      console.log(datasets);
+    }
+
+
     datasets.forEach(set => {
       if (set["label"] == "Book-ins") set["yAxisID"] = "y1";
       if (set["label"] == "Book-outs") set["yAxisID"] = "y1";
@@ -596,6 +612,7 @@ function updateChart() {
                 return [dateStr, chartName, ""];
               },
               label: function(context) {
+                if (context.dataset.label === "N") return null;
                 return `${context.dataset.label}: ${nationalDataCounts.get(context.label)[context.dataset.label]}`;
               }
             }          
