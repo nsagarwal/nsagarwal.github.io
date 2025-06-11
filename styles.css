@@ -1,3 +1,45 @@
+.facilityType-filter .ts-control input {
+  caret-color: transparent;  /* hides the blinking cursor */
+}
+
+.facilityType-filter label {
+  display: block;
+  margin-bottom: 6px; /* spacing below label */
+  margin-left: 20px;
+}
+
+.controls-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.controls-row .ts-control {
+  min-width: 200px; /* or whatever width you want */
+}
+
+button.clear {
+  visibility: hidden;
+  background: #fdf6f1;
+  border-radius: 2px;
+  border: 0px solid #aaa;
+  color: black;
+  margin: 0;
+  padding: 0 2px;
+  width: 6px;
+  cursor: pointer;
+  height: 20px;
+  font-size: 12pt;
+  position: relative;
+  top: -3px; /* move text 2 pixels up */
+}
+
+button.clear:hover {
+  background: #fdf6f1;
+  color:red;
+}
+
+
 div {
 //  border: 1px solid red;
 }
@@ -33,7 +75,7 @@ h3 {
 /* graph slider */
 
 .graphSlider-container {
-  width: 300px;
+  width: 700px;
   margin: 30px auto;
 }
 
@@ -125,12 +167,9 @@ ul li.legend-inactive::before {
   background-color: var(--check-color);
 }
 
-
-
 .slider-group {
   display: flex;
   flex-direction: column;
-  margin-left: auto;
   align-items: center;
   gap: 8px;
 }
@@ -152,6 +191,25 @@ ul li.legend-inactive::before {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  background-color: transparent;
+}
+
+.ts-dropdown .item:hover {
+  background-color: #dbeafe; /* light blue */
+  font-weight: bold;
+}
+.ts-control .item:focus {
+  background-color: transparent;
+  outline: none;
+}
+
+
+
+.ts-dropdown .option.selected::after {
+  content: "✔";
+  float: right;
+  color: #2563eb; /* blue checkmark */
+  padding-right: 0.5em;
 }
 
 .graph-top-panel {
@@ -235,9 +293,9 @@ ul li.legend-inactive::before {
 
 .map-top-controls {
   display: flex;
-  gap: 16px;
-  align-items: center;
-  margin-bottom: 0px;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 2rem;
 }
 
 .map-element-container {
@@ -399,6 +457,12 @@ button.x {
   height: 25px;
   font-size: 12pt;  
 }
+
+button.x:hover {
+  background: #fff7f0;
+  color:red;
+}
+
 
 p {
   font-family: Whyte Book;

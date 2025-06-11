@@ -3,6 +3,88 @@ let monthlyData = [];
 let countiesLoaded = false;
 let countyPaths;
 
+const ts = new TomSelect('#facilityType', {
+  plugins: [],
+  persist: false,
+  create: false,
+  maxItems: null,
+  placeholder: ' Select facility types...',
+  hideSelected: false,
+  closeAfterSelect: false,
+  searchField: [],
+  render: {
+    item: () => {
+      return '<span style="display:none">&#8203;</span>';
+    }
+  },
+  onInitialize() {
+    const self = this;
+    self.control_input.addEventListener('keydown', (e) => {
+        e.preventDefault();
+        });
+
+  self.control_input.addEventListener('paste', (e) => e.preventDefault());
+  self.control_input.addEventListener('input', (e) => e.preventDefault());
+
+    self.onOptionSelect = function(e, option) {
+      e.preventDefault();
+    }
+    self.on('dropdown_open', () => {
+        if (self.dropdown._customToggleListenerAttached) return;
+
+        self.dropdown.addEventListener('pointerdown', (evt) => {
+          const option = evt.target.closest('.option');
+          if (!option) return;
+
+          evt.preventDefault();
+          const value = option.getAttribute('data-value');
+          const isSelected = self.items.includes(value);
+
+          if (isSelected) {
+            self.removeItem(value);
+          } else {
+            self.addItem(value);
+          }
+          ts_refresh(self);
+        });
+
+        self.dropdown._customToggleListenerAttached = true;
+      });
+    }
+});
+
+ts.on('dropdown_close', () => {
+  const options = document.querySelectorAll('.ts-dropdown .option.active');
+  options.forEach(option => option.classList.remove('active'));
+});
+
+
+function ts_refresh(tinst) {
+  if (tinst.items.length === 0) {
+    tinst.settings.placeholder = " Select facility types...";            
+  } else if (tinst.items.length === 1) {
+    tinst.settings.placeholder = "1 facility type selected";            
+  } else {
+    tinst.settings.placeholder = tinst.items.length + " facility types selected";                        
+  }
+  tinst.control_input.setAttribute('placeholder', tinst.settings.placeholder);
+  tinst.refreshState();
+  tinst.refreshOptions(false);
+
+ const btn = document.getElementById('facilityTypeClear');
+  if (tinst.items.length === 0) {
+    btn.style.visibility = 'hidden';
+  } else {
+    btn.style.visibility = 'visible';
+  }
+  updateMap();
+}
+
+document.getElementById('facilityTypeClear').addEventListener('click', () => {
+  ts.clear();
+  ts_refresh(ts);
+});
+
 // ------------------------------------------------------------------------------------------------
 // create geography
 
@@ -214,8 +296,17 @@ function updateMap() {
 
   const tooltip = d3.select("#tooltip");
 
+  const ff = Object.entries(facilityMap)
+    .filter(([key, val]) => ts.items.includes(val.type))
+    .map(([key, val]) => key);
+
+  filteredData = mapData[monthlyData[i].month].filter(d => +d.N >= +range[0] && +d.N <= +range[1]);
+  if (ts.items.length > 0) {
+    filteredData = filteredData.filter(d => ff.includes(d.code));
+  }
+
   map.selectAll("circle")
-    .data(mapData[monthlyData[i].month].filter(d => +d.N >= +range[0] && +d.N <= +range[1]))
+    .data(filteredData)
     .enter()
     .append("circle")
     .attr("cx", d => {

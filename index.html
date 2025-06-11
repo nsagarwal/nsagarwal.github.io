@@ -12,7 +12,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/nouislider@15.7.1/dist/nouislider.min.js"></script>
 
 	<link rel="stylesheet" href="styles.css">
-	<script src="table.js" defer></script>
+	<script src="graph.js" defer></script>
 	<script src="map.js" defer></script>
 </head>
 <body>
@@ -34,6 +34,7 @@
 	</center>
 	<br><br>
 
+
 	<div class="map-container">
 		<div class="map-left-panel">
 			<div id="activeFacilities" style="font-size: 21px;line-height: 120%;color: #666;"></div>
@@ -49,9 +50,25 @@
 		</div>
 		<div class="map-right-panel">
 			<div class="map-top-controls">
-				<div class="slider-group">
+
+<div class="facilityType-filter">
+  <label for="facilityType">Filter by facility type:</label>
+  <div class="controls-row">
+    <button class="clear" id="facilityTypeClear">x</button>
+    <select id="facilityType" multiple>
+      <option value="Dedicated">Dedicated</option>
+      <option value="Family / Children">Family / Children</option>
+      <option value="Federal">Federal</option>
+      <option value="Hold">Hold</option>
+      <option value="Hotel">Hotel</option>
+      <option value="Medical">Medical</option>
+      <option value="Non-dedicated">Non-dedicated</option>
+      <option value="Other">Other</option>
+    </select>
+  </div>
+</div>				<div class="slider-group">
 					<label for="sizeSlider">Filter by population size:</label>
-					<div id="sizeSlider" style="width: 200px;"></div>
+					<div id="sizeSlider" style="width: 200px; margin-top: 12px"></div>
 				</div>
 			</div>
 			<div class="map-element-container" style="margin-top: 20px;">
@@ -75,7 +92,7 @@
 			<div class="graph-element-container">
 				<div><canvas id="graph-element"></canvas></div>
 				<div class="graphSlider-container">
-					<div id="graphSlider" style="margin: 30px auto; width: 300px;"></div>
+					<div id="graphSlider" style="margin: 30px auto; width: 700px;"></div>
 					<div class="graphSlider-labels">
 						<span id="graphSlider-startLabel">Sep. 2008</span>
 						<span id="graphSlider-endLabel">Jan. 2025</span>

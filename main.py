@@ -82,6 +82,9 @@ for index, row in X.iterrows() :
     Y.to_csv("data/proc/facilities/" + row['detention_facility_code'] + "_count.csv", index = False)    
 
 X = X.sort_values('name')
+Y = pd.read_csv("facility_type_grouped.csv")
+X = pd.merge(X, Y, left_on = 'type_detailed', right_on = 'type_detailed', how = 'left')
+X = X.drop('type_detailed', axis = 1)
 X.to_csv("data/proc/facilities.csv", index = False)
 
 # monthly_freq.csv =>

@@ -1,0 +1,25 @@
+﻿type_detailed,type
+DIGSA,Dedicated
+CDF,Dedicated
+SPC,Dedicated
+DIGSA / IGSA,Dedicated
+CDF / DIGSA,Dedicated
+JUVENILE,Family/children
+FAMILY STAGING,Family/children
+FAMILY,Family/children
+DIGSA / FAMILY,Family/children
+USMS IGA,Federal
+BOP,Federal
+USMS CDF,Federal
+IGSA / USMS IGA,Federal
+DOD,Federal
+MOC,Federal
+USMS CDF / USMS IGA,Federal
+HOLD,Hold
+STAGING,Hold
+HOTEL,Hotel
+HOSPITAL,Medical
+IGSA,Non-dedicated
+UNKNOWN,Other
+OTHER,Other
+TAP-ICE,Other

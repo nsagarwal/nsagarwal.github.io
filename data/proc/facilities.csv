@@ -1,1358 +1,1358 @@
-detention_facility_code,name,state,type_detailed,start,end,place
-RICRANS,"ACI, Cranston RI",RI,IGSA,77,78,"Cranston, RI"
-AZDCTUC,AZ Dpt Corrections Tucson,AZ,IGSA,6,7,"Tucson, AZ"
-IWAHOLD,AZ Rem Op Coord Center (AROCC),AZ,HOLD,15,197,"Mesa, AZ"
-ANWHMMN,Abbott Northwestern Hosp,MN,HOSPITAL,174,175,"Minneapolis, MN"
-ABTHOLD,Abilene Hold Room,TX,HOLD,56,86,"Abilene, TX"
-ABRMCTX,Abilene Regional Med Ctr,TX,HOSPITAL,144,145,"Abilene, TX"
-ABRXSPA,Abraxas Academy Detention Center,PA,JUVENILE,67,189,"Morgantown, PA"
-ADACOID,Ada County Jail,ID,IGSA,0,130,"Boise, ID"
-ADAIRKY,Adair County Regional Jail,KY,OTHER,123,124,"Columbia, KY"
-ADAMSWA,Adams County,WA,IGSA,0,137,"Ritzville, WA"
-ADAMSMS,Adams County Det Center,MS,DIGSA,128,197,"Natchez, MS"
-ADAMSCO,Adams County Jail,CO,IGSA,12,18,"Brighton, CO"
-ADDCOVT,Addison County Jail,VT,IGSA,0,40,"Middlebury, VT"
-ADLNTCA,Adelanto ICE Processing Center,CA,CDF / DIGSA,34,197,"Adelanto, CA"
-NYADIRC,"Adirondack CF, Raybrook",NY,OTHER,133,134,"Ray Brook, NY"
-ADVHBCA,Adventist Health Bakersfield,CA,HOSPITAL,180,197,"Bakersfield, CA"
-ADVHDCA,Adventist Health Delano,CA,HOSPITAL,190,194,"Delano, CA"
-AGAHOLD,Agana INS,GU,HOLD,11,191,"Hagatna, GU"
-AGC,Aguadilla SPC,PR,HOLD,0,197,"Aguadilla, PR"
-AIRHOPR,"Airport Hotel, Saj.",PR,HOTEL,0,175,"Isla Verde, PR"
-ALAMCNC,Alamance Co. Det. Facility,NC,IGSA,0,197,"Graham, NC"
-ALAMOTX,Alamo Police Dept.,TX,UNKNOWN,69,157,"Alamo, TX"
-ALAMOCO,Alamosa County Jail,CO,UNKNOWN,93,136,"Alamosa, CO"
-ALMHOLD,Alamosa Holdroom,CO,HOLD,24,194,"Alamosa, CO"
-ALBCONY,Albany County Jail,NY,USMS IGA,0,126,"Albany, NY"
-ALBHOLD,Albany Holdroom,NY,HOLD,86,197,"Latham, NY"
-ALBEMVA,Albemarle-Charlottesville,VA,IGSA,31,71,"Charlottesville, VA"
-ABQHOLD,Albuquerque Hold Room,NM,HOLD,7,197,"Albuquerque, NM"
-ALEXAVA,Alexandria City Jail,VA,USMS IGA,3,183,"Alexandria, VA"
-ALEXAAL,Alexandria City Jail,VA,UNKNOWN,102,103,"Alexandria, VA"
-JENATLA,Alexandria Staging Facility,LA,STAGING,73,197,"Alexandria, LA"
-BHCALCA,Alhambra BHC Hospital,CA,HOSPITAL,0,76,"Rosemead, CA"
-ALHAMCA,Alhambra City Jail,CA,USMS IGA,0,188,"Alhambra, CA"
-ALLEGNY,Allegany County Jail,NY,IGSA,0,148,"Belmont, NY"
-ALLEGPA,Allegheny Co. Jail,PA,USMS IGA,0,88,"Pittsburgh, PA"
-ALLENIN,Allen County Jail,IN,USMS IGA,136,165,"Ft. Wayne, IN"
-APPSCLA,Allen Parish Public Safety Complex,LA,IGSA,91,197,"Oberlin, LA"
-BOPALM,Allenwood (Med) FCI,PA,BOP,0,170,"White Deer, PA"
-APIBHCA,Alvarado Parkway Institute,CA,HOSPITAL,76,189,"La Mesa, CA"
-AMTHOLD,Amarillo Hold Room,TX,HOLD,53,197,"Amarillo, TX"
-AGMDCCA,Anaheim Global Medical Center,CA,HOSPITAL,81,194,"Anaheim, CA"
-ANCHOAK,Anchorage Jail,AK,USMS IGA,0,197,"Anchorage, AK"
-ANCHOLD,Anchorage Sub-Office Hold Room,AK,HOLD,144,173,"Anchorage, AK"
-ANDERSC,Anderson County Det Center,SC,OTHER,147,190,"Anderson, SC"
-ANDRWTX,Andrews Sherrif's Office Co Jail,TX,OTHER,111,122,"Andrews, TX"
-AKPSYNJ,Anne Klein Phsychiatric Institute,NJ,HOSPITAL,43,60,"W. Trenton, NJ"
-FIPCAGA,Annex Folkston IPC,GA,DIGSA,115,197,"Folkston, GA"
-ANJUVMN,Anoka Co. Juvenile Center,MN,JUVENILE,8,22,"Lino Lakes, MN"
-ANSGHTX,Anson General Hospital,TX,HOSPITAL,150,185,"Anson, TX"
-APACHAZ,Apache Co. Jail,AZ,USMS IGA,3,60,"St Johns, AZ"
-ARAPACO,Arapahoe County Jail,CO,IGSA,127,133,"Littleton, CO"
-AZSVCPC,Arizona Service Prison Complex,AZ,UNKNOWN,83,85,"Phoenix, AZ"
-AZSPFLO,Arizona State Prison Comp,AZ,UNKNOWN,137,138,"Florence, AZ"
-ARLCOVA,Arlington Co Jail,VA,USMS IGA,0,40,"Arlington, VA"
-AROOSME,Aroostook County Jail,ME,USMS IGA,0,140,"Houlton, ME"
-ARRMCCA,Arrowhead Regional Med Center,CA,HOSPITAL,68,196,"Colton, CA"
-ARTESNM,Artesia City Jail,NM,OTHER,122,178,"Artesia, NM"
-AFRC,Artesia Family Residential Center,NM,FAMILY,68,160,"Artesia, NM"
-ARTSINM,Artesia Law Enforcement Center,NM,UNKNOWN,96,97,"Artesia, NM"
-ASWHRTX,Ascension Seton Williams Hosp,TX,HOSPITAL,172,176,"Round Rock, TX"
-ASHECNC,Ashe County Jail,NC,UNKNOWN,57,106,"Jefferson, NC"
-ATTHOLD,"Athens, TX Hold Room",TX,HOLD,105,194,"Athens, TX"
-ATLHOLD,Atlanta Dist. Hold Rm,GA,HOLD,0,197,"Atlanta, GA"
-ATLANGA,Atlanta Pretrial Detn Ctr,GA,USMS IGA,0,196,"Atlanta, GA"
-BOPATL,Atlanta U.S. Pen.,GA,UNKNOWN,196,197,"Atlanta, GA"
-ASHRSFL,Atlantic Shores Hospital,FL,HOSPITAL,26,192,"Fort Lauderdale, FL"
-AURORCO,Aurora City Jail,CO,IGSA,10,191,"Aurora, CO"
-AUSHOLD,Austin DRO Hold Room,TX,HOLD,19,197,"Austin, TX"
-AVPARLA,Avoyelles Parish Prison,LA,IGSA,41,46,"Marksville, LA"
-BIINCCO,"BI Incororated, GEO Group Company",CO,UNKNOWN,195,196,"Aurora, CO"
-BSCORTX,BSCC Airpark Unit,TX,BOP,16,51,"Big Spring, TX"
-BSCDRTX,BSCC Cedar Hill Unit,TX,BOP,28,29,"Big Spring, TX"
-BSFLTTX,BSCC Flightline Unit,TX,BOP,28,53,"Big Spring, TX"
-BSGDFTX,BSCC Giles Darby Facility,TX,BOP,28,29,"Post, TX"
-BSNTRTX,BSCC Interstate Unit,TX,BOP,32,33,"Big Spring, TX"
-FLBAKCI,Baker C. I.,FL,UNKNOWN,95,157,"Sanderson, FL"
-CACFBAK,Baker CCF,CA,IGSA,54,55,"Baker, CA"
-BAKERFL,Baker County Sheriff Dept.,FL,IGSA,11,197,"Macclenny, FL"
-BKLHOLD,Bakerfield Hold,CA,HOLD,0,197,"Bakersfield, CA"
-BALHOLD,Bal D D & P,MD,HOLD,0,197,"Baltimore, MD"
-BALDWAL,Baldwin County Cor. Center,AL,IGSA,30,197,"Bay Minette, AL"
-BIMDCAZ,Banner Ironwood Med Ctr,AZ,HOSPITAL,174,197,"Queen Creek, AZ"
-BNMCTAZ,Banner Medical Ctr Tucson,AZ,HOSPITAL,178,185,"Tucson, AZ"
-BANHOAZ,Banner University Medical Phoenix,AZ,HOSPITAL,194,196,"Phoenix, AZ"
-BANNOID,Bannock County Jail,ID,USMS IGA,0,24,"Pocatello, ID"
-BMCSATX,Baptist Medical Center,TX,HOSPITAL,173,197,"San Antonio, TX"
-BARNSMA,Barnstable County,MA,IGSA,42,169,"Barnstable, MA"
-BARRECA,Barrett Honor Camp,CA,JUVENILE,11,48,"Alpine, CA"
-BARTOGA,Bartow Co Jail,GA,UNKNOWN,166,196,"Cartersville, GA"
-BASILLA,Basile Detention Center,LA,DIGSA,0,197,"Basile, LA"
-CMDHOLD,Batavia Command Center Holdroom,NY,HOLD,166,196,"Batavia, NY"
-BAYCOFL,Bay County,FL,UNKNOWN,195,197,"Panama City, FL"
-BAYAMPR,Bayamon Hospital,PR,HOSPITAL,101,197,"Bayamon, PR"
-BSTAYTX,Baylor Scott White Md Ctr,TX,HOSPITAL,178,197,"Dallas, TX"
-BSWRRTX,Baylor Scott White Med RR,TX,HOSPITAL,177,193,"Round Rock, TX"
-BEAVRPA,Beaver County Jail,PA,USMS IGA,106,176,"Aliquippa, PA"
-BEDCITX,Bedford City Jail,TX,IGSA,0,154,"Bedford, TX"
-BEDFOPA,Bedford County Jail,PA,IGSA,0,15,"Bedford, PA"
-BEDFOOH,Bedford Heights City,OH,IGSA,0,79,"Bedford Heights, OH"
-BELCOTX,Bell County Jail,TX,IGSA,145,197,"Belton, TX"
-BEHOSNY,"Bellevue Hospital, Manhat",NY,HOSPITAL,68,133,"New York, NY"
-BLHHOLD,Bellingham BPS ERO Holdroom,WA,HOLD,89,170,"Ferndale, WA"
-BELMOOH,Belmont County Jail,OH,OTHER,139,173,"St Clairsville, OH"
-BENTOWA,Benton County,WA,IGSA,0,15,"Kennewick, WA"
-BERGENJ,Bergen County Jail,NJ,USMS IGA,0,183,"Hackensack, NJ"
-BEJUVPA,Berks Co. Juvenile,PA,JUVENILE,15,45,"Leesport, PA"
-BEFAMPA,Berks County Family Shelter,PA,FAMILY,0,149,"Leesport, PA"
-BERKSPA,"Berks County Jail, PA",PA,USMS IGA,0,167,"Leesport, PA"
-BCORCPA,Berks County Residential Center,PA,DIGSA,159,172,"Leesport, PA"
-BESECPA,Berks County Secured Juvenile,PA,JUVENILE,0,44,"Leesport, PA"
-BRKHOLD,Berks Hold Room,PA,HOLD,94,172,"Leesport, PA"
-BERNANM,Bernalillo County Det Ctr,NM,DIGSA,0,9,"Albuquerque, NM"
-BWRGMTX,Best West Rose Grdn I&S,TX,HOTEL,142,153,"Mcallen, TX"
-BWEPATX,Best Western Casa De Estrella,TX,FAMILY STAGING,150,161,"El Paso, TX"
-BWDGICA,Best Western Dragon Gate Inn,CA,HOTEL,0,138,"Los Angeles, CA"
-BWMARCA,Best Western Marina,CA,HOTEL,99,144,"National City, CA"
-BIDHPMA,Beth Israel Deaconess Hosp,MA,HOSPITAL,172,197,"Boston, MA"
-ISHOSNY,"Beth Israel Hospital, Manhattan",NY,HOSPITAL,29,179,"New York, NY"
-WCCBXTX,Bexar County Wackenhut Annual Det.,TX,USMS IGA,0,47,"San Antonio, TX"
-BIGHOMT,"Big Horn County Jail, MT",MT,IGSA,1,30,"Hardin, MT"
-BIGHOWY,"Big Horn County Jail, WY",WY,IGSA,6,7,"Basin, WY"
-BSCHOLD,Big Spring Hold Room,TX,HOLD,52,197,"Big Spring, TX"
-BILHOLD,Billings Hold Room,MT,HOLD,81,177,"Billings, MT"
-BHMHOLD,Birmingham Hold Room,AL,HOLD,32,193,"Homewood, AL"
-BLKREOK,Blackwell Regional Hospital,OK,HOSPITAL,193,194,"Blackwell, OK"
-BLOUNTN,Blount County Justice Ctr,TN,IGSA,0,5,"Maryville, TN"
-BLBNATX,Bluebonnet Det Fclty,TX,IGSA,134,197,"Anson, TX"
-BOIHOLD,Boise Hold Room,ID,HOLD,73,197,"Boise, ID"
-BONNEID,Bonneville Co. Jail,ID,IGSA,0,52,"Idaho Falls, ID"
-BOONEKY,Boone County Jail,KY,USMS IGA,0,197,"Burlington, KY"
-BSQUETX,Bosque County Sheriff's Dept.,TX,UNKNOWN,91,92,"Meridian, TX"
-BOSSRLA,Bossier Parish Cor. Center,LA,USMS IGA,116,187,"Plain Dealing, LA"
-BOSHOLD,Boston Holdroom,MA,HOLD,8,197,"Burlington, MA"
-BPC,Boston SPC,MA,OTHER,0,187,"Boston, MA"
-BOTTIND,Bottineau Co. ND Jail,ND,IGSA,0,48,"Bottineau, ND"
-BOWCOTX,Bowie County Jail,AR,IGSA,0,1,"Texarkana, AR"
-BLGHOLD,Bowling Green Hold Room,VA,HOLD,183,197,"Bowling Green, VA"
-BRADEFL,Bradenton Detention Center,FL,IGSA,0,56,"Bradenton, FL"
-BRDFDFL,Bradford County Jail,FL,IGSA,166,196,"Starke, FL"
-BRANCMI,"Branch Co, Coldwater, MI",MI,UNKNOWN,88,89,"Coldwater, MI"
-BREMEIA,"Bremer Co Jail, Iowa",IA,USMS IGA,100,160,"Waverly, IA"
-FLBREVC,Brevard Correctional,FL,OTHER,146,148,"Cocoa, FL"
-BREVDFL,Brevard County Jail Complex,FL,UNKNOWN,195,197,"Cocoa, FL"
-BRINDMA,Bristol Cnty Ndartmouth,MA,IGSA,0,153,"North Dartmouth, MA"
-BSAHOLD,Broadview Service Staging,IL,STAGING,26,197,"Broadview, IL"
-BROADMT,Broadwater County Jail,MT,IGSA,4,19,"Townsend, MT"
-BBCHPMI,Bronson Battle Creek Hosp,MI,HOSPITAL,187,193,"Battle Creek, MI"
-BHFLDMI,Bronson Hospital Fieldstone Center,MI,HOSPITAL,60,64,"Battle Creek, MI"
-BROHOMI,Bronson Methodist Hospital,MI,HOSPITAL,193,196,"Kalamazoo, MI"
-BXCHSNY,Bronxcare Health System,NY,HOSPITAL,128,155,"Bronx, NY"
-BOPBRO,Brooklyn MDC,NY,BOP,36,79,"Brooklyn, NY"
-BROKSTX,Brooks County Jail (Contract),TX,USMS IGA,4,166,"Falfurrias, TX"
-BROMMNY,Broome County Jail,NY,IGSA,0,139,"Binghampton, NY"
-BROCRFL,Broward Correctional,FL,IGSA,6,70,"Pembroke Pines, FL"
-BROJAFL,Broward County Jail,FL,IGSA,33,197,"Ft.Lauderdale, FL"
-BRGMCFL,Broward General Medical Center,FL,HOSPITAL,26,197,"Ft. Lauderdale, FL"
-WCCPBFL,Broward Transitional Center,FL,CDF,0,197,"Pompano Beach, FL"
-BROWNSD,Brown County Jail,SD,IGSA,39,51,"Aberdeen, SD"
-BROWNWI,Brown County Jail,WI,UNKNOWN,91,92,"Green Bay, WI"
-BRWNSTX,Brownsville Police Dept.,TX,OTHER,110,168,"Brownsville, TX"
-BRCHOLD,Brush Holdroom,CO,HOLD,24,87,"Brush, CO"
-NYBUFFC,"Buffalo CF, Alden,Ny",NY,IGSA,7,110,"Alden, NY"
-BUFHOLD,Buffalo Hold Room,NY,HOLD,49,195,"Buffalo, NY"
-BTV,Buffalo SPC,NY,SPC,0,197,"Batavia, NY"
-BURLEND,"Burleigh Co. Jail, ND",ND,IGSA,39,43,"Bismarck, ND"
-BURNETX,Burnet County Jail,TX,USMS IGA,20,190,"Burnet, TX"
-BUTLEKS,Butler County Jail,KS,USMS IGA,0,148,"El Dorado, KS"
-BUTLEOH,Butler County Jail,OH,IGSA,0,153,"Hamilton, OH"
-BOPBUT,Butner Fed.Corr.Inst.,NC,BOP,16,20,"Butner, NC"
-SILBOMT,Butte-Silver Bow County Jail,MT,IGSA,23,24,"Butte, MT"
-MABSHOS,Bwater St Hosp Bridgewate,MA,HOSPITAL,0,105,"Bridgewater, MA"
-BFGHITX,"Byrd's Foster Group Home, Inc",TX,JUVENILE,88,126,"Houston, TX"
-CCADCAZ,CCA Cent.AZ.Det.Ctr.,AZ,USMS IGA,0,171,"Florence, AZ"
-CCANOOH,CCA Northeast OH Corrects,OH,CDF,98,137,"Youngstown, OH"
-CCAFLAZ,"CCA, Florence Correctional Center",AZ,USMS IGA,0,197,"Florence, AZ"
-CACFLEO,CCF/Leo Chesney,CA,OTHER,103,104,"Live Oak, CA"
-CADCCAL,CDC Calipatria IHP,CA,IGSA,64,76,"Calipatria, CA"
-CBRRSNC,Cabarrus County Jail,NC,IGSA,8,196,"Concord, NC"
-CACHEUT,Cache Co. Jail,UT,USMS IGA,98,170,"Logan, UT"
-CALDWMO,Caldwell County Jail,MO,IGSA,0,136,"Kingston, MO"
-CALHOMI,"Calhoun Co., Battle Cr,MI",MI,IGSA,0,197,"Battle Creek, MI"
-CAMENCE,"Calif. Men Colony, East",CA,OTHER,107,108,"San Luis Obispo, CA"
-CAMENCW,"Calif. Men Colony, West",CA,OTHER,106,186,"San Luis Obispo, CA"
-CACTYCA,California City Corections Center,CA,USMS IGA,29,62,"California City, CA"
-CASPCAL,Calipatria State Prison,CA,OTHER,4,6,"Calipatria, CA"
-CAMBRPA,"Cambria County Jail, PA",PA,USMS IGA,0,154,"Ebensburg, PA"
-CAMERTX,Cameron County Jail,TX,IGSA,18,184,"Brownsville, TX"
-CAMCOWY,Campbell County Jail,WY,IGSA,1,190,"Gillette, WY"
-CARBOPA,Carbon County Correctionl,PA,IGSA,59,60,"Nesquehoning, PA"
-CARBOWY,Carbon County Jail,WY,IGSA,1,7,"Rawlins, WY"
-CARDFVA,Caroline Detention Facility,VA,DIGSA,119,197,"Bowling Green, VA"
-CARROMD,Carroll County Detention Center,MD,IGSA,0,56,"Westminster, MD"
-CAJUVMN,Carver Co. Juvy Detention,MN,JUVENILE,0,133,"Chaska, MN"
-CARJAMN,Carver County Jail,MN,IGSA,0,173,"Chaska, MN"
-CGRMCAZ,Casa Grande Reg. Med. Center,AZ,HOSPITAL,8,197,"Casa Grande, AZ"
-CASSJCA,Casa San Juan,CA,JUVENILE,45,46,"San Diego, CA"
-CASCAMT,"Cascade County Jail, MT",MT,USMS IGA,0,182,"Great Falls, MT"
-CSYJVNY,Casey House Shelter,NY,JUVENILE,4,80,"Buffalo, NY"
-CSPHOLD,Casper Holdroom,WY,HOLD,24,197,"Casper, WY"
-CASSCND,Cass County Jail,ND,IGSA,31,76,"Fargo, ND"
-CASSCNE,Cass County Jail,NE,USMS IGA,0,142,"Plattsmouth, NE"
-CATAHLA,Catahoula Correctional Center,LA,IGSA,129,152,"Harrisonburg, LA"
-CATTANY,Cattaraugus County Jail,NY,IGSA,0,47,"Little Valley, NY"
-CAYUGNY,Cayuga County Jail,NY,IGSA,0,91,"Auburn, NY"
-CCHRTTX,Cedar Crest Hosp Treat,TX,HOSPITAL,142,192,"Belton, TX"
-CRIHOLD,Cedar Rapids Hold Room,IA,HOLD,27,197,"Cedar Rapids, IA"
-CEMEDFL,Cedars Medical Center,FL,HOSPITAL,10,95,"Miami, FL"
-CNTGRIL,Centegra Hospital,IL,HOSPITAL,90,91,"Woodstock, IL"
-CENTRVA,Centra Health,VA,HOSPITAL,192,193,"Lynchburg, VA"
-CSSCHVA,Centra Southside Comm Hosp,VA,HOSPITAL,181,193,"Farmville, VA"
-CCRMHMN,Centracare Rice Memorial Hosp,MN,HOSPITAL,188,196,"Willmar, MN"
-CAMEDAZ,Central Arizona Medical,AZ,HOSPITAL,42,159,"Florence, AZ"
-CIPHOLD,Central Islip Hold Room,NY,HOLD,136,197,"Central Islip, NY"
-CENTRWV,Central Regional Jail,WV,IGSA,51,52,"Sutton, WV"
-WACLATX,Central Texas Detention Facility,TX,USMS IGA,0,134,"San Antonio, TX"
-CVREGVA,Central VA Regional Jail,VA,IGSA,22,197,"Orange County, VA"
-CVANXCA,Central Valley Annex,CA,UNKNOWN,184,185,"McFarland, CA"
-CMEDHPR,Centro Medico Hospital,PR,HOSPITAL,71,176,"San Juan, PR"
-CRTOSCA,Cerritos  College Hosp,CA,HOSPITAL,16,17,"Cerritos, CA"
-CHMHOLD,Champlain Hold Room,NY,HOLD,129,196,"Champlain, NY"
-CHANRAZ,Chandler Reg Med Ctr,AZ,HOSPITAL,175,197,"Chandler, AZ"
-CHARLSC,Charleston County Correct,SC,USMS IGA,0,191,"North Charleston, SC"
-CHLHOLD,"Charleston, SC Hold Room",SC,HOLD,106,197,"Charleston, SC"
-CHAHOLD,Charlotte Amalie Holdroom,VI,HOLD,17,197,"St. Thomas, VI"
-FLCHACI,"Charlotte CI, Punta Gorda",FL,UNKNOWN,194,195,"Punta Gorda, FL"
-CHRLTFL,Charlotte County Jail,FL,IGSA,103,114,"Punta Gorda, FL"
-CLTHOLD,Charlotte Hold Room,NC,HOLD,29,197,"Charlotte, NC"
-CHASEKS,Chase County Jail,KS,IGSA,0,197,"Cottonwood Falls, KS"
-CSHEPTX,Chase Ste Hotel Elp,TX,HOTEL,142,144,"El Paso, TX"
-CHATHGA,Chatham Co Jail,GA,IGSA,42,46,"Savannah, GA"
-CNGHOLD,Chattanooga Hold Room,TN,HOLD,32,197,"Chattanooga, TN"
-CHACONY,Chautauqua County Jail,NY,IGSA,0,166,"Mayville, NY"
-CHAVENM,Chavez Det Crt,NM,IGSA,109,197,"Roswell, NM"
-CHELAWA,Chelan Co. Regional Jail,WA,USMS IGA,0,103,"Wenatchee, WA"
-CHEMUNY,Chemung County Jail,NY,IGSA,59,60,"Elmira, NY"
-CHENANY,Chenango County Jail,NY,UNKNOWN,60,61,"Norwich, NY"
-CHEROOK,Cherokee County Jail,OK,OTHER,51,52,"Tahlequah, OK"
-CHFLDVA,Chesterfield Co. Jail,VA,UNKNOWN,173,174,"Chesterfield, VA"
-CHYHOLD,Cheyenne Holdroom,WY,HOLD,24,197,"Cheyenne, WY"
-CHIHMIA,Chi Health Mercy Council Bluffs,IA,HOSPITAL,179,180,"Council Bluffs, IA"
-CSLLFTX,Chi St Luke's H M Lufkin,TX,HOSPITAL,186,187,"Lufkin, TX"
-CHISLTX,Chi St Luke's Health Mem,TX,HOSPITAL,171,193,"Lufkin, TX"
-CHIHOLD,Chicago Hold Room,IL,HOLD,26,196,"Chicago, IL"
-CHIPPMI,"Chippewa Co., SSM",MI,IGSA,0,197,"Sault Sainte Marie, MI"
-VTCHTDN,Chittenden Reg. Cor. Facility,VT,IGSA,13,197,"South Burlington, VT"
-CHRISMO,Christian Co Sheriff Dept,MO,IGSA,0,163,"Ozark, MO"
-CHSRHTX,Christus Santa Rosa Hospital - Med,TX,HOSPITAL,187,194,"Irving, TX"
-CCCSSTX,Christus Spohn Hosp CC - South,TX,HOSPITAL,172,173,"Corpus Christi, TX"
-CIBOCNM,Cibola County Correctional Center,NM,IGSA,98,197,"Milan, NM"
-CIBOLNM,Cibola County Det Ctr,NM,IGSA,110,166,"Grants, NM"
-CIBOGNM,Cibola General Hospital,NM,HOSPITAL,182,190,"Grants, NM"
-CINHOLD,Cincinnati Holdroom,OH,HOLD,134,197,"Cincinnati, OH"
-CITRUFL,Citrus County Jail,FL,IGSA,2,195,"Lecanto, FL"
-CLARIPA,Clarion  County Corrections,PA,IGSA,7,8,"Shippenville, PA"
-CLARKWA,Clark County Jail,WA,IGSA,1,2,"Vancouver, WA"
-CFREDVA,Clarke Fred'k Winch.,VA,IGSA,0,1,"Winchester, VA"
-CLAYCIN,Clay County Justice Center,IN,USMS IGA,57,197,"Brazil, IN"
-CLEHOLD,Cleveland Hold Room,OH,HOLD,44,197,"Cleveland, OH"
-CLINTPA,Clinton County Corr. Fac.,PA,USMS IGA,0,197,"Mcelhattan, PA"
-CLICONY,Clinton County Jail,NY,USMS IGA,0,197,"Plattsburgh, NY"
-CBENDTX,Coastal Bend Det. Facility,TX,USMS IGA,44,197,"Robstown, TX"
-COBBJGA,Cobb County Jail,GA,IGSA,0,197,"Marietta, GA"
-COCHIAZ,Cochise Co Jail Bisbee AZ,AZ,IGSA,18,160,"Bisbee, AZ"
-COCONAZ,Coconino Co Detention Facility,AZ,USMS IGA,2,131,"Flagstaff, AZ"
-COLLIFL,Collier County Sheriff,FL,IGSA,0,197,"Naples, FL"
-CSDHOLD,Colo Springs Den HSI Hold,CO,HOLD,132,151,"Colorado Springs, CO"
-COLOMNY,Colombia County Jail,NY,IGSA,4,16,"Hudson, NY"
-COLCASC,Columbia Care Center,SC,HOSPITAL,0,197,"Columbia, SC"
-COLUMOR,Columbia County Jail,OR,USMS IGA,0,70,"Saint Helens, OR"
-COLUMPA,Columbia County Jail,PA,USMS IGA,0,162,"Bloomsburg, PA"
-COLUMFL,Columbia County Jail,FL,UNKNOWN,167,196,"Lake City, FL"
-CKHOSFL,Columbia Kendal Hospital,FL,HOSPITAL,0,197,"Miami, FL"
-COAHOLD,"Columbia, SC Holdroom",SC,HOLD,69,197,"Columbia, SC"
-CLMHOLD,Columbus Holdroom,OH,HOLD,86,197,"Columbus, OH"
-CISAETX,Comfort Inn Ste Elp Airp,TX,HOTEL,150,151,"El Paso, TX"
-CSANOLA,Comfort Suites Alexandria,LA,HOTEL,151,154,"Alexandria, LA"
-CISEPTX,Comfort Suites Casa Consuelo,TX,FAMILY STAGING,150,160,"El Paso, TX"
-COMFTFL,Comfort Suites Hotel,FL,HOTEL,0,146,"Miami, FL"
-CWHCCMP,Commonwealth Healthcare Corp,MP,HOSPITAL,180,181,"Fananganan, Saipan, MP"
-CRMCFCA,Community Reg Med Center,CA,HOSPITAL,175,189,"Fresno, CA"
-CMPJVNY,Compass House Shelter,NY,JUVENILE,0,123,"Buffalo, NY"
-CONCOLA,Concordia Parish C C,LA,IGSA,31,68,"Ferriday, LA"
-CONEJCO,Conejos County Jail,CO,IGSA,0,69,"Antonito, CO"
-CONHOTX,Connally Memorial Medical Center,TX,HOSPITAL,195,196,"Floresville, TX"
-CONWECA,Contra Costa Co Jail/West,CA,USMS IGA,18,119,"Richmond, CA"
-CONCOCA,Contra Costa Co. Jail,CA,USMS IGA,18,119,"Martinez, CA"
-CONVEWY,Converse County Jail,WY,IGSA,0,7,"Douglas, WY"
-CCHHSIL,Cook County Hospital-JHS,IL,HOSPITAL,94,132,"Chicago, IL"
-AKCOOKI,"Cook Inlet Pretrial, Anch",AK,IGSA,0,182,"Anchorage, AK"
-COOSCOR,Coos Co. Jail,OR,IGSA,38,127,"Coquille, OR"
-COOCONH,Coos County Jail,NH,USMS IGA,127,135,"West Stewartstown, NH"
-CRPHOLD,Corpus Christi EOR Hold Room,TX,HOLD,178,197,"Corpus Christi, TX"
-COSTACA,Costa Mesa College Hosp,CA,HOSPITAL,0,58,"Costa Mesa, CA"
-CISPVLA,County Inn & Ste By Rad,LA,HOTEL,144,145,"Pineville, LA"
-CHMCINY,Courthouse USM Cntl Islip,NY,OTHER,137,191,"Central Islip, NY"
-COWJVWA,Cowlitz Co. Juv. Det.,WA,JUVENILE,0,151,"Longview, WA"
-CRGHOLD,Craig Holdroom,CO,HOLD,24,196,"Craig, CO"
-CCHAUTX,Cross Creek Hospital,TX,HOSPITAL,187,193,"Austin, TX"
-CROWGMN,Crow Wing County Jail,MN,IGSA,33,35,"Brainerd, MN"
-CPPAPAZ,Crowne Plaza Phoenix Ap,AZ,HOTEL,142,145,"Phoenix, AZ"
-CRYCCTX,Crystal City Corr. Center,TX,USMS IGA,54,64,"Crystal City, TX"
-CASPSAC,Csp-Sacramento,CA,IGSA,78,79,"Represa, CA"
-CULBETX,Culberson County Sheriff's,TX,IGSA,122,123,"Van Horn, TX"
-CULPEVA,Culpeper Co. Adult Det. Center,VA,IGSA,31,180,"Culpeper, VA"
-CUMBEME,Cumberland County Jail,ME,USMS IGA,0,197,"Portland, ME"
-BOPCUM,Cumberland FCI,MD,BOP,0,19,"Cumberland, MD"
-CURRYNM,Curry County Det Fac,NM,IGSA,46,189,"Clovis, NM"
-CUSTEMT,Custer County Jail,MT,IGSA,0,1,"Miles City, MT"
-GADRYJM,D. Ray James Prison,GA,BOP,120,190,"Folkston, GA"
-DCDOCDC,DC Dept Of Corrections,DC,USMS IGA,13,70,"Washington, DC"
-SAJHOLD,DHS/ICE/DRO,PR,STAGING,0,197,"Guaynabo, PR"
-DSMCNTX,DSMC - Del Sol Medical Center,TX,HOSPITAL,117,196,"El Paso, TX"
-FLDADCI,Dade Correctional Inst,FL,UNKNOWN,74,107,"Florida City, FL"
-DAKOTNE,Dakota County Jail,NE,USMS IGA,14,197,"Dakota City, NE"
-BOPDAL,Dalby Correctional Institute,TX,BOP,101,174,"Post, TX"
-DALCOTX,Dallas County Jail-Lew Sterrett,TX,USMS IGA,72,197,"Dallas, TX"
-DALHOLD,Dallas F.O. Hold,TX,HOLD,0,197,"Dallas, TX"
-DAUPHPA,"Dauphin Cnty Jail, PA",PA,OTHER,105,106,"Harrisburg, PA"
-DAVIDTN,Davidson Co. Sheriff Dept,TN,IGSA,0,134,"Nashville, TN"
-DAWSOMT,Dawson County Jail,MT,IGSA,7,60,"Glendive, MT"
-DIIHBMD,Days Inn Inner Harbor Baltimore,MD,HOTEL,127,129,"Baltimore, MD"
-DEAPDMI,Dearborn Police Dept.,MI,IGSA,0,187,"Dearborn, MI"
-DEKALGA,Dekalb Co Jail,GA,OTHER,10,15,"Decatur, GA"
-DEKALAL,Dekalb County Detention Center,AL,USMS IGA,0,148,"Fort Payne, AL"
-DEKABGA,Dekalb County Jail,GA,IGSA,141,172,"Decatur, GA"
-DLAMOCA,Del Amo Psychiatric Hospital,CA,HOSPITAL,38,39,"Torrance, CA"
-DLRHOLD,Del Rio DRO Hold Room,TX,HOLD,57,197,"Del Rio, TX"
-DHDFNJ,Delaney Hall Detention Facility,NJ,IGSA,34,185,"Newark, NJ"
-DELAWPA,Delaware Co Jail,PA,USMS IGA,81,139,"Thornton, PA"
-DECCSMY,Delaware Correction Center,DE,UNKNOWN,99,122,"Smyrna, DE"
-DELTACO,Delta County Jail,CO,IGSA,1,11,"Delta, CO"
-DENIICO,Denver CDF II,CO,CDF,123,158,"Aurora, CO"
-DENICDF,Denver Contract Det. Fac.,CO,CDF,0,197,"Aurora, CO"
-DENVECO,Denver County Jail,CO,USMS IGA,0,192,"Denver, CO"
-DNHMCCO,Denver Health Medical Center,CO,HOSPITAL,67,189,"Denver, CO"
-DENHOLD,Denver Hold Room,CO,HOLD,0,197,"Denver, CO"
-DENCICO,Denver Justice Center,CO,IGSA,0,13,"Denver, CO"
-DEPCOGU,Department Of Corrections,GU,IGSA,0,135,"Mangilao, GU"
-DEPYOGU,Department Of Youth Affairs,GU,JUVENILE,2,8,"Barrigada, GU"
-GUDOCHG,Dept Of Corrections-Hagatna,GU,USMS IGA,7,197,"Hagatna, GU"
-DSMHOLD,Des Moines Hold Room,IA,HOLD,28,197,"Des Moines, IA"
-DSRTVCA,Desert Valley Hospital,CA,HOSPITAL,68,193,"Victorville, CA"
-CADESVI,Desert View,CA,CDF,43,197,"Adelanto, CA"
-DVHSPNV,Desert View Hospital,NV,HOSPITAL,177,193,"Pahrump, NV"
-DRHCSTX,Dimmit Regional Hospital,TX,HOSPITAL,174,175,"Carrizo Springs, TX"
-WIDODGE,"Dodge Corr Institute, Wau",WI,IGSA,31,86,"Waupun, WI"
-DODGEWI,"Dodge County Jail, Juneau",WI,USMS IGA,0,197,"Juneau, WI"
-DONAANM,Dona Ana County Detention Facility,NM,IGSA,97,161,"Las Cruces, NM"
-DORCHMD,Dorchester Co Det Cntr,MD,IGSA,0,168,"Cambridge, MD"
-DORCDSC,Dorchester Co Det Ctr,SC,USMS IGA,177,196,"Summerville, SC"
-DOUGLOR,Douglas Co. Jail,OR,IGSA,0,53,"Roseburg, OR"
-DOUGLWI,Douglas Co. Wisconsin,WI,IGSA,103,197,"Superior, WI"
-DOCORNE,Douglas County Correction,NE,IGSA,0,160,"Omaha, NE"
-DOUGLCO,Douglas County Detention Center,CO,IGSA,0,181,"Castle Rock, CO"
-DVDHOLD,Dover Holdroom,DE,HOLD,3,197,"Dover, DE"
-DRURYCO,Drury Inn,CO,HOTEL,0,182,"Denver, CO"
-DISSATX,Drury Inn & Stes SNA Ap,TX,HOTEL,142,164,"San Antonio, TX"
-DISPTAZ,Drury Inn Stes Pho Tempe,AZ,HOTEL,143,146,"Tempe, AZ"
-DULHOLD,Duluth Hold Room,MN,HOLD,127,183,"Duluth, MN"
-DUPAGIL,Dupage County Jail,IL,IGSA,10,23,"Wheaton, IL"
-DURHOLD,Durango Holdroom,CO,HOLD,25,197,"Durango, CO"
-DUTCHAK,Dutch Harbor City Jail,AK,IGSA,2,4,"Unalaska, AK"
-DUVALFL,Duval/Jacksonville Jail,FL,IGSA,0,12,"Jacksonville, FL"
-EAGLECO,Eagle County Jail,CO,IGSA,17,68,"Eagle, CO"
-EHDLGTX,East Hidalgo Detention Center,TX,USMS IGA,29,197,"La Villa, TX"
-EMESACA,East Mesa Detent Facility,CA,IGSA,8,96,"San Diego, CA"
-NYEASTC,Eastern C.F. Napanoch,NY,UNKNOWN,162,166,"Napanoch, NY"
-WVEASTR,Eastern Regional Jail,WV,USMS IGA,3,197,"Martinsburg, WV"
-ECOLOWA,Econolodge Motel,WA,HOTEL,1,147,"Tukwila, WA"
-ECTORTX,Ector County Correction Center,TX,IGSA,0,31,"Odessa, TX"
-ECLECTX,Ector County L.E.C.,TX,OTHER,125,126,"Odessa, TX"
-EFMHMFL,Ed Fraser Memorial Hospital,FL,HOSPITAL,173,180,"Macclenny, FL"
-EDDCONM,Eddy County Jail,NM,IGSA,39,162,"Carlsbad, NM"
-EDENDTX,Eden Det Center,TX,BOP,5,17,"Eden, TX"
-EDNHOLD,Eden Det Ctr Hold Room,TX,HOLD,133,176,"Eden, TX"
-EDNDCTX,Eden Detention Ctr,TX,UNKNOWN,130,197,"Eden, TX"
-EDCHOLD,Eden Hold Room,TX,HOLD,54,87,"Eden, TX"
-EDNBGTX,Edinburg Police Dept.,TX,UNKNOWN,64,183,"Edinburg, TX"
-ECRMCCA,El Centro Regional Med Ctr,CA,HOSPITAL,183,195,"El Centro, CA"
-ECC,El Centro SPC,CA,SPC,0,72,"El Centro, CA"
-EPBHSTX,El Paso Behavioral Health System,TX,HOSPITAL,113,197,"El Paso, TX"
-EPCDFTX,El Paso County Detention Facility,TX,UNKNOWN,174,197,"El Paso, TX"
-ELPASCO,El Paso County Jail (CO),CO,IGSA,0,114,"Colorado Springs, CO"
-ELPCOTX,El Paso County Jail (TX),TX,IGSA,107,196,"El Paso, TX"
-EPLTATX,El Paso LTAC Hospital,TX,HOSPITAL,134,197,"El Paso, TX"
-EPC,El Paso SPC,TX,SPC,0,197,"El Paso, TX"
-EPCJUVI,El Paso SPC Juvenile,TX,HOLD,15,179,"El Paso, TX"
-ELVDFTX,El Valle Detention Facility,TX,IGSA,117,197,"Raymondville, TX"
-ELBERCO,Elbert County Jail,CO,IGSA,2,3,"Kiowa, CO"
-ELGPDIL,Elgin Police Dept. Jail,IL,IGSA,0,108,"Elgin, IL"
-ELZICDF,Elizabeth Contract D.F.,NJ,CDF,0,197,"Elizabeth, NJ"
-ELKHAIN,Elkhart County Jail,IN,OTHER,122,136,"Elkhart, IN"
-ELMORID,Elmore County Jail,ID,USMS IGA,8,192,"Mountain Home, ID"
-EAZ,Eloy Federal Contract Fac,AZ,DIGSA,0,197,"Eloy, AZ"
-BOEHOLD,Elp Boeing Dr Holdroom,TX,HOLD,0,126,"El Paso, TX"
-ESHSATX,Embassy Ste Hltn NW I-10,TX,HOTEL,156,157,"San Antonio, TX"
-EMBSATX,Embassy Ste Hltn SNA Ap,TX,HOTEL,150,151,"San Antonio, TX"
-EMBCRNC,Embassy Suites By Hilton,NC,HOTEL,120,180,"Cary, NC"
-EMBSYCO,Embassy Suites Hotel,CO,HOTEL,46,48,"Denver, CO"
-ENLMCCA,Enloe Medical Center,CA,HOSPITAL,173,175,"Chico, CA"
-EIRHONY,Erie Co Holding Center,NY,HOLD,29,30,"Buffalo, NY"
-ERICONY,Erie County Holding Center,NY,HOLD,0,6,"Buffalo, NY"
-ERICOPA,"Erie County Jail, PA",PA,USMS IGA,0,197,"Erie, PA"
-ECMCBNY,Erie County Medical Center,NY,HOSPITAL,57,197,"Buffalo, NY"
-ESSEXMA,"Essex Co. Jail, Middleton",MA,IGSA,0,29,"Middleton, MA"
-ESSEXNJ,Essex County Jail,NJ,IGSA,0,197,"Newark, NJ"
-ESSEXNY,Essex County Jail,NY,IGSA,1,32,"Lewis, NY"
-ETOWAAL,Etowah County Jail (AL),AL,USMS IGA,0,184,"Gadsden, AL"
-ETWHOLD,Etowah ERO Hold Room,AL,HOLD,32,193,"Gadsden, AL"
-EUGHOLD,Eugene Holdroom,OR,HOLD,14,197,"Eugene, OR"
-EULESTX,Euless City Jail,TX,IGSA,0,160,"Euless, TX"
-EXTSAAZ,Extended Stay America,AZ,HOTEL,160,161,AZ
-ESAPAAZ,Extended Stay America Pho Ap,AZ,HOTEL,149,150,"Phoenix, AZ"
-BOPGIL,FCI Gilmer,WV,BOP,103,104,"Glenville, WV"
-BOPVIM,FCI Victorville,CA,BOP,32,195,"Victorville, CA"
-BOPPHL,FDC Philadelphia,PA,BOP,196,197,"Philadelphia, PA"
-FCLT8CA,Facility 8 Detention Facility,CA,UNKNOWN,85,137,"San Diego, CA"
-AKFAIRB,Fairbanks Corr Ctr,AK,IGSA,0,181,"Fairbanks, AK"
-FAICOVA,Fairfax Co Jail,VA,USMS IGA,6,89,"Fairfax, VA"
-FXADCVA,Fairfax Co. Adult Detention Center,VA,IGSA,97,116,"Fairfax, VA"
-FRFLDWY,Fairfield Inn & Suites,WY,HOTEL,116,134,"Cheyenne, WY"
-BOPFAI,Fairton FCI,NJ,BOP,109,130,"Fairton, NJ"
-FAULKSD,Faulk County Jail,SD,IGSA,31,32,"Faulkton, SD"
-FAULKAR,Faulkner County Jail,AR,IGSA,0,4,"Conway, AR"
-FAYETKY,Fayette County Detention Center,KY,USMS IGA,76,197,"Lexington, KY"
-FAYHOLD,Fayetteville Hold Room,AR,HOLD,15,197,"Fayetteville, AR"
-FDLHOLD,Ferndale Hold Room,WA,HOLD,169,197,"Ferndale, WA"
-FERRYWA,Ferry County Jail,WA,IGSA,11,16,"Republic, WA"
-FINNEKS,Finney County Jail,KS,IGSA,141,197,"Garden City, KS"
-NYFISHC,Fishkill C.F. Beacon Ny,NY,OTHER,124,181,"Beacon, NY"
-FLGLRFL,Flagler County Jail,FL,UNKNOWN,184,197,"Bunnel, FL"
-FLATHMT,Flathead County Jail,MT,IGSA,0,161,"Kalispell, MT"
-FLORHAZ,Florence Hospital,AZ,HOSPITAL,170,197,"Florence, AZ"
-FLO,Florence SPC,AZ,SPC,0,197,"Florence, AZ"
-FSF,Florence Staging Facility,AZ,STAGING,0,197,"Florence, AZ"
-FLSPSTA,"Florida St. Pris.,Starke",FL,UNKNOWN,100,101,"Raiford, FL"
-FLOYDGA,Floyd County Jail,GA,USMS IGA,127,197,"Rome, GA"
-FIPCMGA,Folkston Main IPC,GA,DIGSA,119,197,"Folkston, GA"
-FNDDUWI,Fond Du Lac County Sheriff/Jail,WI,UNKNOWN,153,188,"Fond Du Lac, WI"
-FORSYNC,Forsyth County Jail,NC,USMS IGA,0,188,"Winston-Salem, NC"
-FLHOSFL,Fort Lauderdale Hospital,FL,HOSPITAL,109,168,"Fort Lauderdale, FL"
-FMYHOLD,Fort Myers ERO Holdroom,FL,HOLD,90,197,"Fort Myers, FL"
-FSAHOLD,Fort Smith Holdroom,AR,HOLD,29,154,"Fort Smith, AR"
-FPSSAWA,Four Pts Sheraton Sea Ap,WA,HOTEL,155,178,"Des Moines, WA"
-FRANKWA,Franklin County,WA,IGSA,2,3,"Pasco, WA"
-FRACOVT,"Franklin County Jail, VT",VT,IGSA,0,121,"Saint Albans, VT"
-GREENMA,Franklin House of Corrections,MA,USMS IGA,0,151,"Greenfield, MA"
-FREDEMD,Frederick County Det. Cen,MD,IGSA,0,194,"Frederick, MD"
-FCOHOLD,Frederick Holdroom,CO,HOLD,86,87,"Frederick, CO"
-FRDHOLD,Frederick Holdroom,CO,HOLD,86,197,"Frederick, CO"
-FREEBMN,"Freeborn County Jail, MN",MN,IGSA,3,197,"Albert Lea, MN"
-FREESTX,Freestone County Jail,TX,IGSA,170,171,"Fairfield, TX"
-FREMOCO,"Fremont County Jail, CO",CO,IGSA,0,67,"Canon City, CO"
-FREMOWY,"Fremont County Jail, WY",WY,IGSA,5,6,"Lander, WY"
-FRECOCA,Fresno County Jail,CA,IGSA,87,88,"Fresno, CA"
-FREHOLD,Fresno Holdroom,CA,HOLD,0,197,"Fresno, CA"
-FRIOCTX,Frio County Jail,TX,IGSA,133,134,"Pearsall, TX"
-FRIRHTX,Frio Regional Hospital,TX,HOSPITAL,168,197,"Pearsall, TX"
-FLBHCFL,Ft Lauderdale Behavor Hlth Ctr,FL,HOSPITAL,128,197,"Oakland Park, FL"
-GALLAMT,Gallatin County Jail,MT,IGSA,1,185,"Bozeman, MT"
-GCPFCKS,Garden City Processing @ Finney Co,KS,UNKNOWN,177,196,"Garden City, KS"
-GARVIOK,Garvin County Jail,OK,IGSA,0,197,"Pauls Valley, OK"
-GASTNNC,Gaston County Jail,NC,IGSA,0,197,"Gastonia, NC"
-GEAUGOH,Geauga County Jail,OH,USMS IGA,34,197,"Chardon, OH"
-GSMCDPA,Geisinger Medical Center,PA,HOSPITAL,184,186,"Danville, PA"
-GENESNY,Genesee County Jail,NY,USMS IGA,0,43,"Batavia, NY"
-BAILECA,George Bailey Detent Faci,CA,IGSA,35,102,"San Diego, CA"
-IAHSFTX,George Bush Intercontinental,TX,STAGING,70,156,"Houston, TX"
-GRGBVTX,Georgetown Behavioral Hospital,TX,HOSPITAL,193,194,"Georgetown, TX"
-GIJUVAZ,Gila County Juvenile Det Center,AZ,JUVENILE,0,9,"Globe, AZ"
-GLADEFL,Glades County Detention Center,FL,IGSA,0,165,"Moore Haven, FL"
-GLEPDCA,Glendale Police Dept,CA,IGSA,0,197,"Glendale, CA"
-GSCHOLD,Glenwood Springs Holdroom,CO,HOLD,24,185,"Glenwood Springs, CO"
-GLOUCNJ,Gloucester County Jail,NJ,IGSA,20,21,"Woodbury, NJ"
-GLDSACA,Golden State Annex,CA,CDF,143,197,"Mcfarland, CA"
-GSAMHCA,Good Samaritan Hospital,CA,HOSPITAL,173,174,"San Jose, CA"
-GOODCID,Gooding County Jail,ID,UNKNOWN,164,185,"Gooding, ID"
-AKGSCCC,Goose Creek Correctional Center,AK,UNKNOWN,146,183,"Wasilla, AK"
-GOSHEWY,Goshen County Jail,WY,IGSA,1,2,"Torrington, WY"
-GCLECOK,Grady County Law Enforcement Ctr,OK,UNKNOWN,116,170,"Chickasha, OK"
-GMHATGA,Grady Memorial Hospital,GA,HOSPITAL,173,197,"Atlanta, GA"
-GRAHAAZ,Graham Co Jail Safford AZ,AZ,UNKNOWN,162,163,"Safford, AZ"
-GFJUVND,Grand Forks Co. Juvenile,ND,JUVENILE,1,135,"Grand Forks, ND"
-GFCORND,Grand Forks County Correc,ND,IGSA,0,197,"Grand Forks, ND"
-GRFHOLD,Grand Forks Hold Room,ND,HOLD,16,197,"Grand Forks, ND"
-GRIHOLD,Grand Island Hold Room,NE,HOLD,27,158,"Grand Island, NE"
-GJCHOLD,Grand Junction Holdroom,CO,HOLD,24,197,"Grand Junction, CO"
-GRMHOLD,Grand Rapids Holdroom,MI,HOLD,65,197,"Grand Rapids, MI"
-GRANTWA,Grant County,WA,IGSA,0,10,"Ephrata, WA"
-GRANTOR,Grant County Jail,OR,IGSA,4,31,"Canyon City, OR"
-GRYDCKY,Grayson County Det Center (Female),KY,USMS IGA,31,53,"Leitchfield, KY"
-GRAYSKY,Grayson County Detention Center,KY,USMS IGA,0,197,"Leitchfield, KY"
-NYGREAC,Great Meadow C.F.,NY,UNKNOWN,167,181,"Comstock, NY"
-GPCHOLD,Great Plains CI Holdroom,OK,HOLD,89,142,"Hinton, OK"
-GREENMO,Greene County Jail,MO,IGSA,1,64,"Springfield, MO"
-HOUGTTX,Greentree Inn Houston IAH Airport,TX,HOTEL,180,181,"Houston, TX"
-GRRHOLD,Greer Hold Room,SC,HOLD,72,197,"Greer, SC"
-NYGROVC,Groveland C.F. Sonyea,NY,UNKNOWN,158,189,"Sonyea, NY"
-GUADATX,Guadalupe Cty Jail,TX,IGSA,1,89,"Seguin, TX"
-BOPGUA,Guaynabo MDC (San Juan),PR,BOP,0,197,"San Juan, PR"
-GWINNGA,Gwinnett County Jail,GA,IGSA,0,51,"Lawrenceville, GA"
-HCAFMFL,HCA Florida Memorial Hospital,FL,HOSPITAL,173,189,"Jacksonville, FL"
-HCAHCTX,HCA Houston Hc Conroe,TX,HOSPITAL,170,197,"Conroe, TX"
-HACMCNJ,Hackensack Med Ctr,NJ,HOSPITAL,172,173,"Hackensack, NJ"
-HAILEID,Haile Det. Center,ID,IGSA,0,197,"Caldwell, ID"
-HALLJGA,Hall Co Jail,GA,USMS IGA,0,181,"Gainesville, GA"
-HASHENE,Hall County Sheriff,NE,IGSA,2,183,"Grand Island, NE"
-HAMILTX,Hamilton County Jail (TX),TX,UNKNOWN,170,171,"Hamilton, TX"
-HAMPDMA,Hampden Co.House Of Corr.,MA,IGSA,94,110,"Ludlow, MA"
-HISAXLA,Hampton Inn & Stes Alexandria,LA,HOTEL,152,153,"Alexandria, LA"
-HISEPTX,Hampton Inn & Stes Elp Ap,TX,HOTEL,137,142,"El Paso, TX"
-HISMCTX,Hampton Inn & Stes Mcallen,TX,HOTEL,138,179,"Mcallen, TX"
-HAMPITX,Hampton Inn Pearsall,TX,FAMILY STAGING,150,151,"Pearsall, TX"
-HIPANAZ,Hampton Inn Pho Airport N,AZ,HOTEL,138,151,"Phoenix, AZ"
-HRREGVA,Hampton Roads Regional Jail,VA,USMS IGA,0,66,"Portsmouth, VA"
-HCPSCMS,Hancock Co Pub Sfty Cplx,MS,IGSA,139,197,"Bay St. Louis, MS"
-HAVMCWA,Harborview Medical Center,WA,HOSPITAL,186,187,"Seattle, WA"
-HARDEFL,Hardee County Jail,FL,UNKNOWN,101,127,"Wauchula, FL"
-HARDJIA,Hardin Co Jail,IA,IGSA,0,155,"Eldora, IA"
-HLGHOLD,Harlingen Hold Room,TX,HOLD,14,197,"Harlingen, TX"
-HMCHOTX,Harlingen Medical Center,TX,HOSPITAL,0,191,"Harlingen, TX"
-HRLGNTX,Harlingen Police Dept.,TX,UNKNOWN,64,196,"Harlingen, TX"
-HSF,Harlingen Staging Facility,TX,STAGING,0,55,"Harlingen, TX"
-HARRIGA,Harris County Jail,GA,IGSA,48,49,"Hamilton, GA"
-HCPSYTX,Harris County Psychiatric Center,TX,HOSPITAL,96,197,"Houston, TX"
-HHBTHTX,Harris Health Ben Taub Hospital,TX,HOSPITAL,180,191,"Houston, TX"
-LBJHSTX,Harris Health LBJ Hospital,TX,HOSPITAL,192,194,"Houson, TX"
-HBGHOLD,Harrisonburg Hold Room,VA,HOLD,32,197,"Harrisonburg, VA"
-HARFOCT,Hartford Corr Center,CT,IGSA,32,191,"Hartford, CT"
-HARHOLD,Hartford Office,CT,HOLD,0,197,"Hartford, CT"
-HASMHTX,Haskell Memorial Hospital,TX,HOSPITAL,142,145,"Haskell, TX"
-HSELPTX,Hawthorn Stes El Paso Airp,TX,HOTEL,150,151,"El Paso, TX"
-HACTCND,Heart Of America Corr,ND,UNKNOWN,166,167,"Rugby, ND"
-HELHOLD,Hel District Custody,MT,HOLD,3,196,"Helena, MT"
-HENDENC,Henderson County Det. Fac.,NC,IGSA,0,193,"Hendersonville, NC"
-HENDETX,Henderson County Jail,TX,IGSA,131,162,"Athens, TX"
-HENDENV,Henderson Detention,NV,USMS IGA,28,197,"Henderson, NV"
-HDHSPNV,Henderson Hospital,NV,HOSPITAL,176,190,"Henderson, NV"
-HENHOLD,Hendersonville Hold Room,NC,HOLD,75,191,"Hendersonville, NC"
-HNDMCTX,Hendrick Medical Center,TX,HOSPITAL,145,197,"Abilene, TX"
-HENDRFL,Hendry County Jail,FL,IGSA,122,193,"Labelle, FL"
-HNYHOMI,Henry Ford Hospital,MI,HOSPITAL,189,190,"Detroit, MI"
-HNRMCFL,Henry Regional Medical Center,FL,HOSPITAL,111,161,"Clewiston, FL"
-HERNAFL,Hernando County Jail,FL,IGSA,0,13,"Brooksville, FL"
-HIDALNM,Hidalgo County Detention Center,NM,IGSA,78,128,"Lordsburg, NM"
-HIDALTX,Hidalgo County Jail,TX,IGSA,26,195,"Edinburg, TX"
-HDLGOTX,Hidalgo Police Dept.,TX,UNKNOWN,67,160,"Hidalgo, TX"
-AKHIGHL,Highland Mtn Cor Ctr,AK,USMS IGA,0,197,"Eagle River, AK"
-HGHBECO,Highlands Behavioral Health,CO,HOSPITAL,195,197,"Littleton, CO"
-HILLCMT,Hill County Justice Center,MT,USMS IGA,0,124,"Havre, MT"
-HICOJFL,Hillsborough County Jail,FL,IGSA,3,5,"Tampa, FL"
-HOKLYTX,Hockley County Jail,TX,IGSA,31,32,"Levelland, TX"
-HISPAAZ,Holiday Inn & Ste Pho Ap,AZ,HOTEL,142,159,"Phoenix, AZ"
-HIESPAZ,Holiday Inn Exp Phoenix,AZ,HOTEL,142,159,"Phoenix, AZ"
-HOLIETX,Holiday Inn Exp SNA Ap,TX,HOTEL,144,175,"San Antonio, TX"
-HIESATX,Holiday Inn Exp San Antonio,TX,HOTEL,142,152,"San Antonio, TX"
-HIEXSTX,Holiday Inn Expr & Stes Pearsall,TX,HOTEL,149,154,"Pearsall, TX"
-HIRAYTX,Holiday Inn Express & Suites,TX,HOTEL,156,158,TX
-HIELPTX,Holiday Inn Express & Suites,TX,HOTEL,149,153,"El Paso, TX"
-HESPCAZ,Holiday Inn Express Casa De La Luz,AZ,FAMILY STAGING,150,159,"Phoenix, AZ"
-HIPDBAZ,Holiday Inn Pho Dwtn Ballpark,AZ,HOTEL,144,156,"Phoenix, AZ"
-HISDBCA,Holiday Inn SND Bayside,CA,HOTEL,149,151,"San Diego, CA"
-HLYCHIL,Holy Cross Hospital,IL,HOSPITAL,90,100,"Chicago, IL"
-BOPHON,Honolulu Federal Detention Center,HI,BOP,0,197,"Honolulu, HI"
-HOSPSPR,Hospital Pavia-Santurce,PR,HOSPITAL,80,111,"San Juan, PR"
-HAVACTX,Hotel Ava Casa Do Tranquilidade,TX,FAMILY STAGING,156,162,"Laredo, TX"
-HTLPPTX,Hotel Pharr Plaza,TX,HOTEL,142,159,"Pharr, TX"
-HOUICDF,Houston Contract Det.Fac.,TX,CDF,0,197,"Houston, TX"
-HOUHOLD,Houston FO Holdroom,TX,HOLD,0,197,"Houston, TX"
-HHCHKTX,Houston Healthcare Hosp,TX,HOSPITAL,171,197,"Houston, TX"
-HOWARMD,Howard County Det Cntr,MD,IGSA,0,152,"Jessup, MD"
-HUDSONJ,Hudson County Jail,NJ,IGSA,0,190,"Kearny, NJ"
-HUDSPTX,Hudspeth County Jail,TX,IGSA,111,167,"Sierra Blanca, TX"
-HUNMHTX,Huntsville Memorial Hospital,TX,HOSPITAL,180,182,"Huntsville, TX"
-TXHUNTS,Huntsville State P.,TX,IGSA,12,13,"Huntsville, TX"
-POLKCTX,IAH Secure Adult Det. Facility,TX,IGSA,0,197,"Livingston, TX"
-FRMVLVA,ICA - Farmville,VA,DIGSA,22,197,"Farmville, VA"
-HHWHOLD,INS District Office,HI,HOLD,64,193,"Honolulu, HI"
-IFIHOLD,Idaho Falls Hold Room,ID,HOLD,105,197,"Idaho Falls, ID"
-IMPCOCA,Imperial County Jail,CA,IGSA,25,179,"El Centro, CA"
-IRADFCA,Imperial Regional Adult Det Fac,CA,CDF,71,197,"Calexico, CA"
-IMPHOLD,Imperial Sub Office Hold Room,CA,HOLD,150,197,"Calexico, CA"
-INDCMIC,In Dept. Of Corrections,IN,UNKNOWN,60,61,"Indianapolis, IN"
-INPHOLD,Indianapolis Hold Room,IN,HOLD,18,197,"Indianapolis, IN"
-INDMPIN,Indianapolis Metropolitan PD,IN,UNKNOWN,150,151,"Indianapolis, IN"
-INTPOOK,Integris Health Ponca City Hospita,OK,HOSPITAL,184,185,"Ponca City, OK"
-CAIRONW,Ironwood State Prison,CA,UNKNOWN,94,95,"Blythe, CA"
-IRWINGA,Irwin County Detention Center,GA,IGSA / USMS IGA,23,156,"Ocilla, GA"
-JFKTSNY,JFK International Ap - T7,NY,OTHER,118,197,"Jamaica, NY"
-GTMOACU,JTF Camp Six,CU,DOD,196,197,"FPO, CU"
-JHRWLTX,Jack Harwell Detention Center,TX,USMS IGA,30,196,"Waco, TX"
-JACKSOR,Jackson Co Jail,OR,USMS IGA,0,143,"Medford, OR"
-JAJUVOR,Jackson County Juvenile,OR,JUVENILE,20,38,"Medford, OR"
-JACKSTN,Jackson County Sheriff,TN,UNKNOWN,180,181,"Gainesboro, TN"
-JAKHOLD,Jackson MS Hold Room,MS,HOLD,106,197,"Pearl, MS"
-JMHOSFL,Jackson Memorial Hospital,FL,HOSPITAL,0,193,"Miami, FL"
-JKPCCLA,Jackson Parish Correctional Center,LA,DIGSA,125,197,"Jonesboro, LA"
-JAXHOLD,Jacksonville Sub-Office,FL,HOLD,0,197,"Jacksonville, FL"
-JHMCJNY,Jamaica Hospital Med Ctr,NY,HOSPITAL,127,191,"Richmond Hill, NY"
-MUSIKCA,James A Musick Facility,CA,IGSA,22,129,"Irvine, CA"
-JEFFETX,Jefferson County Jail,TX,IGSA,0,60,"Beaumont, TX"
-JEFFEID,Jefferson County Jail,ID,IGSA,1,197,"Rigby, ID"
-JEFFENY,Jefferson County Jail,NY,IGSA,1,52,"Watertown, NY"
-JEFFEKS,Jefferson County Jail,KS,USMS IGA,1,2,"Oskaloosa, KS"
-JEFFEIL,Jefferson County Jail,IL,IGSA,6,194,"Mount Vernon, IL"
-JEFFECO,Jefferson County Jail,CO,IGSA,0,19,"Golden, CO"
-JEFFEMT,Jefferson County Jail,MT,USMS IGA,0,62,"Boulder, MT"
-JENNIMO,Jennings City Jail,MO,USMS IGA,1,26,"Jennings, MO"
-JYCMCNJ,Jersey City Med Ctr,NJ,HOSPITAL,137,139,"Jersey City, NJ"
-JCRLYTX,Joe Corley Processing Ctr,TX,IGSA,115,197,"Conroe, TX"
-JOHNSTX,Johnson County Jail,TX,IGSA,4,150,"Cleburne, TX"
-JOSEPOR,Josephine Co. Jail,OR,USMS IGA,0,116,"Grants Pass, OR"
-KANDIMN,Kandiyohi Co. Jail,MN,IGSA,108,197,"Willmar, MN"
-KANECIL,Kane County Jail,IL,UNKNOWN,68,118,"St Charles, IL"
-KANKEIL,Kankakee County Jail,IL,USMS IGA,96,167,"Kankakee, IL"
-KANHOLD,Kansas City Holdroom,MO,HOLD,24,197,"Kansas City, MO"
-KCCDCTX,Karnes County Civil Det. Facility,TX,FAMILY,39,196,"Karnes City, TX"
-KRNRCTX,Karnes County Residential Center,TX,FAMILY,67,197,"Karnes City, TX"
-KARNETX,Karnes Cty Corr Ctr,TX,USMS IGA,0,197,"Karnes City, TX"
-KCOJFOK,Kay Co Justice Facility,OK,IGSA,128,197,"Newkirk, OK"
-KENOSWI,Kenosha County Jail,WI,USMS IGA,0,150,"Kenosha, WI"
-KENTCMI,"Kent Co.,Grand Rapids,MI",MI,IGSA,49,159,"Grand Rapids, MI"
-KENTHRI,Kent Hospital,RI,HOSPITAL,188,189,"Warwick, RI"
-KERCOCA,Kern County Jail (Lerdo),CA,IGSA,0,66,"Bakersfield, CA"
-KERNHCA,Kern Medical Hospital,CA,HOSPITAL,179,197,"Bakersfield, CA"
-AKKETCH,Ketchikan Regional CC,AK,IGSA,17,88,"Ketchikan, AK"
-KCHOSNY,Kings County Hospital,NY,HOSPITAL,30,119,"Brooklyn, NY"
-KINNETX,Kinney County Jail,TX,IGSA,14,197,"Brackettville, TX"
-KITTIWA,Kittitas County Jail,WA,IGSA,1,147,"Ellensburg, WA"
-KLAMCOR,Klamath Co Jail,OR,IGSA,0,61,"Klamath Falls, OR"
-KNXDFTN,Knox County Detention Facility,TN,USMS IGA,118,197,"Knoxville, TN"
-KNXCHTX,Knox County Hospital,TX,HOSPITAL,183,191,"Knox City, TX"
-KNXHOLD,Knoxville Hold Room,TN,HOLD,32,197,"Knoxville, TN"
-KODIAAK,Kodiak City Jail,AK,IGSA,2,165,"Kodiak, AK"
-KOOTEID,Kootenai County,ID,IGSA,7,12,"Coeur D'Alene, ID"
-KROHOLD,Krome Hold Room,FL,HOLD,94,197,"Miami, FL"
-KRO,Krome North SPC,FL,SPC,0,197,"Miami, FL"
-KRHUBFL,Krome/Miami Hub,FL,HOLD,0,197,"Miami, FL"
-LCIMCTX,La Copa Inn Hotel,TX,FAMILY STAGING,156,157,"South Padre Island, TX"
-LAFERTX,La Feria Police Dept.,TX,UNKNOWN,81,127,"La Feria, TX"
-LPAPSAZ,La Palma Corr Ctr Apso,AZ,DIGSA,125,195,"Eloy, AZ"
-LPLCCAZ,La Palma Correctional Center,AZ,DIGSA,117,179,"Eloy, AZ"
-LAPAZAZ,La Paz County Adult Det. Fac.,AZ,USMS IGA,2,197,"Parker, AZ"
-LPZRHAZ,La Paz Regional Hospital,AZ,HOSPITAL,188,196,"Parker, AZ"
-LAPLACO,La Plata County Jail,CO,USMS IGA,15,138,"Durango, CO"
-LQSNATX,La Quinta Inn By Wyndham SNA,TX,HOTEL,149,163,"San Antonio, TX"
-CSCLQTX,La Quinta Wyndham Casa De Paz,TX,FAMILY STAGING,151,159,"Pearsall, TX"
-LQWCSTX,La Quinta Wyndham Casa Do Sonho,TX,FAMILY STAGING,155,162,"Cotulla, TX"
-LSRDCTX,La Salle Co Regional Det. Center,TX,USMS IGA,32,192,"Encinal, TX"
-BOPLTL,"La Tuna Federal Sattelite, Low",TX,BOP,116,120,"Anthony, TX"
-LACKAPA,"Lackawana Cnty Jail, PA",PA,USMS IGA,0,92,"Scranton, PA"
-CTLAFSL,Laffayette Sheriff's Lock,CT,HOLD,0,57,"Hartford, CT"
-LHMCBMA,Lahey Hospital & Med Ctr,MA,HOSPITAL,183,184,"Burlington, MA"
-LAKCOMT,Lake County Jail,MT,IGSA,0,11,"Polson, MT"
-LAKCOFL,Lake County Jail,FL,UNKNOWN,195,197,"Tavares, FL"
-LKLNDLA,Lakeland Nursing Home,LA,HOSPITAL,0,134,"Pineville, LA"
-LAKMCFL,Lakeside Medical Center,FL,HOSPITAL,114,190,"Belle Glade, FL"
-LANECOR,Lane Co Jail,OR,IGSA,0,132,"Eugene, OR"
-LARCOWY,Laramie County Jail,WY,USMS IGA,0,170,"Cheyenne, WY"
-LRDHOLD,Laredo Detention Center Hold Room,TX,HOLD,29,196,"Laredo, TX"
-LRDMCTX,Laredo Medical Center,TX,HOSPITAL,172,197,"Laredo, TX"
-LRDICDF,Laredo Processing Center,TX,DIGSA,0,197,"Laredo, TX"
-LARIMCO,Larimer County Jail,CO,USMS IGA,0,66,"Fort Collins, CO"
-LRKBHFL,Larkin Behavioral Health Svcs,FL,HOSPITAL,119,197,"Hollywood, FL"
-LRKNHFL,Larkin Hospital,FL,HOSPITAL,5,197,"South Miami, FL"
-LASANCO,Las Animas County Jail,CO,IGSA,18,19,"Trinidad, CO"
-LASWOCA,Las Colinas Women Det Fac,CA,IGSA,48,56,"Santee, CA"
-LASHOLD,Las Cruces Hold Room,NM,HOLD,174,197,"Las Cruces, NM"
-LVGHOLD,Las Vegas Hold Room,NV,HOLD,0,197,"Las Vegas, NV"
-OLACCLA,Lasalle Corr Ctr Olla,LA,IGSA,129,184,"Olla, LA"
-LASALTX,Lasalle County Jail,TX,OTHER,65,143,"Cotulla, TX"
-JENADLA,Lasalle ICE Processing Center,LA,DIGSA,0,197,"Jena, LA"
-LAURITX,Laurel Ridge Treatment Ctr,TX,HOSPITAL,177,179,"San Antonio, TX"
-LAVACTX,Lavaca County Jail,TX,UNKNOWN,113,114,"Hallettsville, TX"
-LAWRESD,"Lawrence Co. Jail, SD",SD,IGSA,7,9,"Deadwood, SD"
-LAWREPA,Lawrence County Jail,PA,USMS IGA,2,51,"New Castle, PA"
-LEACONM,Lea County Jail,NM,USMS IGA,60,157,"Lovington, NM"
-BOPLVN,Leavenworth USP,KS,UNKNOWN,196,197,"Leavenworth, KS"
-LEHIGPA,"Lehigh County Jail, PA",PA,USMS IGA,112,131,"Allentown, PA"
-LVYHOPA,Lehigh Valley Hospital - Pocono,PA,HOSPITAL,191,195,"East Stroudsburg, PA"
-AKLEMON,"Lemon Creek, Juneau,AK",AK,USMS IGA,1,181,"Juneau, AK"
-LSHOSMA,Lemuel Shattuck Hospital,MA,HOSPITAL,1,189,"Jamaica Plain, MA"
-LEVYCFL,Levy County Jail,FL,IGSA,166,195,"Bronson, FL"
-LEWISMT,Lewis & Clark County Jail,MT,IGSA,0,118,"Helena, MT"
-LEWISNY,Lewis County Jail,NY,IGSA,45,46,"Lowville, NY"
-LEXINSC,Lexington County Jail,SC,USMS IGA,26,197,"Lexington, SC"
-LEXFCKY,Lexington Processing @ Fayette Co,KY,USMS IGA,178,197,"Lexington, KY"
-BOPLEX,Lexinton Fed.Med Center,KY,BOP,67,114,"Lexington, KY"
-LIMMCTX,Limeston Medical Center,TX,HOSPITAL,173,188,"Groesbeck, TX"
-LIMCJTX,Limestone County Jail,TX,UNKNOWN,170,175,"Groesbeck, TX"
-LIMESTX,Limestone Det Center,TX,USMS IGA,0,197,"Groesbeck, TX"
-LINCONE,Lincoln County Jail,NE,IGSA,120,197,"North Platte, NE"
-LINCOMO,Lincoln County Sheriff's,MO,IGSA,7,194,"Troy, MO"
-LINNCOR,Linn Co Jail,OR,IGSA,12,85,"Albany, OR"
-LINNJIA,Linn County Jail,IA,USMS IGA,14,184,"Cedar Rapids, IA"
-LRAHOLD,Little Rock Hold Room,AR,HOLD,29,197,"Little Rock, AR"
-NYLIVIC,Livingston Correctional,NY,UNKNOWN,171,172,"Sonyea, NY"
-LIVINNY,Livingston County Jail,NY,USMS IGA,18,116,"Geneseo, NY"
-LLUMCCA,Loma Linda University Med Center,CA,HOSPITAL,72,156,"Loma Linda, CA"
-BOPLOF,Lompoc FCI,CA,BOP,8,194,"Lompoc, CA"
-BOPLOM,Lompoc USP,CA,BOP,55,186,"Lompoc, CA"
-LONPDAR,Lonoke Police Dept Det.Ctr,AR,IGSA,0,160,"Lonoke, AR"
-LTVHOLD,"Lorton, VA Hold Room",VA,HOLD,124,181,"Fairfax, VA"
-LOSCJCA,Los Angeles County Jail-Twin Tower,CA,IGSA,0,136,"Los Angeles, CA"
-BOPLOS,Los Angeles Met.Det.Ctr.,CA,BOP,0,185,"Los Angeles, CA"
-LPD77CA,Los Angeles Police PD 77th Div.,CA,UNKNOWN,87,125,"Los Angeles, CA"
-LOSHOLD,Los Cust Case,CA,HOLD,0,197,"San Pedro, CA"
-LSFHOLD,Los Fresnos Hold Room,TX,HOLD,0,194,"Los Fresnos, TX"
-LFRESTX,Los Fresnos Police Dept.,TX,UNKNOWN,83,85,"Los Fresnos, TX"
-LOUCOVA,Loudoun County,VA,USMS IGA,6,128,"Leesburg, VA"
-LOUHOLD,Louisville Hold Room,KY,HOLD,60,195,"Louisville, KY"
-LDFHOLD,Loveland Holdroom,CO,HOLD,24,87,"Loveland, CO"
-LRKMCFL,Lower Keys Medical Center,FL,HOSPITAL,117,133,"Key West, FL"
-LYOLAIL,Loyola Center For Health,IL,HOSPITAL,98,189,"Maywood, IL"
-LOYMCIL,Loyola Medical Center,IL,HOSPITAL,20,26,"Maywood, IL"
-LUBBOTX,Lubbock County Jail,TX,USMS IGA,0,197,"Lubbock, TX"
-LBKHOLD,Lubbock Hold Room,TX,HOLD,53,197,"Lubbock, TX"
-LUFKNTX,Lufkin Police Dept.,TX,OTHER,110,111,"Lufkin, TX"
-LUNCONM,Luna County Jail,NM,IGSA,17,33,"Deming, NM"
-MHFSHMN,M Health Fairview Southdale Hosp,MN,HOSPITAL,192,194,"Edina, MN"
-MACCOMI,"Macomb Co.Mt.Clemens,MI.",MI,USMS IGA,0,37,"Mount Clemens, MI"
-MADISMS,"Madison Co. Jail, MS.",MS,IGSA,103,197,"Canton, MS"
-MADISID,Madison County Jail,ID,IGSA,0,47,"Rexburg, ID"
-MADISNY,Madison County Jail,NY,USMS IGA,0,60,"Wampsville, NY"
-MAHONOH,Mahoning County Jail,OH,IGSA,0,43,"Youngstown, OH"
-JAMESGA,Main Folkston IPC Drjames,GA,DIGSA / IGSA,99,149,"Folkston, GA"
-MEYTHCT,Maine Youth Center - Long Creek,ME,JUVENILE,32,187,"South Portland, ME"
-MANATFL,Manatee County Detention-Annex,FL,IGSA,181,197,"PALMETTO, FL"
-MANHOLD,Manchester Holdroom,NH,HOLD,23,197,"Manchester, NH"
-MAPLEOH,Maple Heights City Jail,OH,USMS IGA,0,115,"Maple Heights, OH"
-NYMARCC,Marcy Correctional,NY,UNKNOWN,168,181,"Marcy, NY"
-MCFAJAZ,Maricopa County Jail,AZ,USMS IGA,0,167,"Phoenix, AZ"
-MCMEDAZ,Maricopa Medical Center,AZ,HOSPITAL,0,183,"Phoenix, AZ"
-MARICOR,Marion Co Jail,OR,IGSA,54,55,"Salem, OR"
-FLMARIC,Marion Correctional Inst.,FL,OTHER,124,128,"Ocala, FL"
-MARIOFL,Marion County Jail,FL,USMS IGA,195,197,"Oscala, FL"
-MARIOIN,Marion County Jail,IN,USMS IGA,0,197,"Indianapolis, IN"
-BOPMAR,Marion USP,IL,BOP,0,24,"Marion, IL"
-MARSHIA,Marshall County Jail,IA,USMS IGA,24,133,"Marshalltown, IA"
-MARTIFL,Martin County Jail,FL,IGSA,4,196,"Stuart, FL"
-MARTNTX,Martin County Jail,TX,UNKNOWN,57,58,"Stanton, TX"
-MWASHVA,Mary Washington Hospital,VA,HOSPITAL,178,197,"Fredericksburg, VA"
-AKMATSU,"Matsu Pretrial, Palmer AK",AK,IGSA,0,197,"Palmer, AK"
-MAVERTX,Maverick County Jail,TX,IGSA,6,197,"Eagle Pass, TX"
-MCHALMN,Mayo Clinic Health Sys Albert Lea,MN,HOSPITAL,192,193,"Albert Lea, MN"
-MCHENIL,McHenry County Sheriff's,IL,USMS IGA,0,182,"Woodstock, IL"
-MLPHHMI,McLaren Port Huron Hosp,MI,HOSPITAL,180,181,"Port Huron, MI"
-AKMCYOU,McLaughlin Youth Center,AK,JUVENILE,14,20,"Anchorage, AK"
-BOPRAE,"McRae Correctional Facility, CCA",GA,BOP,0,106,"Mcrae, GA"
-MCAHOLD,Mcallen Hold Room,TX,OTHER,143,197,"Edinburg, TX"
-MCCDCTX,Mcclennan County Detention Center,TX,USMS IGA,0,31,"Waco, TX"
-BOPMCR,Mccreary USP,KY,BOP,16,174,"Pine Knot, KY"
-CACFMCF,Mcfarland CCF,CA,IGSA,128,129,"Mcfarland, CA"
-MCKINNM,Mckinley County Adult Det. Cen.,NM,IGSA,95,155,"Gallup, NM"
-MCCLETX,Mclennan County Jail,TX,IGSA,6,197,"Waco, TX"
-MEADESD,"Meade Co. Jail, SD",SD,IGSA,1,54,"Sturgis, SD"
-MECKLNC,Mecklenburg (NC) Co Jail,NC,USMS IGA,0,144,"Charlotte, NC"
-MEDHOLD,Medford Sub-Office,OR,HOLD,4,197,"Medford, OR"
-MHNHHTX,Memorial Hermann NW Hosp,TX,HOSPITAL,171,197,"Houston, TX"
-MEMHOCA,Memorial Hospital Bakersfield,CA,HOSPITAL,179,180,"Bakersfield, CA"
-MEMRHFL,Memorial Regional Hosp.,FL,HOSPITAL,136,191,"Hollywood, FL"
-BOPMEM,Memphis Fed.Corr.Inst.,TN,BOP,0,17,"Memphis, TN"
-MEMHOLD,Memphis Hold Room,TN,HOLD,18,197,"Memphis, TN"
-MRCDSTX,Mercedes Police Dept.,TX,UNKNOWN,80,173,"Mercedes, TX"
-MERCEIL,Mercer County Corrections,IL,OTHER,113,143,"Aledo, IL"
-MHTFHOH,Mercy Health - Tiffin Hospital,OH,HOSPITAL,181,182,"Tiffin, OH"
-MEHOSCA,Mercy Hosp Downtown Bakersfield,CA,HOSPITAL,195,196,"Bakersfield, CA"
-MERCYFL,Mercy Hospital,FL,HOSPITAL,135,187,"Miami, FL"
-MEMCRCA,Mercy Medical Ctr Redding,CA,HOSPITAL,192,193,"Redding, CA"
-MESJACO,Mesa County Jail,CO,USMS IGA,0,197,"Grand Junction, CO"
-CACFMES,Mesa Verde ICE Processing Center,CA,CDF,77,197,"Bakersfield, CA"
-METHOTX,Methodist Hospital,TX,HOSPITAL,184,197,"San Antonio, TX"
-MHMSATX,Methodist Hospital Metropolitan,TX,HOSPITAL,170,195,"San Antonio, TX"
-MHNSATX,Methodist Hospital Northeast,TX,HOSPITAL,168,196,"Live Oak, TX"
-MTHOSTX,Methodist Hospital South,TX,HOSPITAL,171,186,"Jourdanton, TX"
-MHSOSTX,Methodist Hospital Stone Oak,TX,HOSPITAL,173,186,"San Antonio, TX"
-MHTSATX,Methodist Hospital Texsan,TX,HOSPITAL,168,196,"San Antonio, TX"
-MSTHSTX,Methodist Specialty Transplant Hos,TX,HOSPITAL,168,196,"San Antonio, TX"
-METROFL,Metro Dade Jail,FL,IGSA,7,141,"Miami, FL"
-MIAHOLD,Miami (Miramar) Hold Room,FL,HOLD,0,197,"Miami, FL"
-IBPSMIA,Miami Border Patrol,FL,UNKNOWN,100,163,"Miami, FL"
-BOPMIA,Miami FCI (Former MCC),FL,BOP,97,98,"Miami, FL"
-BOPMIM,Miami Fed.Det.Center,FL,BOP,2,197,"Miami, FL"
-MSF,Miami Staging Facility,FL,HOLD,15,197,"Miami, FL"
-MRREGVA,Middle River Regional Jail,VA,UNKNOWN,179,194,"Staunton, VA"
-MIDBIMA,Middlesex County H.O.C.-Billerica,MA,IGSA,3,4,"Cambridge, MA"
-MIDDLNJ,Middlesex County Jail,NJ,IGSA,0,34,"North Brunswick, NJ"
-MIDLATX,Midland Detention Center,TX,USMS IGA,33,197,"Midland, TX"
-MLDHOLD,"Midland, TX ERO Holdroom",TX,HOLD,50,197,"Midland, TX"
-NYMDSTC,Midstate Correctional,NY,UNKNOWN,174,179,"Marcy, NY"
-GTMODCU,Migrant Ops Center Main Av622,CU,MOC,196,197,"FPO, CU"
-MILLRAR,Miller County Jail,AR,USMS IGA,0,197,"Texarkana, AR"
-MHRHOPA,Milton S. Hershey Medical Center,PA,HOSPITAL,193,194,"Hershey, PA"
-MILHOLD,Milwaukee Holdroom,WI,HOLD,9,197,"Milwaukee, WI"
-MINERMT,Mineral County Jail,MT,IGSA,6,7,"Superior, MT"
-MINICID,Minicassia Det. Center,ID,IGSA,1,192,"Burley, ID"
-MNCOAKC,"Minn.C.F, Oak Park Hgts",MN,IGSA,2,3,"Stillwater, MN"
-MINNESD,Minnehaha County Jail,SD,USMS IGA,0,197,"Sioux Falls, SD"
-LANCACA,Mira Loma Det.Center,CA,DIGSA,0,108,"Lancaster, CA"
-MIRHPRI,Miriam Hospital,RI,HOSPITAL,172,197,"Providence, RI"
-MISCOMO,Mississippi County Detention Cente,MO,IGSA,0,124,"Charleston, MO"
-MISSOMT,Missoula County,MT,IGSA,0,145,"Missoula, MT"
-MOAHOLD,Mobile Holdroom,AL,HOLD,188,197,"Mobile, AL"
-MOFFECO,Moffat County Jail,CO,IGSA,0,190,"Craig, CO"
-MOHAVAZ,Mohave Co Corr Center,AZ,IGSA,2,3,"Kingman, AZ"
-NYMOHOC,Mohawk Correctional,NY,UNKNOWN,92,181,"Rome, NY"
-MONMONJ,Monmouth County Jail,NJ,IGSA,0,134,"Freehold, NJ"
-MONROMI,Monroe County Detention-Dorm,MI,IGSA,0,197,"Monroe, MI"
-MONRONY,Monroe County Jail,NY,IGSA,0,14,"Rochester, NY"
-MONROFL,Monroe County Jail,FL,IGSA,0,197,"Key West, FL"
-MNROEMI,Monroe County Sheriff/Jail-Main,MI,IGSA,61,197,"Monroe, MI"
-MTPPDCA,Monterey Park Police Dept,CA,USMS IGA,0,27,"Monterey Park, CA"
-MONCJAL,Montgomery City Jail,AL,USMS IGA,1,131,"Montgomery, AL"
-MNTGMAL,Montgomery City Jail,AL,IGSA,31,196,"Montgomery, AL"
-MONTGPA,"Montgomery Cnty Jail, PA",PA,USMS IGA,0,136,"Norristown, PA"
-MONTGAL,Montgomery Co Mac Sim Butler D.F.,AL,USMS IGA,56,197,"Montgomery, AL"
-MONTGTX,Montgomery County Jail,TX,IGSA,0,179,"Conroe, TX"
-MONTGNY,Montgomery County Jail,NY,IGSA,7,8,"Fonda, NY"
-MONTGMO,Montgomery County Jail,MO,IGSA,0,148,"Montgomery City, MO"
-MTGHOLD,Montgomery Hold Rm,TX,HOLD,120,197,"Conroe, TX"
-MGAHOLD,Montgomery Hold Room,AL,HOLD,32,33,"Montgomery, AL"
-MTGPCTX,Montgomery Processing Ctr,TX,CDF,119,197,"Conroe, TX"
-MORGACO,Morgan County Jail,CO,IGSA,0,16,"Fort Morgan, CO"
-MORGNMO,Morgan County Sheriff's Dept,MO,IGSA,0,149,"Versailles, MO"
-BOPMRG,Morgantown Fed.Corr.Inst.,WV,OTHER,125,187,"Morgantown, WV"
-MOROWOH,Morrow Co. Correctional Facility,OH,IGSA,10,149,"Mount Gilead, OH"
-BOPMVC,Moshannon Valley Correctional,PA,DIGSA,157,164,"Philipsburg, PA"
-MSVPCPA,Moshannon Valley Processing Center,PA,DIGSA,157,197,"Philipsburg, PA"
-MLJHOLD,Mount Laurel Hold Room,NJ,HOLD,130,197,"Mount Laurel, NJ"
-MTNITPA,Mount Nittany Medical Center,PA,HOSPITAL,180,194,"State College, PA"
-MVMCMAZ,Mountain Vista Med Ctr,AZ,HOSPITAL,170,197,"Mesa, AZ"
-MOUNTND,"Mountrail Co. Jail, ND",ND,IGSA,1,50,"Stanley, ND"
-MULTNOR,Multnomah County Jail,OR,IGSA,10,11,"Portland, OR"
-MUSCAIA,Muscatine County Jail,IA,USMS IGA,104,118,"Muscatine, IA"
-MSKGNMI,Muskegon County Jail,MI,UNKNOWN,49,50,"Muskegon, MI"
-MUSSEMT,Musselshell County Jail,MT,IGSA,3,132,"Roundup, MT"
-NEJUVNE,N.E.Neb.Juvenile Services,NE,JUVENILE,10,11,"Madison, NE"
-NHSPCON,"NH State Prison, Concord",NH,IGSA,3,9,"Concord, NH"
-CSCNWWA,NW ICE Processing Ctr,WA,CDF,0,197,"Tacoma, WA"
-NRJDCVA,NW Reg Juv Det Ctr,VA,UNKNOWN,150,197,"Winchester, VA"
-NWRCCMN,NW Regional Corrections Center,MN,USMS IGA,130,197,"Crookston, MN"
-NASHUMA,Nashua St. Jail,MA,UNKNOWN,80,125,"Boston, MA"
-BOPCNV,Nashville Comm. Corr.,TN,BOP,46,197,"Nashville, TN"
-NSVHOLD,Nashville Hold Room,TN,HOLD,32,33,"Nashville, TN"
-NASSANY,Nassau Co Correc Center,NY,IGSA,11,197,"East Meadow, NY"
-NASTRNY,Nassau County ICE Trailer,NY,UNKNOWN,196,197,"East Meadow, NY"
-NASSAFL,Nassau County Jail,FL,IGSA,0,196,"Yulee, FL"
-NATCHLA,Natchitoches Parish Det. Center,LA,USMS IGA,117,132,"Natchitoches, LA"
-NATROWY,Natrona County Jail,WY,USMS IGA,0,197,"Casper, WY"
-NAVSOAZ,Navajo County Sheriff,AZ,IGSA,1,142,"Holbrook, AZ"
-NMCOMNE,Nebraska Med Ctr Omaha,NE,HOSPITAL,180,182,"Omaha, NE"
-NFMIGFL,Neighbor-Family Miami Gardens,FL,UNKNOWN,96,169,"Miramar, FL"
-NFSMTGA,"Neighbor-Family, Stone Mountain",GA,OTHER,113,114,"Stone Mountain, GA"
-NVSDCNV,Nevada Southern Detention Center,NV,USMS IGA,91,197,"Pahrump, NV"
-NWHNVNC,New Hanover Co Det Center,NC,IGSA,44,197,"Castle Hayne, NC"
-NRVRJVA,New River Valley Reg. Jail,VA,OTHER,142,148,"Dublin, VA"
-PRESBNY,New York Presbyterian Hospital,NY,HOSPITAL,183,197,NY
-NEWHOLD,New/INS Os Hold Room,NJ,HOLD,30,197,"Newark, NJ"
-NBGHOLD,Newburgh Holding,NY,HOLD,138,197,"Newburgh, NY"
-NIAGANY,Niagara County Jail,NY,IGSA,0,16,"Lockport, NY"
-NIOBRWY,Niobrara County Jail,WY,IGSA,0,1,"Lusk, WY"
-NIXHCTX,Nix Home Care,TX,UNKNOWN,87,157,"San Antonio, TX"
-NVJDCVA,No. Va. Juvenile Det - ICE,VA,JUVENILE,81,129,"Alexandria, VA"
-NOBLEMN,Nobles Co. Jail,MN,IGSA,1,172,"Worthington, MN"
-NOLHOLD,Nol D D & P,LA,HOLD,56,196,"New Orleans, LA"
-NORFOMA,Norflk Cnty Dedham,MA,USMS IGA,0,76,"Dedham, MA"
-NORFOVA,Norfolk City Jail,VA,USMS IGA,107,191,"Norfolk, VA"
-NORHOLD,Norfolk Sub-Office Hold,VA,HOLD,17,197,"Norfolk, VA"
-NBRMCFL,North Broward Medical Center,FL,HOSPITAL,25,197,"Pompano Beach, FL"
-NCBHOTX,North Central Baptist Hospital,TX,HOSPITAL,176,177,"San Antonio, TX"
-NGDCTGA,North Georgia Detention Center,GA,IGSA,3,66,"Gainesville, GA"
-NOLVGNV,North Las Vegas,NV,USMS IGA,0,138,"North Las Vegas, NV"
-NRPHOLD,North Platte Hold Room,NE,HOLD,27,111,"North Platte, NE"
-NEBHSTX,Northeast Baptist Hospital,TX,HOSPITAL,173,180,"San Antonio, TX"
-BOPNEO,Northeast Ohio Correctional Center,OH,UNKNOWN,98,99,"Youngstown, OH"
-NNREGVA,Northern Neck Reg. Jail,VA,IGSA,120,184,"Warsaw, VA"
-NNVMCNV,Northern Nevada Med Ctr,NV,HOSPITAL,178,179,"Sparks, NV"
-NORCOOR,Northern Oregon Corr.Fac.,OR,IGSA,0,143,"The Dalles, OR"
-NOJUVOR,Northern Oregon Juv.Det.,OR,JUVENILE,0,143,"The Dalles, OR"
-WVNORTH,Northern Regional Jail,WV,USMS IGA,0,197,"Moundsville, WV"
-NWREGVA,Northwest Reg. Adult Det.,VA,IGSA,0,196,"Winchester, VA"
-VTSTALB,Northwest State Correctional Ctr.,VT,USMS IGA,0,197,"Swanton, VT"
-NYCHOLD,Nyc Hold Room,NY,HOLD,0,197,"New York, NY"
-NYEPANV,Nye County Sheriff-Pahrump,NV,IGSA,130,194,"Pahrump, NV"
-OAK,Oakdale Fed. Det. Center,LA,IGSA,0,165,"Oakdale, LA"
-BOPOAD,Oakdale Fed.Det.Center,LA,BOP,0,172,"Oakdale, LA"
-OAKHOLD,Oakdale Holding Room,LA,HOLD,0,196,"Oakdale, LA"
-ODESSTX,Odessa Detention Center,TX,IGSA,50,51,"Odessa, TX"
-OGUHOLD,Ogden Hold Room,UT,HOLD,58,197,"Ogden, UT"
-NYOGDNC,Ogdensburg Correctional,NY,IGSA,94,157,"Ogdensburg, NY"
-OGLECIL,Ogle County Jail,IL,USMS IGA,119,160,"Oregon, IL"
-OKANOWA,Okanogan Co. Jail,WA,IGSA,0,111,"Okanogan, WA"
-OKCHOLD,Oklahoma City Hold Room.,OK,HOLD,52,197,"Oklahoma City, OK"
-OKCOJOK,Oklahoma County Jail,OK,IGSA,123,135,"Oklahoma City, OK"
-OKMULOK,Okmulgee County Jail,OK,IGSA,106,186,"Okmulgee, OK"
-OLDHAKY,Oldham County Jail,KY,USMS IGA,76,197,"La Grange, KY"
-OMAHOLD,Omaha FO Hold,NE,HOLD,0,197,"Omaha, NE"
-ONECONY,Oneida County Jail,NY,IGSA,0,139,"Oriskany, NY"
-ONONDNY,Onondaga County Jail,NY,USMS IGA,0,130,"Syracuse, NY"
-ONTARNY,Ontario County Jail,NY,USMS IGA,0,80,"Canandaigua, NY"
-OGCMCCA,Orange Co Global Medical Center,CA,HOSPITAL,87,172,"Santa Ana, CA"
-OCIRCCA,Orange Count Intake Release Fac.,CA,IGSA,24,143,"Santa Ana, CA"
-OCCWJCA,Orange County Central Women's Jail,CA,IGSA,47,110,"Santa Ana, CA"
-ORANGNY,Orange County Jail,NY,IGSA,0,197,"Goshen, NY"
-ORANGFL,Orange County Jail,FL,USMS IGA,0,197,"Orlando, FL"
-OGRMCNY,Orange Regional Med Ctr,NY,HOSPITAL,128,196,"Middletown, NY"
-AAORDMD,Ordnance Road Correctional Center,MD,IGSA,108,127,"Glen Burnie, MD"
-ORLHOLD,Orlando Hold Room,FL,HOLD,0,197,"Orlando, FL"
-NYORLNC,Orleans Correctional,NY,IGSA,132,133,"Albion, NY"
-ORLEANY,Orleans County Jail,NY,IGSA,5,11,"Albion, NY"
-ORPARLA,Orleans Parish Sheriff,LA,IGSA,0,106,"New Orleans, LA"
-OSAHOKS,Osawatamie State Hospital,KS,HOSPITAL,53,54,"Osawatamie, KS"
-OSCEOFL,Osceola County Jail,FL,UNKNOWN,195,197,"Kissimmee, FL"
-CCASDCA,Otay Mesa Detention Center,CA,CDF,0,197,"San Diego, CA"
-OTRPCNM,Otero Co Processing Center,NM,DIGSA,0,197,"Chaparral, NM"
-OTERONM,Otero County Detention,NM,IGSA,0,190,"Alamogordo, NM"
-OTEROCO,Otero County Jail,CO,USMS IGA,65,94,"Lajunta, CO"
-OTROPNM,Otero County Prison Facility,NM,USMS IGA,0,156,"Chaparral, NM"
-OKMHKTX,Otto Kaiser Memorial Hospital,TX,HOSPITAL,176,196,"Kenedy, TX"
-PMMCAHI,Pali Momi Medical Center,HI,HOSPITAL,175,176,"Aiea, HI"
-PALMBFL,Palm Beach County Jail,FL,IGSA,0,176,"West Palm Beach, FL"
-PLRMCCA,Palmdale Regional Medical Center,CA,HOSPITAL,78,195,"Palmdale, CA"
-AKPALMC,Palmer Correctional Cente,AK,IGSA,41,69,"Palmer, AK"
-PMHOSFL,Palmetto Hospital,FL,HOSPITAL,0,178,"Hialeah, FL"
-PLMBHTX,Palms Behavioral Health,TX,HOSPITAL,95,189,"Harlingen, TX"
-PWHOSFL,Palms West Hospital,FL,HOSPITAL,28,158,"Loxahatchee, FL"
-PLMVWTX,Palmview Police Dept.,TX,UNKNOWN,81,156,"Palmview, TX"
-PAMSATX,Pam Health Specialty Hospital 1,TX,HOSPITAL,189,195,TX
-PAMREVA,Pamunkey Reg Jail,VA,USMS IGA,0,25,"Hanover, VA"
-PVLYHCA,Paradise Valley Hospital,CA,HOSPITAL,166,197,"National City, CA"
-PARKCMT,Park County Det Center,MT,IGSA,4,13,"Livingston, MT"
-PARKJCO,Park County Jail,CO,IGSA,0,94,"Fairplay, CO"
-PARKCWY,Park County Jail,WY,IGSA,2,17,"Cody, WY"
-PKLDHTX,Parkland Hospital,TX,HOSPITAL,152,193,"Dallas, TX"
-PASADCA,Pasadena City Jail,CA,IGSA,0,70,"Pasadena, CA"
-PASSANJ,Passaic County Jail,NJ,IGSA,8,9,"Paterson, NJ"
-PAVHRPR,Pavia Hospital - Hato Rey,PR,HOSPITAL,60,130,"San Juan, PR"
-PDNHOLD,Pdn Hold Room,TX,HOLD,44,185,"El Paso, TX"
-PBDPDMA,Peabody PD,MA,UNKNOWN,184,185,"Peabody, MA"
-PTISATX,Pear Tree Inn SNA Airport,TX,HOTEL,143,177,"San Antonio, TX"
-PECOSTX,Pecos Criminal Justice Center,TX,IGSA,25,161,"Pecos, TX"
-PCSHOLD,Pecos Hold Room,TX,HOLD,17,197,"Pecos, TX"
-PEMBIND,Pembina County Jail,ND,IGSA,1,8,"Cavalier, ND"
-PENDOWA,Pend Orielle Correctional Facility,WA,IGSA,2,7,"Newport, WA"
-PENDRNC,Pender County Jail,NC,UNKNOWN,97,98,"Burgaw, NC"
-MVPNHPA,Penn Highlands Clearfield,PA,HOSPITAL,179,196,"Clearfield, PA"
-PENNISD,Pennington County Jail SD,SD,USMS IGA,0,197,"Rapid City, SD"
-PENOBME,Penobscot County Jail,ME,USMS IGA,0,61,"Bangor, ME"
-PCJDCIL,Peoria County Juv Det Center,IL,JUVENILE,98,99,"Peoria, IL"
-PERRYAL,Perry County Corr. Center,AL,IGSA,0,15,"Uniontown, AL"
-PRYCOAL,Perry County Jail,AL,UNKNOWN,37,38,"Marion, AL"
-AZSPPER,Perryville State Prison,AZ,IGSA,77,168,"Goodyear, AZ"
-BOPPET,Petersburg Fed.Corr.Inst.,VA,UNKNOWN,168,180,"Hopewell, VA"
-PHELPNE,Phelps County Jail,NE,USMS IGA,0,197,"Holdrege, NE"
-PHIHOLD,Phi District Office,PA,HOLD,0,197,"Philadelphia, PA"
-PHILLMT,"Phillips County Jail, MT",MT,IGSA,18,19,"Malta, MT"
-PHPMHGA,Phoebe Putney Memorial Hosp,GA,HOSPITAL,186,187,"Albany, GA"
-PHOSMGA,Phoebe Sumter Med Ctr,GA,HOSPITAL,185,192,"Americus, GA"
-PHOHOLD,Phoenix Dist Office,AZ,HOLD,0,197,"Phoenix, AZ"
-BOPPHX,Phoenix Fed.Corr.Inst.,AZ,BOP,64,191,"Phoenix, AZ"
-PICKJOH,Pickaway County Jail,OH,IGSA,88,89,"Circleville, OH"
-PCKNSAL,Pickens County Det Ctr,AL,IGSA,142,197,"Carrollton, AL"
-PMREGVA,Piedmont Reg Jail,VA,IGSA,0,186,"Farmville, VA"
-PCRMMGA,Piedmount Columbus Reg Midtown MC,GA,HOSPITAL,183,188,"Columbus, GA"
-PIERCND,Pierce County Jail,ND,OTHER,110,195,"Rugby, ND"
-PKEHOLD,Pike County ERO Hold Room,PA,HOLD,94,197,"Hawley, PA"
-PKCNTPA,Pike County Jail,PA,IGSA,161,164,"Lords Valley, PA"
-PIKCOPA,Pike County Jail,PA,IGSA,0,197,"Lords Valley, PA"
-PIMAJAZ,Pima County Jail,AZ,IGSA,35,184,"Tucson, AZ"
-PINALAZ,Pinal County Jail,AZ,IGSA,0,197,"Florence, AZ"
-ILPICKN,Pinckneyville Correctional Center,IL,UNKNOWN,89,90,"Pinckneyville, IL"
-PINEPLA,Pine Prairie ICE Processing Center,LA,DIGSA,87,197,"Pine Prairie, LA"
-PINELFL,Pinellas County Jail,FL,USMS IGA,0,197,"Clearwater, FL"
-PISCAME,Piscataguis County Jail,ME,USMS IGA,0,69,"Dover-Foxcroft, ME"
-PITHOLD,Pittsburgh Holdroom,PA,HOLD,87,197,"Pittsburgh, PA"
-PLATTMO,Platte County Jail,MO,IGSA,0,145,"Platte City, MO"
-PLATTWY,Platte County Jail,WY,USMS IGA,0,197,"Wheatland, WY"
-PLYMOMA,Plymouth Co Cor Facilty,MA,IGSA,0,197,"Plymouth, MA"
-POLKJIA,Polk County Jail,IA,USMS IGA,0,197,"Des Moines, IA"
-BOPPOL,Pollock USP,LA,BOP,120,121,"Pollock, LA"
-POMONCA,Pomona City Jail,CA,USMS IGA,0,112,"Pomona, CA"
-PONDEMT,Pondera County Jail,MT,IGSA,3,25,"Conrad, MT"
-PTISBTX,Port Isabel Police Dept.,TX,UNKNOWN,71,175,"Port Isabel, TX"
-PIC,Port Isabel SPC,TX,SPC,0,197,"Los Fresnos, TX"
-POOHOLD,Portland District Office,OR,HOLD,0,197,"Portland, OR"
-POMHOLD,"Portland, ME Holdroom",ME,HOLD,26,197,"Portland, ME"
-POTTAIA,Pottawattamie County Jail,IA,USMS IGA,0,197,"Council Bluffs, IA"
-PRLDCTX,Prairieland Detention Center,TX,DIGSA,99,197,"Alvarado, TX"
-PRLHOLD,Prairieland Suboffice Hold Room,TX,HOLD,105,197,"Alvarado, TX"
-PRSHANM,Presbyterian Hosp Abq,NM,HOSPITAL,154,194,"Albuquerque, NM"
-PRESITX,Presidio County Jail,TX,IGSA,35,41,"Marfa, TX"
-PWILLVA,Prince William,VA,USMS IGA,0,196,"Manassas, VA"
-KPCHOAZ,Promise Hospital,AZ,HOSPITAL,195,197,"Mesa, AZ"
-PROHOLD,Providence Holdroom,RI,HOLD,113,197,"Warwick, RI"
-PRUHOLD,Provo Hold Room,UT,HOLD,58,197,"Spanish Fork, UT"
-PROWECO,Prowers County Jail,CO,IGSA,1,18,"Lamar, CO"
-PUEBLCO,Pueblo County Jail,CO,USMS IGA,0,189,"Pueblo, CO"
-PUEHOLD,Pueblo Holdroom,CO,HOLD,24,197,"Florence, CO"
-PULASIL,Pulaski County Jail,IL,IGSA,88,156,"Ullin, IL"
-PUTMAFL,Putman County Jail,FL,UNKNOWN,167,192,"Palatka, FL"
-QLTYSCA,Quality Suites,CA,HOTEL,65,164,"Calipatria, CA"
-QUEMCHI,Queen's Medical Center,HI,HOSPITAL,184,185,"Honolulu, HI"
-QUEHONY,Queens House Of Detention,NY,IGSA,62,113,"Kew Gardens, NY"
-CACFDON,RJ Donovan Correc Fac,CA,OTHER,44,154,"San Diego, CA"
-RDHEATX,Radisson Htl Elp Airport,TX,HOTEL,142,149,"El Paso, TX"
-RDUHOLD,Raleigh Hold Room,NC,HOLD,32,197,"Cary, NC"
-RAMEPTX,Ramada By Wyndham El Paso,TX,HOTEL,148,149,"El Paso, TX"
-RMWYPAZ,Ramada By Wyndham Pho,AZ,HOTEL,150,154,"Phoenix, AZ"
-HOTELMA,Ramada Hotel,MA,HOTEL,30,127,"East Boston, MA"
-RAADCMN,"Ramsey ADC Annex, SPM",MN,USMS IGA,0,111,"St. Paul, MN"
-RNDLLTX,Randall County Jail,TX,USMS IGA,0,190,"Amarillo, TX"
-RPCHOLD,Rapid City Hold Room,SD,HOLD,17,197,"Rapid City, SD"
-RAPPSVA,Rapp Sec Center,VA,USMS IGA,4,197,"Stafford, VA"
-BOPRBK,Ray Brook Fed.Corr.Inst.,NY,BOP,107,108,"Ray Brook, NY"
-RDRVHTX,Red River Hospital,TX,HOSPITAL,148,197,"Wichita Falls, TX"
-RRFINWA,Red Roof Inn,WA,HOTEL,4,135,"Seatac, WA"
-REDHOLD,Redding Hold Room,CA,HOLD,126,197,"Redding, CA"
-REJUVTX,Reeves Co. Juv. Det. Ctr.,TX,IGSA,33,138,"Pecos, TX"
-REDETTX,Reeves County Det. Center,TX,IGSA,0,160,"Pecos, TX"
-REJAITX,Reeves County Jail,TX,IGSA,0,38,"Pecos, TX"
-RENHOLD,Reno Hold Room,NV,HOLD,38,197,"Reno, NV"
-RENSSNY,Rensselaer Co Sheriff,NY,USMS IGA,110,167,"Troy, NY"
-RESIDTX,Residence Inn Dallas Ap,TX,HOTEL,150,153,"Irving, TX"
-RIHPRRI,Rhode Island Hospital,RI,HOSPITAL,182,183,"Providence, RI"
-RICECKS,Rice County Det Center,KS,IGSA,0,61,"Lyons, KS"
-RICHOLD,Richland Hold Room,WA,HOLD,154,197,"Richland, WA"
-RICHMVA,Richmond City Jail,VA,IGSA,11,155,"Richmond, VA"
-RCMHOLD,Richmond Sub-Office Hold,VA,HOLD,17,197,"Richmond, VA"
-RWCCMLA,Richwood Cor Center,LA,DIGSA,126,197,"Monroe, LA"
-RIOCCCA,Rio Cosumnes Corrections-RCCC,CA,IGSA,57,117,"Elk Grove, CA"
-RIOGRCO,Rio Grande County Jail,CO,IGSA,99,157,"Del Norte, CO"
-RGRNDTX,Rio Grande Detention Center,TX,USMS CDF,63,197,"Laredo, TX"
-RGHOSTX,Rio Grande St.Hospital,TX,HOSPITAL,64,185,"Harlingen, TX"
-RGS,Rio Grande Valley Staging,TX,STAGING,20,197,"Los Fresnos, TX"
-RVBHHTX,Rio Vista Behv Hlth Hsp,TX,HOSPITAL,140,181,"El Paso, TX"
-RVRCCLA,River Correctional Center,LA,DIGSA,124,197,"Ferriday, LA"
-REHOSIL,Riveredge Hospital,IL,HOSPITAL,0,83,"Forest Park, IL"
-RIVERCA,Riverside County Sheriff,CA,IGSA,12,157,"Riverside, CA"
-RSREGVA,Riverside Reg Jail,VA,USMS IGA,0,156,"Hopewell, VA"
-RONKEVA,Roanoke City Jail,VA,USMS IGA,1,197,"Roanoke, VA"
-ROANOVA,Roanoke County Jail,VA,IGSA,21,127,"Salem, VA"
-RMKHOLD,Roanoke Sub-Office Hold Room,VA,HOLD,118,197,"Salem, VA"
-RADDFGA,Robert A Deyton Detention Fac,GA,USMS CDF,118,197,"Lovejoy, GA"
-ROBERSD,"Roberts Co. Jail, SD",SD,IGSA,39,160,"Sisseton, SD"
-BOPRCH,Rochester Fed.Med.Center,MN,BOP,0,13,"Rochester, MN"
-ROCGHNY,Rochester General Hospital,NY,HOSPITAL,185,186,"Rochester, NY"
-RCKISIL,Rock Island Correctional Center,IL,USMS IGA,63,64,"Rock Island, IL"
-ROCKIIL,Rock Island County Jail,IL,USMS IGA,0,155,"Rock Island, IL"
-RIIHOLD,Rock Island Hold Room,IL,HOLD,32,197,"Rock Island, IL"
-RRIVRIL,Rock River Health Care,IL,HOSPITAL,97,101,"Rockford, IL"
-ROCKIVA,Rockingham Co. Jail,VA,USMS IGA,0,197,"Harrisonburg, VA"
-ROCKINH,Rockingham County Jail,NH,IGSA,0,115,"Brentwood, NH"
-HASKLTX,Rolling Plains Detention Center,TX,USMS IGA,0,196,"Haskell, TX"
-ROSEAMN,Roseau County Jail,MN,IGSA,4,9,"Roseau, MN"
-ROSEBMT,Rosebud County Jail,MT,IGSA,0,30,"Forsyth, MT"
-RSWHOLD,Roswell Hold Room,NM,HOLD,110,197,"Roswell, NM"
-ROUTTCO,Routt County Jail,CO,IGSA,18,19,"Steamboat Springs, CO"
-SDPROCA,S.D. County Probation,CA,OTHER,35,168,"San Diego, CA"
-CACCJAM,SCC/Jamestown,CA,OTHER,66,92,"Jamestown, CA"
-SFRHOLD,SFR Hold Room,CA,HOLD,0,197,"San Francisco, CA"
-SNDHOLD,SND District Staging,CA,HOLD,0,197,"San Diego, CA"
-SNJHOLD,SNJ Hold Room,CA,HOLD,1,195,"San Jose, CA"
-SACRACA,Sacramento County Jail,CA,USMS IGA,0,124,"Sacramento, CA"
-SACHOLD,Sacramento Hold,CA,HOLD,0,197,"Sacramento, CA"
-STAHOLD,Saint Albans Hold Room,VT,HOLD,61,197,"Saint Albans, VT"
-STJOSCO,Saint Joseph Hospital,CO,HOSPITAL,188,197,"Denver, CO"
-SAIHOLD,Saipain Hold,MP,HOLD,26,197,"Saipan, MP"
-MPSIPAN,Saipan Department Of Corrections,MP,USMS IGA,32,197,"Saipan, MP"
-SALEMNJ,Salem County Correctional Facility,NJ,USMS IGA,85,138,"Woodstown, NJ"
-SALINNE,Saline County Jail,NE,OTHER,119,174,"Wilber, NE"
-SALHOLD,Salisbury Hold Room,MD,HOLD,131,197,"Salisbury, MD"
-SLCHOLD,Salt Lake City Hold Room,UT,HOLD,45,197,"West Valley City, UT"
-SLSLCUT,Salt Lake County Jail,UT,USMS IGA,0,197,"Salt Lake City, UT"
-SAMBCMI,Samaritan Behavioral Center,MI,HOSPITAL,53,162,"Detroit, MI"
-SAGHOLD,San Angelo Holdroom,TX,HOLD,86,197,"San Angelo, TX"
-SNAHOLD,San Antonio Dro Hold Room,TX,HOLD,17,197,"San Antonio, TX"
-SBNTOTX,San Benito Police Dept.,TX,UNKNOWN,65,67,"San Benito, TX"
-SBDHOLD,San Bernadino Hold Room,CA,HOLD,0,197,"San Bernardino, CA"
-SBERNCA,San Bernardino Co. Jail,CA,USMS IGA,0,164,"San Bernardino, CA"
-SDHOSCA,San Diego Area Hospital,CA,HOSPITAL,0,95,"Chula Vista, CA"
-SNDCOCA,San Diego County Jail,CA,IGSA,1,116,"San Diego, CA"
-JHALLCA,San Diego County Juv.Hall,CA,JUVENILE,42,44,"San Diego, CA"
-BOPSDC,San Diego MCC,CA,BOP,32,104,"San Diego, CA"
-SJUHOLD,San Juan Airport Hold Room,PR,HOLD,79,197,"San Juan, PR"
-SJUANNM,San Juan County Detention Center,NM,USMS IGA,63,64,"Aztec, NM"
-SJUANTX,San Juan Police Dept.,TX,UNKNOWN,60,73,"San Juan, TX"
-SJS,San Juan Staging,PR,STAGING,59,197,"Guaynabo, PR"
-SLOBICA,San Luis Obispo Co Jail,CA,OTHER,106,119,"San Luis Obispo, CA"
-SLJUVCA,San Luis Obispo Co. Juven,CA,UNKNOWN,44,45,"San Luis Obispo, CA"
-SLRDCAZ,San Luis Regional Det Center,AZ,IGSA,0,197,"San Luis, AZ"
-SANMINM,San Miguel County Det Ctr,NM,IGSA,39,82,"Las Vegas, NM"
-SPHOSCA,San Pedro Peninsula Hospital,CA,HOSPITAL,0,66,"San Pedro, CA"
-SANDONM,Sandoval County Det Ctr,NM,IGSA,39,42,"Bernalillo, NM"
-SANJAIL,Sangamon County Jail,IL,USMS IGA,0,146,"Springfield, IL"
-SACITCA,Santa Ana City Jail,CA,IGSA,0,172,"Santa Ana, CA"
-SANANCA,Santa Ana County Jail,CA,IGSA,0,15,"Santa Ana, CA"
-SAAHOLD,Santa Ana DRO Holdroom,CA,HOLD,0,197,"Santa Ana, CA"
-SBARBCA,Santa Barbara County Jail,CA,OTHER,106,154,"Santa Barbra, CA"
-SCNORCA,Santa Clara Co Main Jail,CA,USMS IGA,0,86,"San Jose, CA"
-SCRUZAZ,Santa Cruz Co Jail AZ,AZ,USMS IGA,6,167,"Nogales, AZ"
-SFCORNM,Santa Fe Cornell Det. Fac.,NM,IGSA,41,42,"Santa Fe, NM"
-SANTANM,Santa Fe County Jail,NM,IGSA,79,82,"Santa Fe, NM"
-SMAHOLD,Santa Maria Sub Office ERO,CA,UNKNOWN,186,197,"Santa Maria, CA"
-SROSAFL,Santa Rosa County Jail,FL,UNKNOWN,196,197,"Milton, FL"
-SARASFL,Sarasota County Jail,FL,IGSA,181,197,"SARASOTA, FL"
-SARPYNE,Sarpy County Jail,NE,IGSA,8,29,"Papillion, NE"
-SARJUNE,Sarpy County Juvenile,NE,JUVENILE,0,47,"Papillion, NE"
-SSMHOLD,Sault Sainte Marie Holdroom,MI,HOLD,64,151,"Sault Ste. Marie, MI"
-SCOTTIA,Scott County Det.Facility,IA,USMS IGA,109,112,"Davenport, IA"
-SCOTTMO,Scott County Jail,MO,IGSA,14,67,"Benton, MO"
-SCOTTNE,Scotts Bluff Co Jail,NE,USMS IGA,33,185,"Gering, NE"
-BOPSET,Seatac Fed.Det.Center,WA,BOP,11,196,"Seattle, WA"
-SEAHOLD,Seattle Field Office Hold Room,WA,HOLD,0,197,"Seattle, WA"
-SEBASAR,Sebastian County Det Cnt,AR,USMS IGA,0,197,"Fort Smith, AR"
-SMNOLFL,Seminole County Jail,FL,UNKNOWN,195,197,"Sanford, FL"
-SENECOH,Seneca County Jail,OH,IGSA,0,197,"Tiffin, OH"
-SENECNY,Seneca County Jail,NY,IGSA,8,68,"Corning, NY"
-STCHOVA,Sentara Careplex Hospital,VA,HOSPITAL,188,189,"Hampton, VA"
-SHNMCTX,Shannon Medical Center,TX,HOSPITAL,177,178,"San Angelo, TX"
-SCVMCCA,Sharp Chula Vista Medical Center,CA,HOSPITAL,162,197,"Chula Vista, CA"
-SHACOKS,Shawnee County Dept Of Corr.,KS,IGSA,0,134,"Topeka, KS"
-SHAJUKS,Shawnee County Juv.Det.Ctr,KS,JUVENILE,1,135,"Topeka, KS"
-SHECOVA,Shenandoah Co Jail,VA,IGSA,14,73,"Woodstock, VA"
-SHERBMN,Sherburne County Jail,MN,IGSA,0,197,"Elk River, MN"
-SHERIWY,Sheridan County Jail,WY,IGSA,5,6,"Sheridan, WY"
-SHERIMT,Sheridan County Jail,MT,IGSA,1,78,"Plentywood, MT"
-BOPSHE,Sheridan Fed.Corr.Inst.,OR,BOP,115,174,"Sheridan, OR"
-VVSHOLD,Shreveport Hold Room,LA,HOLD,72,197,"Shreveport, LA"
-SILERTN,Silverdale/Hamilton County,TN,IGSA,68,69,"Chattanooga, TN"
-SXCHOLD,Sioux City Hold Room,IA,HOLD,27,197,"Sioux City, IA"
-SFDHOLD,Sioux Falls Hold Room,SD,HOLD,17,197,"Sioux Falls, SD"
-SITKAAK,"Sitka City Jail, Sitka AK",AK,IGSA,1,87,"Sitka, AK"
-SLINPAZ,Sleep Inn Phoenix,AZ,HOTEL,150,154,"Phoenix, AZ"
-SISAONE,Sleep Inn Suites Airport,NE,HOTEL,128,132,"Omaha, NE"
-SRJDFID,Snake River Juvenile,ID,JUVENILE,1,131,"Twin Falls, ID"
-SOLONOH,Solon City Jail,OH,IGSA,0,59,"Solon, OH"
-SOMERME,Somerset County Jail,ME,IGSA,0,166,"Madison, ME"
-SMRVLTX,Somervell County Sheriff's Dept.,TX,UNKNOWN,170,171,"Glen Rose, TX"
-SONMACA,Sonoma Co Main Adult Det,CA,UNKNOWN,94,95,"Santa Rosa, CA"
-SOBAYCA,South Bay Detent Facility,CA,IGSA,15,180,"Chula Vista, CA"
-WVSCENT,South Central Regional Jail,WV,USMS IGA,0,197,"Charleston, WV"
-SPIPDTX,South Padre Island Police Dept.,TX,UNKNOWN,125,126,"South Padre Island, TX"
-SSHSWMA,South Shore Hospital,MA,HOSPITAL,182,185,"South Weymouth, MA"
-STFRCTX,South Texas Fam Residential Center,TX,FAMILY,74,191,"Dilley, TX"
-STCDFTX,South Texas ICE Processing Center,TX,CDF,0,197,"Pearsall, TX"
-STDHOLD,South Texas/Pearsall Hold Room,TX,HOLD,29,197,"Pearsall, TX"
-SOUTECO,Southern Ute Detention Center,CO,IGSA,0,15,"Ignacio, CO"
-SPOHOLD,Spokane Hold Room,WA,HOLD,150,197,"Spokane, WA"
-SPOTSVA,Spotsylvania Reg Med Ctr,VA,HOSPITAL,183,193,"Fredericksburg, VA"
-SPRNGOR,Springfield City Jail,OR,IGSA,48,117,"Springfield, OR"
-SPGHOLD,Springfield Dro Hold,MO,HOLD,24,197,"Strafford, MO"
-BOPSPG,Springfield Fed.Med.Cntr,MO,BOP,0,196,"Springfield, MO"
-STFRHGA,St Francis Hospital,GA,HOSPITAL,193,194,"Columbus, GA"
-STJMCWA,St Joseph Medical Center,WA,HOSPITAL,183,197,"Tacoma, WA"
-STLAWNY,St Lawrence County Jail,NY,IGSA,59,60,"Canton, NY"
-SLBHSTX,St Luke's Baptist Hospital,TX,HOSPITAL,174,176,"San Antonio, TX"
-SLHTWTX,St Luke's Health - The Woodlands,TX,HOSPITAL,183,197,"The Woodlands, TX"
-STMARCA,St Mary Medical Center,CA,HOSPITAL,69,197,"Apple Valley, CA"
-STMARAZ,St Mary's Hospital,AZ,HOSPITAL,55,123,"Tucson, AZ"
-STTCJVI,St T Criminal Just Complx,VI,IGSA,0,179,"Charlotte Amalie, VI"
-STTAMLA,St Tammany Parish Jail,LA,IGSA,42,183,"Covington, LA"
-STCLAMI,St. Clair County Jail,MI,IGSA,0,197,"Port Huron, MI"
-STCROWI,St. Croix County Jail,WI,IGSA,37,38,"Hudson, WI"
-SGUHOLD,"St. George, UT Holdroom",UT,HOLD,32,197,"Saint George, UT"
-STJONFL,St. John's County Jail,FL,UNKNOWN,166,197,"St. Augustine, FL"
-STJOSCA,St. Joseph's Hospital,CA,HOSPITAL,1,165,"Orange, CA"
-STJOSAZ,St. Joseph's Hospital & Med. Cen.,AZ,HOSPITAL,10,191,"Phoenix, AZ"
-STLHOLD,St. Louis Holdroom,MO,HOLD,24,197,"St. Louis, MO"
-STMRYIL,St. Mary of The Nazareth,IL,HOSPITAL,0,34,"Chicago, IL"
-SMARYMD,St. Mary's Co Det Cntr,MD,IGSA,0,9,"Leonardtown, MD"
-SSPBAAZ,Staybridge Ste Pho  B A ,AZ,HOTEL,142,157,"Phoenix, AZ"
-ALESSAZ,Stes On Scottsdale Casa De Alegria,AZ,FAMILY STAGING,151,159,"Scottsdale, AZ"
-STEUBNY,Steuben County Jail,NY,IGSA,0,70,"Bath, NY"
-STEVEWA,Stevens County Jail,WA,IGSA,2,116,"Colville, WA"
-STWRTGA,Stewart Detention Center,GA,DIGSA,0,197,"Lumpkin, GA"
-STK,Stockton Staging Facility,CA,STAGING,7,197,"Stockton, CA"
-STOPDIL,Stone Park Police Dept.,IL,IGSA,6,23,"Stone Park, IL"
-STORYIA,Story County Jail,IA,USMS IGA,106,146,"Nevada, IA"
-STRAFNH,Strafford Co Dept Of Corr,NH,IGSA,0,197,"Dover, NH"
-STRMONY,Strong Memorial Hospital,NY,HOSPITAL,190,197,"Rochester, NY"
-STUHOLD,Stuart Hold Room,FL,HOLD,89,197,"Stuart, FL"
-STUTSND,"Stutsman Co. Jail, ND",ND,IGSA,40,49,"Jamestown, ND"
-SUFFONY,Suffolk Co.Correc Fac,NY,USMS IGA,108,132,"Riverhead, NY"
-SUFFOMA,Suffolk Hoc Sbay,MA,IGSA,0,137,"Boston, MA"
-SUMMIUT,Summit County Jail,UT,IGSA,0,196,"Park City, UT"
-SUMTEFL,Sumter County Jail,FL,UNKNOWN,195,197,"Bushnell, FL"
-SUNNYWA,Sunnyside Jail,WA,IGSA,0,119,"Sunnyside, WA"
-SUPHDTX,Super 8 By Wyndham,TX,HOTEL,150,154,"Hidalgo, TX"
-SP8WWTX,Super 8 Wyndham Weslaco,TX,HOTEL,150,152,"Weslaco, TX"
-SSHBWTX,Surestay Hotel Best West,TX,HOTEL,142,151,"Mission, TX"
-SUSSEDE,"Sussex Co Pris,Geotwn,DE",DE,IGSA,40,46,"Georgetown, DE"
-SUSSENJ,Sussex County Jail,NJ,IGSA,0,124,"Newton, NJ"
-SUWANFL,Suwannee County Jail,FL,UNKNOWN,159,168,"Live Oak, FL"
-SWEETWY,Sweetwater County Jail,WY,USMS IGA,0,197,"Rock Springs, WY"
-SYRHOLD,Syracuse Hold Room,NY,HOLD,195,197,"N Syracuse, NY"
-CCAHUTX,T Don Hutto Residential Center,TX,DIGSA / FAMILY,0,197,"Taylor, TX"
-THHEBTX,TX Health Meth Hosp Heb,TX,HOSPITAL,142,143,"Bedford, TX"
-THHMHTX,TX Hlth Harris Meth Hosp,TX,HOSPITAL,192,194,"Fort Woth, TX"
-TACGHWA,Tacoma General Hospital,WA,HOSPITAL,193,196,"Tacoma, WA"
-TALHOLD,Tallahassee Hold Room,FL,HOLD,88,197,"Tallahassee, FL"
-TALLAMS,Tallahatchie Co Corr Facility,MS,USMS IGA,117,161,"Tutwiler, MS"
-TAMHOLD,Tampa Hold Room,FL,HOLD,30,197,"Tampa, FL"
-MATSHOS,Taunton State Hospital,MA,HOSPITAL,0,130,"Taunton, MA"
-TAYLOTX,Taylor County Adult Det.,TX,IGSA,39,144,"Abilene, TX"
-TELLECO,Teller County Jail,CO,IGSA,0,197,"Divide, CO"
-TEMPLCA,Temple Medical,CA,HOSPITAL,18,126,"Los Angeles, CA"
-TENSALA,Tensas Parish Det. Cntr.,LA,IGSA,0,126,"Waterproof, LA"
-BOPTHA,Terre Haute USP,IN,BOP,0,107,"Terre Haute, IN"
-TETONWY,Teton County Detention Center,WY,USMS IGA,0,150,"Jackson, WY"
-MATEWKS,Tewksbury State Hospital,MA,HOSPITAL,3,115,"Tewksbury, MA"
-THHHBTX,Tex Health Huguley Hosp,TX,HOSPITAL,142,197,"Burleson, TX"
-TXAHOLD,Texarkana Holdroom,TX,HOLD,40,197,"Texarkana, TX"
-TVMSATX,Texas Vista Medical Center,TX,HOSPITAL,167,187,"San Antonio, TX"
-TLACYCA,Theo Lacy Facility,CA,IGSA,22,130,"Orange, CA"
-THPSCTX,Thop Sierra Campus Elp,TX,OTHER,134,191,"El Paso, TX"
-BOPTRV,Three Rivers FCI,TX,BOP,41,138,"Three Rivers,, TX"
-TIOGANY,Tioga County Jail,NY,IGSA,6,67,"Owego, NY"
-TITUSTX,Titus County Jail,TX,USMS IGA,105,197,"Mt. Pleasant, TX"
-TGREETX,Tom Green Cty Jail,TX,USMS IGA,0,197,"San Angelo, TX"
-TOOELUT,Tooele County Jail,UT,USMS IGA,86,197,"Tooele, UT"
-TOOLEMT,Toole County Jail,MT,IGSA,0,187,"Shelby, MT"
-TORHOLD,Tornillo Adult Hold Room,TX,HOLD,121,135,"Tornillo, TX"
-TOORANM,"Torrance/Estancia, NM",NM,IGSA,0,197,"Estancia, NM"
-TRVLIAZ,Traveler's Inn - Phoenix,AZ,HOTEL,144,145,"Phoenix, AZ"
-TRAVITX,Travis County Jail,TX,IGSA,21,125,"Austin, TX"
-TRICOIL,Tri-County Jail,IL,IGSA,0,90,"Ullin, IL"
-TRRMCNJ,Trinitas Regional Med Ctr,NJ,HOSPITAL,175,195,"Elizabeth, NJ"
-TRYOSCA,Trinity Youth Services LTFC,CA,UNKNOWN,181,182,"Claremont, CA"
-TAKARTX,Trusted Adult Karnes FSC,TX,TAP-ICE,163,171,"San Antonio, TX"
-TASTDTX,Trusted Adult South Tex Dilley FSC,TX,TAP-ICE,163,172,"Dilley, TX"
-BOPTCN,Tucson Fed.Corr.Inst.,AZ,BOP,85,174,"Tucson, AZ"
-TUCHOLD,Tucson INS Hold Room,AZ,HOLD,0,197,"Tucson, AZ"
-TULCOOK,Tulsa County Jail,OK,IGSA,0,197,"Tulsa, OK"
-TULHOLD,Tulsa Hold Room,OK,HOLD,121,197,"Tulsa, OK"
-TFALLID,Twin Falls County Jail,ID,IGSA,0,188,"Twin Falls, ID"
-TFIHOLD,Twin Falls Hold Room,ID,HOLD,75,197,"Twin Falls, ID"
-DETHOLD,"U.S. Immigration, Detroit",MI,HOLD,0,197,"Detroit, MI"
-UCSDMCA,UC San Diego Medical Center,CA,HOSPITAL,183,187,"San Diego, CA"
-UPMCAPA,UPMC Altoona,PA,UNKNOWN,177,192,"Altoona, PA"
-SPMHOLD,US INS/Detention & Deportation,MN,HOLD,0,197,"Bloomington, MN"
-USMVT,"US Marshal's, Vermont",VT,USMS IGA,16,83,"Burlington, VT"
-USMS2TX,US Marshals  SDTX,TX,UNKNOWN,65,129,"Houston, TX"
-USMS3TX,US Marshals  SDTX,TX,USMS IGA,75,106,"Mcallen, TX"
-USMSDMS,"US Marshals, S.Dist, MS",MS,USMS IGA,75,98,"Jackson, MS"
-USMWDLA,"US Marshals, W.D. LA.",LA,USMS IGA,81,191,"Shreveport, LA"
-USMSDFL,"US Marshals,S.Dist.FL",FL,USMS IGA,17,21,"Miami, FL"
-BOPTCP,US Penitentiary Tucson,AZ,BOP,33,123,"Tucson, AZ"
-BOPCAA,USP Canaan,PA,BOP,11,197,"Waymart, PA"
-UCHUHCO,Uchealth Unv Hosp Of Co,CO,HOSPITAL,171,196,"Aurora, CO"
-UINTAWY,Uinta County Jail,WY,USMS IGA,8,9,"Evanston, WY"
-UINTCUT,Uintah County Jail,UT,IGSA,34,96,"Vernal, UT"
-NYULSTC,"Ulster CF, Napanoch",NY,OTHER,103,104,"Napanoch, NY"
-UMATCOR,Umatilla Co Jail,OR,IGSA,1,95,"Pendleton, OR"
-UNIONNM,Union County Detention Center,NM,IGSA,9,13,"Clayton, NM"
-UNIONSD,Union County Jail,SD,USMS IGA,33,197,"Elk Point, SD"
-UHOSPIN,Union Hospital,IN,HOSPITAL,185,188,"Terre Haute, IN"
-UMEMCNY,United Memorial Med Ctr,NY,HOSPITAL,184,197,"Batavia, NY"
-UPSLHIA,Unity Point Hlth St Lukes Hosp,IA,HOSPITAL,185,186,"Cedar Rapids, IA"
-UHGMCOH,Univ Hosp Geauga Med Ctr,OH,HOSPITAL,171,194,"Chardon, OH"
-UNIVHNJ,University Hospital,NJ,HOSPITAL,178,195,"Newark, NJ"
-UVHSATX,University Hospital,TX,HOSPITAL,166,197,"San Antonio, TX"
-UMCEPTX,University Med Center of El Paso,TX,HOSPITAL,133,197,"El Paso, TX"
-UMIAHFL,University Of Miami Hospital,FL,HOSPITAL,95,196,"Miami, FL"
-UNMHANM,University of New Mexico Hospital,NM,HOSPITAL,188,191,"Albuquerque, NM"
-UCSDHCA,Unv California San Diego Hospital,CA,HOSPITAL,165,175,"San Diego, CA"
-UPSTANY,Upstate University Hospital,NY,HOSPITAL,33,34,"Syracuse, NY"
-UTAHCUT,Utah County Jail,UT,IGSA,0,168,"Spanish Fork, UT"
-UVALDTX,Uvalde County Jail,TX,UNKNOWN,110,196,"Uvalde, TX"
-VTDCORR,VT. Dept. Of Corrections,VT,IGSA,0,163,"Waterbury, VT"
-VALJUTX,Val Verde County Juvenile,TX,JUVENILE,14,29,"Del Rio, TX"
-VALVETX,Val Verde Detention Center,TX,USMS IGA,13,197,"Del Rio, TX"
-VBHOSTX,Valley Baptist Hospital,TX,HOSPITAL,0,197,"Harlingen, TX"
-VWHMCAZ,Valleywise Health Med Ctr,AZ,HOSPITAL,173,197,"Phoenix, AZ"
-VNBRNMI,Van Buren Township PD,MI,IGSA,0,17,"Belleville, MI"
-VRK,Varick Street SPC,NY,HOLD,0,176,"New York, NY"
-PRVEGAL,Vega Alta Det. Facility,PR,IGSA,24,69,"Vega Alta, PR"
-VENTUCA,Ventura County Jail,CA,USMS IGA,5,168,"Ventura, CA"
-VENHOLD,Ventura Custody Case,CA,HOLD,0,197,"Camarrillo, CA"
-VVGMCCA,Victor Valley Global Med Center,CA,HOSPITAL,68,197,"Victorville, CA"
-VICTOTX,Victoria County Jail,TX,IGSA,158,159,"Victoria, TX"
-VIRBEVA,Virginia Beach,VA,IGSA,0,196,"Virginia Beach, VA"
-VPREGVA,Virginia Peninsula Reg. Jail,VA,USMS IGA,6,169,"Williamsburg, VA"
-VISTACA,Vista Detention Facility,CA,IGSA,8,119,"Vista, CA"
-WVREGWV,WV Regional Jail & Corr.,WV,IGSA,0,109,"Charleston, WV"
-WCCSDCA,Wackenhut Corrections Corp,CA,IGSA,44,132,"San Diego, CA"
-WCTHOLD,Waco DRO Hold Room,TX,HOLD,20,197,"Waco, TX"
-WAKECNC,Wake County Sheriff Dept.,NC,IGSA,0,123,"Raleigh, NC"
-WAKULFL,Wakulla County Jail,FL,IGSA,0,151,"Crawfordville, FL"
-WALSHND,Walsh County Jail,ND,IGSA,38,71,"Grafton, ND"
-MIWPRPH,Walter Reuther Psychiatric Center,MI,HOSPITAL,61,65,"Westland, MI"
-WALWOWI,Walworth County Jail,WI,IGSA,45,47,"Elkhorn, WI"
-WARDCND,Ward County Jail,ND,USMS IGA,44,197,"Minot, ND"
-WARCOTX,"Ward Cty Jail, Monahans",TX,USMS IGA,65,87,"Monahans, TX"
-WASATUT,Wasatch County Jail,UT,IGSA,70,71,"Heber, UT"
-WASHAWY,Washakie County Jail,WY,IGSA,6,7,"Worland, WY"
-WASHIME,Washington County Jail,ME,IGSA,0,30,"Machias, ME"
-WASHIAR,Washington County Jail,AR,USMS IGA,0,197,"Fayetteville, AR"
-WASHCUT,Washington County Jail,UT,USMS IGA,0,176,"Hurricane, UT"
-WASCONY,Washington County Jail,NY,USMS IGA,0,84,"Fort Edward, NY"
-WAJAIMN,Washington County Jail,MN,USMS IGA,101,197,"Stillwater, MN"
-WASHICO,Washington County Jail,CO,USMS IGA,0,126,"Akron, CO"
-WASHOLD,Washington Field Office,VA,HOLD,0,197,"Fairfax, VA"
-WASHONV,Washoe County Jail,NV,USMS IGA,0,197,"Reno, NV"
-WASHTMI,"Washtenaw Co, An Arbor,MI",MI,JUVENILE,0,92,"Ann Arbor, MI"
-WRMEDWI,Watertown Regional Medical Center,WI,HOSPITAL,185,186,"Waterton, WI"
-WAUKEWI,Waukesha County Jail,WI,USMS IGA,132,197,"Waukesha, WI"
-WAYNENY,Wayne County Jail,NY,USMS IGA,0,102,"Lyons, NY"
-WAYNEMI,"Wayne County, Detroit",MI,IGSA,0,15,"Detroit, MI"
-WEBDCTX,Webb County Detention Center (CCA),TX,DIGSA,97,197,"Laredo, TX"
-WEBERUT,Weber County Jail,UT,USMS IGA,0,53,"Ogden, UT"
-WNTHOLD,Wenatchee Hold Room,WA,HOLD,153,197,"Yakima, WA"
-WWDHDNH,Wentworth Douglas Hospital,NH,HOSPITAL,176,193,"Dover, NH"
-WBATOLA,West Baton Rouge Det Ctr,LA,IGSA,0,8,"Port Allen, LA"
-WKBHMFL,West Kendall Baptist Hosp,FL,HOSPITAL,121,197,"Miami, FL"
-WMDBHFL,West Miami Dade Bapt Health Emerg,FL,HOSPITAL,164,197,"Miami, FL"
-WOAKSTX,West Oaks Hospital,TX,HOSPITAL,0,65,"Houston, TX"
-WTXDFTX,West Texas Detention Facility,TX,USMS IGA,8,158,"Sierra Blanca, TX"
-CAWVALL,West Valley,CA,UNKNOWN,37,49,"Rancho Cucamonga, CA"
-WSTMCCA,Western Medical Center,CA,HOSPITAL,3,81,"Santa Ana, CA"
-TNWESDF,Western Tennessee Det. Fac.,TN,USMS CDF / USMS IGA,0,183,"Mason, TN"
-WTREGVA,Western Tidewater Reg. Jail,VA,USMS IGA,27,132,"Suffolk, VA"
-WVIRGVA,Western Virginia Regional Jail,VA,USMS IGA,164,191,"Salem, VA"
-WESHOLD,Westminster Custody,CA,HOLD,6,196,"Westminster, CA"
-WMLNDPA,Westmoreland County Jail,PA,IGSA,0,9,"Greensburg, PA"
-WMHOSCA,White Memorial Hospital,CA,HOSPITAL,0,194,"Los Angeles, CA"
-WHITFGA,Whitfield County Jail,GA,IGSA,23,186,"Dalton, GA"
-WICHOLD,Wichita Holdroom,KS,HOLD,24,196,"Wichita, KS"
-AKWILPT,Wildwood Pre-Trial Fac.,AK,IGSA,3,158,"Kenai, AK"
-AKWILCC,Wildwood State Corr. Ctr.,AK,IGSA,70,71,"Kenai, AK"
-WCRDFTX,Willacy Co  Regional Detn Facil,TX,USMS IGA,69,166,"Raymondville, TX"
-WILLCTX,Willacy County Detention Center,TX,DIGSA,0,35,"Raymondville, TX"
-WILLITX,Williamson County Jail,TX,IGSA,0,1,"Georgetown, TX"
-WILLITN,Williamson County Jail,TN,IGSA,0,5,"Franklin, TN"
-WPOHOLD,Williamsport Hold Room,PA,HOLD,191,197,"Williamsport, PA"
-WINWYAZ,Wingate Wyndham Casa Esperanza,AZ,FAMILY STAGING,152,159,"Yuma, AZ"
-WINCOTX,Winkler County Jail,TX,IGSA,58,106,"Kermit, TX"
-LAWINCI,Winn Corr Institute,LA,DIGSA,127,197,"Winnfield, LA"
-WOODBIA,Woodbury County Jail,IA,IGSA,152,194,"Sioux City, IA"
-WORCEMD,Worcester Co. Jail,MD,IGSA,0,173,"Snow Hill, MD"
-WYATTRI,Wyatt Detention Center,RI,USMS IGA,0,197,"Central Falls, RI"
-WYMCONY,Wyoming County Jail,NY,IGSA,132,133,"Warsaw, NY"
-YIKIMWA,Yakima County,WA,USMS IGA,0,129,"Yakima, WA"
-YAKHOLD,Yakima Sub-Office,WA,HOLD,20,197,"Yakima, WA"
-YANCOSD,Yankton Co. Jail SD,SD,USMS IGA,100,167,"Yankton, SD"
-YATESNY,Yates County Jail,NY,IGSA,6,69,"Penn Yan, NY"
-YAVCVAZ,Yavapai County Detention Center,AZ,IGSA,0,111,"Camp Verde, AZ"
-YAVAPAZ,Yavapai County Jail,AZ,IGSA,0,93,"Prescott, AZ"
-YELLOMT,Yellowstone County Jail,MT,USMS IGA,0,185,"Billings, MT"
-CTYORCI,York Corr Inst,CT,IGSA,1,10,"Niantic, CT"
-YORCOSC,York County Detention Center,SC,USMS IGA,0,197,"York, SC"
-YORKCME,York County Jail,ME,IGSA,14,143,"Alfred, ME"
-YORCOPA,"York County Jail, PA",PA,IGSA,0,155,"York, PA"
-YRKHOLD,York Hold Room,PA,HOLD,146,197,"York, PA"
-YUBAJCA,Yuba County Jail,CA,IGSA,0,172,"Marysville, CA"
-YUMHOLD,Yuma Holdroom,AZ,HOLD,0,197,"Yuma, AZ"
-YRMDCAZ,Yuma Regional Med Ctr,AZ,HOSPITAL,188,189,"Yuma, AZ"
-ZAVCOTX,Zavala County Jail,TX,IGSA,13,192,"Crystal City, TX"
+detention_facility_code,name,state,start,end,place,type
+RICRANS,"ACI, Cranston RI",RI,77,78,"Cranston, RI",Non-dedicated
+AZDCTUC,AZ Dpt Corrections Tucson,AZ,6,7,"Tucson, AZ",Non-dedicated
+IWAHOLD,AZ Rem Op Coord Center (AROCC),AZ,15,197,"Mesa, AZ",Hold
+ANWHMMN,Abbott Northwestern Hosp,MN,174,175,"Minneapolis, MN",Medical
+ABTHOLD,Abilene Hold Room,TX,56,86,"Abilene, TX",Hold
+ABRMCTX,Abilene Regional Med Ctr,TX,144,145,"Abilene, TX",Medical
+ABRXSPA,Abraxas Academy Detention Center,PA,67,189,"Morgantown, PA",Family/children
+ADACOID,Ada County Jail,ID,0,130,"Boise, ID",Non-dedicated
+ADAIRKY,Adair County Regional Jail,KY,123,124,"Columbia, KY",Other
+ADAMSWA,Adams County,WA,0,137,"Ritzville, WA",Non-dedicated
+ADAMSMS,Adams County Det Center,MS,128,197,"Natchez, MS",Dedicated
+ADAMSCO,Adams County Jail,CO,12,18,"Brighton, CO",Non-dedicated
+ADDCOVT,Addison County Jail,VT,0,40,"Middlebury, VT",Non-dedicated
+ADLNTCA,Adelanto ICE Processing Center,CA,34,197,"Adelanto, CA",Dedicated
+NYADIRC,"Adirondack CF, Raybrook",NY,133,134,"Ray Brook, NY",Other
+ADVHBCA,Adventist Health Bakersfield,CA,180,197,"Bakersfield, CA",Medical
+ADVHDCA,Adventist Health Delano,CA,190,194,"Delano, CA",Medical
+AGAHOLD,Agana INS,GU,11,191,"Hagatna, GU",Hold
+AGC,Aguadilla SPC,PR,0,197,"Aguadilla, PR",Hold
+AIRHOPR,"Airport Hotel, Saj.",PR,0,175,"Isla Verde, PR",Hotel
+ALAMCNC,Alamance Co. Det. Facility,NC,0,197,"Graham, NC",Non-dedicated
+ALAMOTX,Alamo Police Dept.,TX,69,157,"Alamo, TX",Other
+ALAMOCO,Alamosa County Jail,CO,93,136,"Alamosa, CO",Other
+ALMHOLD,Alamosa Holdroom,CO,24,194,"Alamosa, CO",Hold
+ALBCONY,Albany County Jail,NY,0,126,"Albany, NY",Federal
+ALBHOLD,Albany Holdroom,NY,86,197,"Latham, NY",Hold
+ALBEMVA,Albemarle-Charlottesville,VA,31,71,"Charlottesville, VA",Non-dedicated
+ABQHOLD,Albuquerque Hold Room,NM,7,197,"Albuquerque, NM",Hold
+ALEXAVA,Alexandria City Jail,VA,3,183,"Alexandria, VA",Federal
+ALEXAAL,Alexandria City Jail,VA,102,103,"Alexandria, VA",Other
+JENATLA,Alexandria Staging Facility,LA,73,197,"Alexandria, LA",Hold
+BHCALCA,Alhambra BHC Hospital,CA,0,76,"Rosemead, CA",Medical
+ALHAMCA,Alhambra City Jail,CA,0,188,"Alhambra, CA",Federal
+ALLEGNY,Allegany County Jail,NY,0,148,"Belmont, NY",Non-dedicated
+ALLEGPA,Allegheny Co. Jail,PA,0,88,"Pittsburgh, PA",Federal
+ALLENIN,Allen County Jail,IN,136,165,"Ft. Wayne, IN",Federal
+APPSCLA,Allen Parish Public Safety Complex,LA,91,197,"Oberlin, LA",Non-dedicated
+BOPALM,Allenwood (Med) FCI,PA,0,170,"White Deer, PA",Federal
+APIBHCA,Alvarado Parkway Institute,CA,76,189,"La Mesa, CA",Medical
+AMTHOLD,Amarillo Hold Room,TX,53,197,"Amarillo, TX",Hold
+AGMDCCA,Anaheim Global Medical Center,CA,81,194,"Anaheim, CA",Medical
+ANCHOAK,Anchorage Jail,AK,0,197,"Anchorage, AK",Federal
+ANCHOLD,Anchorage Sub-Office Hold Room,AK,144,173,"Anchorage, AK",Hold
+ANDERSC,Anderson County Det Center,SC,147,190,"Anderson, SC",Other
+ANDRWTX,Andrews Sherrif's Office Co Jail,TX,111,122,"Andrews, TX",Other
+AKPSYNJ,Anne Klein Phsychiatric Institute,NJ,43,60,"W. Trenton, NJ",Medical
+FIPCAGA,Annex Folkston IPC,GA,115,197,"Folkston, GA",Dedicated
+ANJUVMN,Anoka Co. Juvenile Center,MN,8,22,"Lino Lakes, MN",Family/children
+ANSGHTX,Anson General Hospital,TX,150,185,"Anson, TX",Medical
+APACHAZ,Apache Co. Jail,AZ,3,60,"St Johns, AZ",Federal
+ARAPACO,Arapahoe County Jail,CO,127,133,"Littleton, CO",Non-dedicated
+AZSVCPC,Arizona Service Prison Complex,AZ,83,85,"Phoenix, AZ",Other
+AZSPFLO,Arizona State Prison Comp,AZ,137,138,"Florence, AZ",Other
+ARLCOVA,Arlington Co Jail,VA,0,40,"Arlington, VA",Federal
+AROOSME,Aroostook County Jail,ME,0,140,"Houlton, ME",Federal
+ARRMCCA,Arrowhead Regional Med Center,CA,68,196,"Colton, CA",Medical
+ARTESNM,Artesia City Jail,NM,122,178,"Artesia, NM",Other
+AFRC,Artesia Family Residential Center,NM,68,160,"Artesia, NM",Family/children
+ARTSINM,Artesia Law Enforcement Center,NM,96,97,"Artesia, NM",Other
+ASWHRTX,Ascension Seton Williams Hosp,TX,172,176,"Round Rock, TX",Medical
+ASHECNC,Ashe County Jail,NC,57,106,"Jefferson, NC",Other
+ATTHOLD,"Athens, TX Hold Room",TX,105,194,"Athens, TX",Hold
+ATLHOLD,Atlanta Dist. Hold Rm,GA,0,197,"Atlanta, GA",Hold
+ATLANGA,Atlanta Pretrial Detn Ctr,GA,0,196,"Atlanta, GA",Federal
+BOPATL,Atlanta U.S. Pen.,GA,196,197,"Atlanta, GA",Other
+ASHRSFL,Atlantic Shores Hospital,FL,26,192,"Fort Lauderdale, FL",Medical
+AURORCO,Aurora City Jail,CO,10,191,"Aurora, CO",Non-dedicated
+AUSHOLD,Austin DRO Hold Room,TX,19,197,"Austin, TX",Hold
+AVPARLA,Avoyelles Parish Prison,LA,41,46,"Marksville, LA",Non-dedicated
+BIINCCO,"BI Incororated, GEO Group Company",CO,195,196,"Aurora, CO",Other
+BSCORTX,BSCC Airpark Unit,TX,16,51,"Big Spring, TX",Federal
+BSCDRTX,BSCC Cedar Hill Unit,TX,28,29,"Big Spring, TX",Federal
+BSFLTTX,BSCC Flightline Unit,TX,28,53,"Big Spring, TX",Federal
+BSGDFTX,BSCC Giles Darby Facility,TX,28,29,"Post, TX",Federal
+BSNTRTX,BSCC Interstate Unit,TX,32,33,"Big Spring, TX",Federal
+FLBAKCI,Baker C. I.,FL,95,157,"Sanderson, FL",Other
+CACFBAK,Baker CCF,CA,54,55,"Baker, CA",Non-dedicated
+BAKERFL,Baker County Sheriff Dept.,FL,11,197,"Macclenny, FL",Non-dedicated
+BKLHOLD,Bakerfield Hold,CA,0,197,"Bakersfield, CA",Hold
+BALHOLD,Bal D D & P,MD,0,197,"Baltimore, MD",Hold
+BALDWAL,Baldwin County Cor. Center,AL,30,197,"Bay Minette, AL",Non-dedicated
+BIMDCAZ,Banner Ironwood Med Ctr,AZ,174,197,"Queen Creek, AZ",Medical
+BNMCTAZ,Banner Medical Ctr Tucson,AZ,178,185,"Tucson, AZ",Medical
+BANHOAZ,Banner University Medical Phoenix,AZ,194,196,"Phoenix, AZ",Medical
+BANNOID,Bannock County Jail,ID,0,24,"Pocatello, ID",Federal
+BMCSATX,Baptist Medical Center,TX,173,197,"San Antonio, TX",Medical
+BARNSMA,Barnstable County,MA,42,169,"Barnstable, MA",Non-dedicated
+BARRECA,Barrett Honor Camp,CA,11,48,"Alpine, CA",Family/children
+BARTOGA,Bartow Co Jail,GA,166,196,"Cartersville, GA",Other
+BASILLA,Basile Detention Center,LA,0,197,"Basile, LA",Dedicated
+CMDHOLD,Batavia Command Center Holdroom,NY,166,196,"Batavia, NY",Hold
+BAYCOFL,Bay County,FL,195,197,"Panama City, FL",Other
+BAYAMPR,Bayamon Hospital,PR,101,197,"Bayamon, PR",Medical
+BSTAYTX,Baylor Scott White Md Ctr,TX,178,197,"Dallas, TX",Medical
+BSWRRTX,Baylor Scott White Med RR,TX,177,193,"Round Rock, TX",Medical
+BEAVRPA,Beaver County Jail,PA,106,176,"Aliquippa, PA",Federal
+BEDCITX,Bedford City Jail,TX,0,154,"Bedford, TX",Non-dedicated
+BEDFOPA,Bedford County Jail,PA,0,15,"Bedford, PA",Non-dedicated
+BEDFOOH,Bedford Heights City,OH,0,79,"Bedford Heights, OH",Non-dedicated
+BELCOTX,Bell County Jail,TX,145,197,"Belton, TX",Non-dedicated
+BEHOSNY,"Bellevue Hospital, Manhat",NY,68,133,"New York, NY",Medical
+BLHHOLD,Bellingham BPS ERO Holdroom,WA,89,170,"Ferndale, WA",Hold
+BELMOOH,Belmont County Jail,OH,139,173,"St Clairsville, OH",Other
+BENTOWA,Benton County,WA,0,15,"Kennewick, WA",Non-dedicated
+BERGENJ,Bergen County Jail,NJ,0,183,"Hackensack, NJ",Federal
+BEJUVPA,Berks Co. Juvenile,PA,15,45,"Leesport, PA",Family/children
+BEFAMPA,Berks County Family Shelter,PA,0,149,"Leesport, PA",Family/children
+BERKSPA,"Berks County Jail, PA",PA,0,167,"Leesport, PA",Federal
+BCORCPA,Berks County Residential Center,PA,159,172,"Leesport, PA",Dedicated
+BESECPA,Berks County Secured Juvenile,PA,0,44,"Leesport, PA",Family/children
+BRKHOLD,Berks Hold Room,PA,94,172,"Leesport, PA",Hold
+BERNANM,Bernalillo County Det Ctr,NM,0,9,"Albuquerque, NM",Dedicated
+BWRGMTX,Best West Rose Grdn I&S,TX,142,153,"Mcallen, TX",Hotel
+BWEPATX,Best Western Casa De Estrella,TX,150,161,"El Paso, TX",Family/children
+BWDGICA,Best Western Dragon Gate Inn,CA,0,138,"Los Angeles, CA",Hotel
+BWMARCA,Best Western Marina,CA,99,144,"National City, CA",Hotel
+BIDHPMA,Beth Israel Deaconess Hosp,MA,172,197,"Boston, MA",Medical
+ISHOSNY,"Beth Israel Hospital, Manhattan",NY,29,179,"New York, NY",Medical
+WCCBXTX,Bexar County Wackenhut Annual Det.,TX,0,47,"San Antonio, TX",Federal
+BIGHOMT,"Big Horn County Jail, MT",MT,1,30,"Hardin, MT",Non-dedicated
+BIGHOWY,"Big Horn County Jail, WY",WY,6,7,"Basin, WY",Non-dedicated
+BSCHOLD,Big Spring Hold Room,TX,52,197,"Big Spring, TX",Hold
+BILHOLD,Billings Hold Room,MT,81,177,"Billings, MT",Hold
+BHMHOLD,Birmingham Hold Room,AL,32,193,"Homewood, AL",Hold
+BLKREOK,Blackwell Regional Hospital,OK,193,194,"Blackwell, OK",Medical
+BLOUNTN,Blount County Justice Ctr,TN,0,5,"Maryville, TN",Non-dedicated
+BLBNATX,Bluebonnet Det Fclty,TX,134,197,"Anson, TX",Non-dedicated
+BOIHOLD,Boise Hold Room,ID,73,197,"Boise, ID",Hold
+BONNEID,Bonneville Co. Jail,ID,0,52,"Idaho Falls, ID",Non-dedicated
+BOONEKY,Boone County Jail,KY,0,197,"Burlington, KY",Federal
+BSQUETX,Bosque County Sheriff's Dept.,TX,91,92,"Meridian, TX",Other
+BOSSRLA,Bossier Parish Cor. Center,LA,116,187,"Plain Dealing, LA",Federal
+BOSHOLD,Boston Holdroom,MA,8,197,"Burlington, MA",Hold
+BPC,Boston SPC,MA,0,187,"Boston, MA",Other
+BOTTIND,Bottineau Co. ND Jail,ND,0,48,"Bottineau, ND",Non-dedicated
+BOWCOTX,Bowie County Jail,AR,0,1,"Texarkana, AR",Non-dedicated
+BLGHOLD,Bowling Green Hold Room,VA,183,197,"Bowling Green, VA",Hold
+BRADEFL,Bradenton Detention Center,FL,0,56,"Bradenton, FL",Non-dedicated
+BRDFDFL,Bradford County Jail,FL,166,196,"Starke, FL",Non-dedicated
+BRANCMI,"Branch Co, Coldwater, MI",MI,88,89,"Coldwater, MI",Other
+BREMEIA,"Bremer Co Jail, Iowa",IA,100,160,"Waverly, IA",Federal
+FLBREVC,Brevard Correctional,FL,146,148,"Cocoa, FL",Other
+BREVDFL,Brevard County Jail Complex,FL,195,197,"Cocoa, FL",Other
+BRINDMA,Bristol Cnty Ndartmouth,MA,0,153,"North Dartmouth, MA",Non-dedicated
+BSAHOLD,Broadview Service Staging,IL,26,197,"Broadview, IL",Hold
+BROADMT,Broadwater County Jail,MT,4,19,"Townsend, MT",Non-dedicated
+BBCHPMI,Bronson Battle Creek Hosp,MI,187,193,"Battle Creek, MI",Medical
+BHFLDMI,Bronson Hospital Fieldstone Center,MI,60,64,"Battle Creek, MI",Medical
+BROHOMI,Bronson Methodist Hospital,MI,193,196,"Kalamazoo, MI",Medical
+BXCHSNY,Bronxcare Health System,NY,128,155,"Bronx, NY",Medical
+BOPBRO,Brooklyn MDC,NY,36,79,"Brooklyn, NY",Federal
+BROKSTX,Brooks County Jail (Contract),TX,4,166,"Falfurrias, TX",Federal
+BROMMNY,Broome County Jail,NY,0,139,"Binghampton, NY",Non-dedicated
+BROCRFL,Broward Correctional,FL,6,70,"Pembroke Pines, FL",Non-dedicated
+BROJAFL,Broward County Jail,FL,33,197,"Ft.Lauderdale, FL",Non-dedicated
+BRGMCFL,Broward General Medical Center,FL,26,197,"Ft. Lauderdale, FL",Medical
+WCCPBFL,Broward Transitional Center,FL,0,197,"Pompano Beach, FL",Dedicated
+BROWNSD,Brown County Jail,SD,39,51,"Aberdeen, SD",Non-dedicated
+BROWNWI,Brown County Jail,WI,91,92,"Green Bay, WI",Other
+BRWNSTX,Brownsville Police Dept.,TX,110,168,"Brownsville, TX",Other
+BRCHOLD,Brush Holdroom,CO,24,87,"Brush, CO",Hold
+NYBUFFC,"Buffalo CF, Alden,Ny",NY,7,110,"Alden, NY",Non-dedicated
+BUFHOLD,Buffalo Hold Room,NY,49,195,"Buffalo, NY",Hold
+BTV,Buffalo SPC,NY,0,197,"Batavia, NY",Dedicated
+BURLEND,"Burleigh Co. Jail, ND",ND,39,43,"Bismarck, ND",Non-dedicated
+BURNETX,Burnet County Jail,TX,20,190,"Burnet, TX",Federal
+BUTLEKS,Butler County Jail,KS,0,148,"El Dorado, KS",Federal
+BUTLEOH,Butler County Jail,OH,0,153,"Hamilton, OH",Non-dedicated
+BOPBUT,Butner Fed.Corr.Inst.,NC,16,20,"Butner, NC",Federal
+SILBOMT,Butte-Silver Bow County Jail,MT,23,24,"Butte, MT",Non-dedicated
+MABSHOS,Bwater St Hosp Bridgewate,MA,0,105,"Bridgewater, MA",Medical
+BFGHITX,"Byrd's Foster Group Home, Inc",TX,88,126,"Houston, TX",Family/children
+CCADCAZ,CCA Cent.AZ.Det.Ctr.,AZ,0,171,"Florence, AZ",Federal
+CCANOOH,CCA Northeast OH Corrects,OH,98,137,"Youngstown, OH",Dedicated
+CCAFLAZ,"CCA, Florence Correctional Center",AZ,0,197,"Florence, AZ",Federal
+CACFLEO,CCF/Leo Chesney,CA,103,104,"Live Oak, CA",Other
+CADCCAL,CDC Calipatria IHP,CA,64,76,"Calipatria, CA",Non-dedicated
+CBRRSNC,Cabarrus County Jail,NC,8,196,"Concord, NC",Non-dedicated
+CACHEUT,Cache Co. Jail,UT,98,170,"Logan, UT",Federal
+CALDWMO,Caldwell County Jail,MO,0,136,"Kingston, MO",Non-dedicated
+CALHOMI,"Calhoun Co., Battle Cr,MI",MI,0,197,"Battle Creek, MI",Non-dedicated
+CAMENCE,"Calif. Men Colony, East",CA,107,108,"San Luis Obispo, CA",Other
+CAMENCW,"Calif. Men Colony, West",CA,106,186,"San Luis Obispo, CA",Other
+CACTYCA,California City Corections Center,CA,29,62,"California City, CA",Federal
+CASPCAL,Calipatria State Prison,CA,4,6,"Calipatria, CA",Other
+CAMBRPA,"Cambria County Jail, PA",PA,0,154,"Ebensburg, PA",Federal
+CAMERTX,Cameron County Jail,TX,18,184,"Brownsville, TX",Non-dedicated
+CAMCOWY,Campbell County Jail,WY,1,190,"Gillette, WY",Non-dedicated
+CARBOPA,Carbon County Correctionl,PA,59,60,"Nesquehoning, PA",Non-dedicated
+CARBOWY,Carbon County Jail,WY,1,7,"Rawlins, WY",Non-dedicated
+CARDFVA,Caroline Detention Facility,VA,119,197,"Bowling Green, VA",Dedicated
+CARROMD,Carroll County Detention Center,MD,0,56,"Westminster, MD",Non-dedicated
+CAJUVMN,Carver Co. Juvy Detention,MN,0,133,"Chaska, MN",Family/children
+CARJAMN,Carver County Jail,MN,0,173,"Chaska, MN",Non-dedicated
+CGRMCAZ,Casa Grande Reg. Med. Center,AZ,8,197,"Casa Grande, AZ",Medical
+CASSJCA,Casa San Juan,CA,45,46,"San Diego, CA",Family/children
+CASCAMT,"Cascade County Jail, MT",MT,0,182,"Great Falls, MT",Federal
+CSYJVNY,Casey House Shelter,NY,4,80,"Buffalo, NY",Family/children
+CSPHOLD,Casper Holdroom,WY,24,197,"Casper, WY",Hold
+CASSCND,Cass County Jail,ND,31,76,"Fargo, ND",Non-dedicated
+CASSCNE,Cass County Jail,NE,0,142,"Plattsmouth, NE",Federal
+CATAHLA,Catahoula Correctional Center,LA,129,152,"Harrisonburg, LA",Non-dedicated
+CATTANY,Cattaraugus County Jail,NY,0,47,"Little Valley, NY",Non-dedicated
+CAYUGNY,Cayuga County Jail,NY,0,91,"Auburn, NY",Non-dedicated
+CCHRTTX,Cedar Crest Hosp Treat,TX,142,192,"Belton, TX",Medical
+CRIHOLD,Cedar Rapids Hold Room,IA,27,197,"Cedar Rapids, IA",Hold
+CEMEDFL,Cedars Medical Center,FL,10,95,"Miami, FL",Medical
+CNTGRIL,Centegra Hospital,IL,90,91,"Woodstock, IL",Medical
+CENTRVA,Centra Health,VA,192,193,"Lynchburg, VA",Medical
+CSSCHVA,Centra Southside Comm Hosp,VA,181,193,"Farmville, VA",Medical
+CCRMHMN,Centracare Rice Memorial Hosp,MN,188,196,"Willmar, MN",Medical
+CAMEDAZ,Central Arizona Medical,AZ,42,159,"Florence, AZ",Medical
+CIPHOLD,Central Islip Hold Room,NY,136,197,"Central Islip, NY",Hold
+CENTRWV,Central Regional Jail,WV,51,52,"Sutton, WV",Non-dedicated
+WACLATX,Central Texas Detention Facility,TX,0,134,"San Antonio, TX",Federal
+CVREGVA,Central VA Regional Jail,VA,22,197,"Orange County, VA",Non-dedicated
+CVANXCA,Central Valley Annex,CA,184,185,"McFarland, CA",Other
+CMEDHPR,Centro Medico Hospital,PR,71,176,"San Juan, PR",Medical
+CRTOSCA,Cerritos  College Hosp,CA,16,17,"Cerritos, CA",Medical
+CHMHOLD,Champlain Hold Room,NY,129,196,"Champlain, NY",Hold
+CHANRAZ,Chandler Reg Med Ctr,AZ,175,197,"Chandler, AZ",Medical
+CHARLSC,Charleston County Correct,SC,0,191,"North Charleston, SC",Federal
+CHLHOLD,"Charleston, SC Hold Room",SC,106,197,"Charleston, SC",Hold
+CHAHOLD,Charlotte Amalie Holdroom,VI,17,197,"St. Thomas, VI",Hold
+FLCHACI,"Charlotte CI, Punta Gorda",FL,194,195,"Punta Gorda, FL",Other
+CHRLTFL,Charlotte County Jail,FL,103,114,"Punta Gorda, FL",Non-dedicated
+CLTHOLD,Charlotte Hold Room,NC,29,197,"Charlotte, NC",Hold
+CHASEKS,Chase County Jail,KS,0,197,"Cottonwood Falls, KS",Non-dedicated
+CSHEPTX,Chase Ste Hotel Elp,TX,142,144,"El Paso, TX",Hotel
+CHATHGA,Chatham Co Jail,GA,42,46,"Savannah, GA",Non-dedicated
+CNGHOLD,Chattanooga Hold Room,TN,32,197,"Chattanooga, TN",Hold
+CHACONY,Chautauqua County Jail,NY,0,166,"Mayville, NY",Non-dedicated
+CHAVENM,Chavez Det Crt,NM,109,197,"Roswell, NM",Non-dedicated
+CHELAWA,Chelan Co. Regional Jail,WA,0,103,"Wenatchee, WA",Federal
+CHEMUNY,Chemung County Jail,NY,59,60,"Elmira, NY",Non-dedicated
+CHENANY,Chenango County Jail,NY,60,61,"Norwich, NY",Other
+CHEROOK,Cherokee County Jail,OK,51,52,"Tahlequah, OK",Other
+CHFLDVA,Chesterfield Co. Jail,VA,173,174,"Chesterfield, VA",Other
+CHYHOLD,Cheyenne Holdroom,WY,24,197,"Cheyenne, WY",Hold
+CHIHMIA,Chi Health Mercy Council Bluffs,IA,179,180,"Council Bluffs, IA",Medical
+CSLLFTX,Chi St Luke's H M Lufkin,TX,186,187,"Lufkin, TX",Medical
+CHISLTX,Chi St Luke's Health Mem,TX,171,193,"Lufkin, TX",Medical
+CHIHOLD,Chicago Hold Room,IL,26,196,"Chicago, IL",Hold
+CHIPPMI,"Chippewa Co., SSM",MI,0,197,"Sault Sainte Marie, MI",Non-dedicated
+VTCHTDN,Chittenden Reg. Cor. Facility,VT,13,197,"South Burlington, VT",Non-dedicated
+CHRISMO,Christian Co Sheriff Dept,MO,0,163,"Ozark, MO",Non-dedicated
+CHSRHTX,Christus Santa Rosa Hospital - Med,TX,187,194,"Irving, TX",Medical
+CCCSSTX,Christus Spohn Hosp CC - South,TX,172,173,"Corpus Christi, TX",Medical
+CIBOCNM,Cibola County Correctional Center,NM,98,197,"Milan, NM",Non-dedicated
+CIBOLNM,Cibola County Det Ctr,NM,110,166,"Grants, NM",Non-dedicated
+CIBOGNM,Cibola General Hospital,NM,182,190,"Grants, NM",Medical
+CINHOLD,Cincinnati Holdroom,OH,134,197,"Cincinnati, OH",Hold
+CITRUFL,Citrus County Jail,FL,2,195,"Lecanto, FL",Non-dedicated
+CLARIPA,Clarion  County Corrections,PA,7,8,"Shippenville, PA",Non-dedicated
+CLARKWA,Clark County Jail,WA,1,2,"Vancouver, WA",Non-dedicated
+CFREDVA,Clarke Fred'k Winch.,VA,0,1,"Winchester, VA",Non-dedicated
+CLAYCIN,Clay County Justice Center,IN,57,197,"Brazil, IN",Federal
+CLEHOLD,Cleveland Hold Room,OH,44,197,"Cleveland, OH",Hold
+CLINTPA,Clinton County Corr. Fac.,PA,0,197,"Mcelhattan, PA",Federal
+CLICONY,Clinton County Jail,NY,0,197,"Plattsburgh, NY",Federal
+CBENDTX,Coastal Bend Det. Facility,TX,44,197,"Robstown, TX",Federal
+COBBJGA,Cobb County Jail,GA,0,197,"Marietta, GA",Non-dedicated
+COCHIAZ,Cochise Co Jail Bisbee AZ,AZ,18,160,"Bisbee, AZ",Non-dedicated
+COCONAZ,Coconino Co Detention Facility,AZ,2,131,"Flagstaff, AZ",Federal
+COLLIFL,Collier County Sheriff,FL,0,197,"Naples, FL",Non-dedicated
+CSDHOLD,Colo Springs Den HSI Hold,CO,132,151,"Colorado Springs, CO",Hold
+COLOMNY,Colombia County Jail,NY,4,16,"Hudson, NY",Non-dedicated
+COLCASC,Columbia Care Center,SC,0,197,"Columbia, SC",Medical
+COLUMOR,Columbia County Jail,OR,0,70,"Saint Helens, OR",Federal
+COLUMPA,Columbia County Jail,PA,0,162,"Bloomsburg, PA",Federal
+COLUMFL,Columbia County Jail,FL,167,196,"Lake City, FL",Other
+CKHOSFL,Columbia Kendal Hospital,FL,0,197,"Miami, FL",Medical
+COAHOLD,"Columbia, SC Holdroom",SC,69,197,"Columbia, SC",Hold
+CLMHOLD,Columbus Holdroom,OH,86,197,"Columbus, OH",Hold
+CISAETX,Comfort Inn Ste Elp Airp,TX,150,151,"El Paso, TX",Hotel
+CSANOLA,Comfort Suites Alexandria,LA,151,154,"Alexandria, LA",Hotel
+CISEPTX,Comfort Suites Casa Consuelo,TX,150,160,"El Paso, TX",Family/children
+COMFTFL,Comfort Suites Hotel,FL,0,146,"Miami, FL",Hotel
+CWHCCMP,Commonwealth Healthcare Corp,MP,180,181,"Fananganan, Saipan, MP",Medical
+CRMCFCA,Community Reg Med Center,CA,175,189,"Fresno, CA",Medical
+CMPJVNY,Compass House Shelter,NY,0,123,"Buffalo, NY",Family/children
+CONCOLA,Concordia Parish C C,LA,31,68,"Ferriday, LA",Non-dedicated
+CONEJCO,Conejos County Jail,CO,0,69,"Antonito, CO",Non-dedicated
+CONHOTX,Connally Memorial Medical Center,TX,195,196,"Floresville, TX",Medical
+CONWECA,Contra Costa Co Jail/West,CA,18,119,"Richmond, CA",Federal
+CONCOCA,Contra Costa Co. Jail,CA,18,119,"Martinez, CA",Federal
+CONVEWY,Converse County Jail,WY,0,7,"Douglas, WY",Non-dedicated
+CCHHSIL,Cook County Hospital-JHS,IL,94,132,"Chicago, IL",Medical
+AKCOOKI,"Cook Inlet Pretrial, Anch",AK,0,182,"Anchorage, AK",Non-dedicated
+COOSCOR,Coos Co. Jail,OR,38,127,"Coquille, OR",Non-dedicated
+COOCONH,Coos County Jail,NH,127,135,"West Stewartstown, NH",Federal
+CRPHOLD,Corpus Christi EOR Hold Room,TX,178,197,"Corpus Christi, TX",Hold
+COSTACA,Costa Mesa College Hosp,CA,0,58,"Costa Mesa, CA",Medical
+CISPVLA,County Inn & Ste By Rad,LA,144,145,"Pineville, LA",Hotel
+CHMCINY,Courthouse USM Cntl Islip,NY,137,191,"Central Islip, NY",Other
+COWJVWA,Cowlitz Co. Juv. Det.,WA,0,151,"Longview, WA",Family/children
+CRGHOLD,Craig Holdroom,CO,24,196,"Craig, CO",Hold
+CCHAUTX,Cross Creek Hospital,TX,187,193,"Austin, TX",Medical
+CROWGMN,Crow Wing County Jail,MN,33,35,"Brainerd, MN",Non-dedicated
+CPPAPAZ,Crowne Plaza Phoenix Ap,AZ,142,145,"Phoenix, AZ",Hotel
+CRYCCTX,Crystal City Corr. Center,TX,54,64,"Crystal City, TX",Federal
+CASPSAC,Csp-Sacramento,CA,78,79,"Represa, CA",Non-dedicated
+CULBETX,Culberson County Sheriff's,TX,122,123,"Van Horn, TX",Non-dedicated
+CULPEVA,Culpeper Co. Adult Det. Center,VA,31,180,"Culpeper, VA",Non-dedicated
+CUMBEME,Cumberland County Jail,ME,0,197,"Portland, ME",Federal
+BOPCUM,Cumberland FCI,MD,0,19,"Cumberland, MD",Federal
+CURRYNM,Curry County Det Fac,NM,46,189,"Clovis, NM",Non-dedicated
+CUSTEMT,Custer County Jail,MT,0,1,"Miles City, MT",Non-dedicated
+GADRYJM,D. Ray James Prison,GA,120,190,"Folkston, GA",Federal
+DCDOCDC,DC Dept Of Corrections,DC,13,70,"Washington, DC",Federal
+SAJHOLD,DHS/ICE/DRO,PR,0,197,"Guaynabo, PR",Hold
+DSMCNTX,DSMC - Del Sol Medical Center,TX,117,196,"El Paso, TX",Medical
+FLDADCI,Dade Correctional Inst,FL,74,107,"Florida City, FL",Other
+DAKOTNE,Dakota County Jail,NE,14,197,"Dakota City, NE",Federal
+BOPDAL,Dalby Correctional Institute,TX,101,174,"Post, TX",Federal
+DALCOTX,Dallas County Jail-Lew Sterrett,TX,72,197,"Dallas, TX",Federal
+DALHOLD,Dallas F.O. Hold,TX,0,197,"Dallas, TX",Hold
+DAUPHPA,"Dauphin Cnty Jail, PA",PA,105,106,"Harrisburg, PA",Other
+DAVIDTN,Davidson Co. Sheriff Dept,TN,0,134,"Nashville, TN",Non-dedicated
+DAWSOMT,Dawson County Jail,MT,7,60,"Glendive, MT",Non-dedicated
+DIIHBMD,Days Inn Inner Harbor Baltimore,MD,127,129,"Baltimore, MD",Hotel
+DEAPDMI,Dearborn Police Dept.,MI,0,187,"Dearborn, MI",Non-dedicated
+DEKALGA,Dekalb Co Jail,GA,10,15,"Decatur, GA",Other
+DEKALAL,Dekalb County Detention Center,AL,0,148,"Fort Payne, AL",Federal
+DEKABGA,Dekalb County Jail,GA,141,172,"Decatur, GA",Non-dedicated
+DLAMOCA,Del Amo Psychiatric Hospital,CA,38,39,"Torrance, CA",Medical
+DLRHOLD,Del Rio DRO Hold Room,TX,57,197,"Del Rio, TX",Hold
+DHDFNJ,Delaney Hall Detention Facility,NJ,34,185,"Newark, NJ",Non-dedicated
+DELAWPA,Delaware Co Jail,PA,81,139,"Thornton, PA",Federal
+DECCSMY,Delaware Correction Center,DE,99,122,"Smyrna, DE",Other
+DELTACO,Delta County Jail,CO,1,11,"Delta, CO",Non-dedicated
+DENIICO,Denver CDF II,CO,123,158,"Aurora, CO",Dedicated
+DENICDF,Denver Contract Det. Fac.,CO,0,197,"Aurora, CO",Dedicated
+DENVECO,Denver County Jail,CO,0,192,"Denver, CO",Federal
+DNHMCCO,Denver Health Medical Center,CO,67,189,"Denver, CO",Medical
+DENHOLD,Denver Hold Room,CO,0,197,"Denver, CO",Hold
+DENCICO,Denver Justice Center,CO,0,13,"Denver, CO",Non-dedicated
+DEPCOGU,Department Of Corrections,GU,0,135,"Mangilao, GU",Non-dedicated
+DEPYOGU,Department Of Youth Affairs,GU,2,8,"Barrigada, GU",Family/children
+GUDOCHG,Dept Of Corrections-Hagatna,GU,7,197,"Hagatna, GU",Federal
+DSMHOLD,Des Moines Hold Room,IA,28,197,"Des Moines, IA",Hold
+DSRTVCA,Desert Valley Hospital,CA,68,193,"Victorville, CA",Medical
+CADESVI,Desert View,CA,43,197,"Adelanto, CA",Dedicated
+DVHSPNV,Desert View Hospital,NV,177,193,"Pahrump, NV",Medical
+DRHCSTX,Dimmit Regional Hospital,TX,174,175,"Carrizo Springs, TX",Medical
+WIDODGE,"Dodge Corr Institute, Wau",WI,31,86,"Waupun, WI",Non-dedicated
+DODGEWI,"Dodge County Jail, Juneau",WI,0,197,"Juneau, WI",Federal
+DONAANM,Dona Ana County Detention Facility,NM,97,161,"Las Cruces, NM",Non-dedicated
+DORCHMD,Dorchester Co Det Cntr,MD,0,168,"Cambridge, MD",Non-dedicated
+DORCDSC,Dorchester Co Det Ctr,SC,177,196,"Summerville, SC",Federal
+DOUGLOR,Douglas Co. Jail,OR,0,53,"Roseburg, OR",Non-dedicated
+DOUGLWI,Douglas Co. Wisconsin,WI,103,197,"Superior, WI",Non-dedicated
+DOCORNE,Douglas County Correction,NE,0,160,"Omaha, NE",Non-dedicated
+DOUGLCO,Douglas County Detention Center,CO,0,181,"Castle Rock, CO",Non-dedicated
+DVDHOLD,Dover Holdroom,DE,3,197,"Dover, DE",Hold
+DRURYCO,Drury Inn,CO,0,182,"Denver, CO",Hotel
+DISSATX,Drury Inn & Stes SNA Ap,TX,142,164,"San Antonio, TX",Hotel
+DISPTAZ,Drury Inn Stes Pho Tempe,AZ,143,146,"Tempe, AZ",Hotel
+DULHOLD,Duluth Hold Room,MN,127,183,"Duluth, MN",Hold
+DUPAGIL,Dupage County Jail,IL,10,23,"Wheaton, IL",Non-dedicated
+DURHOLD,Durango Holdroom,CO,25,197,"Durango, CO",Hold
+DUTCHAK,Dutch Harbor City Jail,AK,2,4,"Unalaska, AK",Non-dedicated
+DUVALFL,Duval/Jacksonville Jail,FL,0,12,"Jacksonville, FL",Non-dedicated
+EAGLECO,Eagle County Jail,CO,17,68,"Eagle, CO",Non-dedicated
+EHDLGTX,East Hidalgo Detention Center,TX,29,197,"La Villa, TX",Federal
+EMESACA,East Mesa Detent Facility,CA,8,96,"San Diego, CA",Non-dedicated
+NYEASTC,Eastern C.F. Napanoch,NY,162,166,"Napanoch, NY",Other
+WVEASTR,Eastern Regional Jail,WV,3,197,"Martinsburg, WV",Federal
+ECOLOWA,Econolodge Motel,WA,1,147,"Tukwila, WA",Hotel
+ECTORTX,Ector County Correction Center,TX,0,31,"Odessa, TX",Non-dedicated
+ECLECTX,Ector County L.E.C.,TX,125,126,"Odessa, TX",Other
+EFMHMFL,Ed Fraser Memorial Hospital,FL,173,180,"Macclenny, FL",Medical
+EDDCONM,Eddy County Jail,NM,39,162,"Carlsbad, NM",Non-dedicated
+EDENDTX,Eden Det Center,TX,5,17,"Eden, TX",Federal
+EDNHOLD,Eden Det Ctr Hold Room,TX,133,176,"Eden, TX",Hold
+EDNDCTX,Eden Detention Ctr,TX,130,197,"Eden, TX",Other
+EDCHOLD,Eden Hold Room,TX,54,87,"Eden, TX",Hold
+EDNBGTX,Edinburg Police Dept.,TX,64,183,"Edinburg, TX",Other
+ECRMCCA,El Centro Regional Med Ctr,CA,183,195,"El Centro, CA",Medical
+ECC,El Centro SPC,CA,0,72,"El Centro, CA",Dedicated
+EPBHSTX,El Paso Behavioral Health System,TX,113,197,"El Paso, TX",Medical
+EPCDFTX,El Paso County Detention Facility,TX,174,197,"El Paso, TX",Other
+ELPASCO,El Paso County Jail (CO),CO,0,114,"Colorado Springs, CO",Non-dedicated
+ELPCOTX,El Paso County Jail (TX),TX,107,196,"El Paso, TX",Non-dedicated
+EPLTATX,El Paso LTAC Hospital,TX,134,197,"El Paso, TX",Medical
+EPC,El Paso SPC,TX,0,197,"El Paso, TX",Dedicated
+EPCJUVI,El Paso SPC Juvenile,TX,15,179,"El Paso, TX",Hold
+ELVDFTX,El Valle Detention Facility,TX,117,197,"Raymondville, TX",Non-dedicated
+ELBERCO,Elbert County Jail,CO,2,3,"Kiowa, CO",Non-dedicated
+ELGPDIL,Elgin Police Dept. Jail,IL,0,108,"Elgin, IL",Non-dedicated
+ELZICDF,Elizabeth Contract D.F.,NJ,0,197,"Elizabeth, NJ",Dedicated
+ELKHAIN,Elkhart County Jail,IN,122,136,"Elkhart, IN",Other
+ELMORID,Elmore County Jail,ID,8,192,"Mountain Home, ID",Federal
+EAZ,Eloy Federal Contract Fac,AZ,0,197,"Eloy, AZ",Dedicated
+BOEHOLD,Elp Boeing Dr Holdroom,TX,0,126,"El Paso, TX",Hold
+ESHSATX,Embassy Ste Hltn NW I-10,TX,156,157,"San Antonio, TX",Hotel
+EMBSATX,Embassy Ste Hltn SNA Ap,TX,150,151,"San Antonio, TX",Hotel
+EMBCRNC,Embassy Suites By Hilton,NC,120,180,"Cary, NC",Hotel
+EMBSYCO,Embassy Suites Hotel,CO,46,48,"Denver, CO",Hotel
+ENLMCCA,Enloe Medical Center,CA,173,175,"Chico, CA",Medical
+EIRHONY,Erie Co Holding Center,NY,29,30,"Buffalo, NY",Hold
+ERICONY,Erie County Holding Center,NY,0,6,"Buffalo, NY",Hold
+ERICOPA,"Erie County Jail, PA",PA,0,197,"Erie, PA",Federal
+ECMCBNY,Erie County Medical Center,NY,57,197,"Buffalo, NY",Medical
+ESSEXMA,"Essex Co. Jail, Middleton",MA,0,29,"Middleton, MA",Non-dedicated
+ESSEXNJ,Essex County Jail,NJ,0,197,"Newark, NJ",Non-dedicated
+ESSEXNY,Essex County Jail,NY,1,32,"Lewis, NY",Non-dedicated
+ETOWAAL,Etowah County Jail (AL),AL,0,184,"Gadsden, AL",Federal
+ETWHOLD,Etowah ERO Hold Room,AL,32,193,"Gadsden, AL",Hold
+EUGHOLD,Eugene Holdroom,OR,14,197,"Eugene, OR",Hold
+EULESTX,Euless City Jail,TX,0,160,"Euless, TX",Non-dedicated
+EXTSAAZ,Extended Stay America,AZ,160,161,AZ,Hotel
+ESAPAAZ,Extended Stay America Pho Ap,AZ,149,150,"Phoenix, AZ",Hotel
+BOPGIL,FCI Gilmer,WV,103,104,"Glenville, WV",Federal
+BOPVIM,FCI Victorville,CA,32,195,"Victorville, CA",Federal
+BOPPHL,FDC Philadelphia,PA,196,197,"Philadelphia, PA",Federal
+FCLT8CA,Facility 8 Detention Facility,CA,85,137,"San Diego, CA",Other
+AKFAIRB,Fairbanks Corr Ctr,AK,0,181,"Fairbanks, AK",Non-dedicated
+FAICOVA,Fairfax Co Jail,VA,6,89,"Fairfax, VA",Federal
+FXADCVA,Fairfax Co. Adult Detention Center,VA,97,116,"Fairfax, VA",Non-dedicated
+FRFLDWY,Fairfield Inn & Suites,WY,116,134,"Cheyenne, WY",Hotel
+BOPFAI,Fairton FCI,NJ,109,130,"Fairton, NJ",Federal
+FAULKSD,Faulk County Jail,SD,31,32,"Faulkton, SD",Non-dedicated
+FAULKAR,Faulkner County Jail,AR,0,4,"Conway, AR",Non-dedicated
+FAYETKY,Fayette County Detention Center,KY,76,197,"Lexington, KY",Federal
+FAYHOLD,Fayetteville Hold Room,AR,15,197,"Fayetteville, AR",Hold
+FDLHOLD,Ferndale Hold Room,WA,169,197,"Ferndale, WA",Hold
+FERRYWA,Ferry County Jail,WA,11,16,"Republic, WA",Non-dedicated
+FINNEKS,Finney County Jail,KS,141,197,"Garden City, KS",Non-dedicated
+NYFISHC,Fishkill C.F. Beacon Ny,NY,124,181,"Beacon, NY",Other
+FLGLRFL,Flagler County Jail,FL,184,197,"Bunnel, FL",Other
+FLATHMT,Flathead County Jail,MT,0,161,"Kalispell, MT",Non-dedicated
+FLORHAZ,Florence Hospital,AZ,170,197,"Florence, AZ",Medical
+FLO,Florence SPC,AZ,0,197,"Florence, AZ",Dedicated
+FSF,Florence Staging Facility,AZ,0,197,"Florence, AZ",Hold
+FLSPSTA,"Florida St. Pris.,Starke",FL,100,101,"Raiford, FL",Other
+FLOYDGA,Floyd County Jail,GA,127,197,"Rome, GA",Federal
+FIPCMGA,Folkston Main IPC,GA,119,197,"Folkston, GA",Dedicated
+FNDDUWI,Fond Du Lac County Sheriff/Jail,WI,153,188,"Fond Du Lac, WI",Other
+FORSYNC,Forsyth County Jail,NC,0,188,"Winston-Salem, NC",Federal
+FLHOSFL,Fort Lauderdale Hospital,FL,109,168,"Fort Lauderdale, FL",Medical
+FMYHOLD,Fort Myers ERO Holdroom,FL,90,197,"Fort Myers, FL",Hold
+FSAHOLD,Fort Smith Holdroom,AR,29,154,"Fort Smith, AR",Hold
+FPSSAWA,Four Pts Sheraton Sea Ap,WA,155,178,"Des Moines, WA",Hotel
+FRANKWA,Franklin County,WA,2,3,"Pasco, WA",Non-dedicated
+FRACOVT,"Franklin County Jail, VT",VT,0,121,"Saint Albans, VT",Non-dedicated
+GREENMA,Franklin House of Corrections,MA,0,151,"Greenfield, MA",Federal
+FREDEMD,Frederick County Det. Cen,MD,0,194,"Frederick, MD",Non-dedicated
+FCOHOLD,Frederick Holdroom,CO,86,87,"Frederick, CO",Hold
+FRDHOLD,Frederick Holdroom,CO,86,197,"Frederick, CO",Hold
+FREEBMN,"Freeborn County Jail, MN",MN,3,197,"Albert Lea, MN",Non-dedicated
+FREESTX,Freestone County Jail,TX,170,171,"Fairfield, TX",Non-dedicated
+FREMOCO,"Fremont County Jail, CO",CO,0,67,"Canon City, CO",Non-dedicated
+FREMOWY,"Fremont County Jail, WY",WY,5,6,"Lander, WY",Non-dedicated
+FRECOCA,Fresno County Jail,CA,87,88,"Fresno, CA",Non-dedicated
+FREHOLD,Fresno Holdroom,CA,0,197,"Fresno, CA",Hold
+FRIOCTX,Frio County Jail,TX,133,134,"Pearsall, TX",Non-dedicated
+FRIRHTX,Frio Regional Hospital,TX,168,197,"Pearsall, TX",Medical
+FLBHCFL,Ft Lauderdale Behavor Hlth Ctr,FL,128,197,"Oakland Park, FL",Medical
+GALLAMT,Gallatin County Jail,MT,1,185,"Bozeman, MT",Non-dedicated
+GCPFCKS,Garden City Processing @ Finney Co,KS,177,196,"Garden City, KS",Other
+GARVIOK,Garvin County Jail,OK,0,197,"Pauls Valley, OK",Non-dedicated
+GASTNNC,Gaston County Jail,NC,0,197,"Gastonia, NC",Non-dedicated
+GEAUGOH,Geauga County Jail,OH,34,197,"Chardon, OH",Federal
+GSMCDPA,Geisinger Medical Center,PA,184,186,"Danville, PA",Medical
+GENESNY,Genesee County Jail,NY,0,43,"Batavia, NY",Federal
+BAILECA,George Bailey Detent Faci,CA,35,102,"San Diego, CA",Non-dedicated
+IAHSFTX,George Bush Intercontinental,TX,70,156,"Houston, TX",Hold
+GRGBVTX,Georgetown Behavioral Hospital,TX,193,194,"Georgetown, TX",Medical
+GIJUVAZ,Gila County Juvenile Det Center,AZ,0,9,"Globe, AZ",Family/children
+GLADEFL,Glades County Detention Center,FL,0,165,"Moore Haven, FL",Non-dedicated
+GLEPDCA,Glendale Police Dept,CA,0,197,"Glendale, CA",Non-dedicated
+GSCHOLD,Glenwood Springs Holdroom,CO,24,185,"Glenwood Springs, CO",Hold
+GLOUCNJ,Gloucester County Jail,NJ,20,21,"Woodbury, NJ",Non-dedicated
+GLDSACA,Golden State Annex,CA,143,197,"Mcfarland, CA",Dedicated
+GSAMHCA,Good Samaritan Hospital,CA,173,174,"San Jose, CA",Medical
+GOODCID,Gooding County Jail,ID,164,185,"Gooding, ID",Other
+AKGSCCC,Goose Creek Correctional Center,AK,146,183,"Wasilla, AK",Other
+GOSHEWY,Goshen County Jail,WY,1,2,"Torrington, WY",Non-dedicated
+GCLECOK,Grady County Law Enforcement Ctr,OK,116,170,"Chickasha, OK",Other
+GMHATGA,Grady Memorial Hospital,GA,173,197,"Atlanta, GA",Medical
+GRAHAAZ,Graham Co Jail Safford AZ,AZ,162,163,"Safford, AZ",Other
+GFJUVND,Grand Forks Co. Juvenile,ND,1,135,"Grand Forks, ND",Family/children
+GFCORND,Grand Forks County Correc,ND,0,197,"Grand Forks, ND",Non-dedicated
+GRFHOLD,Grand Forks Hold Room,ND,16,197,"Grand Forks, ND",Hold
+GRIHOLD,Grand Island Hold Room,NE,27,158,"Grand Island, NE",Hold
+GJCHOLD,Grand Junction Holdroom,CO,24,197,"Grand Junction, CO",Hold
+GRMHOLD,Grand Rapids Holdroom,MI,65,197,"Grand Rapids, MI",Hold
+GRANTWA,Grant County,WA,0,10,"Ephrata, WA",Non-dedicated
+GRANTOR,Grant County Jail,OR,4,31,"Canyon City, OR",Non-dedicated
+GRYDCKY,Grayson County Det Center (Female),KY,31,53,"Leitchfield, KY",Federal
+GRAYSKY,Grayson County Detention Center,KY,0,197,"Leitchfield, KY",Federal
+NYGREAC,Great Meadow C.F.,NY,167,181,"Comstock, NY",Other
+GPCHOLD,Great Plains CI Holdroom,OK,89,142,"Hinton, OK",Hold
+GREENMO,Greene County Jail,MO,1,64,"Springfield, MO",Non-dedicated
+HOUGTTX,Greentree Inn Houston IAH Airport,TX,180,181,"Houston, TX",Hotel
+GRRHOLD,Greer Hold Room,SC,72,197,"Greer, SC",Hold
+NYGROVC,Groveland C.F. Sonyea,NY,158,189,"Sonyea, NY",Other
+GUADATX,Guadalupe Cty Jail,TX,1,89,"Seguin, TX",Non-dedicated
+BOPGUA,Guaynabo MDC (San Juan),PR,0,197,"San Juan, PR",Federal
+GWINNGA,Gwinnett County Jail,GA,0,51,"Lawrenceville, GA",Non-dedicated
+HCAFMFL,HCA Florida Memorial Hospital,FL,173,189,"Jacksonville, FL",Medical
+HCAHCTX,HCA Houston Hc Conroe,TX,170,197,"Conroe, TX",Medical
+HACMCNJ,Hackensack Med Ctr,NJ,172,173,"Hackensack, NJ",Medical
+HAILEID,Haile Det. Center,ID,0,197,"Caldwell, ID",Non-dedicated
+HALLJGA,Hall Co Jail,GA,0,181,"Gainesville, GA",Federal
+HASHENE,Hall County Sheriff,NE,2,183,"Grand Island, NE",Non-dedicated
+HAMILTX,Hamilton County Jail (TX),TX,170,171,"Hamilton, TX",Other
+HAMPDMA,Hampden Co.House Of Corr.,MA,94,110,"Ludlow, MA",Non-dedicated
+HISAXLA,Hampton Inn & Stes Alexandria,LA,152,153,"Alexandria, LA",Hotel
+HISEPTX,Hampton Inn & Stes Elp Ap,TX,137,142,"El Paso, TX",Hotel
+HISMCTX,Hampton Inn & Stes Mcallen,TX,138,179,"Mcallen, TX",Hotel
+HAMPITX,Hampton Inn Pearsall,TX,150,151,"Pearsall, TX",Family/children
+HIPANAZ,Hampton Inn Pho Airport N,AZ,138,151,"Phoenix, AZ",Hotel
+HRREGVA,Hampton Roads Regional Jail,VA,0,66,"Portsmouth, VA",Federal
+HCPSCMS,Hancock Co Pub Sfty Cplx,MS,139,197,"Bay St. Louis, MS",Non-dedicated
+HAVMCWA,Harborview Medical Center,WA,186,187,"Seattle, WA",Medical
+HARDEFL,Hardee County Jail,FL,101,127,"Wauchula, FL",Other
+HARDJIA,Hardin Co Jail,IA,0,155,"Eldora, IA",Non-dedicated
+HLGHOLD,Harlingen Hold Room,TX,14,197,"Harlingen, TX",Hold
+HMCHOTX,Harlingen Medical Center,TX,0,191,"Harlingen, TX",Medical
+HRLGNTX,Harlingen Police Dept.,TX,64,196,"Harlingen, TX",Other
+HSF,Harlingen Staging Facility,TX,0,55,"Harlingen, TX",Hold
+HARRIGA,Harris County Jail,GA,48,49,"Hamilton, GA",Non-dedicated
+HCPSYTX,Harris County Psychiatric Center,TX,96,197,"Houston, TX",Medical
+HHBTHTX,Harris Health Ben Taub Hospital,TX,180,191,"Houston, TX",Medical
+LBJHSTX,Harris Health LBJ Hospital,TX,192,194,"Houson, TX",Medical
+HBGHOLD,Harrisonburg Hold Room,VA,32,197,"Harrisonburg, VA",Hold
+HARFOCT,Hartford Corr Center,CT,32,191,"Hartford, CT",Non-dedicated
+HARHOLD,Hartford Office,CT,0,197,"Hartford, CT",Hold
+HASMHTX,Haskell Memorial Hospital,TX,142,145,"Haskell, TX",Medical
+HSELPTX,Hawthorn Stes El Paso Airp,TX,150,151,"El Paso, TX",Hotel
+HACTCND,Heart Of America Corr,ND,166,167,"Rugby, ND",Other
+HELHOLD,Hel District Custody,MT,3,196,"Helena, MT",Hold
+HENDENC,Henderson County Det. Fac.,NC,0,193,"Hendersonville, NC",Non-dedicated
+HENDETX,Henderson County Jail,TX,131,162,"Athens, TX",Non-dedicated
+HENDENV,Henderson Detention,NV,28,197,"Henderson, NV",Federal
+HDHSPNV,Henderson Hospital,NV,176,190,"Henderson, NV",Medical
+HENHOLD,Hendersonville Hold Room,NC,75,191,"Hendersonville, NC",Hold
+HNDMCTX,Hendrick Medical Center,TX,145,197,"Abilene, TX",Medical
+HENDRFL,Hendry County Jail,FL,122,193,"Labelle, FL",Non-dedicated
+HNYHOMI,Henry Ford Hospital,MI,189,190,"Detroit, MI",Medical
+HNRMCFL,Henry Regional Medical Center,FL,111,161,"Clewiston, FL",Medical
+HERNAFL,Hernando County Jail,FL,0,13,"Brooksville, FL",Non-dedicated
+HIDALNM,Hidalgo County Detention Center,NM,78,128,"Lordsburg, NM",Non-dedicated
+HIDALTX,Hidalgo County Jail,TX,26,195,"Edinburg, TX",Non-dedicated
+HDLGOTX,Hidalgo Police Dept.,TX,67,160,"Hidalgo, TX",Other
+AKHIGHL,Highland Mtn Cor Ctr,AK,0,197,"Eagle River, AK",Federal
+HGHBECO,Highlands Behavioral Health,CO,195,197,"Littleton, CO",Medical
+HILLCMT,Hill County Justice Center,MT,0,124,"Havre, MT",Federal
+HICOJFL,Hillsborough County Jail,FL,3,5,"Tampa, FL",Non-dedicated
+HOKLYTX,Hockley County Jail,TX,31,32,"Levelland, TX",Non-dedicated
+HISPAAZ,Holiday Inn & Ste Pho Ap,AZ,142,159,"Phoenix, AZ",Hotel
+HIESPAZ,Holiday Inn Exp Phoenix,AZ,142,159,"Phoenix, AZ",Hotel
+HOLIETX,Holiday Inn Exp SNA Ap,TX,144,175,"San Antonio, TX",Hotel
+HIESATX,Holiday Inn Exp San Antonio,TX,142,152,"San Antonio, TX",Hotel
+HIEXSTX,Holiday Inn Expr & Stes Pearsall,TX,149,154,"Pearsall, TX",Hotel
+HIRAYTX,Holiday Inn Express & Suites,TX,156,158,TX,Hotel
+HIELPTX,Holiday Inn Express & Suites,TX,149,153,"El Paso, TX",Hotel
+HESPCAZ,Holiday Inn Express Casa De La Luz,AZ,150,159,"Phoenix, AZ",Family/children
+HIPDBAZ,Holiday Inn Pho Dwtn Ballpark,AZ,144,156,"Phoenix, AZ",Hotel
+HISDBCA,Holiday Inn SND Bayside,CA,149,151,"San Diego, CA",Hotel
+HLYCHIL,Holy Cross Hospital,IL,90,100,"Chicago, IL",Medical
+BOPHON,Honolulu Federal Detention Center,HI,0,197,"Honolulu, HI",Federal
+HOSPSPR,Hospital Pavia-Santurce,PR,80,111,"San Juan, PR",Medical
+HAVACTX,Hotel Ava Casa Do Tranquilidade,TX,156,162,"Laredo, TX",Family/children
+HTLPPTX,Hotel Pharr Plaza,TX,142,159,"Pharr, TX",Hotel
+HOUICDF,Houston Contract Det.Fac.,TX,0,197,"Houston, TX",Dedicated
+HOUHOLD,Houston FO Holdroom,TX,0,197,"Houston, TX",Hold
+HHCHKTX,Houston Healthcare Hosp,TX,171,197,"Houston, TX",Medical
+HOWARMD,Howard County Det Cntr,MD,0,152,"Jessup, MD",Non-dedicated
+HUDSONJ,Hudson County Jail,NJ,0,190,"Kearny, NJ",Non-dedicated
+HUDSPTX,Hudspeth County Jail,TX,111,167,"Sierra Blanca, TX",Non-dedicated
+HUNMHTX,Huntsville Memorial Hospital,TX,180,182,"Huntsville, TX",Medical
+TXHUNTS,Huntsville State P.,TX,12,13,"Huntsville, TX",Non-dedicated
+POLKCTX,IAH Secure Adult Det. Facility,TX,0,197,"Livingston, TX",Non-dedicated
+FRMVLVA,ICA - Farmville,VA,22,197,"Farmville, VA",Dedicated
+HHWHOLD,INS District Office,HI,64,193,"Honolulu, HI",Hold
+IFIHOLD,Idaho Falls Hold Room,ID,105,197,"Idaho Falls, ID",Hold
+IMPCOCA,Imperial County Jail,CA,25,179,"El Centro, CA",Non-dedicated
+IRADFCA,Imperial Regional Adult Det Fac,CA,71,197,"Calexico, CA",Dedicated
+IMPHOLD,Imperial Sub Office Hold Room,CA,150,197,"Calexico, CA",Hold
+INDCMIC,In Dept. Of Corrections,IN,60,61,"Indianapolis, IN",Other
+INPHOLD,Indianapolis Hold Room,IN,18,197,"Indianapolis, IN",Hold
+INDMPIN,Indianapolis Metropolitan PD,IN,150,151,"Indianapolis, IN",Other
+INTPOOK,Integris Health Ponca City Hospita,OK,184,185,"Ponca City, OK",Medical
+CAIRONW,Ironwood State Prison,CA,94,95,"Blythe, CA",Other
+IRWINGA,Irwin County Detention Center,GA,23,156,"Ocilla, GA",Federal
+JFKTSNY,JFK International Ap - T7,NY,118,197,"Jamaica, NY",Other
+GTMOACU,JTF Camp Six,CU,196,197,"FPO, CU",Federal
+JHRWLTX,Jack Harwell Detention Center,TX,30,196,"Waco, TX",Federal
+JACKSOR,Jackson Co Jail,OR,0,143,"Medford, OR",Federal
+JAJUVOR,Jackson County Juvenile,OR,20,38,"Medford, OR",Family/children
+JACKSTN,Jackson County Sheriff,TN,180,181,"Gainesboro, TN",Other
+JAKHOLD,Jackson MS Hold Room,MS,106,197,"Pearl, MS",Hold
+JMHOSFL,Jackson Memorial Hospital,FL,0,193,"Miami, FL",Medical
+JKPCCLA,Jackson Parish Correctional Center,LA,125,197,"Jonesboro, LA",Dedicated
+JAXHOLD,Jacksonville Sub-Office,FL,0,197,"Jacksonville, FL",Hold
+JHMCJNY,Jamaica Hospital Med Ctr,NY,127,191,"Richmond Hill, NY",Medical
+MUSIKCA,James A Musick Facility,CA,22,129,"Irvine, CA",Non-dedicated
+JEFFETX,Jefferson County Jail,TX,0,60,"Beaumont, TX",Non-dedicated
+JEFFEID,Jefferson County Jail,ID,1,197,"Rigby, ID",Non-dedicated
+JEFFENY,Jefferson County Jail,NY,1,52,"Watertown, NY",Non-dedicated
+JEFFEKS,Jefferson County Jail,KS,1,2,"Oskaloosa, KS",Federal
+JEFFEIL,Jefferson County Jail,IL,6,194,"Mount Vernon, IL",Non-dedicated
+JEFFECO,Jefferson County Jail,CO,0,19,"Golden, CO",Non-dedicated
+JEFFEMT,Jefferson County Jail,MT,0,62,"Boulder, MT",Federal
+JENNIMO,Jennings City Jail,MO,1,26,"Jennings, MO",Federal
+JYCMCNJ,Jersey City Med Ctr,NJ,137,139,"Jersey City, NJ",Medical
+JCRLYTX,Joe Corley Processing Ctr,TX,115,197,"Conroe, TX",Non-dedicated
+JOHNSTX,Johnson County Jail,TX,4,150,"Cleburne, TX",Non-dedicated
+JOSEPOR,Josephine Co. Jail,OR,0,116,"Grants Pass, OR",Federal
+KANDIMN,Kandiyohi Co. Jail,MN,108,197,"Willmar, MN",Non-dedicated
+KANECIL,Kane County Jail,IL,68,118,"St Charles, IL",Other
+KANKEIL,Kankakee County Jail,IL,96,167,"Kankakee, IL",Federal
+KANHOLD,Kansas City Holdroom,MO,24,197,"Kansas City, MO",Hold
+KCCDCTX,Karnes County Civil Det. Facility,TX,39,196,"Karnes City, TX",Family/children
+KRNRCTX,Karnes County Residential Center,TX,67,197,"Karnes City, TX",Family/children
+KARNETX,Karnes Cty Corr Ctr,TX,0,197,"Karnes City, TX",Federal
+KCOJFOK,Kay Co Justice Facility,OK,128,197,"Newkirk, OK",Non-dedicated
+KENOSWI,Kenosha County Jail,WI,0,150,"Kenosha, WI",Federal
+KENTCMI,"Kent Co.,Grand Rapids,MI",MI,49,159,"Grand Rapids, MI",Non-dedicated
+KENTHRI,Kent Hospital,RI,188,189,"Warwick, RI",Medical
+KERCOCA,Kern County Jail (Lerdo),CA,0,66,"Bakersfield, CA",Non-dedicated
+KERNHCA,Kern Medical Hospital,CA,179,197,"Bakersfield, CA",Medical
+AKKETCH,Ketchikan Regional CC,AK,17,88,"Ketchikan, AK",Non-dedicated
+KCHOSNY,Kings County Hospital,NY,30,119,"Brooklyn, NY",Medical
+KINNETX,Kinney County Jail,TX,14,197,"Brackettville, TX",Non-dedicated
+KITTIWA,Kittitas County Jail,WA,1,147,"Ellensburg, WA",Non-dedicated
+KLAMCOR,Klamath Co Jail,OR,0,61,"Klamath Falls, OR",Non-dedicated
+KNXDFTN,Knox County Detention Facility,TN,118,197,"Knoxville, TN",Federal
+KNXCHTX,Knox County Hospital,TX,183,191,"Knox City, TX",Medical
+KNXHOLD,Knoxville Hold Room,TN,32,197,"Knoxville, TN",Hold
+KODIAAK,Kodiak City Jail,AK,2,165,"Kodiak, AK",Non-dedicated
+KOOTEID,Kootenai County,ID,7,12,"Coeur D'Alene, ID",Non-dedicated
+KROHOLD,Krome Hold Room,FL,94,197,"Miami, FL",Hold
+KRO,Krome North SPC,FL,0,197,"Miami, FL",Dedicated
+KRHUBFL,Krome/Miami Hub,FL,0,197,"Miami, FL",Hold
+LCIMCTX,La Copa Inn Hotel,TX,156,157,"South Padre Island, TX",Family/children
+LAFERTX,La Feria Police Dept.,TX,81,127,"La Feria, TX",Other
+LPAPSAZ,La Palma Corr Ctr Apso,AZ,125,195,"Eloy, AZ",Dedicated
+LPLCCAZ,La Palma Correctional Center,AZ,117,179,"Eloy, AZ",Dedicated
+LAPAZAZ,La Paz County Adult Det. Fac.,AZ,2,197,"Parker, AZ",Federal
+LPZRHAZ,La Paz Regional Hospital,AZ,188,196,"Parker, AZ",Medical
+LAPLACO,La Plata County Jail,CO,15,138,"Durango, CO",Federal
+LQSNATX,La Quinta Inn By Wyndham SNA,TX,149,163,"San Antonio, TX",Hotel
+CSCLQTX,La Quinta Wyndham Casa De Paz,TX,151,159,"Pearsall, TX",Family/children
+LQWCSTX,La Quinta Wyndham Casa Do Sonho,TX,155,162,"Cotulla, TX",Family/children
+LSRDCTX,La Salle Co Regional Det. Center,TX,32,192,"Encinal, TX",Federal
+BOPLTL,"La Tuna Federal Sattelite, Low",TX,116,120,"Anthony, TX",Federal
+LACKAPA,"Lackawana Cnty Jail, PA",PA,0,92,"Scranton, PA",Federal
+CTLAFSL,Laffayette Sheriff's Lock,CT,0,57,"Hartford, CT",Hold
+LHMCBMA,Lahey Hospital & Med Ctr,MA,183,184,"Burlington, MA",Medical
+LAKCOMT,Lake County Jail,MT,0,11,"Polson, MT",Non-dedicated
+LAKCOFL,Lake County Jail,FL,195,197,"Tavares, FL",Other
+LKLNDLA,Lakeland Nursing Home,LA,0,134,"Pineville, LA",Medical
+LAKMCFL,Lakeside Medical Center,FL,114,190,"Belle Glade, FL",Medical
+LANECOR,Lane Co Jail,OR,0,132,"Eugene, OR",Non-dedicated
+LARCOWY,Laramie County Jail,WY,0,170,"Cheyenne, WY",Federal
+LRDHOLD,Laredo Detention Center Hold Room,TX,29,196,"Laredo, TX",Hold
+LRDMCTX,Laredo Medical Center,TX,172,197,"Laredo, TX",Medical
+LRDICDF,Laredo Processing Center,TX,0,197,"Laredo, TX",Dedicated
+LARIMCO,Larimer County Jail,CO,0,66,"Fort Collins, CO",Federal
+LRKBHFL,Larkin Behavioral Health Svcs,FL,119,197,"Hollywood, FL",Medical
+LRKNHFL,Larkin Hospital,FL,5,197,"South Miami, FL",Medical
+LASANCO,Las Animas County Jail,CO,18,19,"Trinidad, CO",Non-dedicated
+LASWOCA,Las Colinas Women Det Fac,CA,48,56,"Santee, CA",Non-dedicated
+LASHOLD,Las Cruces Hold Room,NM,174,197,"Las Cruces, NM",Hold
+LVGHOLD,Las Vegas Hold Room,NV,0,197,"Las Vegas, NV",Hold
+OLACCLA,Lasalle Corr Ctr Olla,LA,129,184,"Olla, LA",Non-dedicated
+LASALTX,Lasalle County Jail,TX,65,143,"Cotulla, TX",Other
+JENADLA,Lasalle ICE Processing Center,LA,0,197,"Jena, LA",Dedicated
+LAURITX,Laurel Ridge Treatment Ctr,TX,177,179,"San Antonio, TX",Medical
+LAVACTX,Lavaca County Jail,TX,113,114,"Hallettsville, TX",Other
+LAWRESD,"Lawrence Co. Jail, SD",SD,7,9,"Deadwood, SD",Non-dedicated
+LAWREPA,Lawrence County Jail,PA,2,51,"New Castle, PA",Federal
+LEACONM,Lea County Jail,NM,60,157,"Lovington, NM",Federal
+BOPLVN,Leavenworth USP,KS,196,197,"Leavenworth, KS",Other
+LEHIGPA,"Lehigh County Jail, PA",PA,112,131,"Allentown, PA",Federal
+LVYHOPA,Lehigh Valley Hospital - Pocono,PA,191,195,"East Stroudsburg, PA",Medical
+AKLEMON,"Lemon Creek, Juneau,AK",AK,1,181,"Juneau, AK",Federal
+LSHOSMA,Lemuel Shattuck Hospital,MA,1,189,"Jamaica Plain, MA",Medical
+LEVYCFL,Levy County Jail,FL,166,195,"Bronson, FL",Non-dedicated
+LEWISMT,Lewis & Clark County Jail,MT,0,118,"Helena, MT",Non-dedicated
+LEWISNY,Lewis County Jail,NY,45,46,"Lowville, NY",Non-dedicated
+LEXINSC,Lexington County Jail,SC,26,197,"Lexington, SC",Federal
+LEXFCKY,Lexington Processing @ Fayette Co,KY,178,197,"Lexington, KY",Federal
+BOPLEX,Lexinton Fed.Med Center,KY,67,114,"Lexington, KY",Federal
+LIMMCTX,Limeston Medical Center,TX,173,188,"Groesbeck, TX",Medical
+LIMCJTX,Limestone County Jail,TX,170,175,"Groesbeck, TX",Other
+LIMESTX,Limestone Det Center,TX,0,197,"Groesbeck, TX",Federal
+LINCONE,Lincoln County Jail,NE,120,197,"North Platte, NE",Non-dedicated
+LINCOMO,Lincoln County Sheriff's,MO,7,194,"Troy, MO",Non-dedicated
+LINNCOR,Linn Co Jail,OR,12,85,"Albany, OR",Non-dedicated
+LINNJIA,Linn County Jail,IA,14,184,"Cedar Rapids, IA",Federal
+LRAHOLD,Little Rock Hold Room,AR,29,197,"Little Rock, AR",Hold
+NYLIVIC,Livingston Correctional,NY,171,172,"Sonyea, NY",Other
+LIVINNY,Livingston County Jail,NY,18,116,"Geneseo, NY",Federal
+LLUMCCA,Loma Linda University Med Center,CA,72,156,"Loma Linda, CA",Medical
+BOPLOF,Lompoc FCI,CA,8,194,"Lompoc, CA",Federal
+BOPLOM,Lompoc USP,CA,55,186,"Lompoc, CA",Federal
+LONPDAR,Lonoke Police Dept Det.Ctr,AR,0,160,"Lonoke, AR",Non-dedicated
+LTVHOLD,"Lorton, VA Hold Room",VA,124,181,"Fairfax, VA",Hold
+LOSCJCA,Los Angeles County Jail-Twin Tower,CA,0,136,"Los Angeles, CA",Non-dedicated
+BOPLOS,Los Angeles Met.Det.Ctr.,CA,0,185,"Los Angeles, CA",Federal
+LPD77CA,Los Angeles Police PD 77th Div.,CA,87,125,"Los Angeles, CA",Other
+LOSHOLD,Los Cust Case,CA,0,197,"San Pedro, CA",Hold
+LSFHOLD,Los Fresnos Hold Room,TX,0,194,"Los Fresnos, TX",Hold
+LFRESTX,Los Fresnos Police Dept.,TX,83,85,"Los Fresnos, TX",Other
+LOUCOVA,Loudoun County,VA,6,128,"Leesburg, VA",Federal
+LOUHOLD,Louisville Hold Room,KY,60,195,"Louisville, KY",Hold
+LDFHOLD,Loveland Holdroom,CO,24,87,"Loveland, CO",Hold
+LRKMCFL,Lower Keys Medical Center,FL,117,133,"Key West, FL",Medical
+LYOLAIL,Loyola Center For Health,IL,98,189,"Maywood, IL",Medical
+LOYMCIL,Loyola Medical Center,IL,20,26,"Maywood, IL",Medical
+LUBBOTX,Lubbock County Jail,TX,0,197,"Lubbock, TX",Federal
+LBKHOLD,Lubbock Hold Room,TX,53,197,"Lubbock, TX",Hold
+LUFKNTX,Lufkin Police Dept.,TX,110,111,"Lufkin, TX",Other
+LUNCONM,Luna County Jail,NM,17,33,"Deming, NM",Non-dedicated
+MHFSHMN,M Health Fairview Southdale Hosp,MN,192,194,"Edina, MN",Medical
+MACCOMI,"Macomb Co.Mt.Clemens,MI.",MI,0,37,"Mount Clemens, MI",Federal
+MADISMS,"Madison Co. Jail, MS.",MS,103,197,"Canton, MS",Non-dedicated
+MADISID,Madison County Jail,ID,0,47,"Rexburg, ID",Non-dedicated
+MADISNY,Madison County Jail,NY,0,60,"Wampsville, NY",Federal
+MAHONOH,Mahoning County Jail,OH,0,43,"Youngstown, OH",Non-dedicated
+JAMESGA,Main Folkston IPC Drjames,GA,99,149,"Folkston, GA",Dedicated
+MEYTHCT,Maine Youth Center - Long Creek,ME,32,187,"South Portland, ME",Family/children
+MANATFL,Manatee County Detention-Annex,FL,181,197,"PALMETTO, FL",Non-dedicated
+MANHOLD,Manchester Holdroom,NH,23,197,"Manchester, NH",Hold
+MAPLEOH,Maple Heights City Jail,OH,0,115,"Maple Heights, OH",Federal
+NYMARCC,Marcy Correctional,NY,168,181,"Marcy, NY",Other
+MCFAJAZ,Maricopa County Jail,AZ,0,167,"Phoenix, AZ",Federal
+MCMEDAZ,Maricopa Medical Center,AZ,0,183,"Phoenix, AZ",Medical
+MARICOR,Marion Co Jail,OR,54,55,"Salem, OR",Non-dedicated
+FLMARIC,Marion Correctional Inst.,FL,124,128,"Ocala, FL",Other
+MARIOFL,Marion County Jail,FL,195,197,"Oscala, FL",Federal
+MARIOIN,Marion County Jail,IN,0,197,"Indianapolis, IN",Federal
+BOPMAR,Marion USP,IL,0,24,"Marion, IL",Federal
+MARSHIA,Marshall County Jail,IA,24,133,"Marshalltown, IA",Federal
+MARTIFL,Martin County Jail,FL,4,196,"Stuart, FL",Non-dedicated
+MARTNTX,Martin County Jail,TX,57,58,"Stanton, TX",Other
+MWASHVA,Mary Washington Hospital,VA,178,197,"Fredericksburg, VA",Medical
+AKMATSU,"Matsu Pretrial, Palmer AK",AK,0,197,"Palmer, AK",Non-dedicated
+MAVERTX,Maverick County Jail,TX,6,197,"Eagle Pass, TX",Non-dedicated
+MCHALMN,Mayo Clinic Health Sys Albert Lea,MN,192,193,"Albert Lea, MN",Medical
+MCHENIL,McHenry County Sheriff's,IL,0,182,"Woodstock, IL",Federal
+MLPHHMI,McLaren Port Huron Hosp,MI,180,181,"Port Huron, MI",Medical
+AKMCYOU,McLaughlin Youth Center,AK,14,20,"Anchorage, AK",Family/children
+BOPRAE,"McRae Correctional Facility, CCA",GA,0,106,"Mcrae, GA",Federal
+MCAHOLD,Mcallen Hold Room,TX,143,197,"Edinburg, TX",Other
+MCCDCTX,Mcclennan County Detention Center,TX,0,31,"Waco, TX",Federal
+BOPMCR,Mccreary USP,KY,16,174,"Pine Knot, KY",Federal
+CACFMCF,Mcfarland CCF,CA,128,129,"Mcfarland, CA",Non-dedicated
+MCKINNM,Mckinley County Adult Det. Cen.,NM,95,155,"Gallup, NM",Non-dedicated
+MCCLETX,Mclennan County Jail,TX,6,197,"Waco, TX",Non-dedicated
+MEADESD,"Meade Co. Jail, SD",SD,1,54,"Sturgis, SD",Non-dedicated
+MECKLNC,Mecklenburg (NC) Co Jail,NC,0,144,"Charlotte, NC",Federal
+MEDHOLD,Medford Sub-Office,OR,4,197,"Medford, OR",Hold
+MHNHHTX,Memorial Hermann NW Hosp,TX,171,197,"Houston, TX",Medical
+MEMHOCA,Memorial Hospital Bakersfield,CA,179,180,"Bakersfield, CA",Medical
+MEMRHFL,Memorial Regional Hosp.,FL,136,191,"Hollywood, FL",Medical
+BOPMEM,Memphis Fed.Corr.Inst.,TN,0,17,"Memphis, TN",Federal
+MEMHOLD,Memphis Hold Room,TN,18,197,"Memphis, TN",Hold
+MRCDSTX,Mercedes Police Dept.,TX,80,173,"Mercedes, TX",Other
+MERCEIL,Mercer County Corrections,IL,113,143,"Aledo, IL",Other
+MHTFHOH,Mercy Health - Tiffin Hospital,OH,181,182,"Tiffin, OH",Medical
+MEHOSCA,Mercy Hosp Downtown Bakersfield,CA,195,196,"Bakersfield, CA",Medical
+MERCYFL,Mercy Hospital,FL,135,187,"Miami, FL",Medical
+MEMCRCA,Mercy Medical Ctr Redding,CA,192,193,"Redding, CA",Medical
+MESJACO,Mesa County Jail,CO,0,197,"Grand Junction, CO",Federal
+CACFMES,Mesa Verde ICE Processing Center,CA,77,197,"Bakersfield, CA",Dedicated
+METHOTX,Methodist Hospital,TX,184,197,"San Antonio, TX",Medical
+MHMSATX,Methodist Hospital Metropolitan,TX,170,195,"San Antonio, TX",Medical
+MHNSATX,Methodist Hospital Northeast,TX,168,196,"Live Oak, TX",Medical
+MTHOSTX,Methodist Hospital South,TX,171,186,"Jourdanton, TX",Medical
+MHSOSTX,Methodist Hospital Stone Oak,TX,173,186,"San Antonio, TX",Medical
+MHTSATX,Methodist Hospital Texsan,TX,168,196,"San Antonio, TX",Medical
+MSTHSTX,Methodist Specialty Transplant Hos,TX,168,196,"San Antonio, TX",Medical
+METROFL,Metro Dade Jail,FL,7,141,"Miami, FL",Non-dedicated
+MIAHOLD,Miami (Miramar) Hold Room,FL,0,197,"Miami, FL",Hold
+IBPSMIA,Miami Border Patrol,FL,100,163,"Miami, FL",Other
+BOPMIA,Miami FCI (Former MCC),FL,97,98,"Miami, FL",Federal
+BOPMIM,Miami Fed.Det.Center,FL,2,197,"Miami, FL",Federal
+MSF,Miami Staging Facility,FL,15,197,"Miami, FL",Hold
+MRREGVA,Middle River Regional Jail,VA,179,194,"Staunton, VA",Other
+MIDBIMA,Middlesex County H.O.C.-Billerica,MA,3,4,"Cambridge, MA",Non-dedicated
+MIDDLNJ,Middlesex County Jail,NJ,0,34,"North Brunswick, NJ",Non-dedicated
+MIDLATX,Midland Detention Center,TX,33,197,"Midland, TX",Federal
+MLDHOLD,"Midland, TX ERO Holdroom",TX,50,197,"Midland, TX",Hold
+NYMDSTC,Midstate Correctional,NY,174,179,"Marcy, NY",Other
+GTMODCU,Migrant Ops Center Main Av622,CU,196,197,"FPO, CU",Federal
+MILLRAR,Miller County Jail,AR,0,197,"Texarkana, AR",Federal
+MHRHOPA,Milton S. Hershey Medical Center,PA,193,194,"Hershey, PA",Medical
+MILHOLD,Milwaukee Holdroom,WI,9,197,"Milwaukee, WI",Hold
+MINERMT,Mineral County Jail,MT,6,7,"Superior, MT",Non-dedicated
+MINICID,Minicassia Det. Center,ID,1,192,"Burley, ID",Non-dedicated
+MNCOAKC,"Minn.C.F, Oak Park Hgts",MN,2,3,"Stillwater, MN",Non-dedicated
+MINNESD,Minnehaha County Jail,SD,0,197,"Sioux Falls, SD",Federal
+LANCACA,Mira Loma Det.Center,CA,0,108,"Lancaster, CA",Dedicated
+MIRHPRI,Miriam Hospital,RI,172,197,"Providence, RI",Medical
+MISCOMO,Mississippi County Detention Cente,MO,0,124,"Charleston, MO",Non-dedicated
+MISSOMT,Missoula County,MT,0,145,"Missoula, MT",Non-dedicated
+MOAHOLD,Mobile Holdroom,AL,188,197,"Mobile, AL",Hold
+MOFFECO,Moffat County Jail,CO,0,190,"Craig, CO",Non-dedicated
+MOHAVAZ,Mohave Co Corr Center,AZ,2,3,"Kingman, AZ",Non-dedicated
+NYMOHOC,Mohawk Correctional,NY,92,181,"Rome, NY",Other
+MONMONJ,Monmouth County Jail,NJ,0,134,"Freehold, NJ",Non-dedicated
+MONROMI,Monroe County Detention-Dorm,MI,0,197,"Monroe, MI",Non-dedicated
+MONRONY,Monroe County Jail,NY,0,14,"Rochester, NY",Non-dedicated
+MONROFL,Monroe County Jail,FL,0,197,"Key West, FL",Non-dedicated
+MNROEMI,Monroe County Sheriff/Jail-Main,MI,61,197,"Monroe, MI",Non-dedicated
+MTPPDCA,Monterey Park Police Dept,CA,0,27,"Monterey Park, CA",Federal
+MONCJAL,Montgomery City Jail,AL,1,131,"Montgomery, AL",Federal
+MNTGMAL,Montgomery City Jail,AL,31,196,"Montgomery, AL",Non-dedicated
+MONTGPA,"Montgomery Cnty Jail, PA",PA,0,136,"Norristown, PA",Federal
+MONTGAL,Montgomery Co Mac Sim Butler D.F.,AL,56,197,"Montgomery, AL",Federal
+MONTGTX,Montgomery County Jail,TX,0,179,"Conroe, TX",Non-dedicated
+MONTGNY,Montgomery County Jail,NY,7,8,"Fonda, NY",Non-dedicated
+MONTGMO,Montgomery County Jail,MO,0,148,"Montgomery City, MO",Non-dedicated
+MTGHOLD,Montgomery Hold Rm,TX,120,197,"Conroe, TX",Hold
+MGAHOLD,Montgomery Hold Room,AL,32,33,"Montgomery, AL",Hold
+MTGPCTX,Montgomery Processing Ctr,TX,119,197,"Conroe, TX",Dedicated
+MORGACO,Morgan County Jail,CO,0,16,"Fort Morgan, CO",Non-dedicated
+MORGNMO,Morgan County Sheriff's Dept,MO,0,149,"Versailles, MO",Non-dedicated
+BOPMRG,Morgantown Fed.Corr.Inst.,WV,125,187,"Morgantown, WV",Other
+MOROWOH,Morrow Co. Correctional Facility,OH,10,149,"Mount Gilead, OH",Non-dedicated
+BOPMVC,Moshannon Valley Correctional,PA,157,164,"Philipsburg, PA",Dedicated
+MSVPCPA,Moshannon Valley Processing Center,PA,157,197,"Philipsburg, PA",Dedicated
+MLJHOLD,Mount Laurel Hold Room,NJ,130,197,"Mount Laurel, NJ",Hold
+MTNITPA,Mount Nittany Medical Center,PA,180,194,"State College, PA",Medical
+MVMCMAZ,Mountain Vista Med Ctr,AZ,170,197,"Mesa, AZ",Medical
+MOUNTND,"Mountrail Co. Jail, ND",ND,1,50,"Stanley, ND",Non-dedicated
+MULTNOR,Multnomah County Jail,OR,10,11,"Portland, OR",Non-dedicated
+MUSCAIA,Muscatine County Jail,IA,104,118,"Muscatine, IA",Federal
+MSKGNMI,Muskegon County Jail,MI,49,50,"Muskegon, MI",Other
+MUSSEMT,Musselshell County Jail,MT,3,132,"Roundup, MT",Non-dedicated
+NEJUVNE,N.E.Neb.Juvenile Services,NE,10,11,"Madison, NE",Family/children
+NHSPCON,"NH State Prison, Concord",NH,3,9,"Concord, NH",Non-dedicated
+CSCNWWA,NW ICE Processing Ctr,WA,0,197,"Tacoma, WA",Dedicated
+NRJDCVA,NW Reg Juv Det Ctr,VA,150,197,"Winchester, VA",Other
+NWRCCMN,NW Regional Corrections Center,MN,130,197,"Crookston, MN",Federal
+NASHUMA,Nashua St. Jail,MA,80,125,"Boston, MA",Other
+BOPCNV,Nashville Comm. Corr.,TN,46,197,"Nashville, TN",Federal
+NSVHOLD,Nashville Hold Room,TN,32,33,"Nashville, TN",Hold
+NASSANY,Nassau Co Correc Center,NY,11,197,"East Meadow, NY",Non-dedicated
+NASTRNY,Nassau County ICE Trailer,NY,196,197,"East Meadow, NY",Other
+NASSAFL,Nassau County Jail,FL,0,196,"Yulee, FL",Non-dedicated
+NATCHLA,Natchitoches Parish Det. Center,LA,117,132,"Natchitoches, LA",Federal
+NATROWY,Natrona County Jail,WY,0,197,"Casper, WY",Federal
+NAVSOAZ,Navajo County Sheriff,AZ,1,142,"Holbrook, AZ",Non-dedicated
+NMCOMNE,Nebraska Med Ctr Omaha,NE,180,182,"Omaha, NE",Medical
+NFMIGFL,Neighbor-Family Miami Gardens,FL,96,169,"Miramar, FL",Other
+NFSMTGA,"Neighbor-Family, Stone Mountain",GA,113,114,"Stone Mountain, GA",Other
+NVSDCNV,Nevada Southern Detention Center,NV,91,197,"Pahrump, NV",Federal
+NWHNVNC,New Hanover Co Det Center,NC,44,197,"Castle Hayne, NC",Non-dedicated
+NRVRJVA,New River Valley Reg. Jail,VA,142,148,"Dublin, VA",Other
+PRESBNY,New York Presbyterian Hospital,NY,183,197,NY,Medical
+NEWHOLD,New/INS Os Hold Room,NJ,30,197,"Newark, NJ",Hold
+NBGHOLD,Newburgh Holding,NY,138,197,"Newburgh, NY",Hold
+NIAGANY,Niagara County Jail,NY,0,16,"Lockport, NY",Non-dedicated
+NIOBRWY,Niobrara County Jail,WY,0,1,"Lusk, WY",Non-dedicated
+NIXHCTX,Nix Home Care,TX,87,157,"San Antonio, TX",Other
+NVJDCVA,No. Va. Juvenile Det - ICE,VA,81,129,"Alexandria, VA",Family/children
+NOBLEMN,Nobles Co. Jail,MN,1,172,"Worthington, MN",Non-dedicated
+NOLHOLD,Nol D D & P,LA,56,196,"New Orleans, LA",Hold
+NORFOMA,Norflk Cnty Dedham,MA,0,76,"Dedham, MA",Federal
+NORFOVA,Norfolk City Jail,VA,107,191,"Norfolk, VA",Federal
+NORHOLD,Norfolk Sub-Office Hold,VA,17,197,"Norfolk, VA",Hold
+NBRMCFL,North Broward Medical Center,FL,25,197,"Pompano Beach, FL",Medical
+NCBHOTX,North Central Baptist Hospital,TX,176,177,"San Antonio, TX",Medical
+NGDCTGA,North Georgia Detention Center,GA,3,66,"Gainesville, GA",Non-dedicated
+NOLVGNV,North Las Vegas,NV,0,138,"North Las Vegas, NV",Federal
+NRPHOLD,North Platte Hold Room,NE,27,111,"North Platte, NE",Hold
+NEBHSTX,Northeast Baptist Hospital,TX,173,180,"San Antonio, TX",Medical
+BOPNEO,Northeast Ohio Correctional Center,OH,98,99,"Youngstown, OH",Other
+NNREGVA,Northern Neck Reg. Jail,VA,120,184,"Warsaw, VA",Non-dedicated
+NNVMCNV,Northern Nevada Med Ctr,NV,178,179,"Sparks, NV",Medical
+NORCOOR,Northern Oregon Corr.Fac.,OR,0,143,"The Dalles, OR",Non-dedicated
+NOJUVOR,Northern Oregon Juv.Det.,OR,0,143,"The Dalles, OR",Family/children
+WVNORTH,Northern Regional Jail,WV,0,197,"Moundsville, WV",Federal
+NWREGVA,Northwest Reg. Adult Det.,VA,0,196,"Winchester, VA",Non-dedicated
+VTSTALB,Northwest State Correctional Ctr.,VT,0,197,"Swanton, VT",Federal
+NYCHOLD,Nyc Hold Room,NY,0,197,"New York, NY",Hold
+NYEPANV,Nye County Sheriff-Pahrump,NV,130,194,"Pahrump, NV",Non-dedicated
+OAK,Oakdale Fed. Det. Center,LA,0,165,"Oakdale, LA",Non-dedicated
+BOPOAD,Oakdale Fed.Det.Center,LA,0,172,"Oakdale, LA",Federal
+OAKHOLD,Oakdale Holding Room,LA,0,196,"Oakdale, LA",Hold
+ODESSTX,Odessa Detention Center,TX,50,51,"Odessa, TX",Non-dedicated
+OGUHOLD,Ogden Hold Room,UT,58,197,"Ogden, UT",Hold
+NYOGDNC,Ogdensburg Correctional,NY,94,157,"Ogdensburg, NY",Non-dedicated
+OGLECIL,Ogle County Jail,IL,119,160,"Oregon, IL",Federal
+OKANOWA,Okanogan Co. Jail,WA,0,111,"Okanogan, WA",Non-dedicated
+OKCHOLD,Oklahoma City Hold Room.,OK,52,197,"Oklahoma City, OK",Hold
+OKCOJOK,Oklahoma County Jail,OK,123,135,"Oklahoma City, OK",Non-dedicated
+OKMULOK,Okmulgee County Jail,OK,106,186,"Okmulgee, OK",Non-dedicated
+OLDHAKY,Oldham County Jail,KY,76,197,"La Grange, KY",Federal
+OMAHOLD,Omaha FO Hold,NE,0,197,"Omaha, NE",Hold
+ONECONY,Oneida County Jail,NY,0,139,"Oriskany, NY",Non-dedicated
+ONONDNY,Onondaga County Jail,NY,0,130,"Syracuse, NY",Federal
+ONTARNY,Ontario County Jail,NY,0,80,"Canandaigua, NY",Federal
+OGCMCCA,Orange Co Global Medical Center,CA,87,172,"Santa Ana, CA",Medical
+OCIRCCA,Orange Count Intake Release Fac.,CA,24,143,"Santa Ana, CA",Non-dedicated
+OCCWJCA,Orange County Central Women's Jail,CA,47,110,"Santa Ana, CA",Non-dedicated
+ORANGNY,Orange County Jail,NY,0,197,"Goshen, NY",Non-dedicated
+ORANGFL,Orange County Jail,FL,0,197,"Orlando, FL",Federal
+OGRMCNY,Orange Regional Med Ctr,NY,128,196,"Middletown, NY",Medical
+AAORDMD,Ordnance Road Correctional Center,MD,108,127,"Glen Burnie, MD",Non-dedicated
+ORLHOLD,Orlando Hold Room,FL,0,197,"Orlando, FL",Hold
+NYORLNC,Orleans Correctional,NY,132,133,"Albion, NY",Non-dedicated
+ORLEANY,Orleans County Jail,NY,5,11,"Albion, NY",Non-dedicated
+ORPARLA,Orleans Parish Sheriff,LA,0,106,"New Orleans, LA",Non-dedicated
+OSAHOKS,Osawatamie State Hospital,KS,53,54,"Osawatamie, KS",Medical
+OSCEOFL,Osceola County Jail,FL,195,197,"Kissimmee, FL",Other
+CCASDCA,Otay Mesa Detention Center,CA,0,197,"San Diego, CA",Dedicated
+OTRPCNM,Otero Co Processing Center,NM,0,197,"Chaparral, NM",Dedicated
+OTERONM,Otero County Detention,NM,0,190,"Alamogordo, NM",Non-dedicated
+OTEROCO,Otero County Jail,CO,65,94,"Lajunta, CO",Federal
+OTROPNM,Otero County Prison Facility,NM,0,156,"Chaparral, NM",Federal
+OKMHKTX,Otto Kaiser Memorial Hospital,TX,176,196,"Kenedy, TX",Medical
+PMMCAHI,Pali Momi Medical Center,HI,175,176,"Aiea, HI",Medical
+PALMBFL,Palm Beach County Jail,FL,0,176,"West Palm Beach, FL",Non-dedicated
+PLRMCCA,Palmdale Regional Medical Center,CA,78,195,"Palmdale, CA",Medical
+AKPALMC,Palmer Correctional Cente,AK,41,69,"Palmer, AK",Non-dedicated
+PMHOSFL,Palmetto Hospital,FL,0,178,"Hialeah, FL",Medical
+PLMBHTX,Palms Behavioral Health,TX,95,189,"Harlingen, TX",Medical
+PWHOSFL,Palms West Hospital,FL,28,158,"Loxahatchee, FL",Medical
+PLMVWTX,Palmview Police Dept.,TX,81,156,"Palmview, TX",Other
+PAMSATX,Pam Health Specialty Hospital 1,TX,189,195,TX,Medical
+PAMREVA,Pamunkey Reg Jail,VA,0,25,"Hanover, VA",Federal
+PVLYHCA,Paradise Valley Hospital,CA,166,197,"National City, CA",Medical
+PARKCMT,Park County Det Center,MT,4,13,"Livingston, MT",Non-dedicated
+PARKJCO,Park County Jail,CO,0,94,"Fairplay, CO",Non-dedicated
+PARKCWY,Park County Jail,WY,2,17,"Cody, WY",Non-dedicated
+PKLDHTX,Parkland Hospital,TX,152,193,"Dallas, TX",Medical
+PASADCA,Pasadena City Jail,CA,0,70,"Pasadena, CA",Non-dedicated
+PASSANJ,Passaic County Jail,NJ,8,9,"Paterson, NJ",Non-dedicated
+PAVHRPR,Pavia Hospital - Hato Rey,PR,60,130,"San Juan, PR",Medical
+PDNHOLD,Pdn Hold Room,TX,44,185,"El Paso, TX",Hold
+PBDPDMA,Peabody PD,MA,184,185,"Peabody, MA",Other
+PTISATX,Pear Tree Inn SNA Airport,TX,143,177,"San Antonio, TX",Hotel
+PECOSTX,Pecos Criminal Justice Center,TX,25,161,"Pecos, TX",Non-dedicated
+PCSHOLD,Pecos Hold Room,TX,17,197,"Pecos, TX",Hold
+PEMBIND,Pembina County Jail,ND,1,8,"Cavalier, ND",Non-dedicated
+PENDOWA,Pend Orielle Correctional Facility,WA,2,7,"Newport, WA",Non-dedicated
+PENDRNC,Pender County Jail,NC,97,98,"Burgaw, NC",Other
+MVPNHPA,Penn Highlands Clearfield,PA,179,196,"Clearfield, PA",Medical
+PENNISD,Pennington County Jail SD,SD,0,197,"Rapid City, SD",Federal
+PENOBME,Penobscot County Jail,ME,0,61,"Bangor, ME",Federal
+PCJDCIL,Peoria County Juv Det Center,IL,98,99,"Peoria, IL",Family/children
+PERRYAL,Perry County Corr. Center,AL,0,15,"Uniontown, AL",Non-dedicated
+PRYCOAL,Perry County Jail,AL,37,38,"Marion, AL",Other
+AZSPPER,Perryville State Prison,AZ,77,168,"Goodyear, AZ",Non-dedicated
+BOPPET,Petersburg Fed.Corr.Inst.,VA,168,180,"Hopewell, VA",Other
+PHELPNE,Phelps County Jail,NE,0,197,"Holdrege, NE",Federal
+PHIHOLD,Phi District Office,PA,0,197,"Philadelphia, PA",Hold
+PHILLMT,"Phillips County Jail, MT",MT,18,19,"Malta, MT",Non-dedicated
+PHPMHGA,Phoebe Putney Memorial Hosp,GA,186,187,"Albany, GA",Medical
+PHOSMGA,Phoebe Sumter Med Ctr,GA,185,192,"Americus, GA",Medical
+PHOHOLD,Phoenix Dist Office,AZ,0,197,"Phoenix, AZ",Hold
+BOPPHX,Phoenix Fed.Corr.Inst.,AZ,64,191,"Phoenix, AZ",Federal
+PICKJOH,Pickaway County Jail,OH,88,89,"Circleville, OH",Non-dedicated
+PCKNSAL,Pickens County Det Ctr,AL,142,197,"Carrollton, AL",Non-dedicated
+PMREGVA,Piedmont Reg Jail,VA,0,186,"Farmville, VA",Non-dedicated
+PCRMMGA,Piedmount Columbus Reg Midtown MC,GA,183,188,"Columbus, GA",Medical
+PIERCND,Pierce County Jail,ND,110,195,"Rugby, ND",Other
+PKEHOLD,Pike County ERO Hold Room,PA,94,197,"Hawley, PA",Hold
+PKCNTPA,Pike County Jail,PA,161,164,"Lords Valley, PA",Non-dedicated
+PIKCOPA,Pike County Jail,PA,0,197,"Lords Valley, PA",Non-dedicated
+PIMAJAZ,Pima County Jail,AZ,35,184,"Tucson, AZ",Non-dedicated
+PINALAZ,Pinal County Jail,AZ,0,197,"Florence, AZ",Non-dedicated
+ILPICKN,Pinckneyville Correctional Center,IL,89,90,"Pinckneyville, IL",Other
+PINEPLA,Pine Prairie ICE Processing Center,LA,87,197,"Pine Prairie, LA",Dedicated
+PINELFL,Pinellas County Jail,FL,0,197,"Clearwater, FL",Federal
+PISCAME,Piscataguis County Jail,ME,0,69,"Dover-Foxcroft, ME",Federal
+PITHOLD,Pittsburgh Holdroom,PA,87,197,"Pittsburgh, PA",Hold
+PLATTMO,Platte County Jail,MO,0,145,"Platte City, MO",Non-dedicated
+PLATTWY,Platte County Jail,WY,0,197,"Wheatland, WY",Federal
+PLYMOMA,Plymouth Co Cor Facilty,MA,0,197,"Plymouth, MA",Non-dedicated
+POLKJIA,Polk County Jail,IA,0,197,"Des Moines, IA",Federal
+BOPPOL,Pollock USP,LA,120,121,"Pollock, LA",Federal
+POMONCA,Pomona City Jail,CA,0,112,"Pomona, CA",Federal
+PONDEMT,Pondera County Jail,MT,3,25,"Conrad, MT",Non-dedicated
+PTISBTX,Port Isabel Police Dept.,TX,71,175,"Port Isabel, TX",Other
+PIC,Port Isabel SPC,TX,0,197,"Los Fresnos, TX",Dedicated
+POOHOLD,Portland District Office,OR,0,197,"Portland, OR",Hold
+POMHOLD,"Portland, ME Holdroom",ME,26,197,"Portland, ME",Hold
+POTTAIA,Pottawattamie County Jail,IA,0,197,"Council Bluffs, IA",Federal
+PRLDCTX,Prairieland Detention Center,TX,99,197,"Alvarado, TX",Dedicated
+PRLHOLD,Prairieland Suboffice Hold Room,TX,105,197,"Alvarado, TX",Hold
+PRSHANM,Presbyterian Hosp Abq,NM,154,194,"Albuquerque, NM",Medical
+PRESITX,Presidio County Jail,TX,35,41,"Marfa, TX",Non-dedicated
+PWILLVA,Prince William,VA,0,196,"Manassas, VA",Federal
+KPCHOAZ,Promise Hospital,AZ,195,197,"Mesa, AZ",Medical
+PROHOLD,Providence Holdroom,RI,113,197,"Warwick, RI",Hold
+PRUHOLD,Provo Hold Room,UT,58,197,"Spanish Fork, UT",Hold
+PROWECO,Prowers County Jail,CO,1,18,"Lamar, CO",Non-dedicated
+PUEBLCO,Pueblo County Jail,CO,0,189,"Pueblo, CO",Federal
+PUEHOLD,Pueblo Holdroom,CO,24,197,"Florence, CO",Hold
+PULASIL,Pulaski County Jail,IL,88,156,"Ullin, IL",Non-dedicated
+PUTMAFL,Putman County Jail,FL,167,192,"Palatka, FL",Other
+QLTYSCA,Quality Suites,CA,65,164,"Calipatria, CA",Hotel
+QUEMCHI,Queen's Medical Center,HI,184,185,"Honolulu, HI",Medical
+QUEHONY,Queens House Of Detention,NY,62,113,"Kew Gardens, NY",Non-dedicated
+CACFDON,RJ Donovan Correc Fac,CA,44,154,"San Diego, CA",Other
+RDHEATX,Radisson Htl Elp Airport,TX,142,149,"El Paso, TX",Hotel
+RDUHOLD,Raleigh Hold Room,NC,32,197,"Cary, NC",Hold
+RAMEPTX,Ramada By Wyndham El Paso,TX,148,149,"El Paso, TX",Hotel
+RMWYPAZ,Ramada By Wyndham Pho,AZ,150,154,"Phoenix, AZ",Hotel
+HOTELMA,Ramada Hotel,MA,30,127,"East Boston, MA",Hotel
+RAADCMN,"Ramsey ADC Annex, SPM",MN,0,111,"St. Paul, MN",Federal
+RNDLLTX,Randall County Jail,TX,0,190,"Amarillo, TX",Federal
+RPCHOLD,Rapid City Hold Room,SD,17,197,"Rapid City, SD",Hold
+RAPPSVA,Rapp Sec Center,VA,4,197,"Stafford, VA",Federal
+BOPRBK,Ray Brook Fed.Corr.Inst.,NY,107,108,"Ray Brook, NY",Federal
+RDRVHTX,Red River Hospital,TX,148,197,"Wichita Falls, TX",Medical
+RRFINWA,Red Roof Inn,WA,4,135,"Seatac, WA",Hotel
+REDHOLD,Redding Hold Room,CA,126,197,"Redding, CA",Hold
+REJUVTX,Reeves Co. Juv. Det. Ctr.,TX,33,138,"Pecos, TX",Non-dedicated
+REDETTX,Reeves County Det. Center,TX,0,160,"Pecos, TX",Non-dedicated
+REJAITX,Reeves County Jail,TX,0,38,"Pecos, TX",Non-dedicated
+RENHOLD,Reno Hold Room,NV,38,197,"Reno, NV",Hold
+RENSSNY,Rensselaer Co Sheriff,NY,110,167,"Troy, NY",Federal
+RESIDTX,Residence Inn Dallas Ap,TX,150,153,"Irving, TX",Hotel
+RIHPRRI,Rhode Island Hospital,RI,182,183,"Providence, RI",Medical
+RICECKS,Rice County Det Center,KS,0,61,"Lyons, KS",Non-dedicated
+RICHOLD,Richland Hold Room,WA,154,197,"Richland, WA",Hold
+RICHMVA,Richmond City Jail,VA,11,155,"Richmond, VA",Non-dedicated
+RCMHOLD,Richmond Sub-Office Hold,VA,17,197,"Richmond, VA",Hold
+RWCCMLA,Richwood Cor Center,LA,126,197,"Monroe, LA",Dedicated
+RIOCCCA,Rio Cosumnes Corrections-RCCC,CA,57,117,"Elk Grove, CA",Non-dedicated
+RIOGRCO,Rio Grande County Jail,CO,99,157,"Del Norte, CO",Non-dedicated
+RGRNDTX,Rio Grande Detention Center,TX,63,197,"Laredo, TX",Federal
+RGHOSTX,Rio Grande St.Hospital,TX,64,185,"Harlingen, TX",Medical
+RGS,Rio Grande Valley Staging,TX,20,197,"Los Fresnos, TX",Hold
+RVBHHTX,Rio Vista Behv Hlth Hsp,TX,140,181,"El Paso, TX",Medical
+RVRCCLA,River Correctional Center,LA,124,197,"Ferriday, LA",Dedicated
+REHOSIL,Riveredge Hospital,IL,0,83,"Forest Park, IL",Medical
+RIVERCA,Riverside County Sheriff,CA,12,157,"Riverside, CA",Non-dedicated
+RSREGVA,Riverside Reg Jail,VA,0,156,"Hopewell, VA",Federal
+RONKEVA,Roanoke City Jail,VA,1,197,"Roanoke, VA",Federal
+ROANOVA,Roanoke County Jail,VA,21,127,"Salem, VA",Non-dedicated
+RMKHOLD,Roanoke Sub-Office Hold Room,VA,118,197,"Salem, VA",Hold
+RADDFGA,Robert A Deyton Detention Fac,GA,118,197,"Lovejoy, GA",Federal
+ROBERSD,"Roberts Co. Jail, SD",SD,39,160,"Sisseton, SD",Non-dedicated
+BOPRCH,Rochester Fed.Med.Center,MN,0,13,"Rochester, MN",Federal
+ROCGHNY,Rochester General Hospital,NY,185,186,"Rochester, NY",Medical
+RCKISIL,Rock Island Correctional Center,IL,63,64,"Rock Island, IL",Federal
+ROCKIIL,Rock Island County Jail,IL,0,155,"Rock Island, IL",Federal
+RIIHOLD,Rock Island Hold Room,IL,32,197,"Rock Island, IL",Hold
+RRIVRIL,Rock River Health Care,IL,97,101,"Rockford, IL",Medical
+ROCKIVA,Rockingham Co. Jail,VA,0,197,"Harrisonburg, VA",Federal
+ROCKINH,Rockingham County Jail,NH,0,115,"Brentwood, NH",Non-dedicated
+HASKLTX,Rolling Plains Detention Center,TX,0,196,"Haskell, TX",Federal
+ROSEAMN,Roseau County Jail,MN,4,9,"Roseau, MN",Non-dedicated
+ROSEBMT,Rosebud County Jail,MT,0,30,"Forsyth, MT",Non-dedicated
+RSWHOLD,Roswell Hold Room,NM,110,197,"Roswell, NM",Hold
+ROUTTCO,Routt County Jail,CO,18,19,"Steamboat Springs, CO",Non-dedicated
+SDPROCA,S.D. County Probation,CA,35,168,"San Diego, CA",Other
+CACCJAM,SCC/Jamestown,CA,66,92,"Jamestown, CA",Other
+SFRHOLD,SFR Hold Room,CA,0,197,"San Francisco, CA",Hold
+SNDHOLD,SND District Staging,CA,0,197,"San Diego, CA",Hold
+SNJHOLD,SNJ Hold Room,CA,1,195,"San Jose, CA",Hold
+SACRACA,Sacramento County Jail,CA,0,124,"Sacramento, CA",Federal
+SACHOLD,Sacramento Hold,CA,0,197,"Sacramento, CA",Hold
+STAHOLD,Saint Albans Hold Room,VT,61,197,"Saint Albans, VT",Hold
+STJOSCO,Saint Joseph Hospital,CO,188,197,"Denver, CO",Medical
+SAIHOLD,Saipain Hold,MP,26,197,"Saipan, MP",Hold
+MPSIPAN,Saipan Department Of Corrections,MP,32,197,"Saipan, MP",Federal
+SALEMNJ,Salem County Correctional Facility,NJ,85,138,"Woodstown, NJ",Federal
+SALINNE,Saline County Jail,NE,119,174,"Wilber, NE",Other
+SALHOLD,Salisbury Hold Room,MD,131,197,"Salisbury, MD",Hold
+SLCHOLD,Salt Lake City Hold Room,UT,45,197,"West Valley City, UT",Hold
+SLSLCUT,Salt Lake County Jail,UT,0,197,"Salt Lake City, UT",Federal
+SAMBCMI,Samaritan Behavioral Center,MI,53,162,"Detroit, MI",Medical
+SAGHOLD,San Angelo Holdroom,TX,86,197,"San Angelo, TX",Hold
+SNAHOLD,San Antonio Dro Hold Room,TX,17,197,"San Antonio, TX",Hold
+SBNTOTX,San Benito Police Dept.,TX,65,67,"San Benito, TX",Other
+SBDHOLD,San Bernadino Hold Room,CA,0,197,"San Bernardino, CA",Hold
+SBERNCA,San Bernardino Co. Jail,CA,0,164,"San Bernardino, CA",Federal
+SDHOSCA,San Diego Area Hospital,CA,0,95,"Chula Vista, CA",Medical
+SNDCOCA,San Diego County Jail,CA,1,116,"San Diego, CA",Non-dedicated
+JHALLCA,San Diego County Juv.Hall,CA,42,44,"San Diego, CA",Family/children
+BOPSDC,San Diego MCC,CA,32,104,"San Diego, CA",Federal
+SJUHOLD,San Juan Airport Hold Room,PR,79,197,"San Juan, PR",Hold
+SJUANNM,San Juan County Detention Center,NM,63,64,"Aztec, NM",Federal
+SJUANTX,San Juan Police Dept.,TX,60,73,"San Juan, TX",Other
+SJS,San Juan Staging,PR,59,197,"Guaynabo, PR",Hold
+SLOBICA,San Luis Obispo Co Jail,CA,106,119,"San Luis Obispo, CA",Other
+SLJUVCA,San Luis Obispo Co. Juven,CA,44,45,"San Luis Obispo, CA",Other
+SLRDCAZ,San Luis Regional Det Center,AZ,0,197,"San Luis, AZ",Non-dedicated
+SANMINM,San Miguel County Det Ctr,NM,39,82,"Las Vegas, NM",Non-dedicated
+SPHOSCA,San Pedro Peninsula Hospital,CA,0,66,"San Pedro, CA",Medical
+SANDONM,Sandoval County Det Ctr,NM,39,42,"Bernalillo, NM",Non-dedicated
+SANJAIL,Sangamon County Jail,IL,0,146,"Springfield, IL",Federal
+SACITCA,Santa Ana City Jail,CA,0,172,"Santa Ana, CA",Non-dedicated
+SANANCA,Santa Ana County Jail,CA,0,15,"Santa Ana, CA",Non-dedicated
+SAAHOLD,Santa Ana DRO Holdroom,CA,0,197,"Santa Ana, CA",Hold
+SBARBCA,Santa Barbara County Jail,CA,106,154,"Santa Barbra, CA",Other
+SCNORCA,Santa Clara Co Main Jail,CA,0,86,"San Jose, CA",Federal
+SCRUZAZ,Santa Cruz Co Jail AZ,AZ,6,167,"Nogales, AZ",Federal
+SFCORNM,Santa Fe Cornell Det. Fac.,NM,41,42,"Santa Fe, NM",Non-dedicated
+SANTANM,Santa Fe County Jail,NM,79,82,"Santa Fe, NM",Non-dedicated
+SMAHOLD,Santa Maria Sub Office ERO,CA,186,197,"Santa Maria, CA",Other
+SROSAFL,Santa Rosa County Jail,FL,196,197,"Milton, FL",Other
+SARASFL,Sarasota County Jail,FL,181,197,"SARASOTA, FL",Non-dedicated
+SARPYNE,Sarpy County Jail,NE,8,29,"Papillion, NE",Non-dedicated
+SARJUNE,Sarpy County Juvenile,NE,0,47,"Papillion, NE",Family/children
+SSMHOLD,Sault Sainte Marie Holdroom,MI,64,151,"Sault Ste. Marie, MI",Hold
+SCOTTIA,Scott County Det.Facility,IA,109,112,"Davenport, IA",Federal
+SCOTTMO,Scott County Jail,MO,14,67,"Benton, MO",Non-dedicated
+SCOTTNE,Scotts Bluff Co Jail,NE,33,185,"Gering, NE",Federal
+BOPSET,Seatac Fed.Det.Center,WA,11,196,"Seattle, WA",Federal
+SEAHOLD,Seattle Field Office Hold Room,WA,0,197,"Seattle, WA",Hold
+SEBASAR,Sebastian County Det Cnt,AR,0,197,"Fort Smith, AR",Federal
+SMNOLFL,Seminole County Jail,FL,195,197,"Sanford, FL",Other
+SENECOH,Seneca County Jail,OH,0,197,"Tiffin, OH",Non-dedicated
+SENECNY,Seneca County Jail,NY,8,68,"Corning, NY",Non-dedicated
+STCHOVA,Sentara Careplex Hospital,VA,188,189,"Hampton, VA",Medical
+SHNMCTX,Shannon Medical Center,TX,177,178,"San Angelo, TX",Medical
+SCVMCCA,Sharp Chula Vista Medical Center,CA,162,197,"Chula Vista, CA",Medical
+SHACOKS,Shawnee County Dept Of Corr.,KS,0,134,"Topeka, KS",Non-dedicated
+SHAJUKS,Shawnee County Juv.Det.Ctr,KS,1,135,"Topeka, KS",Family/children
+SHECOVA,Shenandoah Co Jail,VA,14,73,"Woodstock, VA",Non-dedicated
+SHERBMN,Sherburne County Jail,MN,0,197,"Elk River, MN",Non-dedicated
+SHERIWY,Sheridan County Jail,WY,5,6,"Sheridan, WY",Non-dedicated
+SHERIMT,Sheridan County Jail,MT,1,78,"Plentywood, MT",Non-dedicated
+BOPSHE,Sheridan Fed.Corr.Inst.,OR,115,174,"Sheridan, OR",Federal
+VVSHOLD,Shreveport Hold Room,LA,72,197,"Shreveport, LA",Hold
+SILERTN,Silverdale/Hamilton County,TN,68,69,"Chattanooga, TN",Non-dedicated
+SXCHOLD,Sioux City Hold Room,IA,27,197,"Sioux City, IA",Hold
+SFDHOLD,Sioux Falls Hold Room,SD,17,197,"Sioux Falls, SD",Hold
+SITKAAK,"Sitka City Jail, Sitka AK",AK,1,87,"Sitka, AK",Non-dedicated
+SLINPAZ,Sleep Inn Phoenix,AZ,150,154,"Phoenix, AZ",Hotel
+SISAONE,Sleep Inn Suites Airport,NE,128,132,"Omaha, NE",Hotel
+SRJDFID,Snake River Juvenile,ID,1,131,"Twin Falls, ID",Family/children
+SOLONOH,Solon City Jail,OH,0,59,"Solon, OH",Non-dedicated
+SOMERME,Somerset County Jail,ME,0,166,"Madison, ME",Non-dedicated
+SMRVLTX,Somervell County Sheriff's Dept.,TX,170,171,"Glen Rose, TX",Other
+SONMACA,Sonoma Co Main Adult Det,CA,94,95,"Santa Rosa, CA",Other
+SOBAYCA,South Bay Detent Facility,CA,15,180,"Chula Vista, CA",Non-dedicated
+WVSCENT,South Central Regional Jail,WV,0,197,"Charleston, WV",Federal
+SPIPDTX,South Padre Island Police Dept.,TX,125,126,"South Padre Island, TX",Other
+SSHSWMA,South Shore Hospital,MA,182,185,"South Weymouth, MA",Medical
+STFRCTX,South Texas Fam Residential Center,TX,74,191,"Dilley, TX",Family/children
+STCDFTX,South Texas ICE Processing Center,TX,0,197,"Pearsall, TX",Dedicated
+STDHOLD,South Texas/Pearsall Hold Room,TX,29,197,"Pearsall, TX",Hold
+SOUTECO,Southern Ute Detention Center,CO,0,15,"Ignacio, CO",Non-dedicated
+SPOHOLD,Spokane Hold Room,WA,150,197,"Spokane, WA",Hold
+SPOTSVA,Spotsylvania Reg Med Ctr,VA,183,193,"Fredericksburg, VA",Medical
+SPRNGOR,Springfield City Jail,OR,48,117,"Springfield, OR",Non-dedicated
+SPGHOLD,Springfield Dro Hold,MO,24,197,"Strafford, MO",Hold
+BOPSPG,Springfield Fed.Med.Cntr,MO,0,196,"Springfield, MO",Federal
+STFRHGA,St Francis Hospital,GA,193,194,"Columbus, GA",Medical
+STJMCWA,St Joseph Medical Center,WA,183,197,"Tacoma, WA",Medical
+STLAWNY,St Lawrence County Jail,NY,59,60,"Canton, NY",Non-dedicated
+SLBHSTX,St Luke's Baptist Hospital,TX,174,176,"San Antonio, TX",Medical
+SLHTWTX,St Luke's Health - The Woodlands,TX,183,197,"The Woodlands, TX",Medical
+STMARCA,St Mary Medical Center,CA,69,197,"Apple Valley, CA",Medical
+STMARAZ,St Mary's Hospital,AZ,55,123,"Tucson, AZ",Medical
+STTCJVI,St T Criminal Just Complx,VI,0,179,"Charlotte Amalie, VI",Non-dedicated
+STTAMLA,St Tammany Parish Jail,LA,42,183,"Covington, LA",Non-dedicated
+STCLAMI,St. Clair County Jail,MI,0,197,"Port Huron, MI",Non-dedicated
+STCROWI,St. Croix County Jail,WI,37,38,"Hudson, WI",Non-dedicated
+SGUHOLD,"St. George, UT Holdroom",UT,32,197,"Saint George, UT",Hold
+STJONFL,St. John's County Jail,FL,166,197,"St. Augustine, FL",Other
+STJOSCA,St. Joseph's Hospital,CA,1,165,"Orange, CA",Medical
+STJOSAZ,St. Joseph's Hospital & Med. Cen.,AZ,10,191,"Phoenix, AZ",Medical
+STLHOLD,St. Louis Holdroom,MO,24,197,"St. Louis, MO",Hold
+STMRYIL,St. Mary of The Nazareth,IL,0,34,"Chicago, IL",Medical
+SMARYMD,St. Mary's Co Det Cntr,MD,0,9,"Leonardtown, MD",Non-dedicated
+SSPBAAZ,Staybridge Ste Pho  B A ,AZ,142,157,"Phoenix, AZ",Hotel
+ALESSAZ,Stes On Scottsdale Casa De Alegria,AZ,151,159,"Scottsdale, AZ",Family/children
+STEUBNY,Steuben County Jail,NY,0,70,"Bath, NY",Non-dedicated
+STEVEWA,Stevens County Jail,WA,2,116,"Colville, WA",Non-dedicated
+STWRTGA,Stewart Detention Center,GA,0,197,"Lumpkin, GA",Dedicated
+STK,Stockton Staging Facility,CA,7,197,"Stockton, CA",Hold
+STOPDIL,Stone Park Police Dept.,IL,6,23,"Stone Park, IL",Non-dedicated
+STORYIA,Story County Jail,IA,106,146,"Nevada, IA",Federal
+STRAFNH,Strafford Co Dept Of Corr,NH,0,197,"Dover, NH",Non-dedicated
+STRMONY,Strong Memorial Hospital,NY,190,197,"Rochester, NY",Medical
+STUHOLD,Stuart Hold Room,FL,89,197,"Stuart, FL",Hold
+STUTSND,"Stutsman Co. Jail, ND",ND,40,49,"Jamestown, ND",Non-dedicated
+SUFFONY,Suffolk Co.Correc Fac,NY,108,132,"Riverhead, NY",Federal
+SUFFOMA,Suffolk Hoc Sbay,MA,0,137,"Boston, MA",Non-dedicated
+SUMMIUT,Summit County Jail,UT,0,196,"Park City, UT",Non-dedicated
+SUMTEFL,Sumter County Jail,FL,195,197,"Bushnell, FL",Other
+SUNNYWA,Sunnyside Jail,WA,0,119,"Sunnyside, WA",Non-dedicated
+SUPHDTX,Super 8 By Wyndham,TX,150,154,"Hidalgo, TX",Hotel
+SP8WWTX,Super 8 Wyndham Weslaco,TX,150,152,"Weslaco, TX",Hotel
+SSHBWTX,Surestay Hotel Best West,TX,142,151,"Mission, TX",Hotel
+SUSSEDE,"Sussex Co Pris,Geotwn,DE",DE,40,46,"Georgetown, DE",Non-dedicated
+SUSSENJ,Sussex County Jail,NJ,0,124,"Newton, NJ",Non-dedicated
+SUWANFL,Suwannee County Jail,FL,159,168,"Live Oak, FL",Other
+SWEETWY,Sweetwater County Jail,WY,0,197,"Rock Springs, WY",Federal
+SYRHOLD,Syracuse Hold Room,NY,195,197,"N Syracuse, NY",Hold
+CCAHUTX,T Don Hutto Residential Center,TX,0,197,"Taylor, TX",Family/children
+THHEBTX,TX Health Meth Hosp Heb,TX,142,143,"Bedford, TX",Medical
+THHMHTX,TX Hlth Harris Meth Hosp,TX,192,194,"Fort Woth, TX",Medical
+TACGHWA,Tacoma General Hospital,WA,193,196,"Tacoma, WA",Medical
+TALHOLD,Tallahassee Hold Room,FL,88,197,"Tallahassee, FL",Hold
+TALLAMS,Tallahatchie Co Corr Facility,MS,117,161,"Tutwiler, MS",Federal
+TAMHOLD,Tampa Hold Room,FL,30,197,"Tampa, FL",Hold
+MATSHOS,Taunton State Hospital,MA,0,130,"Taunton, MA",Medical
+TAYLOTX,Taylor County Adult Det.,TX,39,144,"Abilene, TX",Non-dedicated
+TELLECO,Teller County Jail,CO,0,197,"Divide, CO",Non-dedicated
+TEMPLCA,Temple Medical,CA,18,126,"Los Angeles, CA",Medical
+TENSALA,Tensas Parish Det. Cntr.,LA,0,126,"Waterproof, LA",Non-dedicated
+BOPTHA,Terre Haute USP,IN,0,107,"Terre Haute, IN",Federal
+TETONWY,Teton County Detention Center,WY,0,150,"Jackson, WY",Federal
+MATEWKS,Tewksbury State Hospital,MA,3,115,"Tewksbury, MA",Medical
+THHHBTX,Tex Health Huguley Hosp,TX,142,197,"Burleson, TX",Medical
+TXAHOLD,Texarkana Holdroom,TX,40,197,"Texarkana, TX",Hold
+TVMSATX,Texas Vista Medical Center,TX,167,187,"San Antonio, TX",Medical
+TLACYCA,Theo Lacy Facility,CA,22,130,"Orange, CA",Non-dedicated
+THPSCTX,Thop Sierra Campus Elp,TX,134,191,"El Paso, TX",Other
+BOPTRV,Three Rivers FCI,TX,41,138,"Three Rivers,, TX",Federal
+TIOGANY,Tioga County Jail,NY,6,67,"Owego, NY",Non-dedicated
+TITUSTX,Titus County Jail,TX,105,197,"Mt. Pleasant, TX",Federal
+TGREETX,Tom Green Cty Jail,TX,0,197,"San Angelo, TX",Federal
+TOOELUT,Tooele County Jail,UT,86,197,"Tooele, UT",Federal
+TOOLEMT,Toole County Jail,MT,0,187,"Shelby, MT",Non-dedicated
+TORHOLD,Tornillo Adult Hold Room,TX,121,135,"Tornillo, TX",Hold
+TOORANM,"Torrance/Estancia, NM",NM,0,197,"Estancia, NM",Non-dedicated
+TRVLIAZ,Traveler's Inn - Phoenix,AZ,144,145,"Phoenix, AZ",Hotel
+TRAVITX,Travis County Jail,TX,21,125,"Austin, TX",Non-dedicated
+TRICOIL,Tri-County Jail,IL,0,90,"Ullin, IL",Non-dedicated
+TRRMCNJ,Trinitas Regional Med Ctr,NJ,175,195,"Elizabeth, NJ",Medical
+TRYOSCA,Trinity Youth Services LTFC,CA,181,182,"Claremont, CA",Other
+TAKARTX,Trusted Adult Karnes FSC,TX,163,171,"San Antonio, TX",Other
+TASTDTX,Trusted Adult South Tex Dilley FSC,TX,163,172,"Dilley, TX",Other
+BOPTCN,Tucson Fed.Corr.Inst.,AZ,85,174,"Tucson, AZ",Federal
+TUCHOLD,Tucson INS Hold Room,AZ,0,197,"Tucson, AZ",Hold
+TULCOOK,Tulsa County Jail,OK,0,197,"Tulsa, OK",Non-dedicated
+TULHOLD,Tulsa Hold Room,OK,121,197,"Tulsa, OK",Hold
+TFALLID,Twin Falls County Jail,ID,0,188,"Twin Falls, ID",Non-dedicated
+TFIHOLD,Twin Falls Hold Room,ID,75,197,"Twin Falls, ID",Hold
+DETHOLD,"U.S. Immigration, Detroit",MI,0,197,"Detroit, MI",Hold
+UCSDMCA,UC San Diego Medical Center,CA,183,187,"San Diego, CA",Medical
+UPMCAPA,UPMC Altoona,PA,177,192,"Altoona, PA",Other
+SPMHOLD,US INS/Detention & Deportation,MN,0,197,"Bloomington, MN",Hold
+USMVT,"US Marshal's, Vermont",VT,16,83,"Burlington, VT",Federal
+USMS2TX,US Marshals  SDTX,TX,65,129,"Houston, TX",Other
+USMS3TX,US Marshals  SDTX,TX,75,106,"Mcallen, TX",Federal
+USMSDMS,"US Marshals, S.Dist, MS",MS,75,98,"Jackson, MS",Federal
+USMWDLA,"US Marshals, W.D. LA.",LA,81,191,"Shreveport, LA",Federal
+USMSDFL,"US Marshals,S.Dist.FL",FL,17,21,"Miami, FL",Federal
+BOPTCP,US Penitentiary Tucson,AZ,33,123,"Tucson, AZ",Federal
+BOPCAA,USP Canaan,PA,11,197,"Waymart, PA",Federal
+UCHUHCO,Uchealth Unv Hosp Of Co,CO,171,196,"Aurora, CO",Medical
+UINTAWY,Uinta County Jail,WY,8,9,"Evanston, WY",Federal
+UINTCUT,Uintah County Jail,UT,34,96,"Vernal, UT",Non-dedicated
+NYULSTC,"Ulster CF, Napanoch",NY,103,104,"Napanoch, NY",Other
+UMATCOR,Umatilla Co Jail,OR,1,95,"Pendleton, OR",Non-dedicated
+UNIONNM,Union County Detention Center,NM,9,13,"Clayton, NM",Non-dedicated
+UNIONSD,Union County Jail,SD,33,197,"Elk Point, SD",Federal
+UHOSPIN,Union Hospital,IN,185,188,"Terre Haute, IN",Medical
+UMEMCNY,United Memorial Med Ctr,NY,184,197,"Batavia, NY",Medical
+UPSLHIA,Unity Point Hlth St Lukes Hosp,IA,185,186,"Cedar Rapids, IA",Medical
+UHGMCOH,Univ Hosp Geauga Med Ctr,OH,171,194,"Chardon, OH",Medical
+UNIVHNJ,University Hospital,NJ,178,195,"Newark, NJ",Medical
+UVHSATX,University Hospital,TX,166,197,"San Antonio, TX",Medical
+UMCEPTX,University Med Center of El Paso,TX,133,197,"El Paso, TX",Medical
+UMIAHFL,University Of Miami Hospital,FL,95,196,"Miami, FL",Medical
+UNMHANM,University of New Mexico Hospital,NM,188,191,"Albuquerque, NM",Medical
+UCSDHCA,Unv California San Diego Hospital,CA,165,175,"San Diego, CA",Medical
+UPSTANY,Upstate University Hospital,NY,33,34,"Syracuse, NY",Medical
+UTAHCUT,Utah County Jail,UT,0,168,"Spanish Fork, UT",Non-dedicated
+UVALDTX,Uvalde County Jail,TX,110,196,"Uvalde, TX",Other
+VTDCORR,VT. Dept. Of Corrections,VT,0,163,"Waterbury, VT",Non-dedicated
+VALJUTX,Val Verde County Juvenile,TX,14,29,"Del Rio, TX",Family/children
+VALVETX,Val Verde Detention Center,TX,13,197,"Del Rio, TX",Federal
+VBHOSTX,Valley Baptist Hospital,TX,0,197,"Harlingen, TX",Medical
+VWHMCAZ,Valleywise Health Med Ctr,AZ,173,197,"Phoenix, AZ",Medical
+VNBRNMI,Van Buren Township PD,MI,0,17,"Belleville, MI",Non-dedicated
+VRK,Varick Street SPC,NY,0,176,"New York, NY",Hold
+PRVEGAL,Vega Alta Det. Facility,PR,24,69,"Vega Alta, PR",Non-dedicated
+VENTUCA,Ventura County Jail,CA,5,168,"Ventura, CA",Federal
+VENHOLD,Ventura Custody Case,CA,0,197,"Camarrillo, CA",Hold
+VVGMCCA,Victor Valley Global Med Center,CA,68,197,"Victorville, CA",Medical
+VICTOTX,Victoria County Jail,TX,158,159,"Victoria, TX",Non-dedicated
+VIRBEVA,Virginia Beach,VA,0,196,"Virginia Beach, VA",Non-dedicated
+VPREGVA,Virginia Peninsula Reg. Jail,VA,6,169,"Williamsburg, VA",Federal
+VISTACA,Vista Detention Facility,CA,8,119,"Vista, CA",Non-dedicated
+WVREGWV,WV Regional Jail & Corr.,WV,0,109,"Charleston, WV",Non-dedicated
+WCCSDCA,Wackenhut Corrections Corp,CA,44,132,"San Diego, CA",Non-dedicated
+WCTHOLD,Waco DRO Hold Room,TX,20,197,"Waco, TX",Hold
+WAKECNC,Wake County Sheriff Dept.,NC,0,123,"Raleigh, NC",Non-dedicated
+WAKULFL,Wakulla County Jail,FL,0,151,"Crawfordville, FL",Non-dedicated
+WALSHND,Walsh County Jail,ND,38,71,"Grafton, ND",Non-dedicated
+MIWPRPH,Walter Reuther Psychiatric Center,MI,61,65,"Westland, MI",Medical
+WALWOWI,Walworth County Jail,WI,45,47,"Elkhorn, WI",Non-dedicated
+WARDCND,Ward County Jail,ND,44,197,"Minot, ND",Federal
+WARCOTX,"Ward Cty Jail, Monahans",TX,65,87,"Monahans, TX",Federal
+WASATUT,Wasatch County Jail,UT,70,71,"Heber, UT",Non-dedicated
+WASHAWY,Washakie County Jail,WY,6,7,"Worland, WY",Non-dedicated
+WASHIME,Washington County Jail,ME,0,30,"Machias, ME",Non-dedicated
+WASHIAR,Washington County Jail,AR,0,197,"Fayetteville, AR",Federal
+WASHCUT,Washington County Jail,UT,0,176,"Hurricane, UT",Federal
+WASCONY,Washington County Jail,NY,0,84,"Fort Edward, NY",Federal
+WAJAIMN,Washington County Jail,MN,101,197,"Stillwater, MN",Federal
+WASHICO,Washington County Jail,CO,0,126,"Akron, CO",Federal
+WASHOLD,Washington Field Office,VA,0,197,"Fairfax, VA",Hold
+WASHONV,Washoe County Jail,NV,0,197,"Reno, NV",Federal
+WASHTMI,"Washtenaw Co, An Arbor,MI",MI,0,92,"Ann Arbor, MI",Family/children
+WRMEDWI,Watertown Regional Medical Center,WI,185,186,"Waterton, WI",Medical
+WAUKEWI,Waukesha County Jail,WI,132,197,"Waukesha, WI",Federal
+WAYNENY,Wayne County Jail,NY,0,102,"Lyons, NY",Federal
+WAYNEMI,"Wayne County, Detroit",MI,0,15,"Detroit, MI",Non-dedicated
+WEBDCTX,Webb County Detention Center (CCA),TX,97,197,"Laredo, TX",Dedicated
+WEBERUT,Weber County Jail,UT,0,53,"Ogden, UT",Federal
+WNTHOLD,Wenatchee Hold Room,WA,153,197,"Yakima, WA",Hold
+WWDHDNH,Wentworth Douglas Hospital,NH,176,193,"Dover, NH",Medical
+WBATOLA,West Baton Rouge Det Ctr,LA,0,8,"Port Allen, LA",Non-dedicated
+WKBHMFL,West Kendall Baptist Hosp,FL,121,197,"Miami, FL",Medical
+WMDBHFL,West Miami Dade Bapt Health Emerg,FL,164,197,"Miami, FL",Medical
+WOAKSTX,West Oaks Hospital,TX,0,65,"Houston, TX",Medical
+WTXDFTX,West Texas Detention Facility,TX,8,158,"Sierra Blanca, TX",Federal
+CAWVALL,West Valley,CA,37,49,"Rancho Cucamonga, CA",Other
+WSTMCCA,Western Medical Center,CA,3,81,"Santa Ana, CA",Medical
+TNWESDF,Western Tennessee Det. Fac.,TN,0,183,"Mason, TN",Federal
+WTREGVA,Western Tidewater Reg. Jail,VA,27,132,"Suffolk, VA",Federal
+WVIRGVA,Western Virginia Regional Jail,VA,164,191,"Salem, VA",Federal
+WESHOLD,Westminster Custody,CA,6,196,"Westminster, CA",Hold
+WMLNDPA,Westmoreland County Jail,PA,0,9,"Greensburg, PA",Non-dedicated
+WMHOSCA,White Memorial Hospital,CA,0,194,"Los Angeles, CA",Medical
+WHITFGA,Whitfield County Jail,GA,23,186,"Dalton, GA",Non-dedicated
+WICHOLD,Wichita Holdroom,KS,24,196,"Wichita, KS",Hold
+AKWILPT,Wildwood Pre-Trial Fac.,AK,3,158,"Kenai, AK",Non-dedicated
+AKWILCC,Wildwood State Corr. Ctr.,AK,70,71,"Kenai, AK",Non-dedicated
+WCRDFTX,Willacy Co  Regional Detn Facil,TX,69,166,"Raymondville, TX",Federal
+WILLCTX,Willacy County Detention Center,TX,0,35,"Raymondville, TX",Dedicated
+WILLITX,Williamson County Jail,TX,0,1,"Georgetown, TX",Non-dedicated
+WILLITN,Williamson County Jail,TN,0,5,"Franklin, TN",Non-dedicated
+WPOHOLD,Williamsport Hold Room,PA,191,197,"Williamsport, PA",Hold
+WINWYAZ,Wingate Wyndham Casa Esperanza,AZ,152,159,"Yuma, AZ",Family/children
+WINCOTX,Winkler County Jail,TX,58,106,"Kermit, TX",Non-dedicated
+LAWINCI,Winn Corr Institute,LA,127,197,"Winnfield, LA",Dedicated
+WOODBIA,Woodbury County Jail,IA,152,194,"Sioux City, IA",Non-dedicated
+WORCEMD,Worcester Co. Jail,MD,0,173,"Snow Hill, MD",Non-dedicated
+WYATTRI,Wyatt Detention Center,RI,0,197,"Central Falls, RI",Federal
+WYMCONY,Wyoming County Jail,NY,132,133,"Warsaw, NY",Non-dedicated
+YIKIMWA,Yakima County,WA,0,129,"Yakima, WA",Federal
+YAKHOLD,Yakima Sub-Office,WA,20,197,"Yakima, WA",Hold
+YANCOSD,Yankton Co. Jail SD,SD,100,167,"Yankton, SD",Federal
+YATESNY,Yates County Jail,NY,6,69,"Penn Yan, NY",Non-dedicated
+YAVCVAZ,Yavapai County Detention Center,AZ,0,111,"Camp Verde, AZ",Non-dedicated
+YAVAPAZ,Yavapai County Jail,AZ,0,93,"Prescott, AZ",Non-dedicated
+YELLOMT,Yellowstone County Jail,MT,0,185,"Billings, MT",Federal
+CTYORCI,York Corr Inst,CT,1,10,"Niantic, CT",Non-dedicated
+YORCOSC,York County Detention Center,SC,0,197,"York, SC",Federal
+YORKCME,York County Jail,ME,14,143,"Alfred, ME",Non-dedicated
+YORCOPA,"York County Jail, PA",PA,0,155,"York, PA",Non-dedicated
+YRKHOLD,York Hold Room,PA,146,197,"York, PA",Hold
+YUBAJCA,Yuba County Jail,CA,0,172,"Marysville, CA",Non-dedicated
+YUMHOLD,Yuma Holdroom,AZ,0,197,"Yuma, AZ",Hold
+YRMDCAZ,Yuma Regional Med Ctr,AZ,188,189,"Yuma, AZ",Medical
+ZAVCOTX,Zavala County Jail,TX,13,192,"Crystal City, TX",Non-dedicated

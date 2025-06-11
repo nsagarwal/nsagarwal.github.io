@@ -50,7 +50,7 @@ d3.csv("data/proc/facilities.csv").then(function(data) {
     facilityMap[row.detention_facility_code] = {
       name: row.name,
       place: row.place,
-      type: row.type_detailed,
+      type: row.type,
       start: +row.start,
       end: +row.end
     }
@@ -90,13 +90,26 @@ function populateColumnCheckboxes() {
     const label = document.createElement('label');
     let bgColor = getColor(col) || "#ccc";
     if (facilityList.length > 1) bgColor = "#444";
-    label.innerHTML = `
-      <label class="custom-checkbox" style="--check-color: ${bgColor}">
-      <input type="checkbox" name="col" value="${col}" checked>
-      <span class="checkmark"></span>
-      ${col}
-      </label>
-    `;
+
+    label.className = "custom-checkbox";
+    label.style.setProperty('--check-color', bgColor);
+
+    const checkbox = document.createElement('input');
+    checkbox.type = "checkbox";
+    checkbox.name = "col";
+    checkbox.value = col;
+    checkbox.checked = true;
+    if (col === "Book-ins" || col === "Book-outs") {
+      checkbox.checked = false;
+    }
+
+    const span = document.createElement('span');
+    span.className = "checkmark";
+
+    label.appendChild(checkbox);
+    label.appendChild(span);
+    label.appendChild(document.createTextNode(` ${col}`));
+
     form.appendChild(label);
     form.appendChild(document.createElement('br'));
   });
@@ -590,6 +603,15 @@ function updateChart() {
         }
       }
     });
+
+    if (!selectedCols.includes("Book-ins") && !selectedCols.includes("Book-outs")) {
+      chart.options.scales.y1.display = false;
+      chart.update();
+    }
+    if (!selectedCols.includes("Midnight population") && !selectedCols.includes("24-hour population")) {
+      chart.options.scales.y.display = false;
+      chart.update();
+    }
   }
 }
 
