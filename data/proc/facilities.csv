@@ -5,7 +5,7 @@ IWAHOLD,AZ Rem Op Coord Center (AROCC),AZ,15,197,"Mesa, AZ",Hold
 ANWHMMN,Abbott Northwestern Hosp,MN,174,175,"Minneapolis, MN",Medical
 ABTHOLD,Abilene Hold Room,TX,56,86,"Abilene, TX",Hold
 ABRMCTX,Abilene Regional Med Ctr,TX,144,145,"Abilene, TX",Medical
-ABRXSPA,Abraxas Academy Detention Center,PA,67,189,"Morgantown, PA",Family/children
+ABRXSPA,Abraxas Academy Detention Center,PA,67,189,"Morgantown, PA",Family / Children
 ADACOID,Ada County Jail,ID,0,130,"Boise, ID",Non-dedicated
 ADAIRKY,Adair County Regional Jail,KY,123,124,"Columbia, KY",Other
 ADAMSWA,Adams County,WA,0,137,"Ritzville, WA",Non-dedicated
@@ -46,7 +46,7 @@ ANDERSC,Anderson County Det Center,SC,147,190,"Anderson, SC",Other
 ANDRWTX,Andrews Sherrif's Office Co Jail,TX,111,122,"Andrews, TX",Other
 AKPSYNJ,Anne Klein Phsychiatric Institute,NJ,43,60,"W. Trenton, NJ",Medical
 FIPCAGA,Annex Folkston IPC,GA,115,197,"Folkston, GA",Dedicated
-ANJUVMN,Anoka Co. Juvenile Center,MN,8,22,"Lino Lakes, MN",Family/children
+ANJUVMN,Anoka Co. Juvenile Center,MN,8,22,"Lino Lakes, MN",Family / Children
 ANSGHTX,Anson General Hospital,TX,150,185,"Anson, TX",Medical
 APACHAZ,Apache Co. Jail,AZ,3,60,"St Johns, AZ",Federal
 ARAPACO,Arapahoe County Jail,CO,127,133,"Littleton, CO",Non-dedicated
@@ -56,7 +56,7 @@ ARLCOVA,Arlington Co Jail,VA,0,40,"Arlington, VA",Federal
 AROOSME,Aroostook County Jail,ME,0,140,"Houlton, ME",Federal
 ARRMCCA,Arrowhead Regional Med Center,CA,68,196,"Colton, CA",Medical
 ARTESNM,Artesia City Jail,NM,122,178,"Artesia, NM",Other
-AFRC,Artesia Family Residential Center,NM,68,160,"Artesia, NM",Family/children
+AFRC,Artesia Family Residential Center,NM,68,160,"Artesia, NM",Family / Children
 ARTSINM,Artesia Law Enforcement Center,NM,96,97,"Artesia, NM",Other
 ASWHRTX,Ascension Seton Williams Hosp,TX,172,176,"Round Rock, TX",Medical
 ASHECNC,Ashe County Jail,NC,57,106,"Jefferson, NC",Other
@@ -86,7 +86,7 @@ BANHOAZ,Banner University Medical Phoenix,AZ,194,196,"Phoenix, AZ",Medical
 BANNOID,Bannock County Jail,ID,0,24,"Pocatello, ID",Federal
 BMCSATX,Baptist Medical Center,TX,173,197,"San Antonio, TX",Medical
 BARNSMA,Barnstable County,MA,42,169,"Barnstable, MA",Non-dedicated
-BARRECA,Barrett Honor Camp,CA,11,48,"Alpine, CA",Family/children
+BARRECA,Barrett Honor Camp,CA,11,48,"Alpine, CA",Family / Children
 BARTOGA,Bartow Co Jail,GA,166,196,"Cartersville, GA",Other
 BASILLA,Basile Detention Center,LA,0,197,"Basile, LA",Dedicated
 CMDHOLD,Batavia Command Center Holdroom,NY,166,196,"Batavia, NY",Hold
@@ -104,15 +104,15 @@ BLHHOLD,Bellingham BPS ERO Holdroom,WA,89,170,"Ferndale, WA",Hold
 BELMOOH,Belmont County Jail,OH,139,173,"St Clairsville, OH",Other
 BENTOWA,Benton County,WA,0,15,"Kennewick, WA",Non-dedicated
 BERGENJ,Bergen County Jail,NJ,0,183,"Hackensack, NJ",Federal
-BEJUVPA,Berks Co. Juvenile,PA,15,45,"Leesport, PA",Family/children
-BEFAMPA,Berks County Family Shelter,PA,0,149,"Leesport, PA",Family/children
+BEJUVPA,Berks Co. Juvenile,PA,15,45,"Leesport, PA",Family / Children
+BEFAMPA,Berks County Family Shelter,PA,0,149,"Leesport, PA",Family / Children
 BERKSPA,"Berks County Jail, PA",PA,0,167,"Leesport, PA",Federal
 BCORCPA,Berks County Residential Center,PA,159,172,"Leesport, PA",Dedicated
-BESECPA,Berks County Secured Juvenile,PA,0,44,"Leesport, PA",Family/children
+BESECPA,Berks County Secured Juvenile,PA,0,44,"Leesport, PA",Family / Children
 BRKHOLD,Berks Hold Room,PA,94,172,"Leesport, PA",Hold
 BERNANM,Bernalillo County Det Ctr,NM,0,9,"Albuquerque, NM",Dedicated
 BWRGMTX,Best West Rose Grdn I&S,TX,142,153,"Mcallen, TX",Hotel
-BWEPATX,Best Western Casa De Estrella,TX,150,161,"El Paso, TX",Family/children
+BWEPATX,Best Western Casa De Estrella,TX,150,161,"El Paso, TX",Family / Children
 BWDGICA,Best Western Dragon Gate Inn,CA,0,138,"Los Angeles, CA",Hotel
 BWMARCA,Best Western Marina,CA,99,144,"National City, CA",Hotel
 BIDHPMA,Beth Israel Deaconess Hosp,MA,172,197,"Boston, MA",Medical
@@ -170,7 +170,7 @@ BUTLEOH,Butler County Jail,OH,0,153,"Hamilton, OH",Non-dedicated
 BOPBUT,Butner Fed.Corr.Inst.,NC,16,20,"Butner, NC",Federal
 SILBOMT,Butte-Silver Bow County Jail,MT,23,24,"Butte, MT",Non-dedicated
 MABSHOS,Bwater St Hosp Bridgewate,MA,0,105,"Bridgewater, MA",Medical
-BFGHITX,"Byrd's Foster Group Home, Inc",TX,88,126,"Houston, TX",Family/children
+BFGHITX,"Byrd's Foster Group Home, Inc",TX,88,126,"Houston, TX",Family / Children
 CCADCAZ,CCA Cent.AZ.Det.Ctr.,AZ,0,171,"Florence, AZ",Federal
 CCANOOH,CCA Northeast OH Corrects,OH,98,137,"Youngstown, OH",Dedicated
 CCAFLAZ,"CCA, Florence Correctional Center",AZ,0,197,"Florence, AZ",Federal
@@ -191,12 +191,12 @@ CARBOPA,Carbon County Correctionl,PA,59,60,"Nesquehoning, PA",Non-dedicated
 CARBOWY,Carbon County Jail,WY,1,7,"Rawlins, WY",Non-dedicated
 CARDFVA,Caroline Detention Facility,VA,119,197,"Bowling Green, VA",Dedicated
 CARROMD,Carroll County Detention Center,MD,0,56,"Westminster, MD",Non-dedicated
-CAJUVMN,Carver Co. Juvy Detention,MN,0,133,"Chaska, MN",Family/children
+CAJUVMN,Carver Co. Juvy Detention,MN,0,133,"Chaska, MN",Family / Children
 CARJAMN,Carver County Jail,MN,0,173,"Chaska, MN",Non-dedicated
 CGRMCAZ,Casa Grande Reg. Med. Center,AZ,8,197,"Casa Grande, AZ",Medical
-CASSJCA,Casa San Juan,CA,45,46,"San Diego, CA",Family/children
+CASSJCA,Casa San Juan,CA,45,46,"San Diego, CA",Family / Children
 CASCAMT,"Cascade County Jail, MT",MT,0,182,"Great Falls, MT",Federal
-CSYJVNY,Casey House Shelter,NY,4,80,"Buffalo, NY",Family/children
+CSYJVNY,Casey House Shelter,NY,4,80,"Buffalo, NY",Family / Children
 CSPHOLD,Casper Holdroom,WY,24,197,"Casper, WY",Hold
 CASSCND,Cass County Jail,ND,31,76,"Fargo, ND",Non-dedicated
 CASSCNE,Cass County Jail,NE,0,142,"Plattsmouth, NE",Federal
@@ -275,11 +275,11 @@ COAHOLD,"Columbia, SC Holdroom",SC,69,197,"Columbia, SC",Hold
 CLMHOLD,Columbus Holdroom,OH,86,197,"Columbus, OH",Hold
 CISAETX,Comfort Inn Ste Elp Airp,TX,150,151,"El Paso, TX",Hotel
 CSANOLA,Comfort Suites Alexandria,LA,151,154,"Alexandria, LA",Hotel
-CISEPTX,Comfort Suites Casa Consuelo,TX,150,160,"El Paso, TX",Family/children
+CISEPTX,Comfort Suites Casa Consuelo,TX,150,160,"El Paso, TX",Family / Children
 COMFTFL,Comfort Suites Hotel,FL,0,146,"Miami, FL",Hotel
 CWHCCMP,Commonwealth Healthcare Corp,MP,180,181,"Fananganan, Saipan, MP",Medical
 CRMCFCA,Community Reg Med Center,CA,175,189,"Fresno, CA",Medical
-CMPJVNY,Compass House Shelter,NY,0,123,"Buffalo, NY",Family/children
+CMPJVNY,Compass House Shelter,NY,0,123,"Buffalo, NY",Family / Children
 CONCOLA,Concordia Parish C C,LA,31,68,"Ferriday, LA",Non-dedicated
 CONEJCO,Conejos County Jail,CO,0,69,"Antonito, CO",Non-dedicated
 CONHOTX,Connally Memorial Medical Center,TX,195,196,"Floresville, TX",Medical
@@ -294,7 +294,7 @@ CRPHOLD,Corpus Christi EOR Hold Room,TX,178,197,"Corpus Christi, TX",Hold
 COSTACA,Costa Mesa College Hosp,CA,0,58,"Costa Mesa, CA",Medical
 CISPVLA,County Inn & Ste By Rad,LA,144,145,"Pineville, LA",Hotel
 CHMCINY,Courthouse USM Cntl Islip,NY,137,191,"Central Islip, NY",Other
-COWJVWA,Cowlitz Co. Juv. Det.,WA,0,151,"Longview, WA",Family/children
+COWJVWA,Cowlitz Co. Juv. Det.,WA,0,151,"Longview, WA",Family / Children
 CRGHOLD,Craig Holdroom,CO,24,196,"Craig, CO",Hold
 CCHAUTX,Cross Creek Hospital,TX,187,193,"Austin, TX",Medical
 CROWGMN,Crow Wing County Jail,MN,33,35,"Brainerd, MN",Non-dedicated
@@ -337,7 +337,7 @@ DNHMCCO,Denver Health Medical Center,CO,67,189,"Denver, CO",Medical
 DENHOLD,Denver Hold Room,CO,0,197,"Denver, CO",Hold
 DENCICO,Denver Justice Center,CO,0,13,"Denver, CO",Non-dedicated
 DEPCOGU,Department Of Corrections,GU,0,135,"Mangilao, GU",Non-dedicated
-DEPYOGU,Department Of Youth Affairs,GU,2,8,"Barrigada, GU",Family/children
+DEPYOGU,Department Of Youth Affairs,GU,2,8,"Barrigada, GU",Family / Children
 GUDOCHG,Dept Of Corrections-Hagatna,GU,7,197,"Hagatna, GU",Federal
 DSMHOLD,Des Moines Hold Room,IA,28,197,"Des Moines, IA",Hold
 DSRTVCA,Desert Valley Hospital,CA,68,193,"Victorville, CA",Medical
@@ -468,7 +468,7 @@ GENESNY,Genesee County Jail,NY,0,43,"Batavia, NY",Federal
 BAILECA,George Bailey Detent Faci,CA,35,102,"San Diego, CA",Non-dedicated
 IAHSFTX,George Bush Intercontinental,TX,70,156,"Houston, TX",Hold
 GRGBVTX,Georgetown Behavioral Hospital,TX,193,194,"Georgetown, TX",Medical
-GIJUVAZ,Gila County Juvenile Det Center,AZ,0,9,"Globe, AZ",Family/children
+GIJUVAZ,Gila County Juvenile Det Center,AZ,0,9,"Globe, AZ",Family / Children
 GLADEFL,Glades County Detention Center,FL,0,165,"Moore Haven, FL",Non-dedicated
 GLEPDCA,Glendale Police Dept,CA,0,197,"Glendale, CA",Non-dedicated
 GSCHOLD,Glenwood Springs Holdroom,CO,24,185,"Glenwood Springs, CO",Hold
@@ -481,7 +481,7 @@ GOSHEWY,Goshen County Jail,WY,1,2,"Torrington, WY",Non-dedicated
 GCLECOK,Grady County Law Enforcement Ctr,OK,116,170,"Chickasha, OK",Other
 GMHATGA,Grady Memorial Hospital,GA,173,197,"Atlanta, GA",Medical
 GRAHAAZ,Graham Co Jail Safford AZ,AZ,162,163,"Safford, AZ",Other
-GFJUVND,Grand Forks Co. Juvenile,ND,1,135,"Grand Forks, ND",Family/children
+GFJUVND,Grand Forks Co. Juvenile,ND,1,135,"Grand Forks, ND",Family / Children
 GFCORND,Grand Forks County Correc,ND,0,197,"Grand Forks, ND",Non-dedicated
 GRFHOLD,Grand Forks Hold Room,ND,16,197,"Grand Forks, ND",Hold
 GRIHOLD,Grand Island Hold Room,NE,27,158,"Grand Island, NE",Hold
@@ -511,7 +511,7 @@ HAMPDMA,Hampden Co.House Of Corr.,MA,94,110,"Ludlow, MA",Non-dedicated
 HISAXLA,Hampton Inn & Stes Alexandria,LA,152,153,"Alexandria, LA",Hotel
 HISEPTX,Hampton Inn & Stes Elp Ap,TX,137,142,"El Paso, TX",Hotel
 HISMCTX,Hampton Inn & Stes Mcallen,TX,138,179,"Mcallen, TX",Hotel
-HAMPITX,Hampton Inn Pearsall,TX,150,151,"Pearsall, TX",Family/children
+HAMPITX,Hampton Inn Pearsall,TX,150,151,"Pearsall, TX",Family / Children
 HIPANAZ,Hampton Inn Pho Airport N,AZ,138,151,"Phoenix, AZ",Hotel
 HRREGVA,Hampton Roads Regional Jail,VA,0,66,"Portsmouth, VA",Federal
 HCPSCMS,Hancock Co Pub Sfty Cplx,MS,139,197,"Bay St. Louis, MS",Non-dedicated
@@ -558,13 +558,13 @@ HIESATX,Holiday Inn Exp San Antonio,TX,142,152,"San Antonio, TX",Hotel
 HIEXSTX,Holiday Inn Expr & Stes Pearsall,TX,149,154,"Pearsall, TX",Hotel
 HIRAYTX,Holiday Inn Express & Suites,TX,156,158,TX,Hotel
 HIELPTX,Holiday Inn Express & Suites,TX,149,153,"El Paso, TX",Hotel
-HESPCAZ,Holiday Inn Express Casa De La Luz,AZ,150,159,"Phoenix, AZ",Family/children
+HESPCAZ,Holiday Inn Express Casa De La Luz,AZ,150,159,"Phoenix, AZ",Family / Children
 HIPDBAZ,Holiday Inn Pho Dwtn Ballpark,AZ,144,156,"Phoenix, AZ",Hotel
 HISDBCA,Holiday Inn SND Bayside,CA,149,151,"San Diego, CA",Hotel
 HLYCHIL,Holy Cross Hospital,IL,90,100,"Chicago, IL",Medical
 BOPHON,Honolulu Federal Detention Center,HI,0,197,"Honolulu, HI",Federal
 HOSPSPR,Hospital Pavia-Santurce,PR,80,111,"San Juan, PR",Medical
-HAVACTX,Hotel Ava Casa Do Tranquilidade,TX,156,162,"Laredo, TX",Family/children
+HAVACTX,Hotel Ava Casa Do Tranquilidade,TX,156,162,"Laredo, TX",Family / Children
 HTLPPTX,Hotel Pharr Plaza,TX,142,159,"Pharr, TX",Hotel
 HOUICDF,Houston Contract Det.Fac.,TX,0,197,"Houston, TX",Dedicated
 HOUHOLD,Houston FO Holdroom,TX,0,197,"Houston, TX",Hold
@@ -591,7 +591,7 @@ JFKTSNY,JFK International Ap - T7,NY,118,197,"Jamaica, NY",Other
 GTMOACU,JTF Camp Six,CU,196,197,"FPO, CU",Federal
 JHRWLTX,Jack Harwell Detention Center,TX,30,196,"Waco, TX",Federal
 JACKSOR,Jackson Co Jail,OR,0,143,"Medford, OR",Federal
-JAJUVOR,Jackson County Juvenile,OR,20,38,"Medford, OR",Family/children
+JAJUVOR,Jackson County Juvenile,OR,20,38,"Medford, OR",Family / Children
 JACKSTN,Jackson County Sheriff,TN,180,181,"Gainesboro, TN",Other
 JAKHOLD,Jackson MS Hold Room,MS,106,197,"Pearl, MS",Hold
 JMHOSFL,Jackson Memorial Hospital,FL,0,193,"Miami, FL",Medical
@@ -615,8 +615,8 @@ KANDIMN,Kandiyohi Co. Jail,MN,108,197,"Willmar, MN",Non-dedicated
 KANECIL,Kane County Jail,IL,68,118,"St Charles, IL",Other
 KANKEIL,Kankakee County Jail,IL,96,167,"Kankakee, IL",Federal
 KANHOLD,Kansas City Holdroom,MO,24,197,"Kansas City, MO",Hold
-KCCDCTX,Karnes County Civil Det. Facility,TX,39,196,"Karnes City, TX",Family/children
-KRNRCTX,Karnes County Residential Center,TX,67,197,"Karnes City, TX",Family/children
+KCCDCTX,Karnes County Civil Det. Facility,TX,39,196,"Karnes City, TX",Family / Children
+KRNRCTX,Karnes County Residential Center,TX,67,197,"Karnes City, TX",Family / Children
 KARNETX,Karnes Cty Corr Ctr,TX,0,197,"Karnes City, TX",Federal
 KCOJFOK,Kay Co Justice Facility,OK,128,197,"Newkirk, OK",Non-dedicated
 KENOSWI,Kenosha County Jail,WI,0,150,"Kenosha, WI",Federal
@@ -637,7 +637,7 @@ KOOTEID,Kootenai County,ID,7,12,"Coeur D'Alene, ID",Non-dedicated
 KROHOLD,Krome Hold Room,FL,94,197,"Miami, FL",Hold
 KRO,Krome North SPC,FL,0,197,"Miami, FL",Dedicated
 KRHUBFL,Krome/Miami Hub,FL,0,197,"Miami, FL",Hold
-LCIMCTX,La Copa Inn Hotel,TX,156,157,"South Padre Island, TX",Family/children
+LCIMCTX,La Copa Inn Hotel,TX,156,157,"South Padre Island, TX",Family / Children
 LAFERTX,La Feria Police Dept.,TX,81,127,"La Feria, TX",Other
 LPAPSAZ,La Palma Corr Ctr Apso,AZ,125,195,"Eloy, AZ",Dedicated
 LPLCCAZ,La Palma Correctional Center,AZ,117,179,"Eloy, AZ",Dedicated
@@ -645,8 +645,8 @@ LAPAZAZ,La Paz County Adult Det. Fac.,AZ,2,197,"Parker, AZ",Federal
 LPZRHAZ,La Paz Regional Hospital,AZ,188,196,"Parker, AZ",Medical
 LAPLACO,La Plata County Jail,CO,15,138,"Durango, CO",Federal
 LQSNATX,La Quinta Inn By Wyndham SNA,TX,149,163,"San Antonio, TX",Hotel
-CSCLQTX,La Quinta Wyndham Casa De Paz,TX,151,159,"Pearsall, TX",Family/children
-LQWCSTX,La Quinta Wyndham Casa Do Sonho,TX,155,162,"Cotulla, TX",Family/children
+CSCLQTX,La Quinta Wyndham Casa De Paz,TX,151,159,"Pearsall, TX",Family / Children
+LQWCSTX,La Quinta Wyndham Casa Do Sonho,TX,155,162,"Cotulla, TX",Family / Children
 LSRDCTX,La Salle Co Regional Det. Center,TX,32,192,"Encinal, TX",Federal
 BOPLTL,"La Tuna Federal Sattelite, Low",TX,116,120,"Anthony, TX",Federal
 LACKAPA,"Lackawana Cnty Jail, PA",PA,0,92,"Scranton, PA",Federal
@@ -725,7 +725,7 @@ MADISID,Madison County Jail,ID,0,47,"Rexburg, ID",Non-dedicated
 MADISNY,Madison County Jail,NY,0,60,"Wampsville, NY",Federal
 MAHONOH,Mahoning County Jail,OH,0,43,"Youngstown, OH",Non-dedicated
 JAMESGA,Main Folkston IPC Drjames,GA,99,149,"Folkston, GA",Dedicated
-MEYTHCT,Maine Youth Center - Long Creek,ME,32,187,"South Portland, ME",Family/children
+MEYTHCT,Maine Youth Center - Long Creek,ME,32,187,"South Portland, ME",Family / Children
 MANATFL,Manatee County Detention-Annex,FL,181,197,"PALMETTO, FL",Non-dedicated
 MANHOLD,Manchester Holdroom,NH,23,197,"Manchester, NH",Hold
 MAPLEOH,Maple Heights City Jail,OH,0,115,"Maple Heights, OH",Federal
@@ -746,7 +746,7 @@ MAVERTX,Maverick County Jail,TX,6,197,"Eagle Pass, TX",Non-dedicated
 MCHALMN,Mayo Clinic Health Sys Albert Lea,MN,192,193,"Albert Lea, MN",Medical
 MCHENIL,McHenry County Sheriff's,IL,0,182,"Woodstock, IL",Federal
 MLPHHMI,McLaren Port Huron Hosp,MI,180,181,"Port Huron, MI",Medical
-AKMCYOU,McLaughlin Youth Center,AK,14,20,"Anchorage, AK",Family/children
+AKMCYOU,McLaughlin Youth Center,AK,14,20,"Anchorage, AK",Family / Children
 BOPRAE,"McRae Correctional Facility, CCA",GA,0,106,"Mcrae, GA",Federal
 MCAHOLD,Mcallen Hold Room,TX,143,197,"Edinburg, TX",Other
 MCCDCTX,Mcclennan County Detention Center,TX,0,31,"Waco, TX",Federal
@@ -835,7 +835,7 @@ MULTNOR,Multnomah County Jail,OR,10,11,"Portland, OR",Non-dedicated
 MUSCAIA,Muscatine County Jail,IA,104,118,"Muscatine, IA",Federal
 MSKGNMI,Muskegon County Jail,MI,49,50,"Muskegon, MI",Other
 MUSSEMT,Musselshell County Jail,MT,3,132,"Roundup, MT",Non-dedicated
-NEJUVNE,N.E.Neb.Juvenile Services,NE,10,11,"Madison, NE",Family/children
+NEJUVNE,N.E.Neb.Juvenile Services,NE,10,11,"Madison, NE",Family / Children
 NHSPCON,"NH State Prison, Concord",NH,3,9,"Concord, NH",Non-dedicated
 CSCNWWA,NW ICE Processing Ctr,WA,0,197,"Tacoma, WA",Dedicated
 NRJDCVA,NW Reg Juv Det Ctr,VA,150,197,"Winchester, VA",Other
@@ -861,7 +861,7 @@ NBGHOLD,Newburgh Holding,NY,138,197,"Newburgh, NY",Hold
 NIAGANY,Niagara County Jail,NY,0,16,"Lockport, NY",Non-dedicated
 NIOBRWY,Niobrara County Jail,WY,0,1,"Lusk, WY",Non-dedicated
 NIXHCTX,Nix Home Care,TX,87,157,"San Antonio, TX",Other
-NVJDCVA,No. Va. Juvenile Det - ICE,VA,81,129,"Alexandria, VA",Family/children
+NVJDCVA,No. Va. Juvenile Det - ICE,VA,81,129,"Alexandria, VA",Family / Children
 NOBLEMN,Nobles Co. Jail,MN,1,172,"Worthington, MN",Non-dedicated
 NOLHOLD,Nol D D & P,LA,56,196,"New Orleans, LA",Hold
 NORFOMA,Norflk Cnty Dedham,MA,0,76,"Dedham, MA",Federal
@@ -877,7 +877,7 @@ BOPNEO,Northeast Ohio Correctional Center,OH,98,99,"Youngstown, OH",Other
 NNREGVA,Northern Neck Reg. Jail,VA,120,184,"Warsaw, VA",Non-dedicated
 NNVMCNV,Northern Nevada Med Ctr,NV,178,179,"Sparks, NV",Medical
 NORCOOR,Northern Oregon Corr.Fac.,OR,0,143,"The Dalles, OR",Non-dedicated
-NOJUVOR,Northern Oregon Juv.Det.,OR,0,143,"The Dalles, OR",Family/children
+NOJUVOR,Northern Oregon Juv.Det.,OR,0,143,"The Dalles, OR",Family / Children
 WVNORTH,Northern Regional Jail,WV,0,197,"Moundsville, WV",Federal
 NWREGVA,Northwest Reg. Adult Det.,VA,0,196,"Winchester, VA",Non-dedicated
 VTSTALB,Northwest State Correctional Ctr.,VT,0,197,"Swanton, VT",Federal
@@ -947,7 +947,7 @@ PENDRNC,Pender County Jail,NC,97,98,"Burgaw, NC",Other
 MVPNHPA,Penn Highlands Clearfield,PA,179,196,"Clearfield, PA",Medical
 PENNISD,Pennington County Jail SD,SD,0,197,"Rapid City, SD",Federal
 PENOBME,Penobscot County Jail,ME,0,61,"Bangor, ME",Federal
-PCJDCIL,Peoria County Juv Det Center,IL,98,99,"Peoria, IL",Family/children
+PCJDCIL,Peoria County Juv Det Center,IL,98,99,"Peoria, IL",Family / Children
 PERRYAL,Perry County Corr. Center,AL,0,15,"Uniontown, AL",Non-dedicated
 PRYCOAL,Perry County Jail,AL,37,38,"Marion, AL",Other
 AZSPPER,Perryville State Prison,AZ,77,168,"Goodyear, AZ",Non-dedicated
@@ -1080,7 +1080,7 @@ SBDHOLD,San Bernadino Hold Room,CA,0,197,"San Bernardino, CA",Hold
 SBERNCA,San Bernardino Co. Jail,CA,0,164,"San Bernardino, CA",Federal
 SDHOSCA,San Diego Area Hospital,CA,0,95,"Chula Vista, CA",Medical
 SNDCOCA,San Diego County Jail,CA,1,116,"San Diego, CA",Non-dedicated
-JHALLCA,San Diego County Juv.Hall,CA,42,44,"San Diego, CA",Family/children
+JHALLCA,San Diego County Juv.Hall,CA,42,44,"San Diego, CA",Family / Children
 BOPSDC,San Diego MCC,CA,32,104,"San Diego, CA",Federal
 SJUHOLD,San Juan Airport Hold Room,PR,79,197,"San Juan, PR",Hold
 SJUANNM,San Juan County Detention Center,NM,63,64,"Aztec, NM",Federal
@@ -1105,7 +1105,7 @@ SMAHOLD,Santa Maria Sub Office ERO,CA,186,197,"Santa Maria, CA",Other
 SROSAFL,Santa Rosa County Jail,FL,196,197,"Milton, FL",Other
 SARASFL,Sarasota County Jail,FL,181,197,"SARASOTA, FL",Non-dedicated
 SARPYNE,Sarpy County Jail,NE,8,29,"Papillion, NE",Non-dedicated
-SARJUNE,Sarpy County Juvenile,NE,0,47,"Papillion, NE",Family/children
+SARJUNE,Sarpy County Juvenile,NE,0,47,"Papillion, NE",Family / Children
 SSMHOLD,Sault Sainte Marie Holdroom,MI,64,151,"Sault Ste. Marie, MI",Hold
 SCOTTIA,Scott County Det.Facility,IA,109,112,"Davenport, IA",Federal
 SCOTTMO,Scott County Jail,MO,14,67,"Benton, MO",Non-dedicated
@@ -1120,7 +1120,7 @@ STCHOVA,Sentara Careplex Hospital,VA,188,189,"Hampton, VA",Medical
 SHNMCTX,Shannon Medical Center,TX,177,178,"San Angelo, TX",Medical
 SCVMCCA,Sharp Chula Vista Medical Center,CA,162,197,"Chula Vista, CA",Medical
 SHACOKS,Shawnee County Dept Of Corr.,KS,0,134,"Topeka, KS",Non-dedicated
-SHAJUKS,Shawnee County Juv.Det.Ctr,KS,1,135,"Topeka, KS",Family/children
+SHAJUKS,Shawnee County Juv.Det.Ctr,KS,1,135,"Topeka, KS",Family / Children
 SHECOVA,Shenandoah Co Jail,VA,14,73,"Woodstock, VA",Non-dedicated
 SHERBMN,Sherburne County Jail,MN,0,197,"Elk River, MN",Non-dedicated
 SHERIWY,Sheridan County Jail,WY,5,6,"Sheridan, WY",Non-dedicated
@@ -1133,7 +1133,7 @@ SFDHOLD,Sioux Falls Hold Room,SD,17,197,"Sioux Falls, SD",Hold
 SITKAAK,"Sitka City Jail, Sitka AK",AK,1,87,"Sitka, AK",Non-dedicated
 SLINPAZ,Sleep Inn Phoenix,AZ,150,154,"Phoenix, AZ",Hotel
 SISAONE,Sleep Inn Suites Airport,NE,128,132,"Omaha, NE",Hotel
-SRJDFID,Snake River Juvenile,ID,1,131,"Twin Falls, ID",Family/children
+SRJDFID,Snake River Juvenile,ID,1,131,"Twin Falls, ID",Family / Children
 SOLONOH,Solon City Jail,OH,0,59,"Solon, OH",Non-dedicated
 SOMERME,Somerset County Jail,ME,0,166,"Madison, ME",Non-dedicated
 SMRVLTX,Somervell County Sheriff's Dept.,TX,170,171,"Glen Rose, TX",Other
@@ -1142,7 +1142,7 @@ SOBAYCA,South Bay Detent Facility,CA,15,180,"Chula Vista, CA",Non-dedicated
 WVSCENT,South Central Regional Jail,WV,0,197,"Charleston, WV",Federal
 SPIPDTX,South Padre Island Police Dept.,TX,125,126,"South Padre Island, TX",Other
 SSHSWMA,South Shore Hospital,MA,182,185,"South Weymouth, MA",Medical
-STFRCTX,South Texas Fam Residential Center,TX,74,191,"Dilley, TX",Family/children
+STFRCTX,South Texas Fam Residential Center,TX,74,191,"Dilley, TX",Family / Children
 STCDFTX,South Texas ICE Processing Center,TX,0,197,"Pearsall, TX",Dedicated
 STDHOLD,South Texas/Pearsall Hold Room,TX,29,197,"Pearsall, TX",Hold
 SOUTECO,Southern Ute Detention Center,CO,0,15,"Ignacio, CO",Non-dedicated
@@ -1170,7 +1170,7 @@ STLHOLD,St. Louis Holdroom,MO,24,197,"St. Louis, MO",Hold
 STMRYIL,St. Mary of The Nazareth,IL,0,34,"Chicago, IL",Medical
 SMARYMD,St. Mary's Co Det Cntr,MD,0,9,"Leonardtown, MD",Non-dedicated
 SSPBAAZ,Staybridge Ste Pho  B A ,AZ,142,157,"Phoenix, AZ",Hotel
-ALESSAZ,Stes On Scottsdale Casa De Alegria,AZ,151,159,"Scottsdale, AZ",Family/children
+ALESSAZ,Stes On Scottsdale Casa De Alegria,AZ,151,159,"Scottsdale, AZ",Family / Children
 STEUBNY,Steuben County Jail,NY,0,70,"Bath, NY",Non-dedicated
 STEVEWA,Stevens County Jail,WA,2,116,"Colville, WA",Non-dedicated
 STWRTGA,Stewart Detention Center,GA,0,197,"Lumpkin, GA",Dedicated
@@ -1194,7 +1194,7 @@ SUSSENJ,Sussex County Jail,NJ,0,124,"Newton, NJ",Non-dedicated
 SUWANFL,Suwannee County Jail,FL,159,168,"Live Oak, FL",Other
 SWEETWY,Sweetwater County Jail,WY,0,197,"Rock Springs, WY",Federal
 SYRHOLD,Syracuse Hold Room,NY,195,197,"N Syracuse, NY",Hold
-CCAHUTX,T Don Hutto Residential Center,TX,0,197,"Taylor, TX",Family/children
+CCAHUTX,T Don Hutto Residential Center,TX,0,197,"Taylor, TX",Family / Children
 THHEBTX,TX Health Meth Hosp Heb,TX,142,143,"Bedford, TX",Medical
 THHMHTX,TX Hlth Harris Meth Hosp,TX,192,194,"Fort Woth, TX",Medical
 TACGHWA,Tacoma General Hospital,WA,193,196,"Tacoma, WA",Medical
@@ -1268,7 +1268,7 @@ UPSTANY,Upstate University Hospital,NY,33,34,"Syracuse, NY",Medical
 UTAHCUT,Utah County Jail,UT,0,168,"Spanish Fork, UT",Non-dedicated
 UVALDTX,Uvalde County Jail,TX,110,196,"Uvalde, TX",Other
 VTDCORR,VT. Dept. Of Corrections,VT,0,163,"Waterbury, VT",Non-dedicated
-VALJUTX,Val Verde County Juvenile,TX,14,29,"Del Rio, TX",Family/children
+VALJUTX,Val Verde County Juvenile,TX,14,29,"Del Rio, TX",Family / Children
 VALVETX,Val Verde Detention Center,TX,13,197,"Del Rio, TX",Federal
 VBHOSTX,Valley Baptist Hospital,TX,0,197,"Harlingen, TX",Medical
 VWHMCAZ,Valleywise Health Med Ctr,AZ,173,197,"Phoenix, AZ",Medical
@@ -1302,7 +1302,7 @@ WAJAIMN,Washington County Jail,MN,101,197,"Stillwater, MN",Federal
 WASHICO,Washington County Jail,CO,0,126,"Akron, CO",Federal
 WASHOLD,Washington Field Office,VA,0,197,"Fairfax, VA",Hold
 WASHONV,Washoe County Jail,NV,0,197,"Reno, NV",Federal
-WASHTMI,"Washtenaw Co, An Arbor,MI",MI,0,92,"Ann Arbor, MI",Family/children
+WASHTMI,"Washtenaw Co, An Arbor,MI",MI,0,92,"Ann Arbor, MI",Family / Children
 WRMEDWI,Watertown Regional Medical Center,WI,185,186,"Waterton, WI",Medical
 WAUKEWI,Waukesha County Jail,WI,132,197,"Waukesha, WI",Federal
 WAYNENY,Wayne County Jail,NY,0,102,"Lyons, NY",Federal
@@ -1333,7 +1333,7 @@ WILLCTX,Willacy County Detention Center,TX,0,35,"Raymondville, TX",Dedicated
 WILLITX,Williamson County Jail,TX,0,1,"Georgetown, TX",Non-dedicated
 WILLITN,Williamson County Jail,TN,0,5,"Franklin, TN",Non-dedicated
 WPOHOLD,Williamsport Hold Room,PA,191,197,"Williamsport, PA",Hold
-WINWYAZ,Wingate Wyndham Casa Esperanza,AZ,152,159,"Yuma, AZ",Family/children
+WINWYAZ,Wingate Wyndham Casa Esperanza,AZ,152,159,"Yuma, AZ",Family / Children
 WINCOTX,Winkler County Jail,TX,58,106,"Kermit, TX",Non-dedicated
 LAWINCI,Winn Corr Institute,LA,127,197,"Winnfield, LA",Dedicated
 WOODBIA,Woodbury County Jail,IA,152,194,"Sioux City, IA",Non-dedicated

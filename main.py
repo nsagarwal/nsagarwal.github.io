@@ -83,6 +83,7 @@ X = X.sort_values('name')
 Y = pd.read_csv("facility_types.csv")
 X = pd.merge(X, Y, left_on = 'type_detailed', right_on = 'type_detailed', how = 'left')
 X = X.drop('type_detailed', axis = 1)
+X['type'] = X['type'].replace('Family/children', 'Family / Children')
 X.to_csv("data/proc/facilities.csv", index = False)
 
 # monthly_freq.csv => map/YYYYMM.csv
