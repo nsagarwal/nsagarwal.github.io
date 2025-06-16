@@ -2,6 +2,10 @@
   display: none;
 }
 
+.not-visible {
+  visibility: hidden;
+}
+
 #story {
   position: fixed;
   top: 0;

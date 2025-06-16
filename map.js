@@ -71,6 +71,7 @@ function facilityTypeRefresh(select) {
   const but = document.getElementById('facilityTypeClear');
   but.style.visibility = len === 0 ? 'hidden' : 'visible';
 
+  clearFiltersRefresh();
   updateMap();
 }
 
@@ -78,6 +79,24 @@ document.getElementById('facilityTypeClear').addEventListener('click', () => {
   facilityTypeSelect.clear();
   facilityTypeRefresh(facilityTypeSelect);
 });
+
+const clearFilters = document.getElementById('clear-filters');
+
+function clearFiltersRefresh() {
+  const range = sizeSlider.noUiSlider.get();
+  if (range[0] != "0" || range[1] != "2,260" || facilityTypeSelect.items.length > 0) {
+    clearFilters.classList.remove('not-visible');
+  } else {
+    clearFilters.classList.add('not-visible');
+  }
+}
+
+document.getElementById('clear-filters').addEventListener('click', function() {
+  sizeSlider.noUiSlider.set([0, 2260]);
+  facilityTypeSelect.clear();
+  facilityTypeRefresh(facilityTypeSelect);
+});
+
 
 // ------------------------------------------------------------------------------------------------
 // create geography
@@ -202,6 +221,7 @@ noUiSlider.create(sizeSlider, {
 });
 sizeSlider.noUiSlider.on("update", (values, handle) => {
   updateMap();
+  clearFiltersRefresh();
 });
 
 // ------------------------------------------------------------------------------------------------

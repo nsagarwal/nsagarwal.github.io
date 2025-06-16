@@ -526,7 +526,6 @@ function updateChart() {
         borderWidth: 0
       }
         );
-      console.log(datasets);
     }
 
 

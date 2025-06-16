@@ -577,6 +577,16 @@ input#about-more-check:checked ~ .about-more {
   display: block;
 }
 
+#clear-filters {
+  font-family: Whyte Book;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: left;
+  border-radius: 0pt;
+  padding: 0 0px;
+}
+
+
 /* ------------------------------------------------------------------ */
 /* Vera fonts */
 
