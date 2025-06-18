@@ -235,7 +235,6 @@ function updateChart() {
   if (DEBUG) console.log("updateChart called", monthlyData.length, facilityList.length, chartName);
 
   if (monthlyData.length === 0) return;
-
   if ((facilityList.length == 0) && (chartName != "National")) {
     loadNationalChart();
     return;
@@ -289,7 +288,6 @@ function updateChart() {
       }
     });
   });
-
 
   updateSliderLabels();
 
@@ -350,6 +348,7 @@ function updateChart() {
         scales: {
           y: {
             beginAtZero: true,
+            min: 0,
             position: 'left',
             title: {
               display: true,
@@ -483,6 +482,7 @@ function updateChart() {
         responsive: true,
         scales: {
           y: {
+            min: 0,
             beginAtZero: true,
             position: 'left',
             title: {
@@ -644,6 +644,7 @@ function updateChart() {
         scales: {
           y: {
             beginAtZero: true,
+            min: 0,
             position: 'left',
             title: {
               display: true,
