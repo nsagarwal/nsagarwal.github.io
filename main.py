@@ -9,15 +9,22 @@ os.makedirs("data/proc/map", exist_ok = True)
 
 # national.csv => national_avg.csv
 X = pd.read_csv("data/raw/national.csv")
-X = X[['date','midnight_count_unique_people_ma','daily_count_unique_people_ma','book_in_count_ma','book_out_count_ma','daily_count_unique_people']]
+X = X[['date','midnight_count_unique_people_ma','daily_count_unique_people_ma','book_in_count_ma','book_out_count_ma','daily_count_unique_people',
+    'midnight_count_unique_people', 'book_in_count', 'book_out_count']]
 for col in X.columns :
     if col == "date" : continue
     X[col] = X[col].fillna(0.)
     X[col] = round(X[col])
     if col == "daily_count_unique_people" : continue
-    X.loc[X.index[0:29], col] = None
-X.columns = ['Date', 'Midnight population', '24-hour population', 'Book-ins', 'Book-outs', 'N']
+    if col == "midnight_count_unique_people" : continue
+    if col == "book_in_count" : continue
+    if col == "book_out_count" : continue
+    X.loc[X.index[0:29], col] = -1
+X.columns = ['Date', 'Midnight population', '24-hour population', 'Book-ins', 'Book-outs', 'N', 'N2', 'BI', 'BO']
 X['N'] = X['N'].astype(int)
+X['N2'] = X['N2'].astype(int)
+X['BI'] = X['BI'].astype(int)
+X['BO'] = X['BO'].astype(int)
 X.to_csv("data/proc/national_avg.csv", index = False)
 
 # national.csv => national_counts.csv
@@ -55,17 +62,20 @@ def date_func(date) :
 
 for index, row in X.iterrows() :
     Y = pd.read_csv("data/raw/facilities/" + row['detention_facility_code'] + ".csv")
-    Y = Y[['date', 'midnight_count_unique_people_ma', 'daily_count_unique_people_ma', 'daily_count_unique_people']]
+    Y = Y[['date', 'midnight_count_unique_people_ma', 'daily_count_unique_people_ma', 'daily_count_unique_people', 'midnight_count_unique_people']]
     for col in Y.columns :
         if col == "date" : continue
         Y[col] = Y[col].fillna(0.)
         Y[col] = round(Y[col])
-        if (col != "daily_count_unique_people") : Y.loc[Y.index[0:29], col] = None
-    Y.columns = ['Date', 'Midnight population', '24-hour population', 'N']
+        Y.loc[Y.index[0:29], 'midnight_count_unique_people_ma'] = -1
+        Y.loc[Y.index[0:29], 'daily_count_unique_people_ma'] = -1
+    Y.columns = ['Date', 'Midnight population', '24-hour population', 'N', 'N2']
     Y['N'] = Y['N'].astype(int)
+    Y['N2'] = Y['N2'].astype(int)
+    assert (Y['N'] >= Y['N2']).all()
     Y.to_csv("data/proc/facilities/" + row['detention_facility_code'] + "_avg.csv", index = False)    
 
-    Y = Y[Y['N'] > 0]
+    Y = Y[(Y['N'] > 0) | (Y['N2'] > 0)]
     if Y.shape[0] > 0 :         
         X.loc[index, 'start'] = date_func(pd.to_datetime(Y.iloc[0]['Date']))
         X.loc[index, 'end'] = date_func(pd.to_datetime(Y.iloc[-1]['Date'])) + 1
@@ -80,7 +90,7 @@ for index, row in X.iterrows() :
     Y.to_csv("data/proc/facilities/" + row['detention_facility_code'] + "_count.csv", index = False)    
 
 X = X.sort_values('name')
-Y = pd.read_csv("facility_types.csv")
+Y = pd.read_csv("data/proc/facility_types.csv")
 X = pd.merge(X, Y, left_on = 'type_detailed', right_on = 'type_detailed', how = 'left')
 X = X.drop('type_detailed', axis = 1)
 X['type'] = X['type'].replace('Family/children', 'Family / Children')

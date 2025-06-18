@@ -176,7 +176,7 @@ function loadFacilityChart(code, name) {
     });
     facilityData.push(facilityDataCountsMap);
     labels = data.map(row => row.Date);
-    availableColumns = Object.keys(data[0]).filter(key => key !== 'Date' && key !== 'N');
+    availableColumns = Object.keys(data[0]).filter(key => key !== 'Date' && key !== 'N' && key !== 'N2');
     document.getElementById('columnsForm').innerHTML = "";
 
     d3.csv(`data/proc/facilities/${code}_count.csv`).then(function(data_2) {
@@ -206,7 +206,8 @@ function loadNationalChart() {
       nationalData.set(Date, rest);
     });
     labels = [...nationalData.keys()];
-    availableColumns = Object.keys(data[0]).filter(key => key !== 'Date' && key !== 'N');
+    availableColumns = Object.keys(data[0]).filter(key => key !== 'Date' && key !== 'N' && key !== 'N2'
+      && key !== 'BI' && key !== 'BO');
     document.getElementById('columnsForm').innerHTML = "";      
 
     d3.csv("data/proc/national_counts.csv").then(function(data_2) {
@@ -310,18 +311,31 @@ function updateChart() {
       span.style.color = getColor("facilities", i);
     }
      
-    const datasets = facilityData.flatMap((dataSet, setIndex) =>
-      selectedCols.map((col) => ({
+    const datasets = facilityData.flatMap((dataSet, setIndex) => selectedCols.map((col) => {
+      const color = getColor("facilities", setIndex);
+      const dataArray = [...dataSet.values()].slice(d1_index, d2_index + 1).map(row => parseFloat(row[col]));
+      return {
         label: col,
-        data: [...dataSet.values()].slice(d1_index, d2_index + 1).map(row => parseFloat(row[col])),      
+        data: dataArray,      
         borderWidth: 2,
         pointRadius: 0,
         fill: false,
         yAxisID: "y",
         tension: 0.3,
-        borderColor: getColor("facilities", setIndex)
-      }))
-    );
+        borderColor: color,
+        segment: {
+          borderColor: ctx => {
+            const i = ctx.p0DataIndex;
+            const v1 = dataArray[i];
+            const v2 = dataArray[i + 1];
+            if (v1 === -1 || v2 === -1 || v2 === undefined) {
+              return "rgba(0,0,0,0)";
+            }
+            return color;
+          }
+        }              
+      }
+    }));
 
     const ctx = document.getElementById('graph-element').getContext('2d');
 
@@ -399,37 +413,68 @@ function updateChart() {
 
 
   } else if (facilityList.length == 1) {
-   for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 5; i++) {
       const span = document.getElementById(`facility-name-${i}`);
       span.style.color = getColor("default");
     }
 
     chartName = facilityMap[facilityList[0]].name;
-    const datasets = [
-      ...selectedCols.map((col, i) => ({
+    const datasets = selectedCols.map((col, i) => {
+      const color = getColor(col);
+      const dataArray = [...facilityData[0].values()].slice(d1_index, d2_index + 1).map(row => parseFloat(row[col]));
+      return {
         label: col,
-        data: [...facilityData[0].values()].slice(d1_index, d2_index + 1).map(row => parseFloat(row[col])),      
+        data: dataArray,      
         borderWidth: 2,
         pointRadius: 0,
         fill: false,
         yAxisID: "y",
         tension: 0.3,
-        borderColor: getColor(col)
-      })),
-      {
+        borderColor: color,
+        type: 'line',
+        segment: {
+          borderColor: ctx => {
+            const i = ctx.p0DataIndex;
+            const v1 = dataArray[i];
+            const v2 = dataArray[i + 1];
+            if (v1 === -1 || v2 === -1 || v2 === undefined) {
+              return "rgba(0,0,0,0)";
+            }
+            return color;
+          }
+        }      
+      }
+    });
+
+    if (selectedCols.includes("24-hour population")) {
+      datasets.push({
         label: "N",
         type: "bar",
         data: [...facilityData[0].values()].slice(d1_index, d2_index + 1).map(row => parseInt(row["N"])),
         yAxisID: "y",
+        backgroundColor: "#ddd",
+        borderWidth: 0,
+        grouped: false,
+        order: 2
+     });
+    }
+    if (selectedCols.includes("Midnight population")) {
+      datasets.push({
+        label: "N2",
+        type: "bar",
+        data: [...facilityData[0].values()].slice(d1_index, d2_index + 1).map(row => parseInt(row["N2"])),
+        yAxisID: "y",
         backgroundColor: "#bbb",
-        borderWidth: 0
-      }
-    ];
+        borderWidth: 0,
+        grouped: false,
+        order: 1
+      });
+    }
 
     const ctx = document.getElementById('graph-element').getContext('2d');
 
     chart = new Chart(ctx, {
-      type: 'line',
+      type: 'bar',
       data: {
         labels: visibleLabels,
         datasets: datasets
@@ -493,6 +538,7 @@ function updateChart() {
               },
               label: function(context) {
                 if (context.dataset.label === "N") return null;
+                if (context.dataset.label === "N2") return null;
                 return `${context.dataset.label}: ${facilityDataCounts[0].get(context.label)[context.dataset.label]}`;
               }
             }          
@@ -503,31 +549,82 @@ function updateChart() {
 
   } else {
     chartName = "National";
-    const datasets = selectedCols.map((col, i) => ({
-      label: col,
-      data: [...nationalData.values()].slice(d1_index, d2_index + 1).map(row => parseFloat(row[col])),
-      borderWidth: 2,
-      pointRadius: 0,
-      fill: false,
-      yAxisID: "y",
-      tension: 0.3,
-      borderColor: getColor(col)
-    }));
-
+    const datasets = selectedCols.map((col, i) => {
+      const color = getColor(col);
+      const dataArray = [...nationalData.values()].slice(d1_index, d2_index + 1).map(row => parseFloat(row[col]));
+      return {
+        label: col,
+        data: dataArray,
+        borderWidth: 2,
+        pointRadius: 0,
+        fill: false,
+        yAxisID: "y",
+        tension: 0.3,
+        borderColor: color,
+        segment: {
+          borderColor: ctx => {
+            const i = ctx.p0DataIndex;
+            const v1 = dataArray[i];
+            const v2 = dataArray[i + 1];
+            if (v1 === -1 || v2 === -1 || v2 === undefined) {
+              return "rgba(0,0,0,0)";
+            }
+            return color;
+          }
+        }      
+      };
+    });
 
     if (d2 - d1 <= 12) {
-      datasets.push(
-      {
-        label: "N",
-        type: "bar",
-        data: [...nationalData.values()].slice(d1_index, d2_index + 1).map(row => parseInt(row["N"])),
-        yAxisID: "y",
-        backgroundColor: "#bbb",
-        borderWidth: 0
+      if (selectedCols.includes("24-hour population")) {
+        datasets.push({
+          label: "N",
+          type: "bar",
+          data: [...nationalData.values()].slice(d1_index, d2_index + 1).map(row => parseInt(row["N"])),
+          yAxisID: "y",
+          backgroundColor: "#ddd",
+          borderWidth: 0,
+          grouped: false,
+          order: 2
+       });
       }
-        );
+      if (selectedCols.includes("Midnight population")) {
+        datasets.push({
+          label: "N2",
+          type: "bar",
+          data: [...nationalData.values()].slice(d1_index, d2_index + 1).map(row => parseInt(row["N2"])),
+          yAxisID: "y",
+          backgroundColor: "#bbb",
+          borderWidth: 0,
+          grouped: false,
+          order: 1        
+        });
+      }
+      if (selectedCols.includes("Book-ins") && selectedCols.length == 1) {
+        datasets.push({
+          label: "BI",
+          type: "bar",
+          data: [...nationalData.values()].slice(d1_index, d2_index + 1).map(row => parseInt(row["BI"])),
+          yAxisID: "y1",
+          backgroundColor: "#bbb",
+          borderWidth: 0,
+          grouped: false,
+          order: 1        
+        });
+      }
+      if (selectedCols.includes("Book-outs") && selectedCols.length == 1) {
+        datasets.push({
+          label: "BO",
+          type: "bar",
+          data: [...nationalData.values()].slice(d1_index, d2_index + 1).map(row => parseInt(row["BO"])),
+          yAxisID: "y1",
+          backgroundColor: "#bbb",
+          borderWidth: 0,
+          grouped: false,
+          order: 1        
+        });
+      }
     }
-
 
     datasets.forEach(set => {
       if (set["label"] == "Book-ins") set["yAxisID"] = "y1";
@@ -612,6 +709,9 @@ function updateChart() {
               },
               label: function(context) {
                 if (context.dataset.label === "N") return null;
+                if (context.dataset.label === "N2") return null;
+                if (context.dataset.label === "BI") return null;
+                if (context.dataset.label === "BO") return null;
                 return `${context.dataset.label}: ${nationalDataCounts.get(context.label)[context.dataset.label]}`;
               }
             }          
