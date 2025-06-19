@@ -3,9 +3,7 @@ let DEBUG = 0;
 let chart;
 let labels = [];
 let facilityData = [];
-let facilityDataCounts = [];
 let nationalData = new Map();
-let nationalDataCounts = new Map();
 let availableColumns = [];
 let facilities = [];
 let facilityMap = {};
@@ -168,7 +166,7 @@ function updateSliderLabels() {
 function loadFacilityChart(code, name) {
   if (DEBUG) console.log("loadFacilityChart called", code, name);
   facilityList.push(code);
-  d3.csv(`data/proc/facilities/${code}_avg.csv`).then(function(data) {
+  d3.csv(`data/proc/facilities/${code}.csv`).then(function(data) {
     const facilityDataCountsMap = new Map();
     data.forEach(row => {
       const { Date, ...rest } = row;
@@ -176,17 +174,8 @@ function loadFacilityChart(code, name) {
     });
     facilityData.push(facilityDataCountsMap);
     labels = data.map(row => row.Date);
-    availableColumns = Object.keys(data[0]).filter(key => key !== 'Date' && key !== 'Midnight count' && key !== '24-hour count');
+    availableColumns = Object.keys(data[0]).filter(key => key !== 'Date' && key !== 'Midnight population count' && key !== '24-hour population count');
     document.getElementById('columnsForm').innerHTML = "";
-
-    d3.csv(`data/proc/facilities/${code}_count.csv`).then(function(data_2) {
-      const facilityDataCountsMap_2 = new Map();
-      data_2.forEach(row => {
-        const { Date, ...rest } = row;
-        facilityDataCountsMap_2.set(Date, rest);
-      });
-      facilityDataCounts.push(facilityDataCountsMap_2);
-    });
 
     populateColumnCheckboxes();
     const index_1 = Math.min(...facilityList.map(i => +facilityMap[i].start));
@@ -200,22 +189,15 @@ function loadNationalChart() {
   if (DEBUG) console.log("loadNationalChart called");
   nationalData.clear();
 
-  d3.csv("data/proc/national_avg.csv").then(function(data) {
+  d3.csv("data/proc/national.csv").then(function(data) {
     data.forEach(row => {
       const { Date, ...rest } = row;
       nationalData.set(Date, rest);
     });
     labels = [...nationalData.keys()];
-    availableColumns = Object.keys(data[0]).filter(key => key !== 'Date' && key !== 'Midnight count' && key !== '24-hour count'
-      && key !== 'BI' && key !== 'BO');
+    availableColumns = Object.keys(data[0]).filter(key => key !== 'Date' && key !== 'Midnight population count' && key !== '24-hour population count'
+      && key !== 'Book-ins count' && key !== 'Book-outs count');
     document.getElementById('columnsForm').innerHTML = "";      
-
-    d3.csv("data/proc/national_counts.csv").then(function(data_2) {
-      data_2.forEach(row => {
-        const { Date, ...rest } = row;
-        nationalDataCounts.set(Date, rest);
-      });
-    });
 
     populateColumnCheckboxes();
 
@@ -275,7 +257,6 @@ function updateChart() {
     facility_button[i].addEventListener('click', () => {
       facilityList.splice(i, 1);
       facilityData.splice(i, 1);
-      facilityDataCounts.splice(i, 1);
       if (facilityList.length == 0) {
           loadNationalChart();
       } else {
@@ -401,7 +382,7 @@ function updateChart() {
                 return [dateStr, context[0].dataset.label, ""];
               },
               label: function(context) {
-                return `${facilityMap[facilityList[context.datasetIndex]].name}: ${facilityDataCounts[context.datasetIndex].get(context.label)[context.dataset.label]}`;
+                return `${facilityMap[facilityList[context.datasetIndex]].name}: ${(+facilityData[context.datasetIndex].get(context.label)[context.dataset.label + " count"]).toLocaleString()}`;
               }
             }
           }   
@@ -437,9 +418,9 @@ function updateChart() {
 
     if (selectedCols.includes("Midnight population")) {
       datasets.push({
-        label: "Midnight count",
+        label: "Midnight population count",
         type: "bar",
-        data: [...facilityData[0].values()].slice(d1_index, d2_index + 1).map(row => parseInt(row["Midnight count"])),
+        data: [...facilityData[0].values()].slice(d1_index, d2_index + 1).map(row => parseInt(row["Midnight population count"])),
         yAxisID: "y",
         backgroundColor: "#bbb",
         borderWidth: 0,
@@ -449,9 +430,9 @@ function updateChart() {
     }
     if (selectedCols.includes("24-hour population")) {
       datasets.push({
-        label: "24-hour count",
+        label: "24-hour population count",
         type: "bar",
-        data: [...facilityData[0].values()].slice(d1_index, d2_index + 1).map(row => parseInt(row["24-hour count"])),
+        data: [...facilityData[0].values()].slice(d1_index, d2_index + 1).map(row => parseInt(row["24-hour population count"])),
         yAxisID: "y",
         backgroundColor: "#ddd",
         borderWidth: 0,
@@ -499,9 +480,9 @@ function updateChart() {
                 return [dateStr, chartName, ""];
               },
               label: function(context) {
-                if (context.dataset.label === "Midnight count") return null;
-                if (context.dataset.label === "24-hour count") return null;
-                return `${context.dataset.label}: ${facilityDataCounts[0].get(context.label)[context.dataset.label]}`;
+                if (context.dataset.label === "Midnight population count") return null;
+                if (context.dataset.label === "24-hour population count") return null;
+                return `${context.dataset.label}: ${(+facilityData[0].get(context.label)[context.dataset.label + " count"]).toLocaleString()}`;
               }
             }          
           }        
@@ -532,9 +513,9 @@ function updateChart() {
     if (d2 - d1 <= 12) {
       if (selectedCols.includes("Midnight population")) {
         datasets.push({
-          label: "Midnight count",
+          label: "Midnight population count",
           type: "bar",
-          data: [...nationalData.values()].slice(d1_index, d2_index + 1).map(row => parseInt(row["Midnight count"])),
+          data: [...nationalData.values()].slice(d1_index, d2_index + 1).map(row => parseInt(row["Midnight population count"])),
           yAxisID: "y",
           backgroundColor: "#bbb",
           borderWidth: 0,
@@ -544,9 +525,9 @@ function updateChart() {
       }
       if (selectedCols.includes("24-hour population")) {
         datasets.push({
-          label: "24-hour count",
+          label: "24-hour population count",
           type: "bar",
-          data: [...nationalData.values()].slice(d1_index, d2_index + 1).map(row => parseInt(row["24-hour count"])),
+          data: [...nationalData.values()].slice(d1_index, d2_index + 1).map(row => parseInt(row["24-hour population count"])),
           yAxisID: "y",
           backgroundColor: "#ddd",
           borderWidth: 0,
@@ -556,9 +537,9 @@ function updateChart() {
       }
       if (selectedCols.includes("Book-ins") && selectedCols.length == 1) {
         datasets.push({
-          label: "BI",
+          label: "Book-ins count",
           type: "bar",
-          data: [...nationalData.values()].slice(d1_index, d2_index + 1).map(row => parseInt(row["BI"])),
+          data: [...nationalData.values()].slice(d1_index, d2_index + 1).map(row => parseInt(row["Book-ins count"])),
           yAxisID: "y1",
           backgroundColor: "#bbb",
           borderWidth: 0,
@@ -567,9 +548,9 @@ function updateChart() {
       }
       if (selectedCols.includes("Book-outs") && selectedCols.length == 1) {
         datasets.push({
-          label: "BO",
+          label: "Book-outs count",
           type: "bar",
-          data: [...nationalData.values()].slice(d1_index, d2_index + 1).map(row => parseInt(row["BO"])),
+          data: [...nationalData.values()].slice(d1_index, d2_index + 1).map(row => parseInt(row["Book-outs count"])),
           yAxisID: "y1",
           backgroundColor: "#bbb",
           borderWidth: 0,
@@ -634,11 +615,11 @@ function updateChart() {
                 return [dateStr, chartName, ""];
               },
               label: function(context) {
-                if (context.dataset.label === "Midnight count") return null;
-                if (context.dataset.label === "24-hour count") return null;
-                if (context.dataset.label === "BI") return null;
-                if (context.dataset.label === "BO") return null;
-                return `${context.dataset.label}: ${nationalDataCounts.get(context.label)[context.dataset.label]}`;
+                if (context.dataset.label === "Midnight population count") return null;
+                if (context.dataset.label === "24-hour population count") return null;
+                if (context.dataset.label === "Book-ins count") return null;
+                if (context.dataset.label === "Book-outs count") return null;
+                return `${context.dataset.label}: ${(+nationalData.get(context.label)[context.dataset.label + " count"]).toLocaleString()}`;
               }
             }          
           }        

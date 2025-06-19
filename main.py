@@ -7,7 +7,7 @@ from datetime import datetime
 os.makedirs("data/proc/facilities", exist_ok = True)
 os.makedirs("data/proc/map", exist_ok = True)
 
-# national.csv => national_avg.csv
+# national.csv => national.csv
 X = pd.read_csv("data/raw/national.csv")
 X = X[['date','midnight_count_unique_people_ma','daily_count_unique_people_ma','book_in_count_ma','book_out_count_ma','midnight_count_unique_people',
     'daily_count_unique_people','book_in_count','book_out_count']]
@@ -20,26 +20,15 @@ for col in X.columns :
     if col == "book_in_count" : continue
     if col == "book_out_count" : continue
     X.loc[X.index[0:29], col] = -1
-X.columns = ['Date', 'Midnight population', '24-hour population', 'Book-ins', 'Book-outs', 'Midnight count', '24-hour count', 'BI', 'BO']
-X['Midnight count'] = X['Midnight count'].astype(int)
-X['24-hour count'] = X['24-hour count'].astype(int)
-X['BI'] = X['BI'].astype(int)
-X['BO'] = X['BO'].astype(int)
-X.to_csv("data/proc/national_avg.csv", index = False)
-
-# national.csv => national_counts.csv
-X = pd.read_csv("data/raw/national.csv")
-X = X[['date','midnight_count_unique_people','daily_count_unique_people','book_in_count','book_out_count']]
-for col in X.columns :
-    if col == "date" : continue
-    X[col] = X[col].fillna(0.)
-    X[col] = round(X[col]).astype(int).apply(lambda x: f"{x:,}")
-X.columns = ['Date', 'Midnight population', '24-hour population', 'Book-ins', 'Book-outs']
-X.to_csv("data/proc/national_counts.csv", index = False)
+X.columns = ['Date', 'Midnight population', '24-hour population', 'Book-ins', 'Book-outs', 'Midnight population count', '24-hour population count', 'Book-ins count', 'Book-outs count']
+X['Midnight population count'] = X['Midnight population count'].astype(int)
+X['24-hour population count'] = X['24-hour population count'].astype(int)
+X['Book-ins count'] = X['Book-ins count'].astype(int)
+X['Book-outs count'] = X['Book-outs count'].astype(int)
+X.to_csv("data/proc/national.csv", index = False)
 
 # monthly_freq.csv 
-# facilities/[XXXXXX].csv => facilities/[XXXXXX]_avg.csv
-#                            facilities/[XXXXXX]_count.csv
+# facilities/[XXXXXX].csv => facilities/[XXXXXX].csv
 #                            facilities.csv
 X = pd.read_csv("data/raw/monthly_freq.csv")
 X = X[['detention_facility_code', 'name', 'city', 'state', 'type_detailed']].drop_duplicates(['detention_facility_code'])
@@ -69,26 +58,17 @@ for index, row in X.iterrows() :
         Y[col] = round(Y[col])
         Y.loc[Y.index[0:29], 'midnight_count_unique_people_ma'] = -1
         Y.loc[Y.index[0:29], 'daily_count_unique_people_ma'] = -1
-    Y.columns = ['Date', 'Midnight population', '24-hour population', 'Midnight count', '24-hour count']
-    Y['Midnight count'] = Y['Midnight count'].astype(int)
-    Y['24-hour count'] = Y['24-hour count'].astype(int)
-    assert (Y['24-hour count'] >= Y['Midnight count']).all()
-    Y.to_csv("data/proc/facilities/" + row['detention_facility_code'] + "_avg.csv", index = False)    
+    Y.columns = ['Date', 'Midnight population', '24-hour population', 'Midnight population count', '24-hour population count']
+    Y['Midnight population count'] = Y['Midnight population count'].astype(int)
+    Y['24-hour population count'] = Y['24-hour population count'].astype(int)
+    assert (Y['24-hour population count'] >= Y['Midnight population count']).all()
+    Y.to_csv("data/proc/facilities/" + row['detention_facility_code'] + ".csv", index = False)    
 
-    Y = Y[(Y['24-hour count'] > 0) | (Y['Midnight count'] > 0)]
+    Y = Y[(Y['24-hour population count'] > 0) | (Y['Midnight population count'] > 0)]
     if Y.shape[0] > 0 :         
         X.loc[index, 'start'] = date_func(pd.to_datetime(Y.iloc[0]['Date']))
         X.loc[index, 'end'] = date_func(pd.to_datetime(Y.iloc[-1]['Date'])) + 1
     
-    Y = pd.read_csv("data/raw/facilities/" + row['detention_facility_code'] + ".csv")
-    Y = Y[['date', 'midnight_count_unique_people', 'daily_count_unique_people']]
-    for col in Y.columns :
-        if col == "date" : continue
-        Y[col] = Y[col].fillna(0.)
-        Y[col] = round(Y[col]).astype(int).apply(lambda x: f"{x:,}")
-    Y.columns = ['Date', 'Midnight population', '24-hour population']
-    Y.to_csv("data/proc/facilities/" + row['detention_facility_code'] + "_count.csv", index = False)    
-
 X = X.sort_values('name')
 Y = pd.read_csv("data/proc/facility_types.csv")
 X = pd.merge(X, Y, left_on = 'type_detailed', right_on = 'type_detailed', how = 'left')
