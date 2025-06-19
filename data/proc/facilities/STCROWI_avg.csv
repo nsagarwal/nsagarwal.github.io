@@ -1,4 +1,4 @@
-Date,Midnight population,24-hour population,N,N2
+Date,Midnight population,24-hour population,Midnight count,24-hour count
 2008-10-01,-1.0,-1.0,0,0
 2008-10-02,-1.0,-1.0,0,0
 2008-10-03,-1.0,-1.0,0,0
@@ -1140,7 +1140,7 @@ Date,Midnight population,24-hour population,N,N2
 2011-11-13,0.0,0.0,0,0
 2011-11-14,0.0,0.0,0,0
 2011-11-15,0.0,0.0,0,0
-2011-11-16,0.0,0.0,1,0
+2011-11-16,0.0,0.0,0,1
 2011-11-17,0.0,0.0,0,0
 2011-11-18,0.0,0.0,0,0
 2011-11-19,0.0,0.0,0,0

@@ -39,11 +39,6 @@ button.clear:hover {
   color:red;
 }
 
-
-div {
-//  border: 1px solid red;
-}
-
 h3 {
   font-size: 20px;
   line-height: 140%;
@@ -108,7 +103,7 @@ h3 {
 /* map legend */
 
 ul#activity {
-  padding: none;
+  padding: 0;
   padding-inline-start: 0px;
   font-size: 14px;
   text-align: left;
@@ -118,8 +113,8 @@ ul li.legend-active,
 ul li.legend-inactive {
   list-style-type: none;
   list-style-image: none;
-  margin-left: none;
-  padding-left: none;
+  margin-left: 0;
+  padding-left: 0;
 }
 
 ul li.legend-active::before {
@@ -584,6 +579,11 @@ input#about-more-check:checked ~ .about-more {
   text-align: left;
   border-radius: 0pt;
   padding: 0 0px;
+}
+
+#intro {
+  width: 1000px; 
+  margin: 0 auto;
 }
 
 

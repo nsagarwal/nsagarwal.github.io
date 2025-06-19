@@ -1,4 +1,4 @@
-Date,Midnight population,24-hour population,N,N2
+Date,Midnight population,24-hour population,Midnight count,24-hour count
 2008-10-01,-1.0,-1.0,0,0
 2008-10-02,-1.0,-1.0,0,0
 2008-10-03,-1.0,-1.0,0,0
@@ -4584,7 +4584,7 @@ Date,Midnight population,24-hour population,N,N2
 2021-04-18,0.0,0.0,0,0
 2021-04-19,0.0,0.0,0,0
 2021-04-20,0.0,0.0,1,1
-2021-04-21,0.0,0.0,1,0
+2021-04-21,0.0,0.0,0,1
 2021-04-22,0.0,0.0,0,0
 2021-04-23,0.0,0.0,0,0
 2021-04-24,0.0,0.0,0,0

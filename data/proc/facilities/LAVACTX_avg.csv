@@ -1,4 +1,4 @@
-Date,Midnight population,24-hour population,N,N2
+Date,Midnight population,24-hour population,Midnight count,24-hour count
 2008-10-01,-1.0,-1.0,0,0
 2008-10-02,-1.0,-1.0,0,0
 2008-10-03,-1.0,-1.0,0,0
@@ -3444,7 +3444,7 @@ Date,Midnight population,24-hour population,N,N2
 2018-03-05,0.0,0.0,0,0
 2018-03-06,0.0,0.0,0,0
 2018-03-07,0.0,0.0,0,0
-2018-03-08,0.0,0.0,1,0
+2018-03-08,0.0,0.0,0,1
 2018-03-09,0.0,0.0,0,0
 2018-03-10,0.0,0.0,0,0
 2018-03-11,0.0,0.0,0,0

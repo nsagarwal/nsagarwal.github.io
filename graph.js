@@ -65,20 +65,20 @@ d3.csv("data/proc/facilities.csv").then(function(data) {
   });
 
   select.value = "";
-  tselect = new TomSelect("#facilitySearch", {
+  selectFacility = new TomSelect("#facilitySearch", {
     allowEmptyOption: true,
     placeholder: "Search facilities...",
     maxOptions: 1357,
     maxItems: 1
   });
 
-  tselect.on('change', (value) => {
+  selectFacility.on('change', (value) => {
     if (suppressChange) return;
-    const label = tselect.getItem(value)?.textContent;
+    const label = selectFacility.getItem(value)?.textContent;
     loadFacilityChart(value, label);
     suppressChange = true;
-    tselect.clear();
-    tselect.control_input.blur();
+    selectFacility.clear();
+    selectFacility.control_input.blur();
     suppressChange = false;
   });
 });
@@ -176,7 +176,7 @@ function loadFacilityChart(code, name) {
     });
     facilityData.push(facilityDataCountsMap);
     labels = data.map(row => row.Date);
-    availableColumns = Object.keys(data[0]).filter(key => key !== 'Date' && key !== 'N' && key !== 'N2');
+    availableColumns = Object.keys(data[0]).filter(key => key !== 'Date' && key !== 'Midnight count' && key !== '24-hour count');
     document.getElementById('columnsForm').innerHTML = "";
 
     d3.csv(`data/proc/facilities/${code}_count.csv`).then(function(data_2) {
@@ -206,7 +206,7 @@ function loadNationalChart() {
       nationalData.set(Date, rest);
     });
     labels = [...nationalData.keys()];
-    availableColumns = Object.keys(data[0]).filter(key => key !== 'Date' && key !== 'N' && key !== 'N2'
+    availableColumns = Object.keys(data[0]).filter(key => key !== 'Date' && key !== 'Midnight count' && key !== '24-hour count'
       && key !== 'BI' && key !== 'BO');
     document.getElementById('columnsForm').innerHTML = "";      
 
@@ -250,29 +250,29 @@ function updateChart() {
   let selectedCols = Array.from(document.querySelectorAll('input[name="col"]:checked'))
                              .map(input => input.value);
 
-  const fDiv = Array.from({ length: 5 }, (_, i) => document.getElementById(`facility-group-${i}`));
-  const fSpan = Array.from({ length: 5 }, (_, i) => document.getElementById(`facility-name-${i}`));
-  const fButton = Array.from({ length: 5 }, (_, i) => document.getElementById(`facility-button-${i}`));
+  const facility_div = Array.from({ length: 5 }, (_, i) => document.getElementById(`facility-group-${i}`));
+  const facility_span = Array.from({ length: 5 }, (_, i) => document.getElementById(`facility-name-${i}`));
+  const facility_button = Array.from({ length: 5 }, (_, i) => document.getElementById(`facility-button-${i}`));
 
-  const tselect = document.getElementById('facilitySearch').tomselect;
+  const facilitySelect = document.getElementById('facilitySearch').tomselect;
   if (facilityList.length >= 5) {
-    tselect.disable();
-    tselect.control_input.placeholder = "5 facilities max";
-    tselect.control_input.dispatchEvent(new Event('input')); 
+    facilitySelect.disable();
+    facilitySelect.control_input.placeholder = "5 facilities max";
+    facilitySelect.control_input.dispatchEvent(new Event('input')); 
   } else {
-    tselect.enable();    
-    tselect.control_input.placeholder = "Search facilities...";
-    tselect.control_input.dispatchEvent(new Event('input')); 
+    facilitySelect.enable();    
+    facilitySelect.control_input.placeholder = "Search facilities...";
+    facilitySelect.control_input.dispatchEvent(new Event('input')); 
   }
 
-  fDiv.forEach(div => div.style.display = "none");
+  facility_div.forEach(div => div.style.display = "none");
   facilityList.forEach((code, i) => {
     name = facilityMap[code].name;
-    fDiv[i].style.display = "flex";
-    fSpan[i].textContent = name;
-    fButton[i].replaceWith(fButton[i].cloneNode(true));
-    fButton[i] = document.getElementById(`facility-button-${i}`);
-    fButton[i].addEventListener('click', () => {
+    facility_div[i].style.display = "flex";
+    facility_span[i].textContent = name;
+    facility_button[i].replaceWith(facility_button[i].cloneNode(true));
+    facility_button[i] = document.getElementById(`facility-button-${i}`);
+    facility_button[i].addEventListener('click', () => {
       facilityList.splice(i, 1);
       facilityData.splice(i, 1);
       facilityDataCounts.splice(i, 1);
@@ -291,51 +291,76 @@ function updateChart() {
 
   updateSliderLabels();
 
+  const ctx = document.getElementById('graph-element').getContext('2d');
+  const x_options = {
+    ticks: {
+      maxTicksLimit: 10,
+      callback: function(value, index, ticks) {
+        const rawDate = this.getLabelForValue(value);
+        const parts = rawDate.split("-");
+        const date = new Date(Date.UTC(parts[0], parts[1] - 1, parts[2]));
+        const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", 
+                            "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+        if (date.getUTCDate() !== 1) return null;
+        return `${monthNames[date.getUTCMonth()]} ${date.getUTCFullYear()}`;
+      }
+    }
+  }
+  const y_options = {
+    beginAtZero: true,
+    min: 0,
+    position: 'left',
+    title: {
+      display: true,
+      text: 'Population'
+    }          
+  }
+  const baseDataSetOptions = {
+    borderWidth: 2,
+    pointRadius: 0,
+    fill: false,
+    yAxisID: "y",
+    tension: 0.3
+  }
+  const baseToolTipOptions = {
+      usePointStyle: true,
+      mode: 'index',
+      intersect: false,
+      padding: 14,
+      boxWidth: 0,
+      boxHeight: 0
+  }
+
   if (facilityList.length > 1) {
     chartName = "various";
-    if (selectedCols.length > 1) {
-      selectedCols = [ selectedCols[0] ];
-    }
-    if (selectedCols.length == 0) {
-      selectedCols = ['Midnight popluation'];
-    }
+    if (selectedCols.length > 1) selectedCols = [ selectedCols[0] ];
+    if (selectedCols.length == 0) selectedCols = ['Midnight popluation'];
 
     document.querySelectorAll('input[name="col"]').forEach(input => {
       input.checked = selectedCols.includes(input.value);
     });
 
-   for (let i = 0; i < 5; i++) {
-      const span = document.getElementById(`facility-name-${i}`);
-      span.style.color = getColor("facilities", i);
+    for (let i = 0; i < 5; i++) {
+      document.getElementById(`facility-name-${i}`).style.color = getColor("facilities", i);
     }
      
     const datasets = facilityData.flatMap((dataSet, setIndex) => selectedCols.map((col) => {
       const color = getColor("facilities", setIndex);
       const dataArray = [...dataSet.values()].slice(d1_index, d2_index + 1).map(row => parseFloat(row[col]));
       return {
-        label: col,
+        ...baseDataSetOptions,
         data: dataArray,      
-        borderWidth: 2,
-        pointRadius: 0,
-        fill: false,
-        yAxisID: "y",
-        tension: 0.3,
+        label: col,
         borderColor: color,
         segment: {
           borderColor: ctx => {
-            const i = ctx.p0DataIndex;
-            const v1 = dataArray[i];
-            const v2 = dataArray[i + 1];
-            if (v1 === -1 || v2 === -1 || v2 === undefined) {
-              return "rgba(0,0,0,0)";
-            }
+            if (dataArray[ctx.p0DataIndex] === -1) return "rgba(0,0,0,0)";
+            if (ctx.p0DataIndex + 1 < dataArray.length && dataArray[ctx.p0DataIndex + 1] === -1) return "rgba(0,0,0,0)";
             return color;
           }
         }              
       }
     }));
-
-    const ctx = document.getElementById('graph-element').getContext('2d');
 
     chart = new Chart(ctx, {
       type: 'line',
@@ -346,29 +371,8 @@ function updateChart() {
       options: {
         responsive: true,
         scales: {
-          y: {
-            beginAtZero: true,
-            min: 0,
-            position: 'left',
-            title: {
-              display: true,
-              text: 'Population'
-            }          
-          },
-          x: {
-            ticks: {
-              maxTicksLimit: 10,
-              callback: function(value, index, ticks) {
-                const rawDate = this.getLabelForValue(value);
-                const parts = rawDate.split("-");
-                const date = new Date(Date.UTC(parts[0], parts[1] - 1, parts[2]));
-                const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", 
-                                    "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-                if (date.getUTCDate() !== 1) return null;
-                return `${monthNames[date.getUTCMonth()]} ${date.getUTCFullYear()}`;
-              }
-            }
-          }
+          y: y_options,
+          x: x_options
         },
         plugins: {
           legend: {
@@ -382,12 +386,7 @@ function updateChart() {
             }
           },
           tooltip: {
-            usePointStyle: true,
-            mode: 'index',
-            intersect: false,
-            padding: 14,
-            boxWidth: 0,
-            boxHeight: 0,
+            ...baseToolTipOptions,
             callbacks: {
               labelPointStyle: () => ({
                 pointStyle: false
@@ -413,8 +412,7 @@ function updateChart() {
 
   } else if (facilityList.length == 1) {
     for (let i = 0; i < 5; i++) {
-      const span = document.getElementById(`facility-name-${i}`);
-      span.style.color = getColor("default");
+      document.getElementById(`facility-name-${i}`).style.color = getColor("default");
     }
 
     chartName = facilityMap[facilityList[0]].name;
@@ -422,46 +420,26 @@ function updateChart() {
       const color = getColor(col);
       const dataArray = [...facilityData[0].values()].slice(d1_index, d2_index + 1).map(row => parseFloat(row[col]));
       return {
-        label: col,
+        ...baseDataSetOptions,
         data: dataArray,      
-        borderWidth: 2,
-        pointRadius: 0,
-        fill: false,
-        yAxisID: "y",
-        tension: 0.3,
+        label: col,
         borderColor: color,
         type: 'line',
         segment: {
           borderColor: ctx => {
-            const i = ctx.p0DataIndex;
-            const v1 = dataArray[i];
-            const v2 = dataArray[i + 1];
-            if (v1 === -1 || v2 === -1 || v2 === undefined) {
-              return "rgba(0,0,0,0)";
-            }
+            if (dataArray[ctx.p0DataIndex] === -1) return "rgba(0,0,0,0)";
+            if (ctx.p0DataIndex + 1 < dataArray.length && dataArray[ctx.p0DataIndex + 1] === -1) return "rgba(0,0,0,0)";
             return color;
           }
         }      
       }
     });
 
-    if (selectedCols.includes("24-hour population")) {
-      datasets.push({
-        label: "N",
-        type: "bar",
-        data: [...facilityData[0].values()].slice(d1_index, d2_index + 1).map(row => parseInt(row["N"])),
-        yAxisID: "y",
-        backgroundColor: "#ddd",
-        borderWidth: 0,
-        grouped: false,
-        order: 2
-     });
-    }
     if (selectedCols.includes("Midnight population")) {
       datasets.push({
-        label: "N2",
+        label: "Midnight count",
         type: "bar",
-        data: [...facilityData[0].values()].slice(d1_index, d2_index + 1).map(row => parseInt(row["N2"])),
+        data: [...facilityData[0].values()].slice(d1_index, d2_index + 1).map(row => parseInt(row["Midnight count"])),
         yAxisID: "y",
         backgroundColor: "#bbb",
         borderWidth: 0,
@@ -469,8 +447,18 @@ function updateChart() {
         order: 1
       });
     }
-
-    const ctx = document.getElementById('graph-element').getContext('2d');
+    if (selectedCols.includes("24-hour population")) {
+      datasets.push({
+        label: "24-hour count",
+        type: "bar",
+        data: [...facilityData[0].values()].slice(d1_index, d2_index + 1).map(row => parseInt(row["24-hour count"])),
+        yAxisID: "y",
+        backgroundColor: "#ddd",
+        borderWidth: 0,
+        grouped: false,
+        order: 2
+     });
+    }
 
     chart = new Chart(ctx, {
       type: 'bar',
@@ -481,29 +469,8 @@ function updateChart() {
       options: {
         responsive: true,
         scales: {
-          y: {
-            min: 0,
-            beginAtZero: true,
-            position: 'left',
-            title: {
-              display: true,
-              text: 'Population'
-            }          
-          },
-          x: {
-            ticks: {
-              maxTicksLimit: 10,
-              callback: function(value, index, ticks) {
-                const rawDate = this.getLabelForValue(value);
-                const parts = rawDate.split("-");
-                const date = new Date(Date.UTC(parts[0], parts[1] - 1, parts[2]));
-                const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", 
-                                    "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-                if (date.getUTCDate() !== 1) return null;
-                return `${monthNames[date.getUTCMonth()]} ${date.getUTCFullYear()}`;
-              }
-            }
-          }
+          y: y_options,
+          x: x_options
         },
         plugins: {
           legend: {
@@ -517,12 +484,7 @@ function updateChart() {
             }
           },
           tooltip: {
-            usePointStyle: true,
-            mode: 'index',
-            intersect: false,
-            padding: 14,
-            boxWidth: 0,
-            boxHeight: 0,
+            ...baseToolTipOptions,
             callbacks: {
               labelPointStyle: () => ({
                 pointStyle: false
@@ -537,8 +499,8 @@ function updateChart() {
                 return [dateStr, chartName, ""];
               },
               label: function(context) {
-                if (context.dataset.label === "N") return null;
-                if (context.dataset.label === "N2") return null;
+                if (context.dataset.label === "Midnight count") return null;
+                if (context.dataset.label === "24-hour count") return null;
                 return `${context.dataset.label}: ${facilityDataCounts[0].get(context.label)[context.dataset.label]}`;
               }
             }          
@@ -553,22 +515,14 @@ function updateChart() {
       const color = getColor(col);
       const dataArray = [...nationalData.values()].slice(d1_index, d2_index + 1).map(row => parseFloat(row[col]));
       return {
+        ...baseDataSetOptions,
+        data: dataArray,      
         label: col,
-        data: dataArray,
-        borderWidth: 2,
-        pointRadius: 0,
-        fill: false,
-        yAxisID: "y",
-        tension: 0.3,
         borderColor: color,
         segment: {
           borderColor: ctx => {
-            const i = ctx.p0DataIndex;
-            const v1 = dataArray[i];
-            const v2 = dataArray[i + 1];
-            if (v1 === -1 || v2 === -1 || v2 === undefined) {
-              return "rgba(0,0,0,0)";
-            }
+            if (dataArray[ctx.p0DataIndex] === -1) return "rgba(0,0,0,0)";
+            if (ctx.p0DataIndex + 1 < dataArray.length && dataArray[ctx.p0DataIndex + 1] === -1) return "rgba(0,0,0,0)";
             return color;
           }
         }      
@@ -576,29 +530,29 @@ function updateChart() {
     });
 
     if (d2 - d1 <= 12) {
-      if (selectedCols.includes("24-hour population")) {
-        datasets.push({
-          label: "N",
-          type: "bar",
-          data: [...nationalData.values()].slice(d1_index, d2_index + 1).map(row => parseInt(row["N"])),
-          yAxisID: "y",
-          backgroundColor: "#ddd",
-          borderWidth: 0,
-          grouped: false,
-          order: 2
-       });
-      }
       if (selectedCols.includes("Midnight population")) {
         datasets.push({
-          label: "N2",
+          label: "Midnight count",
           type: "bar",
-          data: [...nationalData.values()].slice(d1_index, d2_index + 1).map(row => parseInt(row["N2"])),
+          data: [...nationalData.values()].slice(d1_index, d2_index + 1).map(row => parseInt(row["Midnight count"])),
           yAxisID: "y",
           backgroundColor: "#bbb",
           borderWidth: 0,
           grouped: false,
           order: 1        
         });
+      }
+      if (selectedCols.includes("24-hour population")) {
+        datasets.push({
+          label: "24-hour count",
+          type: "bar",
+          data: [...nationalData.values()].slice(d1_index, d2_index + 1).map(row => parseInt(row["24-hour count"])),
+          yAxisID: "y",
+          backgroundColor: "#ddd",
+          borderWidth: 0,
+          grouped: false,
+          order: 2
+       });
       }
       if (selectedCols.includes("Book-ins") && selectedCols.length == 1) {
         datasets.push({
@@ -608,8 +562,7 @@ function updateChart() {
           yAxisID: "y1",
           backgroundColor: "#bbb",
           borderWidth: 0,
-          grouped: false,
-          order: 1        
+          grouped: false
         });
       }
       if (selectedCols.includes("Book-outs") && selectedCols.length == 1) {
@@ -620,8 +573,7 @@ function updateChart() {
           yAxisID: "y1",
           backgroundColor: "#bbb",
           borderWidth: 0,
-          grouped: false,
-          order: 1        
+          grouped: false
         });
       }
     }
@@ -630,8 +582,6 @@ function updateChart() {
       if (set["label"] == "Book-ins") set["yAxisID"] = "y1";
       if (set["label"] == "Book-outs") set["yAxisID"] = "y1";
     });
-
-    const ctx = document.getElementById('graph-element').getContext('2d');
 
     chart = new Chart(ctx, {
       type: 'line',
@@ -642,17 +592,11 @@ function updateChart() {
       options: {
         responsive: true,
         scales: {
-          y: {
-            beginAtZero: true,
-            min: 0,
-            position: 'left',
-            title: {
-              display: true,
-              text: 'Population'
-            }          
-          },
+          x: x_options,
+          y: y_options,
           y1 : {
             beginAtZero: true,
+            min: 0,
             position: 'right',
             title: {
               display: true,
@@ -661,20 +605,6 @@ function updateChart() {
             grid: {
               display: false
             }                      
-          },
-          x: {
-            ticks: {
-              maxTicksLimit: 10,
-              callback: function(value, index, ticks) {
-                const rawDate = this.getLabelForValue(value);
-                const parts = rawDate.split("-");
-                const date = new Date(Date.UTC(parts[0], parts[1] - 1, parts[2]));
-                const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", 
-                                    "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-                if (date.getUTCDate() !== 1) return null;
-                return `${monthNames[date.getUTCMonth()]} ${date.getUTCFullYear()}`;
-              }
-            }
           }
         },
         plugins: {
@@ -689,12 +619,7 @@ function updateChart() {
             }
           },
           tooltip: {
-            usePointStyle: true,
-            mode: 'index',
-            intersect: false,
-            padding: 14,
-            boxWidth: 0,
-            boxHeight: 0,
+            ...baseToolTipOptions,
             callbacks: {
               labelPointStyle: () => ({
                 pointStyle: false
@@ -709,8 +634,8 @@ function updateChart() {
                 return [dateStr, chartName, ""];
               },
               label: function(context) {
-                if (context.dataset.label === "N") return null;
-                if (context.dataset.label === "N2") return null;
+                if (context.dataset.label === "Midnight count") return null;
+                if (context.dataset.label === "24-hour count") return null;
                 if (context.dataset.label === "BI") return null;
                 if (context.dataset.label === "BO") return null;
                 return `${context.dataset.label}: ${nationalDataCounts.get(context.label)[context.dataset.label]}`;
@@ -733,8 +658,9 @@ function updateChart() {
 }
 
 function getColor(key, index = 0) {
-  const facilityColors = ["#d62728", "#9467bd", "#ff7f0e", "#1f77b4", "#2ca02c"];
   if (DEBUG) console.log("getColor called", key, index, facilityColors[index]);
+
+  const facilityColors = ["#d62728", "#9467bd", "#ff7f0e", "#1f77b4", "#2ca02c"];
   if (key == "facilities") return facilityColors[index];
   if (key == "Midnight population") return "blue";
   if (key == "24-hour population") return "red";

@@ -1,4 +1,4 @@
-Date,Midnight population,24-hour population,N,N2
+Date,Midnight population,24-hour population,Midnight count,24-hour count
 2008-10-01,-1.0,-1.0,0,0
 2008-10-02,-1.0,-1.0,0,0
 2008-10-03,-1.0,-1.0,0,0
@@ -4975,7 +4975,7 @@ Date,Midnight population,24-hour population,N,N2
 2022-05-14,4.0,4.0,6,6
 2022-05-15,4.0,4.0,6,6
 2022-05-16,4.0,4.0,6,6
-2022-05-17,4.0,4.0,6,0
+2022-05-17,4.0,4.0,0,6
 2022-05-18,4.0,4.0,0,0
 2022-05-19,4.0,4.0,0,0
 2022-05-20,4.0,4.0,0,0

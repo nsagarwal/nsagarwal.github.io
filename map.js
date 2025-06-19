@@ -322,6 +322,8 @@ function updateMap() {
   document.getElementById("activeFacilities").textContent = filteredData.filter(d => d.N > 0.).length.toLocaleString();
   document.getElementById("totalFacilities").textContent = filteredData.length.toLocaleString();
 
+  filteredData.sort((a, b) => +b.size - +a.size);
+
   map.selectAll("circle")
     .data(filteredData)
     .enter()
