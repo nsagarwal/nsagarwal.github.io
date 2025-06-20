@@ -1,17 +1,17 @@
 let DEBUG = 0;
 
-let chart;
+let graph;
 let labels = [];
-let facilityData = [];
-let nationalData = new Map();
 let availableColumns = [];
-let facilities = [];
+let nationalData = new Map();
+let facilityData = [];
 let facilityMap = {};
 let facilityList = [];
-let chartName = "";
+let monthlyData = [];
+let graphName = "";
 let dateRange = "";
 
-loadNationalChart();
+loadNationalGraph();
 
 const graphSlider = document.getElementById("graphSlider");
 noUiSlider.create(graphSlider, {
@@ -27,16 +27,8 @@ noUiSlider.create(graphSlider, {
 });
 
 graphSlider.noUiSlider.on("slide", (values, handle) => {
-  updateChart();
+  updateGraph();
   updateSliderLabels();
-});
-
-// load dMap
-let dMap = {};
-d3.csv("data/proc/dmap.csv").then(function(data) {
-  data.forEach(row => {
-    dMap[row.date] = row.index;
-  })
 });
 
 let suppressChange = false;
@@ -52,10 +44,6 @@ d3.csv("data/proc/facilities.csv").then(function(data) {
       start: +row.start,
       end: +row.end
     }
-    facilities.push({
-      code: row.detention_facility_code,
-      name: row.name
-    });
     const option = document.createElement("option");
     option.value = row.detention_facility_code;
     option.textContent = `${row.name} (${row.state})`;
@@ -73,7 +61,7 @@ d3.csv("data/proc/facilities.csv").then(function(data) {
   selectFacility.on('change', (value) => {
     if (suppressChange) return;
     const label = selectFacility.getItem(value)?.textContent;
-    loadFacilityChart(value, label);
+    loadFacilityGraph(value, label);
     suppressChange = true;
     selectFacility.clear();
     selectFacility.control_input.blur();
@@ -122,7 +110,7 @@ function populateColumnCheckboxes() {
               input.checked = selectedCols.includes(input.value);
             });
         }
-        updateChart();
+        updateGraph();
       }
     });
     form.dataset.listenerAttached = "true";
@@ -163,8 +151,8 @@ function updateSliderLabels() {
   }
 }
 
-function loadFacilityChart(code, name) {
-  if (DEBUG) console.log("loadFacilityChart called", code, name);
+function loadFacilityGraph(code, name) {
+  if (DEBUG) console.log("loadFacilityGraph called", code, name);
   facilityList.push(code);
   d3.csv(`data/proc/facilities/${code}.csv`).then(function(data) {
     const facilityDataCountsMap = new Map();
@@ -181,12 +169,12 @@ function loadFacilityChart(code, name) {
     const index_1 = Math.min(...facilityList.map(i => +facilityMap[i].start));
     const index_2 = Math.max(...facilityList.map(i => +facilityMap[i].end));
     setupSliders(index_1, index_2);
-    updateChart();
+    updateGraph();
   })
 }
 
-function loadNationalChart() {
-  if (DEBUG) console.log("loadNationalChart called");
+function loadNationalGraph() {
+  if (DEBUG) console.log("loadNationalGraph called");
   nationalData.clear();
 
   d3.csv("data/proc/national.csv").then(function(data) {
@@ -205,27 +193,27 @@ function loadNationalChart() {
     index_2 = 197;
 
     setupSliders(index_1, index_2);
-    chartName = "National"
-    updateChart();
+    graphName = "National"
+    updateGraph();
   });
 }
 
 // ------------------------------------------------------------------------------------------------
-// update chart
+// update graph
 
-function updateChart() {
-  if (DEBUG) console.log("updateChart called", monthlyData.length, facilityList.length, chartName);
+function updateGraph() {
+  if (DEBUG) console.log("updateGraph called", monthlyData.length, facilityList.length, graphName);
 
   if (monthlyData.length === 0) return;
-  if ((facilityList.length == 0) && (chartName != "National")) {
-    loadNationalChart();
+  if ((facilityList.length == 0) && (graphName != "National")) {
+    loadNationalGraph();
     return;
   }
-  if (chart) chart.destroy();
+  if (graph) graph.destroy();
 
   const [d1, d2] = graphSlider.noUiSlider.get().map(Number);
-  d1_index = (d1 < monthlyData.length) ? +dMap[monthlyData[d1].month] : 99999;
-  d2_index = (d2 + 1 < monthlyData.length) ? +dMap[monthlyData[d2+1].month] : 99999;
+  d1_index = (d1 < monthlyData.length) ? monthlyData[d1].index : 99999;
+  d2_index = (d2 + 1 < monthlyData.length) ? monthlyData[d2+1].index : 99999;
   const d1_index_1 = (d1_index === 0) ? 29 : d1_index;
 
   const visibleLabels = labels.slice(d1_index, d2_index + 1);
@@ -258,14 +246,14 @@ function updateChart() {
       facilityList.splice(i, 1);
       facilityData.splice(i, 1);
       if (facilityList.length == 0) {
-          loadNationalChart();
+          loadNationalGraph();
       } else {
         document.getElementById('columnsForm').innerHTML = "";
         populateColumnCheckboxes();
         const index_1 = Math.min(...facilityList.map(i => +facilityMap[i].start));
         const index_2 = Math.max(...facilityList.map(i => +facilityMap[i].end));
         setupSliders(index_1, index_2);
-        updateChart();
+        updateGraph();
       }
     });
   });
@@ -313,7 +301,7 @@ function updateChart() {
   }
 
   if (facilityList.length > 1) {
-    chartName = "various";
+    graphName = "various";
     if (selectedCols.length > 1) selectedCols = [ selectedCols[0] ];
     if (selectedCols.length == 0) selectedCols = ['Midnight popluation'];
 
@@ -343,7 +331,7 @@ function updateChart() {
       }
     }));
 
-    chart = new Chart(ctx, {
+    graph = new Chart(ctx, {
       type: 'line',
       data: {
         labels: visibleLabels,
@@ -361,7 +349,7 @@ function updateChart() {
           },
           title: {
             display: true,
-            text: ["People detained by ICE, 30 Day Rolling Average - " + chartName, dateRange],
+            text: ["People detained by ICE, 30 Day Rolling Average - " + graphName, dateRange],
             font: {
               size: 18
             }
@@ -396,7 +384,7 @@ function updateChart() {
       document.getElementById(`facility-name-${i}`).style.color = getColor("default");
     }
 
-    chartName = facilityMap[facilityList[0]].name;
+    graphName = facilityMap[facilityList[0]].name;
     const datasets = selectedCols.map((col, i) => {
       const color = getColor(col);
       const dataArray = [...facilityData[0].values()].slice(d1_index, d2_index + 1).map(row => parseFloat(row[col]));
@@ -441,7 +429,7 @@ function updateChart() {
      });
     }
 
-    chart = new Chart(ctx, {
+    graph = new Chart(ctx, {
       type: 'bar',
       data: {
         labels: visibleLabels,
@@ -459,7 +447,7 @@ function updateChart() {
           },
           title: {
             display: true,
-            text: ["People detained by ICE, 30 Day Rolling Average - " + chartName, dateRange],
+            text: ["People detained by ICE, 30 Day Rolling Average - " + graphName, dateRange],
             font: {
               size: 18
             }
@@ -477,7 +465,7 @@ function updateChart() {
                   month: "short",
                   day: "2-digit"
                 });
-                return [dateStr, chartName, ""];
+                return [dateStr, graphName, ""];
               },
               label: function(context) {
                 if (context.dataset.label === "Midnight population count") return null;
@@ -491,7 +479,7 @@ function updateChart() {
     });
 
   } else {
-    chartName = "National";
+    graphName = "National";
     const datasets = selectedCols.map((col, i) => {
       const color = getColor(col);
       const dataArray = [...nationalData.values()].slice(d1_index, d2_index + 1).map(row => parseFloat(row[col]));
@@ -564,7 +552,7 @@ function updateChart() {
       if (set["label"] == "Book-outs") set["yAxisID"] = "y1";
     });
 
-    chart = new Chart(ctx, {
+    graph = new Chart(ctx, {
       type: 'line',
       data: {
         labels: visibleLabels,
@@ -594,7 +582,7 @@ function updateChart() {
           },
           title: {
             display: true,
-            text: ["People detained by ICE, 30 Day Rolling Average - " + chartName, dateRange],
+            text: ["People detained by ICE, 30 Day Rolling Average - " + graphName, dateRange],
             font: {
               size: 18
             }
@@ -612,7 +600,7 @@ function updateChart() {
                   month: "short",
                   day: "2-digit"
                 });
-                return [dateStr, chartName, ""];
+                return [dateStr, graphName, ""];
               },
               label: function(context) {
                 if (context.dataset.label === "Midnight population count") return null;
@@ -628,12 +616,12 @@ function updateChart() {
     });
 
     if (!selectedCols.includes("Book-ins") && !selectedCols.includes("Book-outs")) {
-      chart.options.scales.y1.display = false;
-      chart.update();
+      graph.options.scales.y1.display = false;
+      graph.update();
     }
     if (!selectedCols.includes("Midnight population") && !selectedCols.includes("24-hour population")) {
-      chart.options.scales.y.display = false;
-      chart.update();
+      graph.options.scales.y.display = false;
+      graph.update();
     }
   }
 }

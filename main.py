@@ -116,14 +116,14 @@ for month in sorted(X['month'].drop_duplicates()) :
     Y = Y[Y['daily_unique_avg'] > 0.]
     Y = Y.drop_duplicates('detention_facility_code')
     Z.loc[month, 'total'] = Y.shape[0]
-Z.to_csv("data/proc/monthly.csv")
 
-# national.csv => dmap.csv
 X = pd.read_csv("data/raw/national.csv")
 Q = X.apply(lambda x : pd.to_datetime(x['date']).strftime("%Y-%m"), axis = 1).drop_duplicates().to_frame().reset_index()
-Q.columns = ['index', 'date']
-Q = Q[['date', 'index']]
-Q.to_csv("data/proc/dmap.csv", index = False)
+Q.columns = ['index', 'month']
+Z = pd.merge(Z, Q, left_index = True, right_on = 'month', how = 'left')
+Z = Z.set_index('month', verify_integrity = True)
+Z.to_csv("data/proc/monthly.csv")
+
 
 X = pd.read_csv("data/proc/monthly.csv")
 X = X.set_index('month')

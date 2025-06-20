@@ -1,5 +1,3 @@
-let monthlyData = [];
-
 let countiesLoaded = false;
 let countyPaths;
 
@@ -241,6 +239,7 @@ d3.csv("data/proc/monthly.csv").then(function(data_1) {
   data_1.forEach(d => {
     d.active = +d.active;
     d.total = +d.total;
+    d.index = +d.index;
   });
   d3.csv("data/proc/map/2025-02.csv").then(function(data_2) {
     monthlyData = data_1;
@@ -251,7 +250,7 @@ d3.csv("data/proc/monthly.csv").then(function(data_1) {
     document.getElementById("startDate").textContent = formatMonthYear("2008-10");
     updateMap();
     loadMapData();
-    updateChart();
+    updateGraph();
     updateSliderLabels();
   });
 });
@@ -302,8 +301,6 @@ function updateMap() {
 
   document.getElementById("selectedDate_1").textContent = formatMonthYear(monthlyData[i].month);
   document.getElementById("selectedDate_2").textContent = formatMonthYear(monthlyData[i].month);
-//  document.getElementById("activeFacilities").textContent = monthlyData[i].active.toLocaleString();
-//  document.getElementById("totalFacilities").textContent = monthlyData[i].total.toLocaleString();
 
   const range = sizeSlider.noUiSlider.get().map(val => Number(val.replace(/,/g, '')));
   map.selectAll("circle").remove();
@@ -371,7 +368,7 @@ function updateMap() {
             .scale(3)
             .translate(-x, -y)
         );
-      if (facilityList.length < 5) loadFacilityChart(d.code, facilityMap[d.code].name);
+      if (facilityList.length < 5) loadFacilityGraph(d.code, facilityMap[d.code].name);
       const hideTooltip = () => {
         tooltip.style("opacity", 0);
         window.removeEventListener("pointermove", hideTooltip);
