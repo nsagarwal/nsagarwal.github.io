@@ -70,7 +70,7 @@ for index, row in X.iterrows() :
         X.loc[index, 'end'] = date_func(pd.to_datetime(Y.iloc[-1]['Date'])) + 1
     
 X = X.sort_values('name')
-Y = pd.read_csv("data/proc/facility_types.csv")
+Y = pd.read_csv("data/raw/facility_types.csv")
 X = pd.merge(X, Y, left_on = 'type_detailed', right_on = 'type_detailed', how = 'left')
 X = X.drop('type_detailed', axis = 1)
 X['type'] = X['type'].replace('Family/children', 'Family / Children')

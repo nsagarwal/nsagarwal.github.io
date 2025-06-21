@@ -1,15 +1,60 @@
-let DEBUG = 0;
+const DEBUG = 0;
 
-let graph;
+// --------------------------------------------------------------------------------------------------------
+// OBJECT MODEL
+//
+// nationalData stores the data from national.csv :
+// - defined as a map from Date to the remaining columns in that dataframe
+// - loaded once on page load
+
+let nationalData = new Map();
+
+// facilityMap stores the data from facilities.csv :
+// - defined as a map from detention_facility_code to the remaining columns in that dataframe
+// - loaded once on page load
+//
+// Note: 
+//
+// 1. The columns 'start' and 'end' are pre-calculated indices into graphSlider which specify when data begins and ends for
+// a given facility. These values are used to set the initial date window of the graph when particular facilities are selected.
+//
+// 2. The column 'type' is pre-calculated based on the type_detailed given in raw/monthly_freq.csv and the type mapping given
+// in raw/facility_types.csv.
+
+let facilityMap = {};
+
+// facilityList and facilityData are arrays that store data from facilities/[XXXXXX].csv. Specifically, they store 
+// the detention_facility_code and facility-level data respectively of facilities selected in the graph. 
+// When a facility is de-selected from the graph, the corresponding item in both
+// arrays is removed. Thus the length of facilityList and facilityData is always between 0 and 5. Note:
+//
+// 1. This object model means that facility-level data is reloaded whenever a facility is de-selected and then re-selected. 
+// I did this to keep memory usage constant at the expense of potential duplicate loading of data, presumably from cache 
+// or disk the second time.
+//
+// 2. An alternative object model is to define facilityData as a map from detention_facility_code to facility-level data, in which
+// items do not get removed from it when facilities are de-selected. This would avoid duplicate loading of data at the expense
+// of unbounded memory usage, proportional to the total number of facilities ever selected.
+//
+// 3. In the current object model, facilityList and facilityData could be combined into a single map from detention_facility_code
+// to facility-level data. The reason I did not implement it that way here is because the current approach can be more easily adapted to
+// the object model described in note 2. Specifically, in that alternative object model, facilityList would remain an array of length
+// at most 5, and facilityData would be redefined as a map of length equal to the total number of facilities ever selected.
+
+let facilityList = [];
+let facilityData = [];
+
+// --------------------------------------------------------------------------------------------------------
+
 let labels = [];
 let availableColumns = [];
-let nationalData = new Map();
-let facilityData = [];
-let facilityMap = {};
-let facilityList = [];
 let monthlyData = [];
+
+let graph;
+
+// graphName and graphRange are strings used in the graph's title
 let graphName = "";
-let dateRange = "";
+let graphRange = "";
 
 loadNationalGraph();
 
@@ -30,6 +75,37 @@ graphSlider.noUiSlider.on("slide", (values, handle) => {
   updateGraph();
   updateSliderLabels();
 });
+
+function updateSliderLabels() {
+  if (monthlyData.length === 0) return;
+
+  const [start, end] = graphSlider.noUiSlider.get().map(Number);
+  const startLabel = (start < monthlyData.length) ? formatMonthYear(monthlyData[start].month) : "Mar. 2025";
+  const endLabel = (end < monthlyData.length) ? formatMonthYear(monthlyData[end].month) : "Mar. 2025";
+
+  document.getElementById('graphSlider-startLabel').textContent = startLabel;
+  document.getElementById('graphSlider-endLabel').textContent = endLabel;
+
+  graphRange = `${startLabel} - ${endLabel}`;    
+  if (startLabel == endLabel) graphRange = `${startLabel}`;
+  if (endLabel == "Feb. 2025") {
+    graphRange += "*";
+    document.getElementById("footer1").style.display = "block";
+  } else {
+    document.getElementById("footer1").style.display = "none";          
+  }
+}
+
+function setSliders(min, max) {
+  graphSlider.noUiSlider.set([min, max]);
+  updateSliderLabels();
+}
+
+
+
+
+
+
 
 let suppressChange = false;
 
@@ -117,50 +193,19 @@ function populateColumnCheckboxes() {
   }
 }
 
-function setupSliders(min, max) {
-  graphSlider.noUiSlider.set([min, max]);
-  updateSliderLabels();
-}
 
-function updateSliderLabels() {
-  if (monthlyData.length === 0) return;
-  const [start, end] = graphSlider.noUiSlider.get().map(Number);
-  document.getElementById('graphSlider-startLabel').textContent = (start < monthlyData.length) ? 
-    formatMonthYear(monthlyData[start].month) : "Mar. 2025";
-  document.getElementById('graphSlider-endLabel').textContent = (end < monthlyData.length) ?
-    formatMonthYear(monthlyData[end].month) : "Mar. 2025";
 
-  let dateRange1 = document.getElementById('graphSlider-startLabel').textContent;
-  let dateRange2 = document.getElementById('graphSlider-endLabel').textContent;
-  if (dateRange1 == dateRange2) {
-    dateRange = `${dateRange1}`;
-    if (dateRange1 == "Feb. 2025") {
-      dateRange = `${dateRange1}*`;
-      document.getElementById("footer1").style.display = "block";
-    } else {      
-      document.getElementById("footer1").style.display = "none";
-    }
-  } else {
-    dateRange = `${dateRange1} - ${dateRange2}`;    
-    if (dateRange2 == "Feb. 2025") {
-      dateRange = `${dateRange1} - ${dateRange2}*`;
-      document.getElementById("footer1").style.display = "block";
-    } else {
-      document.getElementById("footer1").style.display = "none";      
-    }
-  }
-}
 
 function loadFacilityGraph(code, name) {
   if (DEBUG) console.log("loadFacilityGraph called", code, name);
   facilityList.push(code);
   d3.csv(`data/proc/facilities/${code}.csv`).then(function(data) {
-    const facilityDataCountsMap = new Map();
+    const fMap = new Map();
     data.forEach(row => {
       const { Date, ...rest } = row;
-      facilityDataCountsMap.set(Date, rest);
+      fMap.set(Date, rest);
     });
-    facilityData.push(facilityDataCountsMap);
+    facilityData.push(fMap);
     labels = data.map(row => row.Date);
     availableColumns = Object.keys(data[0]).filter(key => key !== 'Date' && key !== 'Midnight population count' && key !== '24-hour population count');
     document.getElementById('columnsForm').innerHTML = "";
@@ -168,7 +213,8 @@ function loadFacilityGraph(code, name) {
     populateColumnCheckboxes();
     const index_1 = Math.min(...facilityList.map(i => +facilityMap[i].start));
     const index_2 = Math.max(...facilityList.map(i => +facilityMap[i].end));
-    setupSliders(index_1, index_2);
+    setSliders(index_1, index_2);
+    graphName = (facilityList.length > 1) ? "various" : facilityMap[facilityList[0]].name;
     updateGraph();
   })
 }
@@ -192,7 +238,7 @@ function loadNationalGraph() {
     index_1 = 0;
     index_2 = 197;
 
-    setupSliders(index_1, index_2);
+    setSliders(index_1, index_2);
     graphName = "National"
     updateGraph();
   });
@@ -216,6 +262,7 @@ function updateGraph() {
   d2_index = (d2 + 1 < monthlyData.length) ? monthlyData[d2+1].index : 99999;
   const d1_index_1 = (d1_index === 0) ? 29 : d1_index;
 
+  let datasets;
   const visibleLabels = labels.slice(d1_index, d2_index + 1);
   let selectedCols = Array.from(document.querySelectorAll('input[name="col"]:checked'))
                              .map(input => input.value);
@@ -248,11 +295,12 @@ function updateGraph() {
       if (facilityList.length == 0) {
           loadNationalGraph();
       } else {
+        graphName = (facilityList.length > 1) ? "various" : facilityMap[facilityList[0]].name;
         document.getElementById('columnsForm').innerHTML = "";
         populateColumnCheckboxes();
         const index_1 = Math.min(...facilityList.map(i => +facilityMap[i].start));
         const index_2 = Math.max(...facilityList.map(i => +facilityMap[i].end));
-        setupSliders(index_1, index_2);
+        setSliders(index_1, index_2);
         updateGraph();
       }
     });
@@ -260,7 +308,17 @@ function updateGraph() {
 
   updateSliderLabels();
 
+  let dataArray, color;
   const ctx = document.getElementById('graph-element').getContext('2d');
+  const baseGraph = function() {
+    return {
+      type: 'line',
+      data: {
+        labels: visibleLabels,
+        datasets: datasets
+      }
+    }
+  }
   const x_options = {
     ticks: {
       maxTicksLimit: 10,
@@ -289,7 +347,7 @@ function updateGraph() {
     pointRadius: 0,
     fill: false,
     yAxisID: "y",
-    tension: 0.3
+    tension: 0.3,
   }
   const baseToolTipOptions = {
       usePointStyle: true,
@@ -299,9 +357,55 @@ function updateGraph() {
       boxWidth: 0,
       boxHeight: 0
   }
+  const baseOptions = {
+    responsive: true,
+    scales: {
+      y: y_options,
+      x: x_options
+    }    
+  }
+  const basePlugins = function() {
+    return {
+      legend: {
+        display: false
+      },
+      title: {
+        display: true,
+        text: ["People detained by ICE, 30 Day Rolling Average - " + graphName, graphRange],
+        font: {
+          size: 18
+        }
+      }
+    };
+  }
+
+  const baseCallbacks = {
+    labelPointStyle: () => ({
+      pointStyle: false
+    })
+  }
+
+  const segment = function(dataArray, color) {
+    return {
+      borderColor: ctx => {
+        if (dataArray[ctx.p0DataIndex] === -1) return "rgba(0,0,0,0)";
+        if (ctx.p0DataIndex + 1 < dataArray.length && dataArray[ctx.p0DataIndex + 1] === -1) return "rgba(0,0,0,0)";
+        return color;
+      }
+    }
+  }
+
+  function formatTitle(context, label = graphName) {
+    const date = new Date(context[0].label + "T00:00:00");
+    const dateStr = date.toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "short",
+      day: "2-digit"
+    });
+    return [dateStr, label, ""];
+  }
 
   if (facilityList.length > 1) {
-    graphName = "various";
     if (selectedCols.length > 1) selectedCols = [ selectedCols[0] ];
     if (selectedCols.length == 0) selectedCols = ['Midnight popluation'];
 
@@ -313,62 +417,29 @@ function updateGraph() {
       document.getElementById(`facility-name-${i}`).style.color = getColor("facilities", i);
     }
      
-    const datasets = facilityData.flatMap((dataSet, setIndex) => selectedCols.map((col) => {
-      const color = getColor("facilities", setIndex);
-      const dataArray = [...dataSet.values()].slice(d1_index, d2_index + 1).map(row => parseFloat(row[col]));
+    datasets = facilityData.flatMap((dataSet, setIndex) => selectedCols.map((col) => {
+      color = getColor("facilities", setIndex);
+      dataArray = [...dataSet.values()].slice(d1_index, d2_index + 1).map(row => parseFloat(row[col]));
       return {
         ...baseDataSetOptions,
         data: dataArray,      
         label: col,
         borderColor: color,
-        segment: {
-          borderColor: ctx => {
-            if (dataArray[ctx.p0DataIndex] === -1) return "rgba(0,0,0,0)";
-            if (ctx.p0DataIndex + 1 < dataArray.length && dataArray[ctx.p0DataIndex + 1] === -1) return "rgba(0,0,0,0)";
-            return color;
-          }
-        }              
+        segment: segment(dataArray, color)              
       }
     }));
 
     graph = new Chart(ctx, {
-      type: 'line',
-      data: {
-        labels: visibleLabels,
-        datasets: datasets
-      },
+      ...baseGraph(),
       options: {
-        responsive: true,
-        scales: {
-          y: y_options,
-          x: x_options
-        },
+        ...baseOptions,
         plugins: {
-          legend: {
-            display: false
-          },
-          title: {
-            display: true,
-            text: ["People detained by ICE, 30 Day Rolling Average - " + graphName, dateRange],
-            font: {
-              size: 18
-            }
-          },
+          ...basePlugins(),
           tooltip: {
             ...baseToolTipOptions,
             callbacks: {
-              labelPointStyle: () => ({
-                pointStyle: false
-              }),
-              title: function (context) {
-                const date = new Date(context[0].label + "T00:00:00");
-                dateStr = date.toLocaleDateString("en-US", {
-                  year: "numeric",
-                  month: "short",
-                  day: "2-digit"
-                });
-                return [dateStr, context[0].dataset.label, ""];
-              },
+              ...baseCallbacks,
+              title: context => formatTitle(context, context[0].dataset.label),
               label: function(context) {
                 return `${facilityMap[facilityList[context.datasetIndex]].name}: ${(+facilityData[context.datasetIndex].get(context.label)[context.dataset.label + " count"]).toLocaleString()}`;
               }
@@ -378,95 +449,55 @@ function updateGraph() {
       }
     });
 
-
   } else if (facilityList.length == 1) {
     for (let i = 0; i < 5; i++) {
       document.getElementById(`facility-name-${i}`).style.color = getColor("default");
     }
 
-    graphName = facilityMap[facilityList[0]].name;
-    const datasets = selectedCols.map((col, i) => {
-      const color = getColor(col);
-      const dataArray = [...facilityData[0].values()].slice(d1_index, d2_index + 1).map(row => parseFloat(row[col]));
+    datasets = selectedCols.map((col, i) => {
+      color = getColor(col);
+      dataArray = [...facilityData[0].values()].slice(d1_index, d2_index + 1).map(row => parseFloat(row[col]));
       return {
         ...baseDataSetOptions,
         data: dataArray,      
         label: col,
         borderColor: color,
         type: 'line',
-        segment: {
-          borderColor: ctx => {
-            if (dataArray[ctx.p0DataIndex] === -1) return "rgba(0,0,0,0)";
-            if (ctx.p0DataIndex + 1 < dataArray.length && dataArray[ctx.p0DataIndex + 1] === -1) return "rgba(0,0,0,0)";
-            return color;
-          }
-        }      
+        segment: segment(dataArray, color)
       }
     });
 
-    if (selectedCols.includes("Midnight population")) {
-      datasets.push({
-        label: "Midnight population count",
+
+    const func = function({column, color = "#bbb", order = 1, axis = "y"}) {
+      column = column + " count";
+      return {
+        label: column,
         type: "bar",
-        data: [...facilityData[0].values()].slice(d1_index, d2_index + 1).map(row => parseInt(row["Midnight population count"])),
+        data: [...facilityData[0].values()].slice(d1_index, d2_index + 1).map(row => parseInt(row[column])),
         yAxisID: "y",
-        backgroundColor: "#bbb",
+        backgroundColor: color,
         borderWidth: 0,
         grouped: false,
-        order: 1
-      });
-    }
-    if (selectedCols.includes("24-hour population")) {
-      datasets.push({
-        label: "24-hour population count",
-        type: "bar",
-        data: [...facilityData[0].values()].slice(d1_index, d2_index + 1).map(row => parseInt(row["24-hour population count"])),
-        yAxisID: "y",
-        backgroundColor: "#ddd",
-        borderWidth: 0,
-        grouped: false,
-        order: 2
-     });
-    }
+        order: order
+      }
+    };
+
+    if (selectedCols.includes("Midnight population"))
+      datasets.push(func({column: "Midnight population"}));
+    if (selectedCols.includes("24-hour population"))      
+      datasets.push(func({column: "24-hour population", color: "#ddd", order: 2}));
 
     graph = new Chart(ctx, {
-      type: 'bar',
-      data: {
-        labels: visibleLabels,
-        datasets: datasets
-      },
+      ...baseGraph(),
       options: {
-        responsive: true,
-        scales: {
-          y: y_options,
-          x: x_options
-        },
+        ...baseOptions,
         plugins: {
-          legend: {
-            display: false
-          },
-          title: {
-            display: true,
-            text: ["People detained by ICE, 30 Day Rolling Average - " + graphName, dateRange],
-            font: {
-              size: 18
-            }
-          },
+          ...basePlugins(),
           tooltip: {
             ...baseToolTipOptions,
             callbacks: {
-              labelPointStyle: () => ({
-                pointStyle: false
-              }),
-              title: function (context) {
-                const date = new Date(context[0].label + "T00:00:00");
-                dateStr = date.toLocaleDateString("en-US", {
-                  year: "numeric",
-                  month: "short",
-                  day: "2-digit"
-                });
-                return [dateStr, graphName, ""];
-              },
+              ...baseCallbacks,
+              title: context => formatTitle(context),
               label: function(context) {
                 if (context.dataset.label === "Midnight population count") return null;
                 if (context.dataset.label === "24-hour population count") return null;
@@ -480,71 +511,41 @@ function updateGraph() {
 
   } else {
     graphName = "National";
-    const datasets = selectedCols.map((col, i) => {
-      const color = getColor(col);
-      const dataArray = [...nationalData.values()].slice(d1_index, d2_index + 1).map(row => parseFloat(row[col]));
+    datasets = selectedCols.map((col, i) => {
+      color = getColor(col);
+      dataArray = [...nationalData.values()].slice(d1_index, d2_index + 1).map(row => parseFloat(row[col]));
       return {
         ...baseDataSetOptions,
         data: dataArray,      
         label: col,
         borderColor: color,
-        segment: {
-          borderColor: ctx => {
-            if (dataArray[ctx.p0DataIndex] === -1) return "rgba(0,0,0,0)";
-            if (ctx.p0DataIndex + 1 < dataArray.length && dataArray[ctx.p0DataIndex + 1] === -1) return "rgba(0,0,0,0)";
-            return color;
-          }
-        }      
+        segment: segment(dataArray, color)
       };
     });
 
     if (d2 - d1 <= 12) {
-      if (selectedCols.includes("Midnight population")) {
-        datasets.push({
-          label: "Midnight population count",
+      const func = function({column, color = "#bbb", order = 1, axis = "y"}) {
+        column = column + " count";
+        return {
+          label: column,
           type: "bar",
-          data: [...nationalData.values()].slice(d1_index, d2_index + 1).map(row => parseInt(row["Midnight population count"])),
+          data: [...nationalData.values()].slice(d1_index, d2_index + 1).map(row => parseInt(row[column])),
           yAxisID: "y",
-          backgroundColor: "#bbb",
+          backgroundColor: color,
           borderWidth: 0,
           grouped: false,
-          order: 1        
-        });
-      }
-      if (selectedCols.includes("24-hour population")) {
-        datasets.push({
-          label: "24-hour population count",
-          type: "bar",
-          data: [...nationalData.values()].slice(d1_index, d2_index + 1).map(row => parseInt(row["24-hour population count"])),
-          yAxisID: "y",
-          backgroundColor: "#ddd",
-          borderWidth: 0,
-          grouped: false,
-          order: 2
-       });
-      }
-      if (selectedCols.includes("Book-ins") && selectedCols.length == 1) {
-        datasets.push({
-          label: "Book-ins count",
-          type: "bar",
-          data: [...nationalData.values()].slice(d1_index, d2_index + 1).map(row => parseInt(row["Book-ins count"])),
-          yAxisID: "y1",
-          backgroundColor: "#bbb",
-          borderWidth: 0,
-          grouped: false
-        });
-      }
-      if (selectedCols.includes("Book-outs") && selectedCols.length == 1) {
-        datasets.push({
-          label: "Book-outs count",
-          type: "bar",
-          data: [...nationalData.values()].slice(d1_index, d2_index + 1).map(row => parseInt(row["Book-outs count"])),
-          yAxisID: "y1",
-          backgroundColor: "#bbb",
-          borderWidth: 0,
-          grouped: false
-        });
-      }
+          order: order
+        }
+      };
+
+      if (selectedCols.includes("Midnight population")) 
+        datasets.push(func({column: "Midnight population"}));
+      if (selectedCols.includes("24-hour population")) 
+        datasets.push(func({column: "24-hour population", color: "#ddd", order: 2}));
+      if (selectedCols.includes("Book-ins") && selectedCols.length == 1) 
+        datasets.push(func({column: "Book-ins", axis: "y1"}));
+      if (selectedCols.includes("Book-outs") && selectedCols.length == 1) 
+        datasets.push(func({column: "Book-outs", axis: "y1"}));
     }
 
     datasets.forEach(set => {
@@ -553,16 +554,12 @@ function updateGraph() {
     });
 
     graph = new Chart(ctx, {
-      type: 'line',
-      data: {
-        labels: visibleLabels,
-        datasets: datasets
-      },
+      ...baseGraph(),
       options: {
         responsive: true,
         scales: {
-          x: x_options,
           y: y_options,
+          x: x_options,
           y1 : {
             beginAtZero: true,
             min: 0,
@@ -577,31 +574,12 @@ function updateGraph() {
           }
         },
         plugins: {
-          legend: {
-            display: false
-          },
-          title: {
-            display: true,
-            text: ["People detained by ICE, 30 Day Rolling Average - " + graphName, dateRange],
-            font: {
-              size: 18
-            }
-          },
+          ...basePlugins(),
           tooltip: {
             ...baseToolTipOptions,
             callbacks: {
-              labelPointStyle: () => ({
-                pointStyle: false
-              }),
-              title: function (context) {
-                const date = new Date(context[0].label  + "T00:00:00");
-                dateStr = date.toLocaleDateString("en-US", {
-                  year: "numeric",
-                  month: "short",
-                  day: "2-digit"
-                });
-                return [dateStr, graphName, ""];
-              },
+              ...baseCallbacks,
+              title: context => formatTitle(context),
               label: function(context) {
                 if (context.dataset.label === "Midnight population count") return null;
                 if (context.dataset.label === "24-hour population count") return null;
