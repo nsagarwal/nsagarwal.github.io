@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>ICE Detention Trends</title>
 	<script src="https://d3js.org/d3.v6.min.js"></script>
 	<script src="https://unpkg.com/topojson-client@3"></script>
@@ -13,11 +14,9 @@
 	<script src="https://cdn.jsdelivr.net/npm/nouislider@15.7.1/dist/nouislider.min.js"></script>
   <script src="https://unpkg.com/scrollama"></script>
 
-	<link rel="stylesheet" href="styles.css">
-	<link rel="stylesheet" href="story.css">
-	<script src="graph.js" defer></script>
-	<script src="map.js" defer></script>
-	<script src="story.js" defer></script>
+	<link rel="stylesheet" href="styles/styles.css">
+	<link rel="stylesheet" href="styles/story.css">
+	<script type="module" src="js/main.js" defer></script>
 </head>
 <body>
 	<h1>ICE Detention Trends</h1>
@@ -32,12 +31,18 @@
 		<p>The federal government must end the harmful practice of civil immigration detention as a fundamental step toward ending mass incarceration in the United States. Until then, it should regularly release current, anonymized, person-level detention datasets. This would be a critical move toward making ICE operations transparent and enabling further research on detention and its impacts. Without data transparency, ICE’s operations—and their harms—will continue behind closed doors.</p>
 	</div>
 
-	<br>
-	<center>
-	<a class="button" id="open-story">View Introduction</a>
-	<a class="button" href="https://github.com/vera-institute/ice-detention-trends" target="_blank" rel="noopener noreferrer">Download the Data</a>
-	</center>
-	<br><br>
+	<div id="buttons">
+		<br>
+		<center>
+		<a class="button" id="open-story">View Introduction</a>
+		<a class="button" id="download-data" href="https://github.com/vera-institute/ice-detention-trends" target="_blank" rel="noopener noreferrer">Download the Data</a>
+		</center>
+		<br><br>
+	</div>
+
+	<div id="mobile">
+		<h3>A desktop browser is required to explore the dashboard.</h3>
+	</div>
 
 	<div id="story" class="hidden">
 	  <button id="close-story">×</button>
