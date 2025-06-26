@@ -2,6 +2,11 @@ let scroller = null;
 const story = document.getElementById('story');
 const image = document.getElementById('main-image');
 
+const altText = ["", "Map of ICE facilities across the U.S.", "Example of ICE facility types", 
+  "Graph of the midnight population and 24-hour population of ICE facilities",
+  "Graph of people detained by ICE from April 2019 to February 2025", "Graph of people detained by ICE at the Florence Staging Facility",
+  "Graph of people detained by ICE at Moshannon Valley Processing Center and various New Jersey facilities", ""]
+
 function renderStep(index) {
   const file = `images/${String(index).padStart(2, '0')}.jpg`;
 
@@ -11,6 +16,7 @@ function renderStep(index) {
     image.addEventListener('transitionend', function onFadeOut() {
       image.removeEventListener('transitionend', onFadeOut);
       image.src = file;
+      image.alt = altText[index];
       image.onload = () => {
         image.style.opacity = 1;
       };
