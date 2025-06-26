@@ -19,28 +19,24 @@
 	<script type="module" src="js/main.js" defer></script>
 </head>
 <body>
-	<h1>ICE Detention Trends</h1>
-	<p class="updated">Updated on May 29, 2025, to reflect newer data</p>
-
 	<div id="intro">
+		<h1>ICE Detention Trends</h1>
+		<p class="updated">Updated on May 29, 2025, to reflect newer data</p>
+
 		<p>Every year, U.S. Immigration and Customs Enforcement (ICE) subjects hundreds of thousands of people to civil immigration detention—a practice that is <a href="https://www.vera.org/ending-mass-incarceration/reducing-incarceration/detention-of-immigrants" target="_blank" rel="noopener noreferrer">unjust, inhumane, and completely unnecessary</a>. It does so under a veil of secrecy, sharing only limited, <a href="https://tracreports.org/reports/696/" target="_blank" rel="noopener noreferrer">often</a> <a href="https://www.gao.gov/assets/gao-24-106233.pdf" target="_blank" rel="noopener noreferrer">error-prone</a> statistics with the public. ICE’s failure to regularly release accurate, complete, and accessible data to the public enables it to operate its multi-billion-dollar detention network with impunity and little oversight.</p>
 
 		<p>To address this need, the <i>ICE Detention Trends</i> dashboard presents analysis by Vera that reveals an unprecedented level of detail about ICE detention populations—nationally and across the 1,357 facilities in which ICE detained people—on each day of the 16-year period from fiscal year 2009 through mid-fiscal year 2025 <strong style="font-weight: 500;">(October 1, 2008, through February 17, 2025)</strong>. This includes a detailed picture of ICE detention during the first four weeks of President Trump’s second term, including people sent by the government to detention centers at Guantanamo Bay. Vera’s tool allows the public to see the kinds of information that ICE <i>should</i> share.</p>
 
 		<p>The federal government must end the harmful practice of civil immigration detention as a fundamental step toward ending mass incarceration in the United States. Until then, it should regularly release current, anonymized, person-level detention datasets. This would be a critical move toward making ICE operations transparent and enabling further research on detention and its impacts. Without data transparency, ICE’s operations—and their harms—will continue behind closed doors.</p>
-	</div>
 
-	<div id="buttons">
-		<br>
-		<center>
-		<a class="button" id="open-story">View Introduction</a>
-		<a class="button" id="download-data" href="https://github.com/vera-institute/ice-detention-trends" target="_blank" rel="noopener noreferrer">Download the Data</a>
-		</center>
-		<br><br>
+		<div id="buttons">
+			<a class="button" id="open-story">View Introduction</a>
+			<a class="button" id="download-data" href="https://github.com/vera-institute/ice-detention-trends" target="_blank" rel="noopener noreferrer">Download the Data</a>
+		</div>
 	</div>
 
 	<div id="mobile">
-		<h3>A desktop browser is required to explore the dashboard.</h3>
+		<h2>A desktop browser is required to explore the dashboard.</h2>
 	</div>
 
 	<div id="story" class="hidden">
@@ -182,6 +178,8 @@
 		</div>
 	</div>
 
+	<hr style="border: none; height: 1px; background-color: #d2bab4; width: 80%; margin: 3rem auto">
+
 	<div class = "graph-container">
 		<div class="graph-top-panel">
 			<div class="graph-element-container">
@@ -228,7 +226,7 @@
 	</div>
     
 	<div id="about">
-	  <h3>About the Data</h3>
+	  <h2>About the Data</h2>
 	  <p>
 	    Through interactive maps and graphs, this tool allows users to see changes in the following metrics&mdash;geographically and over time:
 	  </p>
@@ -269,9 +267,8 @@
 	  </ul>
 
     <div class="about-more-container">
-      <input type="checkbox" id="about-more-check">
-      <label class="about-more-label" for="about-more-check">Read more about the data</label>
-      <div class="about-more">
+			<a href="#" id="showAboutMore" class="about-more-link">More about the data</a>
+      <div id="aboutMoreContent" class="about-more">
         <p>
           This dashboard primarily draws from ICE detention datasets obtained through Freedom of Information Act (FOIA) requests, shared with Vera by <a href="https://www.david-hausman.com/" target="_blank" rel="noreferrer noopener">David Hausman</a>, assistant professor of law, University of California, Berkeley, and the American Civil Liberties Union (ACLU). The initial version of this dashboard, launched in August 2023, used data from October 1, 2008, through March 30, 2020 (“Dataset I”). Vera updated this tool in May 2025 to add more recent data. The current iteration of the tool uses data from October 1, 2008, through February 17, 2025 (fiscal year 2009 through mid-fiscal year 2025). The data includes detention history information for every person in ICE custody during this time.
         </p>
@@ -309,7 +306,7 @@
   </div>
 
 	<div id="footer">
-	  <h3>Credits</h3>
+	  <h2>Credits</h2>
 	  <ul>
 	    <li>Data analysis: Noelle Smart, Zachary Lawrence, and Neil Agarwal</li>
 	    <li>Data engineering: Zachary Lawrence and Neil Agarwal</li>
@@ -317,16 +314,16 @@
 	    <li>Writing: Noelle Smart</li>
 	    <li>Editing: Léon Digard</li>
 	  </ul>
-	  <h3>Acknowledgements</h3>
+	  <h2>Acknowledgements</h2>
 	  <p>
 	    Vera thanks <a href="https://www.david-hausman.com/" target="_blank" rel="noopener noreferrer">David Hausman,</a> assistant professor of law, University of California, Berkeley, and the American Civil Liberties Union (ACLU) for providing the detention-stint-level ICE detention datasets acquired through FOIA requests that are visualized in this dashboard. Vera also thanks the following organizations for making available the supplemental ICE datasets Vera used to process the data and geocode facilities: Human Rights Watch, Transactional Records Access Clearinghouse, National Immigrant Justice Center, Immigrant Legal Resource Center, and the Marshall Project.
 	  </p>
 	  <p>
 	    Vera would like to thank the following current and former colleagues for their support in providing editing, design, and guidance: Nina Siulc, Jacquelyn Pavilon, Bethany Costello, Kenny Lam, Chris Henrichson, Jasmine Heiss, Jacob Kang-Brown, Kica Matos, Will Snowden, and Lizzie Allen. The authors wish to acknowledge the work of Dennis Kuo, who contributed to the development of the Detention Stay ID algorithm during his time as senior data scientist at Vera.
 	  </p>
-	  <h3>Contact</h3>
+	  <h2>Contact</h2>
 	  <p>
-	    For more information, contact Noelle Smart, principal research associate, at <ahref="mailto:nsmart@vera.org">nsmart@vera.org</a>.
+	    For more information, contact Noelle Smart, principal research associate, at <a href="mailto:nsmart@vera.org">nsmart@vera.org</a>.
 	  </p>
 	</div>
 

@@ -310,6 +310,11 @@ export function updateGraph() {
       title: {
         display: true,
         text: ["People detained by ICE, 30 Day Rolling Average - " + graphName, graphRange],
+        color: '#222',
+        align: 'start',
+        padding: {
+          bottom: 40
+        },
         font: {
           size: 18
         }
