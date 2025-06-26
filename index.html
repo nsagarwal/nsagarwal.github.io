@@ -19,7 +19,7 @@
 	<script type="module" src="js/main.js" defer></script>
 </head>
 <body>
-	<div id="intro">
+	<div id="intro" class="content">
 		<h1>ICE Detention Trends</h1>
 		<p class="updated">Updated on May 29, 2025, to reflect newer data</p>
 
@@ -159,7 +159,7 @@
 				</div>			
 				<div class="slider-group">
 					<label for="sizeSlider">Filter by population size:</label>
-					<div id="sizeSlider" style="width: 200px; margin-top: 12px"></div>
+					<div id="sizeSlider"></div>
 				</div>
 			</div>
 			<div class="map-element-container" style="margin-top: 20px;">
@@ -193,7 +193,7 @@
 				</div>
 			</div>
 			<div class="graph-right-controls">
-				<select id="facilitySearch" placeholder="Search facilities..." style="width: 200px;"></select>
+				<select id="facilitySearch" placeholder="Search facilities..."></select>
 				<div id="facility-group-0" style="display: none; align-items: center; gap: 6px; margin-top: 10px;">
 					<button id="facility-button-0" class="x" style="margin-top:-2px;">x</button>
 					<span id="facility-name-0">Test</span>
@@ -225,7 +225,7 @@
 		</div>
 	</div>
     
-	<div id="about">
+	<div id="about" class="content">
 	  <h2>About the Data</h2>
 	  <p>
 	    Through interactive maps and graphs, this tool allows users to see changes in the following metrics&mdash;geographically and over time:
@@ -305,7 +305,7 @@
     </div>
   </div>
 
-	<div id="footer">
+	<div id="footer" class="content">
 	  <h2>Credits</h2>
 	  <ul>
 	    <li>Data analysis: Noelle Smart, Zachary Lawrence, and Neil Agarwal</li>

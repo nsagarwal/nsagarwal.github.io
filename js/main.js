@@ -14,3 +14,7 @@ document.getElementById('showAboutMore').addEventListener('click', function(even
     this.textContent = 'More about the data';
   }
 });
+
+if (document.documentElement.scrollWidth > document.documentElement.clientWidth) {
+//  console.log("OVERFLOW");
+}
