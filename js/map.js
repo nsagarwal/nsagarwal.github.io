@@ -1,4 +1,4 @@
-import { updateGraph, updateSliderLabels, loadFacilityGraph } from './graph.js';
+import { updateGraph, loadFacilityGraph } from './graph.js';
 import { facilityMap, facilityList, facilityData, getMonthlyData, setMonthlyData, formatMonthYear } from './shared.js';
 
 let countiesLoaded = false;
@@ -27,9 +27,7 @@ const facilityTypeSelect = new TomSelect('#facilityType', {
   self.control_input.addEventListener('paste', (e) => e.preventDefault());
   self.control_input.addEventListener('input', (e) => e.preventDefault());
 
-  self.onOptionSelect = function(e, option) {
-    e.preventDefault();
-  }
+  self.onOptionSelect = function(e, option) { e.preventDefault(); }
   self.on('dropdown_open', () => {
       if (self.dropdown._customToggleListenerAttached) return;
 
@@ -81,14 +79,13 @@ document.getElementById('facilityTypeClear').addEventListener('click', () => {
   facilityTypeRefresh(facilityTypeSelect);
 });
 
-const clearFilters = document.getElementById('clear-filters');
 
 function clearFiltersRefresh() {
   const range = sizeSlider.noUiSlider.get();
   if (range[0] != "0" || range[1] != "2,260" || facilityTypeSelect.items.length > 0) {
-    clearFilters.classList.remove('not-visible');
+    document.getElementById('clear-filters').classList.remove('not-visible');
   } else {
-    clearFilters.classList.add('not-visible');
+    document.getElementById('clear-filters').classList.add('not-visible');
   }
 }
 
@@ -254,7 +251,6 @@ d3.csv("data/monthly.csv").then(function(data_1) {
     updateMap();
     loadMapData();
     updateGraph();
-    updateSliderLabels();
   });
 });
 
