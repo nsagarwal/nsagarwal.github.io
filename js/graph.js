@@ -56,7 +56,7 @@ function setSliders(min, max) {
 
 let suppressChange = false;
 
-d3.csv("/ice-detention-trends-v2/data/facilities.csv").then(function(data) {
+d3.csv(import.meta.env.BASE_URL + "data/facilities.csv").then(function(data) {
   const select = document.getElementById("facilitySearch");
 
   data.forEach(row => {
@@ -144,7 +144,7 @@ function populateColumnCheckboxes() {
 
 export function loadFacilityGraph(code, name) {
   facilityList.push(code);
-  d3.csv(`/ice-detention-trends-v2/data/facilities/${code}.csv`).then(function(data) {
+  d3.csv(import.meta.env.BASE_URL + `data/facilities/${code}.csv`).then(function(data) {
     const fMap = new Map();
     data.forEach(row => {
       const { Date, ...rest } = row;
@@ -167,7 +167,7 @@ export function loadFacilityGraph(code, name) {
 function loadNationalGraph() {
   nationalData.clear();
 
-  d3.csv("/ice-detention-trends-v2/data/national.csv").then(function(data) {
+  d3.csv(import.meta.env.BASE_URL + "data/national.csv").then(function(data) {
     data.forEach(row => {
       const { Date, ...rest } = row;
       nationalData.set(Date, rest);
