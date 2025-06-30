@@ -8,7 +8,7 @@ const altText = ["", "Map of ICE facilities across the U.S.", "Example of ICE fa
   "Graph of people detained by ICE at Moshannon Valley Processing Center and various New Jersey facilities", ""]
 
 function renderStep(index) {
-  const file = `images/${String(index).padStart(2, '0')}.jpg`;
+  const file = `/ice-detention-trends-v2/images/${String(index).padStart(2, '0')}.jpg`;
 
   image.style.opacity = 1;
   requestAnimationFrame(() => {
@@ -46,7 +46,7 @@ function destroyScrollama() {
 document.getElementById('open-story').addEventListener('click', () => {
   story.classList.remove('hidden');
   renderStep(0);
-  image.src = "images/00.jpg";
+  image.src = "/ice-detention-trends-v2/images/00.jpg";
   story.scrollTop = 0;
   setTimeout(() => {
     initScrollama();

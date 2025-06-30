@@ -229,19 +229,19 @@ let mapData = {};
 
 function loadMapData() {
   getMonthlyData().forEach(d => {
-    d3.csv(`data/map/${d.month}.csv`).then(function(data) {
+    d3.csv(`/ice-detention-trends-v2/data/map/${d.month}.csv`).then(function(data) {
       mapData[d.month] = data;
     })
   })
 }
 
-d3.csv("data/monthly.csv").then(function(data_1) {
+d3.csv("/ice-detention-trends-v2/data/monthly.csv").then(function(data_1) {
   data_1.forEach(d => {
     d.active = +d.active;
     d.total = +d.total;
     d.index = +d.index;
   });
-  d3.csv("data/map/2025-02.csv").then(function(data_2) {
+  d3.csv("/ice-detention-trends-v2/data/map/2025-02.csv").then(function(data_2) {
     setMonthlyData(data_1);
     const mapSlider = document.getElementById("mapSlider");
     mapSlider.max = data_1.length - 1;

@@ -3,26 +3,26 @@
 
 @font-face {
   font-family: "Whyte Black";
-  src: url(/fonts/ABCWhyte-Black.woff) format("woff");
+  src: url(/ice-detention-trends-v2/fonts/ABCWhyte-Black.woff) format("woff");
   font-style: normal;
 }
 
 @font-face {
   font-family: "Whyte Bold";
-  src: url(/fonts/ABCWhyte-Bold.woff) format("woff");
+  src: url(/ice-detention-trends-v2/fonts/ABCWhyte-Bold.woff) format("woff");
   font-style: normal;
 }
 
 @font-face {
   font-family: "Whyte Book";
-  src: url(/fonts/ABCWhyte-Book.woff) format("woff");
+  src: url(/ice-detention-trends-v2/fonts/ABCWhyte-Book.woff) format("woff");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "GT Sectra Bold";
-  src: url(/fonts/gt-sectra-bold-webfont.woff) format("woff");
+  src: url(/ice-detention-trends-v2/fonts/gt-sectra-bold-webfont.woff) format("woff");
   font-weight: bold;
   font-style: normal;
 }
