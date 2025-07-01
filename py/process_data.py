@@ -8,7 +8,7 @@ os.makedirs("public/data/facilities", exist_ok = True)
 os.makedirs("public/data/map", exist_ok = True)
 
 # national.csv => national.csv
-X = pd.read_csv("data/raw/national.csv")
+X = pd.read_csv("raw/national.csv")
 X = X[['date','midnight_count_unique_people_ma','daily_count_unique_people_ma','book_in_count_ma','book_out_count_ma','midnight_count_unique_people',
     'daily_count_unique_people','book_in_count','book_out_count']]
 for col in X.columns :
@@ -30,17 +30,18 @@ X.to_csv("public/data/national.csv", index = False)
 # monthly_freq.csv 
 # facilities/[XXXXXX].csv => facilities/[XXXXXX].csv
 #                            facilities.csv
-X = pd.read_csv("data/raw/monthly_freq.csv")
+X = pd.read_csv("raw/monthly_freq.csv")
 X = X[['detention_facility_code', 'name', 'city', 'state', 'type_detailed']].drop_duplicates(['detention_facility_code'])
 X['start'] = 0
 X['end'] = 197
 Q = X[~X['city'].isna()]
 X.loc[Q.index, 'city'] = Q.apply(lambda x : x['city'] + ", ", axis = 1)
 X['city'] = X['city'].fillna("")
+X['state'] = X['state'].fillna("")
 X['place'] = X.apply(lambda x : x['city'] + x['state'], axis = 1)
 X = X.drop('city', axis = 1);
 
-L = glob.glob("data/raw/facilities/*")
+L = glob.glob("raw/facilities/*")
 L = [p.split("/")[-1].replace(".csv", "") for p in L]
 assert(len(L) - len(set(L)) == 0)
 assert(X['detention_facility_code'].shape[0] == X['detention_facility_code'].drop_duplicates().shape[0])
@@ -50,7 +51,7 @@ def date_func(date) :
     return 12 * (date.year - 2008) + date.month - 10
 
 for index, row in X.iterrows() :
-    Y = pd.read_csv("data/raw/facilities/" + row['detention_facility_code'] + ".csv")
+    Y = pd.read_csv("raw/facilities/" + row['detention_facility_code'] + ".csv")
     Y = Y[['date', 'midnight_count_unique_people_ma','daily_count_unique_people_ma','midnight_count_unique_people','daily_count_unique_people']]
     for col in Y.columns :
         if col == "date" : continue
@@ -70,14 +71,14 @@ for index, row in X.iterrows() :
         X.loc[index, 'end'] = date_func(pd.to_datetime(Y.iloc[-1]['Date'])) + 1
     
 X = X.sort_values('name')
-Y = pd.read_csv("data/raw/facility_types.csv")
+Y = pd.read_csv("raw/facility_types.csv")
 X = pd.merge(X, Y, left_on = 'type_detailed', right_on = 'type_detailed', how = 'left')
 X = X.drop('type_detailed', axis = 1)
 X['type'] = X['type'].replace('Family/children', 'Family / Children')
 X.to_csv("public/data/facilities.csv", index = False)
 
 # monthly_freq.csv => map/YYYYMM.csv
-X = pd.read_csv("data/raw/monthly_freq.csv")
+X = pd.read_csv("raw/monthly_freq.csv")
 X = X[['detention_facility_code', 'name', 'month', 'latitude', 'longitude', 'daily_unique_avg']].drop_duplicates()
 X.columns = ['code', 'name', 'month', 'latitude', 'longitude', 'N']
 
@@ -104,7 +105,7 @@ for month in sorted(X['month'].drop_duplicates()) :
     Y.to_csv("public/data/map/" + month + ".csv", index = False)
 
 # monthly_freq.csv => monthly.csv
-X = pd.read_csv("data/raw/monthly_freq.csv")
+X = pd.read_csv("raw/monthly_freq.csv")
 Z = pd.DataFrame(columns = ['active', 'total'])
 Z.index.name = 'month'
 for month in sorted(X['month'].drop_duplicates()) :
@@ -117,7 +118,7 @@ for month in sorted(X['month'].drop_duplicates()) :
     Y = Y.drop_duplicates('detention_facility_code')
     Z.loc[month, 'total'] = Y.shape[0]
 
-X = pd.read_csv("data/raw/national.csv")
+X = pd.read_csv("raw/national.csv")
 Q = X.apply(lambda x : pd.to_datetime(x['date']).strftime("%Y-%m"), axis = 1).drop_duplicates().to_frame().reset_index()
 Q.columns = ['index', 'month']
 Z = pd.merge(Z, Q, left_index = True, right_on = 'month', how = 'left')
