@@ -56,3 +56,8 @@ export function formatMonthYear(ym) {
   return `${months[+month]} ${year}`;
 }
 
+export function formatMonthYear2(ym) {
+  const [year, month] = ym.split("-");
+  const months = ["", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+  return `${months[+month]} ${year}`;
+}

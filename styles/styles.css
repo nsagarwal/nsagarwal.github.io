@@ -97,6 +97,10 @@ label {
 
 /* ------------------------------------------------------------------ */
 
+#map-title {
+  text-align: center;
+}
+
 .content {
   padding: 0 6.25rem;
   max-width: 48rem;
@@ -170,7 +174,7 @@ label {
 
 button.clear {
   visibility: hidden;
-  background: #fdf6f1;
+  background: #fff7f0;
   border-radius: 2px;
   border: 0px solid #aaa;
   color: black;
@@ -185,7 +189,7 @@ button.clear {
 }
 
 button.clear:hover {
-  background: #fdf6f1;
+  background: #fff7f0;
   color:red;
 }
 
@@ -347,7 +351,7 @@ ul li.legend-inactive::before {
   flex-direction: row;
   align-items: flex-start;  
   padding: 16px;
-  background: #fdf6f1;
+  background: #fff7f0;
 }
 
 .graph-element-container {
@@ -355,14 +359,14 @@ ul li.legend-inactive::before {
   display: flex;
   flex-direction: column;
   padding: 16px;
-  background: #fdf6f1;
+  background: #fff7f0;
 }
 
 .graph-right-controls {
   width: 100%;
-  max-width: 225px;
+  max-width: 300px;
   padding: 5px;
-  background: #fdf6f1;
+  background: #fff7f0;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -377,7 +381,7 @@ ul li.legend-inactive::before {
 .graph-bottom-panel {
   padding: 0;
   margin: 0;
-  background: #fdf6f1;  
+  background: #fff7f0;  
 }
 
 .footer-note {
@@ -412,7 +416,7 @@ ul li.legend-inactive::before {
   max-width: 125px;
   flex-shrink: 0;
   padding: 5px;
-  background: #fdf6f1;
+  background: #fff7f0;
 }
 
 .map-right-panel {
@@ -420,7 +424,7 @@ ul li.legend-inactive::before {
   display: flex;
   flex-direction: column;
   padding: 16px;
-  background: #fdf6f1;
+  background: #fff7f0;
 }
 
 .map-top-controls {
@@ -600,8 +604,8 @@ button.x:hover {
 
 .about-more {
   max-height: 0;
-  padding: 0;
-  color: #2c3e50;
+  padding-left: 1.5em;
+  color: #0a0319;
   background: #fff7f0;
   transition: all 0.35s;
   display: none;
@@ -636,6 +640,10 @@ button.x:hover {
     display: block;
   }
   #buttons {
+    display: none;
+  }
+
+  #buttons_p {
     display: none;
   }
 }

@@ -1,5 +1,5 @@
 import { updateGraph, loadFacilityGraph } from './graph.js';
-import { facilityMap, facilityList, facilityData, getMonthlyData, setMonthlyData, formatMonthYear } from './shared.js';
+import { facilityMap, facilityList, facilityData, getMonthlyData, setMonthlyData, formatMonthYear, formatMonthYear2 } from './shared.js';
 
 let countiesLoaded = false;
 let countyPaths;
@@ -106,8 +106,8 @@ let height = 550 - margin.top - margin.bottom;
 
 let zoomLevel = 1.;
 let projection = geoAlbersUsaTerritories.geoAlbersUsaTerritories()
-  .scale(width * 1.5)
-  .translate([width / 2, height / 2.2]);
+  .scale(width * 1.2)
+  .translate([width / 2, height / 1.8]);
 
 const path = d3.geoPath().projection(projection);
 
@@ -241,12 +241,12 @@ d3.csv(import.meta.env.BASE_URL + "data/monthly.csv").then(function(data_1) {
     d.total = +d.total;
     d.index = +d.index;
   });
-  d3.csv(import.meta.env.BASE_URL + "data/map/2025-02.csv").then(function(data_2) {
+  d3.csv(import.meta.env.BASE_URL + "data/map/2025-06.csv").then(function(data_2) {
     setMonthlyData(data_1);
     const mapSlider = document.getElementById("mapSlider");
     mapSlider.max = data_1.length - 1;
     mapSlider.value = data_1.length - 1;
-    mapData["2025-02"] = data_2;
+    mapData["2025-06"] = data_2;
     document.getElementById("startDate").textContent = formatMonthYear("2008-10");
     updateMap();
     loadMapData();
@@ -311,17 +311,29 @@ function updateMap() {
     .map(([key, val]) => key);
 
   let filteredData = mapData[monthlyData[i].month].filter(d => +d.N >= +range[0] && +d.N <= +range[1]);
+  let filteredData_2 = mapData[monthlyData[i].month].filter(d => +d.N_max >= +range[0] && +d.N_min <= +range[1]);
+
   if (facilityTypeSelect.items.length > 0) {
     filteredData = filteredData.filter(d => ff.includes(d.code));
+    filteredData_2 = filteredData_2.filter(d => ff.includes(d.code));
   }
 
-  document.getElementById("activeFacilities").textContent = filteredData.filter(d => d.N > 0.).length.toLocaleString();
-  document.getElementById("totalFacilities").textContent = filteredData.length.toLocaleString();
+  document.getElementById("activeFacilities").textContent = filteredData.filter(d => +d.N > 0.).length.toLocaleString();
+  document.getElementById("totalFacilities").textContent = filteredData_2.length.toLocaleString();
 
   filteredData.sort((a, b) => +b.size - +a.size);
-
+  const validPoints = filteredData.filter(d => {
+    const coords = projection([+d.longitude, +d.latitude]);
+    return coords !== null && Array.isArray(coords);
+  });
+//  filteredData.forEach(d => {
+//    const coords = projection([+d.longitude, +d.latitude]);
+//    if (!coords || !Array.isArray(coords)) {
+//      console.log("Invalid projection:", d);
+//    }
+//  });
   map.selectAll("circle")
-    .data(filteredData)
+    .data(validPoints)
     .enter()
     .append("circle")
     .attr("cx", d => {
@@ -342,11 +354,11 @@ function updateMap() {
     .on("mouseover", (event, d) => {
       tooltip
         .style("opacity", 1)
-        .html(`<strong>${facilityMap[d.code].name}</strong><br>
+        .html(`<strong>${formatMonthYear2(monthlyData[i].month)}</strong><br><br>
+              <strong>${facilityMap[d.code].name}</strong><br>
               ${facilityMap[d.code].place}<br>
-              ${formatMonthYear(monthlyData[i].month)}<br>
               ${facilityMap[d.code].type}<br>          
-              Monthly average 24-hour population: ${Math.round(+d.N).toLocaleString()}`);
+              Monthly avg. 24-hour population: ${Math.round(+d.N).toLocaleString()}`);
     })
     .on("mousemove", event => {
       tooltip

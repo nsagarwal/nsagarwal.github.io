@@ -33,7 +33,7 @@ X.to_csv("public/data/national.csv", index = False)
 X = pd.read_csv("raw/monthly_freq.csv")
 X = X[['detention_facility_code', 'name', 'city', 'state', 'type_detailed']].drop_duplicates(['detention_facility_code'])
 X['start'] = 0
-X['end'] = 197
+X['end'] = 201
 Q = X[~X['city'].isna()]
 X.loc[Q.index, 'city'] = Q.apply(lambda x : x['city'] + ", ", axis = 1)
 X['city'] = X['city'].fillna("")
@@ -74,7 +74,6 @@ X = X.sort_values('name')
 Y = pd.read_csv("raw/facility_types.csv")
 X = pd.merge(X, Y, left_on = 'type_detailed', right_on = 'type_detailed', how = 'left')
 X = X.drop('type_detailed', axis = 1)
-X['type'] = X['type'].replace('Family/children', 'Family / Children')
 X.to_csv("public/data/facilities.csv", index = False)
 
 # monthly_freq.csv => map/YYYYMM.csv
@@ -95,15 +94,29 @@ def size(N) :
     return 15
 
 X['size'] = X.apply(lambda x : size(x['N']), axis = 1)
+M = X['code'].drop_duplicates().to_frame()
+M['N_min'] = 9999999.
+M['N_max'] = 0.
 
 F = set()
 for month in sorted(X['month'].drop_duplicates()) :
     Y = X[X['month'] == month]
-    F.update(set(Y[Y['N'] > 0.]['code']))
+    Q = Y[Y['N'] > 0]
+
+    M = pd.merge(M, Q[['code', 'N']], left_on = 'code', right_on = 'code', how = 'left')
+    for index, row in M.iterrows() :
+        if pd.notna(row['N']) and row['N'] < row['N_min'] :
+            M.loc[index, 'N_min'] = row['N']
+        if pd.notna(row['N']) and row['N'] > row['N_max'] :
+            M.loc[index, 'N_max'] = row['N']
+    M = M.drop('N', axis = 1)
+    
+    F.update(set(Y.loc[Q.index]['code']))
     Y = Y[Y['code'].isin(F)]    
+    Y = pd.merge(Y, M, left_on = 'code', right_on = 'code', how = 'left')
     Y = Y.drop(['month', 'name'], axis = 1)
     Y.to_csv("public/data/map/" + month + ".csv", index = False)
-
+    
 # monthly_freq.csv => monthly.csv
 X = pd.read_csv("raw/monthly_freq.csv")
 Z = pd.DataFrame(columns = ['active', 'total'])

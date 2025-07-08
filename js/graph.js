@@ -13,9 +13,9 @@ loadNationalGraph();
 
 const graphSlider = document.getElementById("graphSlider");
 noUiSlider.create(graphSlider, {
-  start: [0, 196],
+  start: [0, 200],
   connect: true,
-  range: { min: 0, max: 196 },
+  range: { min: 0, max: 200 },
   step: 1,
   tooltips: false,
   format: {
@@ -33,15 +33,15 @@ export function updateSliderLabels() {
   if (monthlyData.length === 0) return;
 
   const [start, end] = graphSlider.noUiSlider.get().map(Number);
-  const startLabel = (start < monthlyData.length) ? formatMonthYear(monthlyData[start].month) : "Mar. 2025";
-  const endLabel = (end < monthlyData.length) ? formatMonthYear(monthlyData[end].month) : "Mar. 2025";
+  const startLabel = (start < monthlyData.length) ? formatMonthYear(monthlyData[start].month) : "Jul. 2025";
+  const endLabel = (end < monthlyData.length) ? formatMonthYear(monthlyData[end].month) : "Jul. 2025";
 
   document.getElementById('graphSlider-startLabel').textContent = startLabel;
   document.getElementById('graphSlider-endLabel').textContent = endLabel;
 
   graphRange = `${startLabel} - ${endLabel}`;    
   if (startLabel == endLabel) graphRange = `${startLabel}`;
-  if (endLabel == "Feb. 2025") {
+  if (endLabel == "OLD - Feb. 2025") {
     graphRange += "*";
     document.getElementById("footer1").style.display = "block";
   } else {
@@ -143,6 +143,7 @@ function populateColumnCheckboxes() {
 
 
 export function loadFacilityGraph(code, name) {
+  if (facilityList.includes(code)) return;
   facilityList.push(code);
   d3.csv(import.meta.env.BASE_URL + `data/facilities/${code}.csv`).then(function(data) {
     const fMap = new Map();
@@ -159,7 +160,7 @@ export function loadFacilityGraph(code, name) {
     const index_1 = Math.min(...facilityList.map(i => +facilityMap[i].start));
     const index_2 = Math.max(...facilityList.map(i => +facilityMap[i].end));
     setSliders(index_1, index_2);
-    graphName = (facilityList.length > 1) ? "various" : facilityMap[facilityList[0]].name;
+    graphName = (facilityList.length > 1) ? "Facility Comparison" : facilityMap[facilityList[0]].name + " (" + facilityMap[facilityList[0]].place + ")";
     updateGraph();
   })
 }
@@ -178,7 +179,7 @@ function loadNationalGraph() {
     document.getElementById('columnsForm').innerHTML = "";      
 
     populateColumnCheckboxes();
-    setSliders(0, 197);
+    setSliders(0, 201);
     graphName = "National"
     updateGraph();
   });
@@ -186,6 +187,8 @@ function loadNationalGraph() {
 
 // ------------------------------------------------------------------------------------------------
 // update graph
+
+let lastStr = "";
 
 export function updateGraph() {
   if (monthlyData.length === 0) return;
@@ -201,7 +204,7 @@ export function updateGraph() {
   const d1_index_1 = (d1_index === 0) ? 29 : d1_index;
 
   let datasets;
-  const visibleLabels = labels.slice(d1_index, d2_index + 1);
+  const visibleLabels = labels.slice(d1_index, d2_index);
   selectedCols = Array.from(document.querySelectorAll('input[name="col"]:checked'))
                              .map(input => input.value);
 
@@ -233,7 +236,7 @@ export function updateGraph() {
       if (facilityList.length == 0) {
           loadNationalGraph();
       } else {
-        graphName = (facilityList.length > 1) ? "various" : facilityMap[facilityList[0]].name;
+        graphName = (facilityList.length > 1) ? "Facility Comparison" : facilityMap[facilityList[0]].name + " (" + facilityMap[facilityList[0]].place + ")";
         document.getElementById('columnsForm').innerHTML = "";
         populateColumnCheckboxes();
         const index_1 = Math.min(...facilityList.map(i => +facilityMap[i].start));
@@ -246,6 +249,37 @@ export function updateGraph() {
 
   updateSliderLabels();
 
+  function markSparseMonthStarts(labels, maxTicks = 6) {
+    const monthStartIndexes = [];
+    labels.forEach((label, i) => {
+      if (label.slice(8, 10) === "01") {
+        monthStartIndexes.push(i);
+      }
+    });
+    const totalMonths = monthStartIndexes.length;
+    if (totalMonths < 2) return new Array(labels.length).fill(1);
+
+    const spacing = Math.ceil(totalMonths / maxTicks);
+    const selectedIndexes = [];
+    for (let i = 0; i < totalMonths; i += spacing) {
+      selectedIndexes.push(monthStartIndexes[i]);
+    }
+    const a1 = monthStartIndexes[totalMonths - 1] - selectedIndexes[selectedIndexes.length - 1];
+    const a2 = monthStartIndexes[totalMonths - 1] - selectedIndexes[0];
+    if (a1 / a2 < 0.08) { selectedIndexes.pop(); }
+    if (selectedIndexes[0] !== monthStartIndexes[0]) {
+      selectedIndexes.unshift(monthStartIndexes[0]);
+    }
+    if (selectedIndexes[selectedIndexes.length - 1] !== monthStartIndexes[totalMonths - 1]) {
+      selectedIndexes.push(monthStartIndexes[totalMonths - 1]);
+    }
+    const output = new Array(labels.length).fill(0);
+    selectedIndexes.forEach(i => output[i] = 1);
+
+    return output;
+  }
+
+  const markers = markSparseMonthStarts(visibleLabels);
   let dataArray, color;
   const ctx = document.getElementById('graph-element').getContext('2d');
   const baseGraph = function() {
@@ -261,13 +295,28 @@ export function updateGraph() {
     ticks: {
       maxTicksLimit: 10,
       callback: function(value, index, ticks) {
-        const rawDate = this.getLabelForValue(value);
-        const parts = rawDate.split("-");
-        const date = new Date(Date.UTC(parts[0], parts[1] - 1, parts[2]));
-        const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", 
-                            "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-        if (date.getUTCDate() !== 1) return null;
-        return `${monthNames[date.getUTCMonth()]} ${date.getUTCFullYear()}`;
+        if (markers[index] === 1) {
+          const rawDate = this.getLabelForValue(value);
+          const parts = rawDate.split("-");
+          const date = new Date(Date.UTC(parts[0], parts[1] - 1, parts[2]));
+          const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", 
+                              "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+          if (ticks.length < 33) {
+            const formatted = date.toLocaleDateString('en-US', {
+              year: 'numeric',
+              month: 'short',
+              day: 'numeric',
+              timeZone: 'UTC'
+            });
+            return `${formatted}`;
+          } else { 
+            const newStr = `${monthNames[date.getUTCMonth()]} ${date.getUTCFullYear()}`;
+            if (lastStr == newStr) return null;
+            lastStr = newStr;
+            return `${monthNames[date.getUTCMonth()]} ${date.getUTCFullYear()}`;
+          }
+        }
+        return null;
       }
     }
   }
@@ -309,7 +358,7 @@ export function updateGraph() {
       },
       title: {
         display: true,
-        text: ["People detained by ICE, 30 Day Rolling Average - " + graphName, graphRange],
+        text: ["People Detained by ICE", graphName],
         color: '#222',
         align: 'start',
         padding: {
@@ -345,7 +394,7 @@ export function updateGraph() {
       month: "short",
       day: "2-digit"
     });
-    return [dateStr, label, ""];
+    return [label, "", dateStr];
   }
 
   if (facilityList.length > 1) {

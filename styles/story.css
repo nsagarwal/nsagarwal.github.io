@@ -13,14 +13,14 @@
   width: 100vw;
   height: 100vh;
   overflow-y: scroll;
-  background: #fdf6f1;
+  background: #fff7f0;
   z-index: 1000;
 }
 
 #close-story {
   position: fixed;
-  top: 1rem;
-  left: 1rem;
+  top: 6rem;
+  left: 75%;
   font-size: 2rem;
   z-index: 1001;
   background: none;
@@ -49,11 +49,10 @@
   transform: translate(-50%, -50%);
   z-index: 0;
   display: flex;
-  background-color: #fdf6f1;
+  background-color: #fff7f0;
   align-items: center;
   justify-content: center;
   pointer-events: none;
-
   max-width: 90vw;
   max-height: 90vh;
   padding: 1rem;
@@ -70,9 +69,30 @@
 
 .textbox {
   font-size: 1.5rem;
-  background: rgba(255, 255, 255, 0.40);
-  padding: 2rem 0;
+  background: #000000ba;
+  padding: 2rem 2rem;
 }
+
+.textbox p {
+  color: #fff;
+  text-shadow: 1px 1px #000;
+}
+
+.textbox a {
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-color: #ef4136;
+  text-underline-offset: .2em;
+  transition: color .15s ease-in, border .15s ease-in, background .15s ease-in, opacity .15s ease-in; 
+}
+
+.textbox a:hover,
+.textbox a:focus {
+  background-color: #da392f;
+  color: #fff;
+  text-decoration-color: none;
+}
+
 
 .step {
   min-height: 100vh;
